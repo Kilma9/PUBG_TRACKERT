@@ -85,6 +85,14 @@
       padding: 15px;
       position: relative;
       height: 300px;
+      min-height: 300px;
+      width: 100%;
+    }
+    
+    .chart-container canvas {
+      width: 100% !important;
+      height: 280px !important;
+      max-height: 280px;
     }
     
     .stats-summary {
@@ -236,6 +244,8 @@
       destroyCharts();
       const dayMatches = matchData.filter(match => match.date.split('T')[0] === day);
       
+      console.log('Processing day:', day, 'with', dayMatches.length, 'matches');
+      
       // Calculate daily aggregated stats
       const playerStats = {};
       dayMatches.forEach(match => {
@@ -266,6 +276,8 @@
           });
         });
       });
+
+      console.log('Player stats calculated:', Object.keys(playerStats).length, 'players');
 
       // Display summary stats
       const summaryHtml = `
@@ -304,113 +316,230 @@
       
       document.getElementById('dayCharts').innerHTML = chartsHtml;
 
-      const players = Object.keys(playerStats);
-      const chartOptions = {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: { y: { beginAtZero: true } }
-      };
+      // Show the day content first
+      document.getElementById('dayContent').classList.remove('hidden');
 
-      // Performance charts
-      currentCharts.push(new Chart(document.getElementById('dayKillsChart'), {
-        type: 'bar',
-        data: {
-          labels: players,
-          datasets: [{
-            label: 'Kills',
-            data: players.map(p => playerStats[p].kills),
-            backgroundColor: '#ff6b6b'
-          }]
-        },
-        options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Total Kills' } } }
-      }));
-
-      currentCharts.push(new Chart(document.getElementById('dayDamageChart'), {
-        type: 'bar',
-        data: {
-          labels: players,
-          datasets: [{
-            label: 'Damage',
-            data: players.map(p => Math.round(playerStats[p].damage)),
-            backgroundColor: '#4ecdc4'
-          }]
-        },
-        options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Total Damage' } } }
-      }));
-
-      currentCharts.push(new Chart(document.getElementById('dayHeadshotsChart'), {
-        type: 'bar',
-        data: {
-          labels: players,
-          datasets: [{
-            label: 'Headshots',
-            data: players.map(p => playerStats[p].headshots),
-            backgroundColor: '#45b7d1'
-          }]
-        },
-        options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Total Headshots' } } }
-      }));
-
-      currentCharts.push(new Chart(document.getElementById('dayAssistsChart'), {
-        type: 'bar',
-        data: {
-          labels: players,
-          datasets: [{
-            label: 'Assists',
-            data: players.map(p => playerStats[p].assists),
-            backgroundColor: '#f7b731'
-          }]
-        },
-        options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Total Assists' } } }
-      }));
-
-      // Weapon charts for each player
-      const weaponChartsContainer = document.getElementById('weaponCharts');
-      weaponChartsContainer.innerHTML = '';
-      
-      players.forEach(player => {
-        const weapons = Object.entries(playerStats[player].weaponDamage)
-          .filter(([weapon, damage]) => damage > 0)
-          .sort((a, b) => b[1] - a[1])
-          .slice(0, 10); // Top 10 weapons
+      // Use setTimeout to ensure DOM is ready before creating charts
+      setTimeout(() => {
+        const players = Object.keys(playerStats);
+        console.log('Creating charts for players:', players);
         
-        if (weapons.length > 0) {
-          const chartDiv = document.createElement('div');
-          chartDiv.className = 'weapon-chart';
-          chartDiv.innerHTML = `<canvas id="weapon-${player}"></canvas>`;
-          weaponChartsContainer.appendChild(chartDiv);
-          
-          currentCharts.push(new Chart(document.getElementById(`weapon-${player}`), {
-            type: 'doughnut',
+        if (players.length === 0) {
+          console.error('No players found for charts');
+          return;
+        }
+
+        const chartOptions = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { 
+            legend: { display: false },
+            title: { display: true }
+          },
+          scales: { 
+            y: { beginAtZero: true }
+          },
+          animation: false // Disable animation for faster rendering
+        };
+
+        // Check if canvas elements exist before creating charts
+        const killsCanvas = document.getElementById('dayKillsChart');
+        const damageCanvas = document.getElementById('dayDamageChart');
+        const headshotsCanvas = document.getElementById('dayHeadshotsChart');
+        const assistsCanvas = document.getElementById('dayAssistsChart');
+
+        console.log('Canvas elements found:', {
+          kills: !!killsCanvas,
+          damage: !!damageCanvas,
+          headshots: !!headshotsCanvas,
+          assists: !!assistsCanvas
+        });
+
+        if (!killsCanvas || !damageCanvas || !headshotsCanvas || !assistsCanvas) {
+          console.error('Canvas elements not found');
+          return;
+        }
+
+        // Performance charts
+        try {
+          console.log('Creating kills chart...');
+          const killsChart = new Chart(killsCanvas, {
+            type: 'bar',
             data: {
-              labels: weapons.map(([weapon]) => weapon),
+              labels: players,
               datasets: [{
-                data: weapons.map(([_, damage]) => Math.round(damage)),
-                backgroundColor: [
-                  '#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57',
-                  '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3', '#ff9f43'
-                ]
+                label: 'Kills',
+                data: players.map(p => playerStats[p].kills),
+                backgroundColor: '#ff6b6b',
+                borderColor: '#ff5252',
+                borderWidth: 1
               }]
             },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              plugins: {
-                title: { display: true, text: `${player} - Weapon Damage` },
-                legend: { position: 'bottom', labels: { boxWidth: 12, fontSize: 10 } }
-              }
+            options: { 
+              ...chartOptions, 
+              plugins: { 
+                ...chartOptions.plugins, 
+                title: { display: true, text: 'Total Kills' } 
+              } 
             }
-          }));
-        }
-      });
+          });
+          currentCharts.push(killsChart);
+          console.log('Kills chart created successfully');
 
-      document.getElementById('dayContent').classList.remove('hidden');
+          console.log('Creating damage chart...');
+          const damageChart = new Chart(damageCanvas, {
+            type: 'bar',
+            data: {
+              labels: players,
+              datasets: [{
+                label: 'Damage',
+                data: players.map(p => Math.round(playerStats[p].damage)),
+                backgroundColor: '#4ecdc4',
+                borderColor: '#26d0ce',
+                borderWidth: 1
+              }]
+            },
+            options: { 
+              ...chartOptions, 
+              plugins: { 
+                ...chartOptions.plugins, 
+                title: { display: true, text: 'Total Damage' } 
+              } 
+            }
+          });
+          currentCharts.push(damageChart);
+          console.log('Damage chart created successfully');
+
+          console.log('Creating headshots chart...');
+          const headshotsChart = new Chart(headshotsCanvas, {
+            type: 'bar',
+            data: {
+              labels: players,
+              datasets: [{
+                label: 'Headshots',
+                data: players.map(p => playerStats[p].headshots),
+                backgroundColor: '#45b7d1',
+                borderColor: '#3742fa',
+                borderWidth: 1
+              }]
+            },
+            options: { 
+              ...chartOptions, 
+              plugins: { 
+                ...chartOptions.plugins, 
+                title: { display: true, text: 'Total Headshots' } 
+              } 
+            }
+          });
+          currentCharts.push(headshotsChart);
+          console.log('Headshots chart created successfully');
+
+          console.log('Creating assists chart...');
+          const assistsChart = new Chart(assistsCanvas, {
+            type: 'bar',
+            data: {
+              labels: players,
+              datasets: [{
+                label: 'Assists',
+                data: players.map(p => playerStats[p].assists),
+                backgroundColor: '#f7b731',
+                borderColor: '#fa8231',
+                borderWidth: 1
+              }]
+            },
+            options: { 
+              ...chartOptions, 
+              plugins: { 
+                ...chartOptions.plugins, 
+                title: { display: true, text: 'Total Assists' } 
+              } 
+            }
+          });
+          currentCharts.push(assistsChart);
+          console.log('Assists chart created successfully');
+
+          console.log('All main charts created successfully. Total charts:', currentCharts.length);
+        } catch (error) {
+          console.error('Error creating main charts:', error);
+        }
+
+        // Weapon charts for each player
+        const weaponChartsContainer = document.getElementById('weaponCharts');
+        if (weaponChartsContainer) {
+          weaponChartsContainer.innerHTML = '';
+          
+          players.forEach(player => {
+            const weapons = Object.entries(playerStats[player].weaponDamage)
+              .filter(([weapon, damage]) => damage > 0)
+              .sort((a, b) => b[1] - a[1])
+              .slice(0, 10); // Top 10 weapons
+            
+            if (weapons.length > 0) {
+              const chartDiv = document.createElement('div');
+              chartDiv.className = 'weapon-chart';
+              const cleanPlayerId = player.replace(/[^a-zA-Z0-9]/g, '_');
+              chartDiv.innerHTML = `<canvas id="weapon-${cleanPlayerId}"></canvas>`;
+              weaponChartsContainer.appendChild(chartDiv);
+              
+              console.log(`Creating weapon chart for ${player} with ${weapons.length} weapons`);
+              
+              // Use another setTimeout for weapon charts
+              setTimeout(() => {
+                const weaponCanvas = document.getElementById(`weapon-${cleanPlayerId}`);
+                if (weaponCanvas) {
+                  try {
+                    const weaponChart = new Chart(weaponCanvas, {
+                      type: 'doughnut',
+                      data: {
+                        labels: weapons.map(([weapon]) => weapon),
+                        datasets: [{
+                          data: weapons.map(([_, damage]) => Math.round(damage)),
+                          backgroundColor: [
+                            '#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57',
+                            '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3', '#ff9f43'
+                          ]
+                        }]
+                      },
+                      options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        animation: false,
+                        plugins: {
+                          title: { display: true, text: `${player} - Weapon Damage` },
+                          legend: { position: 'bottom', labels: { boxWidth: 12, fontSize: 10 } }
+                        }
+                      }
+                    });
+                    currentCharts.push(weaponChart);
+                    console.log(`Weapon chart created for ${player}`);
+                  } catch (error) {
+                    console.error(`Error creating weapon chart for ${player}:`, error);
+                  }
+                } else {
+                  console.error(`Weapon canvas not found for ${player}`);
+                }
+              }, 200);
+            }
+          });
+        }
+
+        // Final check and debug info
+        setTimeout(() => {
+          console.log('Final chart count:', currentCharts.length);
+          console.log('Chart containers visible:', {
+            dayContent: !document.getElementById('dayContent').classList.contains('hidden'),
+            chartsGrid: !!document.querySelector('.charts-grid'),
+            chartContainers: document.querySelectorAll('.chart-container').length
+          });
+        }, 500);
+      }, 250); // Increased timeout to give more time for DOM rendering
     }
 
     function showMatchDetails(dayMatches, matchIndex) {
-      destroyCharts();
+      destroyCharts(); // Only destroy charts, keep day summary visible
       const match = dayMatches[matchIndex];
+      
+      console.log('Showing match details for match', matchIndex);
       
       // Match summary
       const summaryHtml = `
@@ -449,118 +578,186 @@
       
       document.getElementById('matchCharts').innerHTML = chartsHtml;
 
-      const players = match.team.map(p => p.name);
-      const chartOptions = {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: { y: { beginAtZero: true } }
-      };
+      // Show match content
+      document.getElementById('matchContent').classList.remove('hidden');
 
-      // Performance charts
-      currentCharts.push(new Chart(document.getElementById('matchKillsChart'), {
-        type: 'bar',
-        data: {
-          labels: players,
-          datasets: [{
-            data: match.team.map(p => p.kills || 0),
-            backgroundColor: '#ff6b6b'
-          }]
-        },
-        options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Kills' } } }
-      }));
-
-      currentCharts.push(new Chart(document.getElementById('matchDamageChart'), {
-        type: 'bar',
-        data: {
-          labels: players,
-          datasets: [{
-            data: match.team.map(p => Math.round(p.damage || 0)),
-            backgroundColor: '#4ecdc4'
-          }]
-        },
-        options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Damage' } } }
-      }));
-
-      currentCharts.push(new Chart(document.getElementById('matchHeadshotsChart'), {
-        type: 'bar',
-        data: {
-          labels: players,
-          datasets: [{
-            data: match.team.map(p => p.headshots || 0),
-            backgroundColor: '#45b7d1'
-          }]
-        },
-        options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Headshots' } } }
-      }));
-
-      currentCharts.push(new Chart(document.getElementById('matchHealsChart'), {
-        type: 'bar',
-        data: {
-          labels: players,
-          datasets: [{
-            data: match.team.map(p => (p.heals || 0) + (p.boosts || 0)),
-            backgroundColor: '#26de81'
-          }]
-        },
-        options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Heals + Boosts' } } }
-      }));
-
-      // Individual weapon charts for each player
-      const weaponChartsContainer = document.getElementById('matchWeaponCharts');
-      weaponChartsContainer.innerHTML = '';
-      
-      match.team.forEach(player => {
-        const weapons = Object.entries(player.weaponDamage || {})
-          .filter(([weapon, damage]) => damage > 0 && !weapon.includes('Player') && !weapon.includes('Effect'))
-          .map(([weapon, damage]) => [cleanWeaponName(weapon), damage])
-          .sort((a, b) => b[1] - a[1]);
+      // Create match charts with delay
+      setTimeout(() => {
+        const players = match.team.map(p => p.name);
+        console.log('Creating match charts for players:', players);
         
-        if (weapons.length > 0) {
-          const chartDiv = document.createElement('div');
-          chartDiv.className = 'weapon-chart';
-          chartDiv.innerHTML = `<canvas id="match-weapon-${player.name}"></canvas>`;
-          weaponChartsContainer.appendChild(chartDiv);
-          
-          currentCharts.push(new Chart(document.getElementById(`match-weapon-${player.name}`), {
-            type: 'doughnut',
+        const chartOptions = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { 
+            legend: { display: false },
+            title: { display: true }
+          },
+          scales: { 
+            y: { beginAtZero: true }
+          },
+          animation: false
+        };
+
+        // Check canvas elements
+        const killsCanvas = document.getElementById('matchKillsChart');
+        const damageCanvas = document.getElementById('matchDamageChart');
+        const headshotsCanvas = document.getElementById('matchHeadshotsChart');
+        const healsCanvas = document.getElementById('matchHealsChart');
+
+        console.log('Match canvas elements found:', {
+          kills: !!killsCanvas,
+          damage: !!damageCanvas,
+          headshots: !!headshotsCanvas,
+          heals: !!healsCanvas
+        });
+
+        if (!killsCanvas || !damageCanvas || !headshotsCanvas || !healsCanvas) {
+          console.error('Match canvas elements not found');
+          return;
+        }
+
+        try {
+          // Performance charts
+          const killsChart = new Chart(killsCanvas, {
+            type: 'bar',
             data: {
-              labels: weapons.map(([weapon]) => weapon),
+              labels: players,
               datasets: [{
-                data: weapons.map(([_, damage]) => Math.round(damage)),
-                backgroundColor: [
-                  '#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57',
-                  '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3', '#ff9f43'
-                ]
+                data: match.team.map(p => p.kills || 0),
+                backgroundColor: '#ff6b6b',
+                borderColor: '#ff5252',
+                borderWidth: 1
               }]
             },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              plugins: {
-                title: { display: true, text: `${player.name} - Weapon Damage` },
-                legend: { position: 'bottom', labels: { boxWidth: 12, fontSize: 10 } }
-              }
-            }
-          }));
-        }
-      });
+            options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Kills' } } }
+          });
+          currentCharts.push(killsChart);
 
-      document.getElementById('matchContent').classList.remove('hidden');
+          const damageChart = new Chart(damageCanvas, {
+            type: 'bar',
+            data: {
+              labels: players,
+              datasets: [{
+                data: match.team.map(p => Math.round(p.damage || 0)),
+                backgroundColor: '#4ecdc4',
+                borderColor: '#26d0ce',
+                borderWidth: 1
+              }]
+            },
+            options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Damage' } } }
+          });
+          currentCharts.push(damageChart);
+
+          const headshotsChart = new Chart(headshotsCanvas, {
+            type: 'bar',
+            data: {
+              labels: players,
+              datasets: [{
+                data: match.team.map(p => p.headshots || 0),
+                backgroundColor: '#45b7d1',
+                borderColor: '#3742fa',
+                borderWidth: 1
+              }]
+            },
+            options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Headshots' } } }
+          });
+          currentCharts.push(headshotsChart);
+
+          const healsChart = new Chart(healsCanvas, {
+            type: 'bar',
+            data: {
+              labels: players,
+              datasets: [{
+                data: match.team.map(p => (p.heals || 0) + (p.boosts || 0)),
+                backgroundColor: '#26de81',
+                borderColor: '#20bf6b',
+                borderWidth: 1
+              }]
+            },
+            options: { ...chartOptions, plugins: { ...chartOptions.plugins, title: { display: true, text: 'Heals + Boosts' } } }
+          });
+          currentCharts.push(healsChart);
+
+          console.log('Match charts created successfully');
+        } catch (error) {
+          console.error('Error creating match charts:', error);
+        }
+
+        // Individual weapon charts for each player
+        const weaponChartsContainer = document.getElementById('matchWeaponCharts');
+        if (weaponChartsContainer) {
+          weaponChartsContainer.innerHTML = '';
+          
+          match.team.forEach(player => {
+            const weapons = Object.entries(player.weaponDamage || {})
+              .filter(([weapon, damage]) => damage > 0 && !weapon.includes('Player') && !weapon.includes('Effect'))
+              .map(([weapon, damage]) => [cleanWeaponName(weapon), damage])
+              .sort((a, b) => b[1] - a[1]);
+            
+            if (weapons.length > 0) {
+              const chartDiv = document.createElement('div');
+              chartDiv.className = 'weapon-chart';
+              const cleanPlayerId = player.name.replace(/[^a-zA-Z0-9]/g, '_');
+              chartDiv.innerHTML = `<canvas id="match-weapon-${cleanPlayerId}"></canvas>`;
+              weaponChartsContainer.appendChild(chartDiv);
+              
+              setTimeout(() => {
+                const weaponCanvas = document.getElementById(`match-weapon-${cleanPlayerId}`);
+                if (weaponCanvas) {
+                  try {
+                    const weaponChart = new Chart(weaponCanvas, {
+                      type: 'doughnut',
+                      data: {
+                        labels: weapons.map(([weapon]) => weapon),
+                        datasets: [{
+                          data: weapons.map(([_, damage]) => Math.round(damage)),
+                          backgroundColor: [
+                            '#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57',
+                            '#ff9ff3', '#54a0ff', '#5f27cd', '#00d2d3', '#ff9f43'
+                          ]
+                        }]
+                      },
+                      options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        animation: false,
+                        plugins: {
+                          title: { display: true, text: `${player.name} - Weapon Damage` },
+                          legend: { position: 'bottom', labels: { boxWidth: 12, fontSize: 10 } }
+                        }
+                      }
+                    });
+                    currentCharts.push(weaponChart);
+                  } catch (error) {
+                    console.error(`Error creating match weapon chart for ${player.name}:`, error);
+                  }
+                }
+              }, 200);
+            }
+          });
+        }
+      }, 250);
     }
 
     // Event listeners
     document.getElementById('daySelect').addEventListener('change', function() {
       const selectedDay = this.value;
       
+      console.log('Day selected:', selectedDay);
+      
       if (selectedDay) {
         populateMatchDropdown(selectedDay);
         showDaySummary(selectedDay);
+        // Don't hide matchContent, just reset the match dropdown
+        document.getElementById('matchSelect').value = '';
         document.getElementById('matchContent').classList.add('hidden');
       } else {
         document.getElementById('matchSelect').disabled = true;
+        document.getElementById('matchSelect').value = '';
         document.getElementById('dayContent').classList.add('hidden');
         document.getElementById('matchContent').classList.add('hidden');
+        destroyCharts();
       }
     });
 
@@ -568,11 +765,26 @@
       const selectedDay = document.getElementById('daySelect').value;
       const matchIndex = parseInt(this.value);
       
+      console.log('Match selected:', matchIndex, 'for day:', selectedDay);
+      
       if (!isNaN(matchIndex) && selectedDay) {
         const dayMatches = matchData.filter(match => match.date.split('T')[0] === selectedDay);
         showMatchDetails(dayMatches, matchIndex);
+        // Keep dayContent visible - don't hide it
       } else {
         document.getElementById('matchContent').classList.add('hidden');
+        // Re-destroy only match charts, keep day charts
+        const matchCharts = currentCharts.filter(chart => 
+          chart.canvas && chart.canvas.id && chart.canvas.id.includes('match')
+        );
+        matchCharts.forEach(chart => {
+          if (chart && typeof chart.destroy === 'function') {
+            chart.destroy();
+          }
+        });
+        currentCharts = currentCharts.filter(chart => 
+          !(chart.canvas && chart.canvas.id && chart.canvas.id.includes('match'))
+        );
       }
     });
   </script>

@@ -10,16 +10,30 @@ const headers = {
 };
 
 async function getPlayerId() {
+  console.log(`🔍 Looking up player: ${PLAYER_NAME}`);
   const url = `https://api.pubg.com/shards/${PLATFORM}/players?filter[playerNames]=${PLAYER_NAME}`;
-  const response = await axios.get(url, { headers });
-  return response.data.data[0].id;
+  try {
+    const response = await axios.get(url, { headers });
+    console.log(`✅ Player found successfully`);
+    return response.data.data[0].id;
+  } catch (error) {
+    console.error(`❌ Error finding player:`, error.message);
+    throw error;
+  }
 }
 
 async function getMatchHistory(playerId) {
+  console.log(`📋 Fetching match history for player ID: ${playerId}`);
   const url = `https://api.pubg.com/shards/${PLATFORM}/players/${playerId}`;
-  const response = await axios.get(url, { headers });
-  const matches = response.data.data.relationships.matches.data;
-  return matches.map(match => match.id);
+  try {
+    const response = await axios.get(url, { headers });
+    const matches = response.data.data.relationships.matches.data;
+    console.log(`✅ Found ${matches.length} recent matches`);
+    return matches.map(match => match.id);
+  } catch (error) {
+    console.error(`❌ Error fetching match history:`, error.message);
+    throw error;
+  }
 }
 
 async function getMatchDetails(matchId) {
@@ -409,26 +423,117 @@ function summarizeTeamStatsByDay(matchSummaries) {
 
 (async () => {
   try {
+    console.log(`🎮 Starting PUBG data collection for ${PLAYER_NAME}`);
+    console.log(`📅 Fetching matches from the last 30 days...`);
+    
     const playerId = await getPlayerId();
-    console.log(`Player ID: ${playerId}`);
+    console.log(`👤 Player ID: ${playerId}`);
 
     const matchIds = await getMatchHistory(playerId);
-    console.log(`Recent Match IDs:`, matchIds.slice(0, 10));
+    console.log(`📋 Total available matches: ${matchIds.length}`);
 
     const matchSummaries = [];
-
-    for (const matchId of matchIds.slice(0, 10)) {
-      const summary = await getMatchDetails(matchId);
-      if (summary) matchSummaries.push(summary);
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+    
+    console.log(`📆 Filtering matches since: ${thirtyDaysAgo.toISOString().split('T')[0]}`);
+    
+    let processedCount = 0;
+    let matchesInRange = 0;
+    
+    // Process matches until we're beyond 30 days or run out of matches
+    for (const matchId of matchIds) {
+      console.log(`\n🔄 Processing match ${processedCount + 1}/${matchIds.length}...`);
+      
+      try {
+        const summary = await getMatchDetails(matchId);
+        
+        if (summary) {
+          const matchDate = new Date(summary.date);
+          
+          // Check if match is within last 30 days
+          if (matchDate >= thirtyDaysAgo) {
+            matchSummaries.push(summary);
+            matchesInRange++;
+            console.log(`✅ Match added (${matchesInRange} total within 30 days)`);
+          } else {
+            console.log(`⏰ Match too old (${matchDate.toISOString().split('T')[0]}), stopping collection`);
+            break; // Stop processing older matches
+          }
+        } else {
+          console.log(`❌ Failed to process match or player not found`);
+        }
+        
+        processedCount++;
+        
+        // Add delay to respect API rate limits (avoid hitting rate limits)
+        if (processedCount % 5 === 0) {
+          console.log(`⏸️ Taking a short break to respect API limits...`);
+          await new Promise(resolve => setTimeout(resolve, 2000)); // 2 second pause every 5 matches
+        }
+        
+        // Safety limit to avoid processing too many matches
+        if (processedCount >= 100) {
+          console.log(`⚠️ Reached safety limit of 100 matches processed`);
+          break;
+        }
+        
+      } catch (error) {
+        console.error(`❌ Error processing match ${matchId}:`, error.message);
+        // Continue with next match instead of stopping
+        processedCount++;
+        continue;
+      }
     }
 
-    summarizeTeamStatsByDay(matchSummaries);
+    console.log(`\n📊 Collection Summary:`);
+    console.log(`   • Total matches processed: ${processedCount}`);
+    console.log(`   • Matches within 30 days: ${matchesInRange}`);
+    console.log(`   • Date range: ${matchSummaries.length > 0 ? 
+      `${new Date(matchSummaries[matchSummaries.length - 1].date).toISOString().split('T')[0]} to ${new Date(matchSummaries[0].date).toISOString().split('T')[0]}` : 
+      'No matches found'}`);
 
-    // ✅ Save to local file
-    const fs = require('fs');
-    fs.writeFileSync('data.json', JSON.stringify(matchSummaries, null, 2));
-    console.log('📁 Saved match summaries to data.json');
+    if (matchSummaries.length > 0) {
+      console.log(`\n📈 Generating daily summaries...`);
+      summarizeTeamStatsByDay(matchSummaries);
+
+      // ✅ Save to local file with timestamp
+      const fs = require('fs');
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('T')[0];
+      
+      // Save main data file
+      fs.writeFileSync('data.json', JSON.stringify(matchSummaries, null, 2));
+      
+      // Save backup with timestamp
+      fs.writeFileSync(`data_backup_${timestamp}.json`, JSON.stringify(matchSummaries, null, 2));
+      
+      console.log(`\n💾 Files saved:`);
+      console.log(`   • data.json (${matchSummaries.length} matches)`);
+      console.log(`   • data_backup_${timestamp}.json (backup)`);
+      
+      // Generate summary statistics
+      const uniqueDays = [...new Set(matchSummaries.map(m => m.date.split('T')[0]))];
+      const totalKills = matchSummaries.reduce((sum, match) => 
+        sum + match.team.reduce((teamSum, player) => teamSum + (player.kills || 0), 0), 0);
+      const totalDamage = matchSummaries.reduce((sum, match) => 
+        sum + match.team.reduce((teamSum, player) => teamSum + (player.damage || 0), 0), 0);
+      
+      console.log(`\n🎯 30-Day Performance Summary:`);
+      console.log(`   • Days with matches: ${uniqueDays.length}`);
+      console.log(`   • Total team kills: ${totalKills}`);
+      console.log(`   • Total team damage: ${Math.round(totalDamage).toLocaleString()}`);
+      console.log(`   • Average matches per day: ${(matchSummaries.length / uniqueDays.length).toFixed(1)}`);
+      
+    } else {
+      console.log(`\n⚠️ No matches found within the last 30 days`);
+    }
+    
   } catch (error) {
-    console.error('Error:', error.response?.data || error.message);
+    console.error('\n💥 Fatal Error:', error.response?.data || error.message);
+    if (error.response?.status === 429) {
+      console.error('🚫 Rate limit exceeded. Please wait a few minutes before trying again.');
+    } else if (error.response?.status === 401) {
+      console.error('🔑 Authentication failed. Please check your API key.');
+    }
   }
 })();
