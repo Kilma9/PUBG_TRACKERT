@@ -20,9 +20,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          # Remove cache to avoid lock file conflicts
           
       - name: 🔧 Install dependencies
-        run: npm install
+        run: |
+          echo "📦 Installing dependencies..."
+          # Clear npm cache to avoid conflicts
+          npm cache clean --force
+          # Install dependencies and update lock file
+          npm install
+          echo "✅ Dependencies installed successfully"
         
       - name: 📁 Build and prepare files for webzdarma.cz
         run: |
