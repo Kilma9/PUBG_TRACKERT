@@ -296,6 +296,7 @@
         <option value="Mar-0">Mar-0</option>
         <option value="Hyottokko">Hyottokko</option>
         <option value="Baron_Frajeris">Baron_Frajeris</option>
+        <option value="codufus">codufus</option>
       </select>
       
       <label><strong>Special Sections:</strong></label>
@@ -303,6 +304,7 @@
         <option value="">Choose section...</option>
         <option value="memes">🤡 Meme Dashboard</option>
         <option value="records">🏆 Team Records</option>
+        <option value="changelog">📋 Changelog</option>
       </select>
     </div>
   </div>
@@ -341,6 +343,13 @@
     <div class="section-header">🏆 Team Records & Achievements</div>
     <div class="section-content">
       <div id="recordsDetails"></div>
+    </div>
+  </div>
+
+  <div id="changelogContent" class="content-section hidden">
+    <div class="section-header">📋 Changelog</div>
+    <div class="section-content">
+      <div id="changelogDetails"></div>
     </div>
   </div>
 
@@ -1032,6 +1041,7 @@
         document.getElementById('bioContent').classList.add('hidden');
         document.getElementById('memeContent').classList.add('hidden');
         document.getElementById('recordsContent').classList.add('hidden');
+        document.getElementById('changelogContent').classList.add('hidden');
         
         populateMatchDropdown(selectedDay);
         showDaySummary(selectedDay);
@@ -1076,6 +1086,7 @@
         document.getElementById('bioContent').classList.add('hidden');
         document.getElementById('memeContent').classList.add('hidden');
         document.getElementById('recordsContent').classList.add('hidden');
+        document.getElementById('changelogContent').classList.add('hidden');
         
         const teamComposition = document.getElementById('teamCompositionSelect').value;
         const dayMatches = getFilteredMatches(selectedDay, teamComposition);
@@ -1154,6 +1165,7 @@
       // Hide all special sections first
       document.getElementById('memeContent').classList.add('hidden');
       document.getElementById('recordsContent').classList.add('hidden');
+      document.getElementById('changelogContent').classList.add('hidden');
       
       if (selectedSection === 'memes') {
         // Hide main dashboard when showing special sections
@@ -1167,6 +1179,14 @@
         // Hide main dashboard when showing special sections
         toggleMainDashboard(true);
         showTeamRecords();
+        
+        // Reset bio dropdown
+        document.getElementById('bioSelect').value = '';
+        document.getElementById('bioContent').classList.add('hidden');
+      } else if (selectedSection === 'changelog') {
+        // Hide main dashboard when showing special sections
+        toggleMainDashboard(true);
+        showChangelog();
         
         // Reset bio dropdown
         document.getElementById('bioSelect').value = '';
@@ -1204,6 +1224,11 @@
           description: 'The legendary hoarder who carries zero ammo and no heals, but somehow has 200 mortar shells! 💣🎒 "Need ammo?" - "Sorry, only explosives!"',
           favoriteGun: 'Mortars',
           funnyNote: 'Explosive logistics expert'
+        },
+        'codufus': {
+          description: 'Bad mother father from the beautiful island of Corsica! 🏝️😎 Feels right at home on Paramo map - another volcanic island where he can spray enemies among familiar terrain and architecture!',
+          favoriteGun: 'AUG',
+          funnyNote: 'Volcanic island warrior'
         }
       };
 
@@ -1352,6 +1377,49 @@
       
       document.getElementById('recordsDetails').innerHTML = recordsHtml;
       document.getElementById('recordsContent').classList.remove('hidden');
+    }
+
+    // Function to show changelog
+    function showChangelog() {
+      const changelogHtml = `
+        <div style="max-width: 800px; margin: 0 auto;">
+          <div style="background: #f8f9fa; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+            <h3 style="color: #333; margin-top: 0;">📋 PUBG Tracker Development History</h3>
+            <p style="color: #666; margin-bottom: 0;">Track the evolution of your favorite PUBG performance dashboard!</p>
+          </div>
+          
+          <div style="border-left: 4px solid #28a745; padding-left: 20px; margin-bottom: 30px;">
+            <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h4 style="color: #28a745; margin: 0;">Version 1.0 🎉</h4>
+                <span style="background: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">18.10.2025</span>
+              </div>
+              <ul style="margin: 10px 0; color: #333;">
+                <li><strong>Initial Release:</strong> Complete PUBG performance tracking dashboard</li>
+                <li><strong>Core Features:</strong> Daily summaries, match details, weapon analytics</li>
+                <li><strong>Team System:</strong> Composition filtering and player statistics</li>
+                <li><strong>Player BIOs:</strong> Humorous player profiles with favorite weapons</li>
+                <li><strong>Special Sections:</strong> Meme dashboard and team records</li>
+                <li><strong>Automation:</strong> Scheduled data collection via GitHub Actions</li>
+                <li><strong>Deployment:</strong> Automated CI/CD pipeline to webzdarma.cz hosting</li>
+                <li><strong>Cache Management:</strong> Smart data refresh and sync tracking</li>
+              </ul>
+              <div style="background: #f8f9fa; border-radius: 4px; padding: 10px; margin-top: 15px;">
+                <small style="color: #666;">
+                  <strong>Technical Stack:</strong> HTML5, JavaScript ES6, Chart.js, Node.js, PUBG API, GitHub Actions
+                </small>
+              </div>
+            </div>
+          </div>
+          
+          <div style="text-align: center; color: #666; font-style: italic;">
+            <small>🚀 More updates coming soon! Stay tuned for new features and improvements.</small>
+          </div>
+        </div>
+      `;
+      
+      document.getElementById('changelogDetails').innerHTML = changelogHtml;
+      document.getElementById('changelogContent').classList.remove('hidden');
     }
 
     // Function to calculate meme statistics
