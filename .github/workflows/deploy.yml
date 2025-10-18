@@ -96,7 +96,7 @@ jobs:
           **/.env
           **/PUBG.JS
           
-    - name: 📤 Alternative: Deploy via SFTP
+    - name: 📤 Alternative Deploy via SFTP
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       if: false  # Set to true if you prefer SFTP over FTP
       with:
