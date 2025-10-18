@@ -1,4 +1,4 @@
-name: Deploy Static Site
+name: Deploy to Webzdarma.cz Hosting
 
 on:
   push:
@@ -6,60 +6,128 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-static:
+  deploy-to-webzdarma:
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: http://kilma-pubg.wz.cz:8080/
     
     steps:
-    - name: 🚚 Checkout
-      uses: actions/checkout@v4
-      
-    - name: 📦 Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
+      - name: 🚚 Checkout
+        uses: actions/checkout@v4
         
-    - name: 🔧 Install dependencies
-      run: npm install
-      
-    - name: 📁 Build static files
-      run: |
-        # Create static build directory
-        mkdir -p static-build
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: 🔧 Install dependencies
+        run: npm install
         
-        # Copy main files
-        cp index.html static-build/
-        cp data.json static-build/ 2>/dev/null || echo '[]' > static-build/data.json
-        
-        # Copy public directory if exists
-        if [ -d "public" ]; then
-          cp -r public static-build/
-        fi
-        
-        # Create a simple web server info (optional)
-        cat > static-build/info.txt << EOF
-        PUBG Tracker - Static Deployment
-        Built on: $(date)
-        Commit: ${{ github.sha }}
-        Branch: ${{ github.ref_name }}
-        EOF
-        
-    - name: 🌐 Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./static-build
-        
-    - name: 📤 Deploy to Production FTP (Main Branch Only)
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      if: github.ref == 'refs/heads/main'
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}  
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./static-build/
-        server-dir: ${{ secrets.FTP_SERVER_DIR }}
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
+      - name: 📁 Build and prepare files for webzdarma.cz
+        run: |
+          echo "🏗️ Building PUBG Tracker for kilma-pubg.wz.cz:8080"
+          
+          # Create deployment directory
+          mkdir -p deploy
+          
+          # Copy main application files
+          cp index.html deploy/
+          cp data.json deploy/ 2>/dev/null || echo '[]' > deploy/data.json
+          
+          # Copy public directory if exists
+          if [ -d "public" ]; then
+            cp -r public deploy/
+            echo "📂 Copied public directory"
+          fi
+          
+          # Copy server files (in case webzdarma supports Node.js)
+          cp server.js deploy/
+          cp package.json deploy/
+          cp package-lock.json deploy/
+          
+          # Create .htaccess for Apache/webzdarma.cz
+          cat > deploy/.htaccess << 'EOF'
+          # PUBG Tracker - Webzdarma.cz Configuration
+          DirectoryIndex index.html
+          
+          # Enable rewrite engine
+          RewriteEngine On
+          
+          # Handle SPA routing
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule ^(.*)$ index.html [QSA,L]
+          
+          # Security headers
+          <IfModule mod_headers.c>
+              Header always set X-Frame-Options DENY
+              Header always set X-Content-Type-Options nosniff
+          </IfModule>
+          
+          # Cache optimization
+          <IfModule mod_expires.c>
+              ExpiresActive On
+              ExpiresByType text/css "access plus 1 month"
+              ExpiresByType application/javascript "access plus 1 month"
+              ExpiresByType application/json "access plus 1 day"
+          </IfModule>
+          
+          # Compress files for better performance
+          <IfModule mod_deflate.c>
+              AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+          </IfModule>
+          EOF
+          
+          # Create deployment info
+          cat > deploy/deployment-info.txt << EOF
+          PUBG Tracker - Webzdarma.cz Deployment
+          =====================================
+          Target URL: http://kilma-pubg.wz.cz:8080/
+          Deployed: $(date)
+          Commit: ${{ github.sha }}
+          Branch: ${{ github.ref_name }}
+          
+          Files deployed:
+          - index.html (Main dashboard)
+          - data.json (Match data)
+          - server.js (Express server - if supported)
+          - package.json (Dependencies)
+          - .htaccess (Apache configuration)
+          EOF
+          
+          echo "📋 Files prepared for deployment:"
+          ls -la deploy/
+          
+      - name: 📤 Deploy to Webzdarma.cz via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.WEBZDARMA_FTP_SERVER }}
+          username: ${{ secrets.WEBZDARMA_FTP_USERNAME }}  
+          password: ${{ secrets.WEBZDARMA_FTP_PASSWORD }}
+          local-dir: ./deploy/
+          server-dir: ${{ secrets.WEBZDARMA_FTP_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.env
+            **/PUBG.JS
+            
+      - name: ✅ Deployment Success
+        if: success()
+        run: |
+          echo "🎉 PUBG Tracker successfully deployed!"
+          echo "🌐 Live URL: http://kilma-pubg.wz.cz:8080/"
+          echo "📁 Deployed to webzdarma.cz hosting"
+          echo "⏰ Deployment completed at: $(date)"
+          
+      - name: ❌ Deployment Failed
+        if: failure()
+        run: |
+          echo "💥 Deployment to webzdarma.cz failed!"
+          echo "🔍 Check the following:"
+          echo "   - FTP credentials in GitHub Secrets"
+          echo "   - FTP server connectivity" 
+          echo "   - Directory permissions on webzdarma.cz"
+          echo "   - Server directory path configuration"
