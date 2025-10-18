@@ -352,7 +352,9 @@
     }
 
     // Load and process data
-    fetch('/data.json')
+    // Add cache-busting parameter to force fresh data loading
+    const timestamp = new Date().getTime();
+    fetch(`/data.json?v=${timestamp}`)
       .then(res => res.json())
       .then(data => {
         matchData = data;
