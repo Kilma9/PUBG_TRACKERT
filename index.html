@@ -258,6 +258,18 @@
     <p><small id="lastUpdated">Loading sync information...</small></p>
   </div>
   
+  <div id="knownBugs" class="content-section" style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="section-header" style="color: #856404; font-size: 14px; margin-bottom: 5px;">⚠️ Known Issues</div>
+    <div style="font-size: 12px; color: #856404;">
+      <ul style="margin: 5px 0; padding-left: 20px;">
+        <li><strong>Weapon Damage:</strong> Includes damage to wildlife (bears) and self/team damage from grenades/vehicles</li>
+        <li><strong>Team Damage:</strong> Friendly fire and environmental damage is counted in statistics</li>
+        <li><strong>Data Sync:</strong> Cache issues may show outdated match data - use hard refresh (Ctrl+Shift+R)</li>
+      </ul>
+      <small style="font-style: italic;">These will be addressed in future updates</small>
+    </div>
+  </div>
+  
   <div class="controls">
     <div class="dropdown-container">
       <label><strong>Select Day:</strong></label>
@@ -1011,6 +1023,16 @@
       console.log('Day selected:', selectedDay);
       
       if (selectedDay) {
+        // Show main dashboard when day is selected
+        toggleMainDashboard(false);
+        
+        // Reset bio and special dropdowns
+        document.getElementById('bioSelect').value = '';
+        document.getElementById('specialSelect').value = '';
+        document.getElementById('bioContent').classList.add('hidden');
+        document.getElementById('memeContent').classList.add('hidden');
+        document.getElementById('recordsContent').classList.add('hidden');
+        
         populateMatchDropdown(selectedDay);
         showDaySummary(selectedDay);
         // Don't hide matchContent, just reset the match dropdown
@@ -1045,6 +1067,16 @@
       console.log('Match selected:', matchIndex, 'for day:', selectedDay);
       
       if (!isNaN(matchIndex) && selectedDay) {
+        // Ensure main dashboard is visible when match is selected
+        toggleMainDashboard(false);
+        
+        // Reset bio and special dropdowns
+        document.getElementById('bioSelect').value = '';
+        document.getElementById('specialSelect').value = '';
+        document.getElementById('bioContent').classList.add('hidden');
+        document.getElementById('memeContent').classList.add('hidden');
+        document.getElementById('recordsContent').classList.add('hidden');
+        
         const teamComposition = document.getElementById('teamCompositionSelect').value;
         const dayMatches = getFilteredMatches(selectedDay, teamComposition);
         showMatchDetails(dayMatches, matchIndex);
@@ -1071,6 +1103,26 @@
       }
     });
 
+    // Function to hide/show main dashboard sections
+    function toggleMainDashboard(hide = false) {
+      const mainSections = ['dayContent', 'matchContent'];
+      const knownBugs = document.getElementById('knownBugs');
+      
+      if (hide) {
+        // Hide main sections when Bio/Special is active
+        mainSections.forEach(sectionId => {
+          document.getElementById(sectionId).classList.add('hidden');
+        });
+        if (knownBugs) knownBugs.style.display = 'none';
+      } else {
+        // Show main sections when returning to normal mode
+        mainSections.forEach(sectionId => {
+          document.getElementById(sectionId).classList.remove('hidden');
+        });
+        if (knownBugs) knownBugs.style.display = 'block';
+      }
+    }
+
     // BIO dropdown event listener
     document.getElementById('bioSelect').addEventListener('change', function() {
       const selectedPlayer = this.value;
@@ -1078,8 +1130,17 @@
       console.log('Player BIO selected:', selectedPlayer);
       
       if (selectedPlayer) {
+        // Hide main dashboard when showing bio
+        toggleMainDashboard(true);
         showPlayerBio(selectedPlayer);
+        
+        // Reset other dropdowns
+        document.getElementById('specialSelect').value = '';
+        document.getElementById('memeContent').classList.add('hidden');
+        document.getElementById('recordsContent').classList.add('hidden');
       } else {
+        // Show main dashboard when no bio selected
+        toggleMainDashboard(false);
         document.getElementById('bioContent').classList.add('hidden');
       }
     });
@@ -1095,9 +1156,24 @@
       document.getElementById('recordsContent').classList.add('hidden');
       
       if (selectedSection === 'memes') {
+        // Hide main dashboard when showing special sections
+        toggleMainDashboard(true);
         showMemesDashboard();
+        
+        // Reset bio dropdown
+        document.getElementById('bioSelect').value = '';
+        document.getElementById('bioContent').classList.add('hidden');
       } else if (selectedSection === 'records') {
+        // Hide main dashboard when showing special sections
+        toggleMainDashboard(true);
         showTeamRecords();
+        
+        // Reset bio dropdown
+        document.getElementById('bioSelect').value = '';
+        document.getElementById('bioContent').classList.add('hidden');
+      } else {
+        // Show main dashboard when no special section selected
+        toggleMainDashboard(false);
       }
     });
 
