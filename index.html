@@ -144,6 +144,39 @@
       border-radius: 8px;
       padding: 10px;
     }
+
+    .player-bio {
+      text-align: center;
+    }
+
+    .player-bio h2 {
+      color: #667eea;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .bio-content {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      border-left: 4px solid #667eea;
+    }
+
+    .bio-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+      margin: 0;
+      font-style: italic;
+    }
+
+    .bio-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -163,6 +196,16 @@
       <select id="matchSelect" disabled>
         <option value="">Choose a match...</option>
       </select>
+      
+      <label><strong>Player BIO:</strong></label>
+      <select id="bioSelect">
+        <option value="">Choose a player...</option>
+        <option value="Kilma9">Kilma9</option>
+        <option value="Veru_13">Veru_13</option>
+        <option value="Mar-0">Mar-0</option>
+        <option value="Hyottokko">Hyottokko</option>
+        <option value="Baron_Frajeris">Baron_Frajeris</option>
+      </select>
     </div>
   </div>
   
@@ -179,6 +222,13 @@
     <div class="section-content">
       <div id="matchSummary"></div>
       <div id="matchCharts"></div>
+    </div>
+  </div>
+
+  <div id="bioContent" class="content-section hidden">
+    <div class="section-header">Player Biography</div>
+    <div class="section-content">
+      <div id="bioDetails"></div>
     </div>
   </div>
 
@@ -787,6 +837,52 @@
         );
       }
     });
+
+    // BIO dropdown event listener
+    document.getElementById('bioSelect').addEventListener('change', function() {
+      const selectedPlayer = this.value;
+      
+      console.log('Player BIO selected:', selectedPlayer);
+      
+      if (selectedPlayer) {
+        showPlayerBio(selectedPlayer);
+      } else {
+        document.getElementById('bioContent').classList.add('hidden');
+      }
+    });
+
+    // Function to show player bio
+    function showPlayerBio(playerName) {
+      const bioData = {
+        'Kilma9': 'Team leader and tactical mastermind - excels at long-range engagements and strategic positioning.',
+        'Veru_13': 'Aggressive assault specialist - known for fearless close-quarters combat and high kill counts.',
+        'Mar-0': 'Support player extraordinaire - master of healing, revives, and keeping the team alive.',
+        'Hyottokko': 'Silent sniper and reconnaissance expert - deadly accurate from impossible distances.',
+        'Baron_Frajeris': 'Vehicle specialist and mobility expert - gets the team out of trouble with style.'
+      };
+
+      const bioHtml = `
+        <div class="player-bio">
+          <h2>🎮 ${playerName}</h2>
+          <div class="bio-content">
+            <p>${bioData[playerName] || 'Mysterious player with unknown specialties - data classified.'}</p>
+          </div>
+          <div class="bio-stats">
+            <div class="stat-card">
+              <div class="stat-title">Status</div>
+              <div class="stat-value">Active Player</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-title">Role</div>
+              <div class="stat-value">Squad Member</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('bioDetails').innerHTML = bioHtml;
+      document.getElementById('bioContent').classList.remove('hidden');
+    }
   </script>
 </body>
 </html>
