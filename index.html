@@ -177,6 +177,78 @@
       gap: 15px;
       margin-top: 20px;
     }
+
+    .meme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .meme-card {
+      background: linear-gradient(135deg, #ff6b6b, #feca57);
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .meme-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .meme-value {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .meme-description {
+      font-size: 14px;
+      opacity: 0.9;
+      font-style: italic;
+    }
+
+    .records-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .record-card {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .record-trophy {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .record-title {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .record-holder {
+      font-size: 20px;
+      margin: 10px 0;
+      color: #ffd700;
+    }
+
+    .record-value {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
   </style>
 </head>
 <body>
@@ -206,6 +278,13 @@
         <option value="Hyottokko">Hyottokko</option>
         <option value="Baron_Frajeris">Baron_Frajeris</option>
       </select>
+      
+      <label><strong>Special Sections:</strong></label>
+      <select id="specialSelect">
+        <option value="">Choose section...</option>
+        <option value="memes">🤡 Meme Dashboard</option>
+        <option value="records">🏆 Team Records</option>
+      </select>
     </div>
   </div>
   
@@ -229,6 +308,20 @@
     <div class="section-header">Player Biography</div>
     <div class="section-content">
       <div id="bioDetails"></div>
+    </div>
+  </div>
+
+  <div id="memeContent" class="content-section hidden">
+    <div class="section-header">🤡 Meme Dashboard - Hall of Fame</div>
+    <div class="section-content">
+      <div id="memeDetails"></div>
+    </div>
+  </div>
+
+  <div id="recordsContent" class="content-section hidden">
+    <div class="section-header">🏆 Team Records & Achievements</div>
+    <div class="section-content">
+      <div id="recordsDetails"></div>
     </div>
   </div>
 
@@ -851,6 +944,23 @@
       }
     });
 
+    // Special sections dropdown event listener
+    document.getElementById('specialSelect').addEventListener('change', function() {
+      const selectedSection = this.value;
+      
+      console.log('Special section selected:', selectedSection);
+      
+      // Hide all special sections first
+      document.getElementById('memeContent').classList.add('hidden');
+      document.getElementById('recordsContent').classList.add('hidden');
+      
+      if (selectedSection === 'memes') {
+        showMemesDashboard();
+      } else if (selectedSection === 'records') {
+        showTeamRecords();
+      }
+    });
+
     // Function to show player bio
     function showPlayerBio(playerName) {
       const bioData = {
@@ -912,6 +1022,212 @@
 
       document.getElementById('bioDetails').innerHTML = bioHtml;
       document.getElementById('bioContent').classList.remove('hidden');
+    }
+
+    // Function to show Memes Dashboard
+    function showMemesDashboard() {
+      const memeStats = calculateMemeStats();
+      
+      const memeHtml = `
+        <div class="meme-grid">
+          <div class="meme-card">
+            <div class="meme-title">🚗💥 Vehicle Destruction Expert</div>
+            <div class="meme-value">Kilma9</div>
+            <div class="meme-description">"I swear the glider controls are different!"</div>
+          </div>
+          
+          <div class="meme-card">
+            <div class="meme-title">🎒 Explosive Hoarder Award</div>
+            <div class="meme-value">Baron_Frajeris</div>
+            <div class="meme-description">"Need ammo? I have mortars!"</div>
+          </div>
+          
+          <div class="meme-card">
+            <div class="meme-title">🪂 Hot Zone Magnet</div>
+            <div class="meme-value">Mar-0</div>
+            <div class="meme-description">"This looks like a quiet spot..." *5 teams land*</div>
+          </div>
+          
+          <div class="meme-card">
+            <div class="meme-title">⚡ Sleeping Deity</div>
+            <div class="meme-value">Hyottokko</div>
+            <div class="meme-description">"Gods don't need aim assist"</div>
+          </div>
+          
+          <div class="meme-card">
+            <div class="meme-title">👑 Range Empress</div>
+            <div class="meme-value">Veru_13</div>
+            <div class="meme-description">"Distance is just a number"</div>
+          </div>
+          
+          <div class="meme-card">
+            <div class="meme-title">💊 Most Likely to Need Revive</div>
+            <div class="meme-value">${memeStats.mostRevives}</div>
+            <div class="meme-description">"I was checking the map!"</div>
+          </div>
+          
+          <div class="meme-card">
+            <div class="meme-title">🔥 Damage Dealer Supreme</div>
+            <div class="meme-value">${memeStats.topDamager}</div>
+            <div class="meme-description">Making enemies regret their life choices</div>
+          </div>
+          
+          <div class="meme-card">
+            <div class="meme-title">🎯 Kill Stealer Extraordinaire</div>
+            <div class="meme-value">${memeStats.killStealer}</div>
+            <div class="meme-description">"I was helping!"</div>
+          </div>
+        </div>
+      `;
+      
+      document.getElementById('memeDetails').innerHTML = memeHtml;
+      document.getElementById('memeContent').classList.remove('hidden');
+    }
+
+    // Function to show Team Records
+    function showTeamRecords() {
+      const records = calculateTeamRecords();
+      
+      const recordsHtml = `
+        <div class="records-grid">
+          <div class="record-card">
+            <div class="record-trophy">🏆</div>
+            <div class="record-title">Highest Single Match Damage</div>
+            <div class="record-holder">${records.topDamage.player}</div>
+            <div class="record-value">${records.topDamage.value.toLocaleString()}</div>
+          </div>
+          
+          <div class="record-card">
+            <div class="record-trophy">💀</div>
+            <div class="record-title">Most Kills in One Match</div>
+            <div class="record-holder">${records.topKills.player}</div>
+            <div class="record-value">${records.topKills.value}</div>
+          </div>
+          
+          <div class="record-card">
+            <div class="record-trophy">🎯</div>
+            <div class="record-title">Best Team Damage Combined</div>
+            <div class="record-holder">Team Record</div>
+            <div class="record-value">${records.teamDamage.toLocaleString()}</div>
+          </div>
+          
+          <div class="record-card">
+            <div class="record-trophy">💊</div>
+            <div class="record-title">Most Revives in One Match</div>
+            <div class="record-holder">${records.topRevives.player}</div>
+            <div class="record-value">${records.topRevives.value}</div>
+          </div>
+          
+          <div class="record-card">
+            <div class="record-trophy">🏥</div>
+            <div class="record-title">Healing Champion</div>
+            <div class="record-holder">${records.topHeals.player}</div>
+            <div class="record-value">${records.topHeals.value}</div>
+          </div>
+          
+          <div class="record-card">
+            <div class="record-trophy">🚀</div>
+            <div class="record-title">Boost Master</div>
+            <div class="record-holder">${records.topBoosts.player}</div>
+            <div class="record-value">${records.topBoosts.value}</div>
+          </div>
+        </div>
+      `;
+      
+      document.getElementById('recordsDetails').innerHTML = recordsHtml;
+      document.getElementById('recordsContent').classList.remove('hidden');
+    }
+
+    // Function to calculate meme statistics
+    function calculateMemeStats() {
+      if (!matchData || matchData.length === 0) {
+        return {
+          mostRevives: 'Unknown',
+          topDamager: 'Unknown',
+          killStealer: 'Unknown'
+        };
+      }
+
+      const playerStats = {};
+      matchData.forEach(match => {
+        match.team.forEach(player => {
+          if (!playerStats[player.name]) {
+            playerStats[player.name] = { 
+              revives: 0, damage: 0, kills: 0, matches: 0 
+            };
+          }
+          playerStats[player.name].revives += player.revives || 0;
+          playerStats[player.name].damage += player.damage || 0;
+          playerStats[player.name].kills += player.kills || 0;
+          playerStats[player.name].matches++;
+        });
+      });
+
+      const mostRevives = Object.entries(playerStats)
+        .sort((a, b) => b[1].revives - a[1].revives)[0]?.[0] || 'Unknown';
+      
+      const topDamager = Object.entries(playerStats)
+        .sort((a, b) => b[1].damage - a[1].damage)[0]?.[0] || 'Unknown';
+      
+      const killStealer = Object.entries(playerStats)
+        .sort((a, b) => {
+          const aRatio = a[1].kills / Math.max(a[1].damage, 1);
+          const bRatio = b[1].kills / Math.max(b[1].damage, 1);
+          return bRatio - aRatio;
+        })[0]?.[0] || 'Unknown';
+
+      return { mostRevives, topDamager, killStealer };
+    }
+
+    // Function to calculate team records
+    function calculateTeamRecords() {
+      if (!matchData || matchData.length === 0) {
+        return {
+          topDamage: { player: 'Unknown', value: 0 },
+          topKills: { player: 'Unknown', value: 0 },
+          teamDamage: 0,
+          topRevives: { player: 'Unknown', value: 0 },
+          topHeals: { player: 'Unknown', value: 0 },
+          topBoosts: { player: 'Unknown', value: 0 }
+        };
+      }
+
+      let topDamage = { player: '', value: 0 };
+      let topKills = { player: '', value: 0 };
+      let teamDamage = 0;
+      let topRevives = { player: '', value: 0 };
+      let topHeals = { player: '', value: 0 };
+      let topBoosts = { player: '', value: 0 };
+
+      matchData.forEach(match => {
+        let matchTeamDamage = 0;
+        match.team.forEach(player => {
+          // Track individual records
+          if (player.damage > topDamage.value) {
+            topDamage = { player: player.name, value: player.damage };
+          }
+          if (player.kills > topKills.value) {
+            topKills = { player: player.name, value: player.kills };
+          }
+          if (player.revives > topRevives.value) {
+            topRevives = { player: player.name, value: player.revives };
+          }
+          if (player.heals > topHeals.value) {
+            topHeals = { player: player.name, value: player.heals };
+          }
+          if (player.boosts > topBoosts.value) {
+            topBoosts = { player: player.name, value: player.boosts };
+          }
+          
+          matchTeamDamage += player.damage || 0;
+        });
+        
+        if (matchTeamDamage > teamDamage) {
+          teamDamage = matchTeamDamage;
+        }
+      });
+
+      return { topDamage, topKills, teamDamage, topRevives, topHeals, topBoosts };
     }
   </script>
 </body>
