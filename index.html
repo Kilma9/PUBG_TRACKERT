@@ -392,6 +392,7 @@
   <script>
     let matchData = [];
     let currentCharts = [];
+    let cachedRecords = null; // Cache for pre-calculated records
 
     // Utility function to clean weapon names
     function cleanWeaponName(weapon) {
@@ -415,6 +416,12 @@
       .then(res => res.json())
       .then(data => {
         matchData = data;
+        
+        // Pre-calculate records automatically on every data load
+        console.log('📊 Pre-calculating team records...');
+        cachedRecords = calculateTeamRecords();
+        console.log('✅ Records calculated and cached');
+        
         populateDayDropdown();
         populateTeamCompositions();
         updateSyncInfo(data);
@@ -427,16 +434,32 @@
     // Update sync information with Prague time
     function updateSyncInfo(data) {
       try {
-        const now = new Date();
-        const pragueTime = new Intl.DateTimeFormat('en-GB', {
-          timeZone: 'Europe/Prague',
-          year: 'numeric',
-          month: 'long', 
-          day: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit'
-        }).format(now);
+        // Find the most recent match to determine when data was last collected
+        let latestMatch = null;
+        let latestTime = 0;
+        
+        data.forEach(match => {
+          const matchTime = new Date(match.date).getTime();
+          if (matchTime > latestTime) {
+            latestTime = matchTime;
+            latestMatch = match;
+          }
+        });
+
+    // Update sync information with Prague time
+    async function updateSyncInfo(data) {
+      try {
+        // Try to fetch the actual sync timestamp first
+        let actualSyncTime = null;
+        try {
+          const syncResponse = await fetch(`/last-sync.json?v=${new Date().getTime()}`);
+          if (syncResponse.ok) {
+            const syncData = await syncResponse.json();
+            actualSyncTime = syncData.pragueTime;
+          }
+        } catch (syncError) {
+          console.log('No sync timestamp file found, using fallback');
+        }
 
         // Find the most recent match
         let latestMatch = null;
@@ -450,7 +473,20 @@
           }
         });
 
-        let syncInfo = `Last sync: ${pragueTime} (Prague) - ${data.length} matches`;
+        let syncInfo;
+        if (actualSyncTime) {
+          syncInfo = `Data collected: ${actualSyncTime} (Prague) - ${data.length} matches`;
+        } else {
+          // Fallback: show page load time
+          const pageLoadTime = new Intl.DateTimeFormat('en-GB', {
+            timeZone: 'Europe/Prague',
+            day: 'numeric',
+            month: 'short',
+            hour: '2-digit',
+            minute: '2-digit'
+          }).format(new Date());
+          syncInfo = `Page loaded: ${pageLoadTime} (Prague) - ${data.length} matches`;
+        }
         
         if (latestMatch) {
           const lastMatchPragueTime = new Intl.DateTimeFormat('en-GB', {
@@ -1397,7 +1433,15 @@
 
     // Function to show Team Records
     function showTeamRecords() {
-      const records = calculateTeamRecords();
+      // Use cached records if available, otherwise calculate fresh
+      const records = cachedRecords || calculateTeamRecords();
+      
+      if (!cachedRecords) {
+        console.log('⚠️ No cached records found, calculating fresh records');
+        cachedRecords = records; // Cache for next time
+      } else {
+        console.log('✅ Using pre-calculated cached records');
+      }
       
       const recordsHtml = `
         <div class="records-grid">

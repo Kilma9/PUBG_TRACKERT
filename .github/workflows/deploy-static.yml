@@ -47,6 +47,9 @@ jobs:
           cp data.json deploy/
           echo "✅ data.json copied. Size: $(wc -c < deploy/data.json) bytes"
           
+          # Copy sync timestamp file
+          cp last-sync.json deploy/ 2>/dev/null || echo "No sync timestamp file"
+          
           # Copy deployment timestamp
           cp deployment-timestamp.txt deploy/ 2>/dev/null || echo "No timestamp file"
           

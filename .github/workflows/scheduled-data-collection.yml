@@ -66,6 +66,18 @@ jobs:
         echo "✅ Data collection completed"
         echo "📊 Current data.json size: $(wc -c < data.json 2>/dev/null || echo '0') bytes"
         
+        # Create timestamp file for accurate sync tracking
+        cat > last-sync.json << EOF
+        {
+          "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+          "pragueTime": "$(TZ='Europe/Prague' date '+%Y-%m-%d %H:%M:%S')",
+          "trigger": "${{ github.event_name }}",
+          "workflow": "scheduled-data-collection"
+        }
+        EOF
+        
+        echo "🕒 Created timestamp file: last-sync.json"
+        
     - name: 📈 Generate collection report
       run: |
         echo "## 🎮 PUBG Data Collection Report" > collection_report.md
@@ -97,6 +109,7 @@ jobs:
         
         # Add all data files
         git add data*.json
+        git add last-sync.json 2>/dev/null || echo "No sync timestamp to add"
         git add collection_report.md 2>/dev/null || echo "No collection report to add"
         
         # Check if there are changes to commit
