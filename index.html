@@ -913,9 +913,14 @@
       if (!isNaN(matchIndex) && selectedDay) {
         const dayMatches = matchData.filter(match => match.date.split('T')[0] === selectedDay);
         showMatchDetails(dayMatches, matchIndex);
-        // Keep dayContent visible - don't hide it
+        // Hide day summary when match is selected
+        document.getElementById('dayContent').classList.add('hidden');
       } else {
         document.getElementById('matchContent').classList.add('hidden');
+        // Show day summary again when no match is selected
+        if (selectedDay) {
+          document.getElementById('dayContent').classList.remove('hidden');
+        }
         // Re-destroy only match charts, keep day charts
         const matchCharts = currentCharts.filter(chart => 
           chart.canvas && chart.canvas.id && chart.canvas.id.includes('match')
