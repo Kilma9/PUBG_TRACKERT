@@ -255,7 +255,7 @@
   <div class="header">
     <h1>🎮 PUBG Performance Dashboard</h1>
     <p>Track your team's performance with detailed statistics and weapon analytics</p>
-    <p><small>Last updated: October 18, 2025 - Fresh data with 52 matches!</small></p>
+    <p><small id="lastUpdated">Loading sync information...</small></p>
   </div>
   
   <div class="controls">
@@ -360,10 +360,59 @@
         matchData = data;
         populateDayDropdown();
         populateTeamCompositions();
+        updateSyncInfo(data);
       })
       .catch(error => {
         console.error('Error loading data:', error);
+        document.getElementById('lastUpdated').textContent = 'Error loading data - check connection';
       });
+
+    // Update sync information with Prague time
+    function updateSyncInfo(data) {
+      try {
+        const now = new Date();
+        const pragueTime = new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Europe/Prague',
+          year: 'numeric',
+          month: 'long', 
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        }).format(now);
+
+        // Find the most recent match
+        let latestMatch = null;
+        let latestTime = 0;
+        
+        data.forEach(match => {
+          const matchTime = new Date(match.date).getTime();
+          if (matchTime > latestTime) {
+            latestTime = matchTime;
+            latestMatch = match;
+          }
+        });
+
+        let syncInfo = `Last sync: ${pragueTime} (Prague) - ${data.length} matches`;
+        
+        if (latestMatch) {
+          const lastMatchPragueTime = new Intl.DateTimeFormat('en-GB', {
+            timeZone: 'Europe/Prague',
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          }).format(new Date(latestMatch.date));
+          
+          syncInfo += ` | Latest match: ${lastMatchPragueTime} (Prague)`;
+        }
+
+        document.getElementById('lastUpdated').textContent = syncInfo;
+      } catch (error) {
+        console.error('Error updating sync info:', error);
+        document.getElementById('lastUpdated').textContent = `Fresh data with ${data.length} matches!`;
+      }
+    }
 
     function populateDayDropdown() {
       const daySelect = document.getElementById('daySelect');
