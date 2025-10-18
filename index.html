@@ -249,6 +249,43 @@
       font-weight: bold;
       margin: 5px 0;
     }
+
+    .record-date {
+      font-size: 12px;
+      color: #e0e0e0;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    .special-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+
+    .special-btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .special-btn:hover {
+      background: linear-gradient(135deg, #764ba2, #667eea);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .special-btn:active, .special-btn.active {
+      background: linear-gradient(135deg, #5a67d8, #553c9a);
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -300,12 +337,11 @@
       </select>
       
       <label><strong>Special Sections:</strong></label>
-      <select id="specialSelect">
-        <option value="">Choose section...</option>
-        <option value="memes">🤡 Meme Dashboard</option>
-        <option value="records">🏆 Team Records</option>
-        <option value="changelog">📋 Changelog</option>
-      </select>
+      <div class="special-buttons">
+        <button id="memesBtn" class="special-btn">🤡 Meme Dashboard</button>
+        <button id="recordsBtn" class="special-btn">🏆 Team Records</button>
+        <button id="changelogBtn" class="special-btn">📋 Changelog</button>
+      </div>
     </div>
   </div>
   
@@ -1037,7 +1073,7 @@
         
         // Reset bio and special dropdowns
         document.getElementById('bioSelect').value = '';
-        document.getElementById('specialSelect').value = '';
+        resetSpecialButtons();
         document.getElementById('bioContent').classList.add('hidden');
         document.getElementById('memeContent').classList.add('hidden');
         document.getElementById('recordsContent').classList.add('hidden');
@@ -1082,7 +1118,7 @@
         
         // Reset bio and special dropdowns
         document.getElementById('bioSelect').value = '';
-        document.getElementById('specialSelect').value = '';
+        resetSpecialButtons();
         document.getElementById('bioContent').classList.add('hidden');
         document.getElementById('memeContent').classList.add('hidden');
         document.getElementById('recordsContent').classList.add('hidden');
@@ -1146,9 +1182,10 @@
         showPlayerBio(selectedPlayer);
         
         // Reset other dropdowns
-        document.getElementById('specialSelect').value = '';
+        resetSpecialButtons();
         document.getElementById('memeContent').classList.add('hidden');
         document.getElementById('recordsContent').classList.add('hidden');
+        document.getElementById('changelogContent').classList.add('hidden');
       } else {
         // Show main dashboard when no bio selected
         toggleMainDashboard(false);
@@ -1156,45 +1193,78 @@
       }
     });
 
-    // Special sections dropdown event listener
-    document.getElementById('specialSelect').addEventListener('change', function() {
-      const selectedSection = this.value;
-      
-      console.log('Special section selected:', selectedSection);
-      
-      // Hide all special sections first
+    // Helper function to reset special button states
+    function resetSpecialButtons() {
+      document.querySelectorAll('.special-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+    }
+
+    // Helper function to hide all special sections
+    function hideAllSpecialSections() {
       document.getElementById('memeContent').classList.add('hidden');
       document.getElementById('recordsContent').classList.add('hidden');
       document.getElementById('changelogContent').classList.add('hidden');
+    }
+
+    // Memes button event listener
+    document.getElementById('memesBtn').addEventListener('click', function() {
+      console.log('Memes button clicked');
       
-      if (selectedSection === 'memes') {
-        // Hide main dashboard when showing special sections
-        toggleMainDashboard(true);
-        showMemesDashboard();
-        
-        // Reset bio dropdown
-        document.getElementById('bioSelect').value = '';
-        document.getElementById('bioContent').classList.add('hidden');
-      } else if (selectedSection === 'records') {
-        // Hide main dashboard when showing special sections
-        toggleMainDashboard(true);
-        showTeamRecords();
-        
-        // Reset bio dropdown
-        document.getElementById('bioSelect').value = '';
-        document.getElementById('bioContent').classList.add('hidden');
-      } else if (selectedSection === 'changelog') {
-        // Hide main dashboard when showing special sections
-        toggleMainDashboard(true);
-        showChangelog();
-        
-        // Reset bio dropdown
-        document.getElementById('bioSelect').value = '';
-        document.getElementById('bioContent').classList.add('hidden');
-      } else {
-        // Show main dashboard when no special section selected
-        toggleMainDashboard(false);
-      }
+      // Reset other buttons and hide all sections first
+      resetSpecialButtons();
+      hideAllSpecialSections();
+      
+      // Set this button as active
+      this.classList.add('active');
+      
+      // Hide main dashboard when showing special sections
+      toggleMainDashboard(true);
+      showMemesDashboard();
+      
+      // Reset bio dropdown
+      document.getElementById('bioSelect').value = '';
+      document.getElementById('bioContent').classList.add('hidden');
+    });
+
+    // Records button event listener
+    document.getElementById('recordsBtn').addEventListener('click', function() {
+      console.log('Records button clicked');
+      
+      // Reset other buttons and hide all sections first
+      resetSpecialButtons();
+      hideAllSpecialSections();
+      
+      // Set this button as active
+      this.classList.add('active');
+      
+      // Hide main dashboard when showing special sections
+      toggleMainDashboard(true);
+      showTeamRecords();
+      
+      // Reset bio dropdown
+      document.getElementById('bioSelect').value = '';
+      document.getElementById('bioContent').classList.add('hidden');
+    });
+
+    // Changelog button event listener
+    document.getElementById('changelogBtn').addEventListener('click', function() {
+      console.log('Changelog button clicked');
+      
+      // Reset other buttons and hide all sections first
+      resetSpecialButtons();
+      hideAllSpecialSections();
+      
+      // Set this button as active
+      this.classList.add('active');
+      
+      // Hide main dashboard when showing special sections
+      toggleMainDashboard(true);
+      showChangelog();
+      
+      // Reset bio dropdown
+      document.getElementById('bioSelect').value = '';
+      document.getElementById('bioContent').classList.add('hidden');
     });
 
     // Function to show player bio
@@ -1336,6 +1406,7 @@
             <div class="record-title">Highest Single Match Damage</div>
             <div class="record-holder">${records.topDamage.player}</div>
             <div class="record-value">${records.topDamage.value.toLocaleString()}</div>
+            <div class="record-date">📅 ${records.topDamage.date}</div>
           </div>
           
           <div class="record-card">
@@ -1343,13 +1414,15 @@
             <div class="record-title">Most Kills in One Match</div>
             <div class="record-holder">${records.topKills.player}</div>
             <div class="record-value">${records.topKills.value}</div>
+            <div class="record-date">📅 ${records.topKills.date}</div>
           </div>
           
           <div class="record-card">
             <div class="record-trophy">🎯</div>
             <div class="record-title">Best Team Damage Combined</div>
             <div class="record-holder">Team Record</div>
-            <div class="record-value">${records.teamDamage.toLocaleString()}</div>
+            <div class="record-value">${records.teamDamage.value.toLocaleString()}</div>
+            <div class="record-date">📅 ${records.teamDamage.date}</div>
           </div>
           
           <div class="record-card">
@@ -1357,6 +1430,7 @@
             <div class="record-title">Most Revives in One Match</div>
             <div class="record-holder">${records.topRevives.player}</div>
             <div class="record-value">${records.topRevives.value}</div>
+            <div class="record-date">📅 ${records.topRevives.date}</div>
           </div>
           
           <div class="record-card">
@@ -1364,6 +1438,7 @@
             <div class="record-title">Healing Champion</div>
             <div class="record-holder">${records.topHeals.player}</div>
             <div class="record-value">${records.topHeals.value}</div>
+            <div class="record-date">📅 ${records.topHeals.date}</div>
           </div>
           
           <div class="record-card">
@@ -1371,6 +1446,7 @@
             <div class="record-title">Boost Master</div>
             <div class="record-holder">${records.topBoosts.player}</div>
             <div class="record-value">${records.topBoosts.value}</div>
+            <div class="record-date">📅 ${records.topBoosts.date}</div>
           </div>
         </div>
       `;
@@ -1467,47 +1543,55 @@
     function calculateTeamRecords() {
       if (!matchData || matchData.length === 0) {
         return {
-          topDamage: { player: 'Unknown', value: 0 },
-          topKills: { player: 'Unknown', value: 0 },
-          teamDamage: 0,
-          topRevives: { player: 'Unknown', value: 0 },
-          topHeals: { player: 'Unknown', value: 0 },
-          topBoosts: { player: 'Unknown', value: 0 }
+          topDamage: { player: 'Unknown', value: 0, date: 'N/A' },
+          topKills: { player: 'Unknown', value: 0, date: 'N/A' },
+          teamDamage: { value: 0, date: 'N/A' },
+          topRevives: { player: 'Unknown', value: 0, date: 'N/A' },
+          topHeals: { player: 'Unknown', value: 0, date: 'N/A' },
+          topBoosts: { player: 'Unknown', value: 0, date: 'N/A' }
         };
       }
 
-      let topDamage = { player: '', value: 0 };
-      let topKills = { player: '', value: 0 };
-      let teamDamage = 0;
-      let topRevives = { player: '', value: 0 };
-      let topHeals = { player: '', value: 0 };
-      let topBoosts = { player: '', value: 0 };
+      let topDamage = { player: '', value: 0, date: '' };
+      let topKills = { player: '', value: 0, date: '' };
+      let teamDamage = { value: 0, date: '' };
+      let topRevives = { player: '', value: 0, date: '' };
+      let topHeals = { player: '', value: 0, date: '' };
+      let topBoosts = { player: '', value: 0, date: '' };
 
       matchData.forEach(match => {
         let matchTeamDamage = 0;
+        const matchDate = new Date(match.date).toLocaleDateString('en-GB', {
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+        
         match.team.forEach(player => {
-          // Track individual records
+          // Track individual records with dates
           if (player.damage > topDamage.value) {
-            topDamage = { player: player.name, value: player.damage };
+            topDamage = { player: player.name, value: player.damage, date: matchDate };
           }
           if (player.kills > topKills.value) {
-            topKills = { player: player.name, value: player.kills };
+            topKills = { player: player.name, value: player.kills, date: matchDate };
           }
           if (player.revives > topRevives.value) {
-            topRevives = { player: player.name, value: player.revives };
+            topRevives = { player: player.name, value: player.revives, date: matchDate };
           }
           if (player.heals > topHeals.value) {
-            topHeals = { player: player.name, value: player.heals };
+            topHeals = { player: player.name, value: player.heals, date: matchDate };
           }
           if (player.boosts > topBoosts.value) {
-            topBoosts = { player: player.name, value: player.boosts };
+            topBoosts = { player: player.name, value: player.boosts, date: matchDate };
           }
           
           matchTeamDamage += player.damage || 0;
         });
         
-        if (matchTeamDamage > teamDamage) {
-          teamDamage = matchTeamDamage;
+        if (matchTeamDamage > teamDamage.value) {
+          teamDamage = { value: matchTeamDamage, date: matchDate };
         }
       });
 
