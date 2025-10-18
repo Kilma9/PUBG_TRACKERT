@@ -1,0 +1,4 @@
+Data deployment forced at: October 18, 2025 - 14:00 UTC
+This file ensures data.json gets redeployed with fresh October 18th matches.
+Total matches in current data.json: 52
+Latest match timestamp: 2025-10-18T11:50:00Z
