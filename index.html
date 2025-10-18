@@ -414,7 +414,7 @@
     const timestamp = new Date().getTime();
     fetch(`/data.json?v=${timestamp}`)
       .then(res => res.json())
-      .then(data => {
+      .then(async (data) => {
         matchData = data;
         
         // Pre-calculate records automatically on every data load
@@ -424,27 +424,12 @@
         
         populateDayDropdown();
         populateTeamCompositions();
-        updateSyncInfo(data);
+        await updateSyncInfo(data);
       })
       .catch(error => {
         console.error('Error loading data:', error);
         document.getElementById('lastUpdated').textContent = 'Error loading data - check connection';
       });
-
-    // Update sync information with Prague time
-    function updateSyncInfo(data) {
-      try {
-        // Find the most recent match to determine when data was last collected
-        let latestMatch = null;
-        let latestTime = 0;
-        
-        data.forEach(match => {
-          const matchTime = new Date(match.date).getTime();
-          if (matchTime > latestTime) {
-            latestTime = matchTime;
-            latestMatch = match;
-          }
-        });
 
     // Update sync information with Prague time
     async function updateSyncInfo(data) {
