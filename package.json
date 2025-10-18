@@ -1,13 +1,14 @@
 {
   "name": "pubg_tracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "PUBG Performance Dashboard with automated data collection",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "collect": "node PUBG.JS"
   },
-  "keywords": [],
+  "keywords": ["pubg", "tracker", "dashboard"],
   "author": "",
   "license": "ISC",
   "dependencies": {
