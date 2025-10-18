@@ -33,7 +33,10 @@ jobs:
         cache: 'npm'
         
     - name: 🔧 Install dependencies
-      run: npm install
+      run: |
+        echo "📦 Installing Node.js dependencies..."
+        npm install
+        echo "✅ Dependencies installed successfully"
       
     - name: 🎮 Run PUBG data collection
       env:
