@@ -1,0 +1,133 @@
+name: Deploy PUBG Tracker to Web Hosting
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+      
+    - name: 📂 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: 📦 Install dependencies
+      run: npm ci
+      
+    - name: 🔧 Build project (if needed)
+      run: |
+        echo "No build step required for this project"
+        # If you add a build process later, add it here
+        # npm run build
+        
+    - name: 🧪 Run tests (optional)
+      run: |
+        echo "No tests configured yet"
+        # npm test
+        
+    - name: 📁 Prepare deployment files
+      run: |
+        # Create deployment directory
+        mkdir -p deploy
+        
+        # Copy frontend files
+        cp index.html deploy/
+        cp -r public deploy/ 2>/dev/null || echo "No public directory"
+        
+        # Copy backend files (for Node.js hosting)
+        cp server.js deploy/
+        cp package.json deploy/
+        cp package-lock.json deploy/
+        
+        # Copy data files
+        cp data.json deploy/ 2>/dev/null || echo "No data.json yet"
+        
+        # Copy README
+        cp README.md deploy/
+        
+        # Create .htaccess for Apache (if needed)
+        echo "DirectoryIndex index.html" > deploy/.htaccess
+        echo "RewriteEngine On" >> deploy/.htaccess
+        echo "RewriteCond %{REQUEST_FILENAME} !-f" >> deploy/.htaccess
+        echo "RewriteCond %{REQUEST_FILENAME} !-d" >> deploy/.htaccess
+        echo "RewriteRule ^(.*)$ index.html [QSA,L]" >> deploy/.htaccess
+        
+    - name: 📤 Deploy to Production FTP (Main Branch Only)
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      if: github.ref == 'refs/heads/main'
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./deploy/
+        server-dir: ${{ secrets.FTP_SERVER_DIR }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.env
+          **/PUBG.JS
+          
+    - name: 📤 Deploy to Dev FTP (Dev Branch Only) 
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      if: github.ref == 'refs/heads/dev'
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./deploy/
+        server-dir: ${{ secrets.FTP_DEV_SERVER_DIR }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.env
+          **/PUBG.JS
+          
+    - name: 📤 Alternative: Deploy via SFTP
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      if: false  # Set to true if you prefer SFTP over FTP
+      with:
+        server: ${{ secrets.SFTP_SERVER }}
+        username: ${{ secrets.SFTP_USERNAME }}
+        password: ${{ secrets.SFTP_PASSWORD }}
+        local_path: './deploy/*'
+        remote_path: ${{ secrets.SFTP_SERVER_DIR }}
+        sftpArgs: '-o ConnectTimeout=5'
+        
+    - name: 🔔 Notify production deployment success
+      if: success() && github.ref == 'refs/heads/main'
+      run: |
+        echo "✅ Production deployment successful!"
+        echo "🌐 Your PUBG Tracker is now live at your production web hosting"
+        
+    - name: 🔔 Notify dev deployment success
+      if: success() && github.ref == 'refs/heads/dev'
+      run: |
+        echo "✅ Development deployment successful!"
+        echo "🧪 Your PUBG Tracker dev version is updated"
+        
+    - name: 🔔 Notify build success (no deployment)
+      if: success() && github.event_name == 'pull_request'
+      run: |
+        echo "✅ Build and tests successful!"
+        echo "📋 Pull request is ready for review"
+        
+    - name: 🚨 Notify deployment failure  
+      if: failure()
+      run: |
+        echo "❌ Deployment failed!"
+        echo "Branch: ${{ github.ref_name }}"
+        echo "Please check the logs and your hosting credentials"
