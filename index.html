@@ -264,6 +264,12 @@
         <option value="">Choose a day...</option>
       </select>
       
+      <label><strong>Team Filter:</strong></label>
+      <select id="teamCompositionSelect">
+        <option value="all">All Compositions</option>
+        <option value="">Loading...</option>
+      </select>
+      
       <label><strong>Select Match:</strong></label>
       <select id="matchSelect" disabled>
         <option value="">Choose a match...</option>
@@ -350,6 +356,7 @@
       .then(data => {
         matchData = data;
         populateDayDropdown();
+        populateTeamCompositions();
       })
       .catch(error => {
         console.error('Error loading data:', error);
@@ -371,23 +378,85 @@
       const matchSelect = document.getElementById('matchSelect');
       matchSelect.innerHTML = '<option value="">Choose a match...</option>';
       
-      const dayMatches = matchData.filter(match => match.date.split('T')[0] === selectedDay);
+      const teamComposition = document.getElementById('teamCompositionSelect').value;
+      const dayMatches = getFilteredMatches(selectedDay, teamComposition);
+      
       dayMatches.forEach((match, index) => {
         const option = document.createElement('option');
         option.value = index.toString();
         const time = new Date(match.date).toLocaleTimeString();
-        option.textContent = `Match ${index + 1} (${time})`;
+        const teamNames = match.team.map(p => p.name).join(', ');
+        option.textContent = `Match ${index + 1} (${time}) - ${teamNames}`;
         matchSelect.appendChild(option);
       });
       
       matchSelect.disabled = dayMatches.length === 0;
     }
 
+    // Get unique team compositions
+    function getTeamCompositions() {
+      const compositions = new Set();
+      matchData.forEach(match => {
+        const teamNames = match.team.map(player => player.name).sort().join(', ');
+        compositions.add(teamNames);
+      });
+      return Array.from(compositions).sort();
+    }
+
+    // Populate team composition dropdown
+    function populateTeamCompositions() {
+      const teamSelect = document.getElementById('teamCompositionSelect');
+      teamSelect.innerHTML = '<option value="all">All Compositions</option>';
+      
+      const compositions = getTeamCompositions();
+      compositions.forEach(composition => {
+        const option = document.createElement('option');
+        option.value = composition;
+        option.textContent = `${composition} (${getCompositionMatchCount(composition)} matches)`;
+        teamSelect.appendChild(option);
+      });
+    }
+
+    // Get match count for a specific team composition
+    function getCompositionMatchCount(composition) {
+      return matchData.filter(match => {
+        const teamNames = match.team.map(player => player.name).sort().join(', ');
+        return teamNames === composition;
+      }).length;
+    }
+
+    // Filter matches by team composition
+    function getFilteredMatches(day, teamComposition = 'all') {
+      let filtered = matchData.filter(match => match.date.split('T')[0] === day);
+      
+      if (teamComposition !== 'all') {
+        filtered = filtered.filter(match => {
+          const teamNames = match.team.map(player => player.name).sort().join(', ');
+          return teamNames === teamComposition;
+        });
+      }
+      
+      return filtered;
+    }
+
     function showDaySummary(day) {
       destroyCharts();
-      const dayMatches = matchData.filter(match => match.date.split('T')[0] === day);
+      const teamComposition = document.getElementById('teamCompositionSelect').value;
+      const dayMatches = getFilteredMatches(day, teamComposition);
       
       console.log('Processing day:', day, 'with', dayMatches.length, 'matches');
+      console.log('Team composition filter:', teamComposition);
+      
+      if (dayMatches.length === 0) {
+        document.getElementById('daySummary').innerHTML = `
+          <div class="stat-card">
+            <div class="stat-title">No Matches Found</div>
+            <div class="stat-value">No matches for selected team composition on ${day}</div>
+          </div>
+        `;
+        document.getElementById('dayContent').classList.remove('hidden');
+        return;
+      }
       
       // Calculate daily aggregated stats
       const playerStats = {};
@@ -904,6 +973,19 @@
       }
     });
 
+    // Team composition filter event listener
+    document.getElementById('teamCompositionSelect').addEventListener('change', function() {
+      const selectedDay = document.getElementById('daySelect').value;
+      
+      if (selectedDay) {
+        populateMatchDropdown(selectedDay);
+        showDaySummary(selectedDay);
+        // Reset match selection when composition changes
+        document.getElementById('matchSelect').value = '';
+        document.getElementById('matchContent').classList.add('hidden');
+      }
+    });
+
     document.getElementById('matchSelect').addEventListener('change', function() {
       const selectedDay = document.getElementById('daySelect').value;
       const matchIndex = parseInt(this.value);
@@ -911,7 +993,8 @@
       console.log('Match selected:', matchIndex, 'for day:', selectedDay);
       
       if (!isNaN(matchIndex) && selectedDay) {
-        const dayMatches = matchData.filter(match => match.date.split('T')[0] === selectedDay);
+        const teamComposition = document.getElementById('teamCompositionSelect').value;
+        const dayMatches = getFilteredMatches(selectedDay, teamComposition);
         showMatchDetails(dayMatches, matchIndex);
         // Hide day summary when match is selected
         document.getElementById('dayContent').classList.add('hidden');

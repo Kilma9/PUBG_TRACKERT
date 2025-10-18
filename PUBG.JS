@@ -1,8 +1,16 @@
 const axios = require('axios');
 
-const API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiYjE4YmYzMC04YzA4LTAxM2UtZGUwMy0yNmQxYTJiMzY4ZGYiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNzYwNTQxNzY4LCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InptcmRpX2FwaV9wdWJnIn0.VxVk7vF2bR25_Z0YZa-QB8v0mEOmwDi0Lreu20d5rE0'; // Replace with your actual API key
-const PLAYER_NAME = 'Kilma9';
-const PLATFORM = 'steam';
+// Use environment variables for cloud execution, fallback to hardcoded values for local development
+const API_KEY = process.env.PUBG_API_KEY || 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiYjE4YmYzMC04YzA4LTAxM2UtZGUwMy0yNmQxYTJiMzY4ZGYiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNzYwNTQxNzY4LCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InptcmRpX2FwaV9wdWJnIn0.VxVk7vF2bR25_Z0YZa-QB8v0mEOmwDi0Lreu20d5rE0';
+const PLAYER_NAME = process.env.PLAYER_NAME || 'Kilma9';
+const PLATFORM = process.env.PLATFORM || 'steam';
+
+// Check if running in cloud environment
+const IS_CLOUD = process.env.GITHUB_ACTIONS === 'true';
+
+console.log(`🔧 Environment: ${IS_CLOUD ? 'GitHub Actions (Cloud)' : 'Local Development'}`);
+console.log(`🎮 Player: ${PLAYER_NAME}`);
+console.log(`🖥️ Platform: ${PLATFORM}`);
 
 const headers = {
   Authorization: `Bearer ${API_KEY}`,

@@ -1,0 +1,137 @@
+name: Scheduled PUBG Data Collection
+
+on:
+  # Run multiple times every evening (Prague time)
+  schedule:
+    - cron: '0 18 * * *'  # 20:00 Prague time (8 PM)
+    - cron: '0 19 * * *'  # 21:00 Prague time (9 PM)
+    - cron: '0 20 * * *'  # 22:00 Prague time (10 PM)
+  
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      days_to_collect:
+        description: 'Number of days to collect (default: 1)'
+        required: false
+        default: '1'
+        type: string
+
+jobs:
+  collect-pubg-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🚚 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: 📦 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: 🔧 Install dependencies
+      run: npm install
+      
+    - name: 🎮 Run PUBG data collection
+      env:
+        PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
+        PLAYER_NAME: 'Kilma9'
+        PLATFORM: 'steam'
+      run: |
+        echo "🎯 Starting PUBG data collection..."
+        echo "⏰ Current time: $(date)"
+        echo "📅 Collecting data for the last ${{ github.event.inputs.days_to_collect || '1' }} day(s)"
+        
+        # Create backup of existing data
+        if [ -f "data.json" ]; then
+          cp data.json "data_backup_$(date +%Y-%m-%d_%H-%M-%S).json"
+          echo "💾 Created backup of existing data"
+        fi
+        
+        # Run the PUBG data collection script
+        node PUBG.JS
+        
+        echo "✅ Data collection completed"
+        echo "📊 Current data.json size: $(wc -c < data.json 2>/dev/null || echo '0') bytes"
+        
+    - name: 📈 Generate collection report
+      run: |
+        echo "## 🎮 PUBG Data Collection Report" > collection_report.md
+        echo "**Collection Date:** $(date)" >> collection_report.md
+        echo "**Trigger:** ${{ github.event_name }}" >> collection_report.md
+        
+        if [ -f "data.json" ]; then
+          MATCHES_COUNT=$(jq length data.json 2>/dev/null || echo "0")
+          echo "**Total Matches:** $MATCHES_COUNT" >> collection_report.md
+          
+          # Get latest match date
+          LATEST_MATCH=$(jq -r '.[0].date // "No matches"' data.json 2>/dev/null)
+          echo "**Latest Match:** $LATEST_MATCH" >> collection_report.md
+          
+          # Get unique players
+          PLAYERS=$(jq -r '.[].team[].name' data.json 2>/dev/null | sort | uniq | tr '\n' ', ' | sed 's/,$//')
+          echo "**Players Found:** $PLAYERS" >> collection_report.md
+        else
+          echo "**Status:** ❌ No data.json file found" >> collection_report.md
+        fi
+        
+        cat collection_report.md
+        
+    - name: 💾 Commit and push updated data
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "PUBG Data Collector"
+        
+        # Add all data files
+        git add data*.json
+        git add collection_report.md
+        
+        # Check if there are changes to commit
+        if git diff --staged --quiet; then
+          echo "📋 No new data to commit"
+        else
+          # Commit with detailed message
+          COMMIT_MSG="🎮 Automated PUBG data collection - $(date +%Y-%m-%d)"
+          git commit -m "$COMMIT_MSG"
+          git push
+          echo "✅ Data committed and pushed to repository"
+        fi
+        
+    - name: 🚀 Deploy to webzdarma.cz (if data updated)
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      if: success()
+      with:
+        server: ${{ secrets.WEBZDARMA_FTP_SERVER }}
+        username: ${{ secrets.WEBZDARMA_FTP_USERNAME }}
+        password: ${{ secrets.WEBZDARMA_FTP_PASSWORD }}
+        local-dir: ./
+        server-dir: ${{ secrets.WEBZDARMA_FTP_DIR }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.env
+          **/PUBG.JS
+          **/.github/**
+          **/collection_report.md
+          **/data_backup_*.json
+          
+    - name: 📧 Notify on failure
+      if: failure()
+      run: |
+        echo "❌ PUBG Data collection failed!"
+        echo "🔍 Check the following:"
+        echo "   - PUBG API key validity"
+        echo "   - Network connectivity"
+        echo "   - PUBG API rate limits"
+        echo "   - Player name and platform correctness"
+        
+    - name: 🎉 Success notification
+      if: success()
+      run: |
+        echo "✅ PUBG Data collection completed successfully!"
+        echo "🌐 Dashboard updated at: http://kilma-pubg.wz.cz:8080/"
+        echo "📊 Fresh stats available for analysis"
