@@ -186,53 +186,49 @@ class DiscordNotifier {
             minute: '2-digit'
         });
 
-        return {
-            embeds: [{
-                title: `🎮 New PUBG Match Detected!`,
-                color: color,
-                thumbnail: {
-                    url: 'https://cdn.discordapp.com/attachments/placeholder/pubg-logo.png'
+        // Create a cleaner, more reliable embed format
+        const embed = {
+            title: `🎮 New PUBG Match - ${matchStats.player.name}`,
+            description: `${placementEmoji} **Placement:** #${matchStats.player.placement} | ${killsEmoji} **Kills:** ${matchStats.player.kills}`,
+            color: color,
+            fields: [
+                {
+                    name: '�️ Map',
+                    value: matchStats.mapName || 'Unknown',
+                    inline: true
                 },
-                fields: [
-                    {
-                        name: '👤 Player',
-                        value: matchStats.player.name,
-                        inline: true
-                    },
-                    {
-                        name: `${placementEmoji} Placement`,
-                        value: `#${matchStats.player.placement}/100`,
-                        inline: true
-                    },
-                    {
-                        name: `${killsEmoji} Performance`,
-                        value: `${matchStats.player.kills} kills\n${matchStats.player.damage} damage`,
-                        inline: true
-                    },
-                    {
-                        name: '🗺️ Match Info',
-                        value: `**Map:** ${matchStats.mapName}\n**Mode:** ${matchStats.gameMode}\n**Survival:** ${matchStats.player.survival}min`,
-                        inline: true
-                    },
-                    {
-                        name: '⏰ Match Time',
-                        value: `${matchTime} (Prague)`,
-                        inline: true
-                    },
-                    {
-                        name: '🤝 Squad',
-                        value: matchStats.player.teammates.length > 0 
-                            ? `${matchStats.player.name}, ${matchStats.player.teammates.join(', ')}`
-                            : 'Solo match',
-                        inline: false
-                    }
-                ],
-                footer: {
-                    text: `Match ID: ${matchStats.matchId.substring(0, 8)}... | PUBG Tracker`
+                {
+                    name: '🎯 Damage',
+                    value: `${matchStats.player.damage}`,
+                    inline: true
                 },
-                timestamp: matchStats.createdAt
-            }]
+                {
+                    name: '⏱️ Survival',
+                    value: `${matchStats.player.survival}min`,
+                    inline: true
+                },
+                {
+                    name: '� Match Time',
+                    value: matchTime,
+                    inline: false
+                }
+            ],
+            footer: {
+                text: `PUBG Tracker | Match ${matchStats.matchId.substring(0, 8)}`
+            },
+            timestamp: matchStats.createdAt
         };
+
+        // Add squad info if available
+        if (matchStats.player.teammates && matchStats.player.teammates.length > 0) {
+            embed.fields.push({
+                name: '🤝 Squad',
+                value: `${matchStats.player.name}, ${matchStats.player.teammates.join(', ')}`,
+                inline: false
+            });
+        }
+
+        return { embeds: [embed] };
     }
 
     getPlacementEmoji(placement) {
@@ -258,10 +254,11 @@ class DiscordNotifier {
             const response = await axios.post(CONFIG.DISCORD_WEBHOOK_URL, embed, {
                 headers: {
                     'Content-Type': 'application/json'
-                }
+                },
+                timeout: 10000 // 10 second timeout
             });
 
-            if (response.status === 204) {
+            if (response.status === 204 || response.status === 200) {
                 console.log('✅ Discord notification sent successfully');
                 this.lastNotifiedState.totalNotificationsSent++;
                 return true;
@@ -270,6 +267,10 @@ class DiscordNotifier {
             }
         } catch (error) {
             console.error('❌ Failed to send Discord notification:', error.message);
+            if (error.response) {
+                console.error('Response status:', error.response.status);
+                console.error('Response data:', JSON.stringify(error.response.data, null, 2));
+            }
             return false;
         }
     }

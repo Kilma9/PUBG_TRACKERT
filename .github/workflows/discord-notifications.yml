@@ -11,6 +11,10 @@ on:
         required: false
         default: 'false'
 
+permissions:
+  contents: write
+  actions: read
+
 jobs:
   check-and-notify:
     runs-on: ubuntu-latest
@@ -46,12 +50,17 @@ jobs:
     - name: 💾 Commit notification state
       run: |
         # Configure git
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         
-        # Add notification state files
-        git add last-notified-match.json 2>/dev/null || echo "No notification state to add"
-        git add discord-notification-log.md 2>/dev/null || echo "No log file to add"
+        # Add notification state files if they exist
+        if [ -f "last-notified-match.json" ]; then
+          git add last-notified-match.json
+        fi
+        
+        if [ -f "discord-notification-log.md" ]; then
+          git add discord-notification-log.md  
+        fi
         
         # Check if there are changes to commit
         if git diff --staged --quiet; then
@@ -59,7 +68,7 @@ jobs:
         else
           echo "💾 Committing notification state updates..."
           git commit -m "🔔 Update Discord notification state - $(date '+%Y-%m-%d %H:%M UTC')"
-          git push
+          git push origin main
           echo "✅ Notification state committed successfully"
         fi
         
