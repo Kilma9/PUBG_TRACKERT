@@ -1,0 +1,78 @@
+name: Discord Match Notifications
+
+on:
+  schedule:
+    # Run every 10 minutes
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+    inputs:
+      force_check:
+        description: 'Force check for new matches'
+        required: false
+        default: 'false'
+
+jobs:
+  check-and-notify:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🚚 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 📦 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: 🔧 Install dependencies
+      run: |
+        echo "📦 Installing axios for API calls..."
+        npm install axios
+        echo "✅ Dependencies installed"
+        
+    - name: 🔍 Check for new matches and notify Discord
+      env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
+      run: |
+        echo "🎮 Starting Discord notification check..."
+        echo "⏰ Check time: $(date)"
+        
+        # Run the Discord notification script
+        node discord-notifier.js
+        
+        echo "✅ Discord notification check completed"
+        
+    - name: 💾 Commit notification state
+      run: |
+        # Configure git
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # Add notification state files
+        git add last-notified-match.json 2>/dev/null || echo "No notification state to add"
+        git add discord-notification-log.md 2>/dev/null || echo "No log file to add"
+        
+        # Check if there are changes to commit
+        if git diff --staged --quiet; then
+          echo "📋 No notification state changes to commit"
+        else
+          echo "💾 Committing notification state updates..."
+          git commit -m "🔔 Update Discord notification state - $(date '+%Y-%m-%d %H:%M UTC')"
+          git push
+          echo "✅ Notification state committed successfully"
+        fi
+        
+    - name: ✅ Notification Summary
+      if: success()
+      run: |
+        echo "🎉 Discord notification check completed successfully!"
+        echo "🕒 Next check in 10 minutes"
+        echo "📊 Check logs in discord-notification-log.md"
+        
+    - name: ❌ Notification Failed
+      if: failure()
+      run: |
+        echo "💥 Discord notification check failed!"
+        echo "🔍 Check the workflow logs for details"
+        echo "🔄 Will retry in 10 minutes"
