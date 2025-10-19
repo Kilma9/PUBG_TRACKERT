@@ -1,5 +1,98 @@
 [
   {
+    "date": "2025-10-18T14:15:08Z",
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 1,
+        "damage": 253.28415,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Pickup Truck_ A_esports": 26.546213150024414,
+          "Weap Kar98k": 82.5266227722168,
+          "Player Male_ A": 0,
+          "Weap A C E32": 135.0199966430664,
+          "B P_ Fire Effect Controller": 8,
+          "B P_ Molotov Fire Debuff": 10,
+          "Proj Grenade": 17.73752212524414
+        },
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 72,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1563,
+        "walkDistance": 4100.5454,
+        "rideDistance": 4106.9355,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 3,
+        "damage": 245.04047,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Pickup Truck_ A_esports": 26.546213150024414,
+          "Weap Mini14": 144.0604705810547,
+          "Player Male_ A": 0,
+          "Weap A U G": 100.98000144958496
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 52,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 9,
+        "heals": 6,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1564,
+        "walkDistance": 4313.461,
+        "rideDistance": 2706.652,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 232.77998,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Pickup Truck_ A_esports": 26.546213150024414,
+          "B P_ Pillar_ Car": 10.905470848083496,
+          "Weap M24": 142.75,
+          "Player Male_ A": 0.12875977158546448,
+          "Weap Beryl M762": 90.02999877929688
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 18,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 6,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1564,
+        "walkDistance": 4320.633,
+        "rideDistance": 3316.455,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-10-18T14:04:03Z",
     "team": [
       {
