@@ -1,12 +1,4 @@
 ---
-**Total notifications sent:** 1
-**Last check:** 2025-10-19T15:45:49.699Z
-
-
-**2025-10-19T15:48:15.715Z** - 🔍 Discord notification check started
-**2025-10-19T15:48:16.677Z** - 🔔 Notification sent: 1 kills, #2 placement on Kiki_Main
-
----
 **Total notifications sent:** 2
 **Last check:** 2025-10-19T15:48:16.679Z
 
@@ -105,3 +97,11 @@
 ---
 **Total notifications sent:** 2
 **Last check:** 2025-10-19T18:38:11.021Z
+
+
+**2025-10-19T18:48:31.520Z** - 🔍 Discord notification check started
+**2025-10-19T18:48:31.975Z** - 📭 No new matches to notify about
+
+---
+**Total notifications sent:** 2
+**Last check:** 2025-10-19T18:48:31.977Z
