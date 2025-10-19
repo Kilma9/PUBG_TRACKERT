@@ -128,6 +128,8 @@ class DiscordNotifier {
     // Process match data to extract player stats
     processMatchData(matchData) {
         const participants = matchData.included.filter(item => item.type === 'participant');
+        const rosters = matchData.included.filter(item => item.type === 'roster');
+        
         const playerStats = participants.find(p => 
             p.attributes.stats.name === CONFIG.PLAYER_NAME
         );
@@ -139,11 +141,23 @@ class DiscordNotifier {
 
         const stats = playerStats.attributes.stats;
         const matchInfo = matchData.data.attributes;
+        const playerId = playerStats.id;
 
-        // Find teammates
-        const teammates = participants
-            .filter(p => p.attributes.stats.teamId === stats.teamId && p.attributes.stats.name !== CONFIG.PLAYER_NAME)
-            .map(p => p.attributes.stats.name);
+        // Find the correct roster (team) that contains our player
+        const playerRoster = rosters.find(roster =>
+            roster.relationships.participants.data.some(p => p.id === playerId)
+        );
+
+        let teammates = [];
+        if (playerRoster) {
+            // Get all participants in the same roster, excluding our player
+            teammates = playerRoster.relationships.participants.data
+                .map(participantRef => {
+                    const participant = participants.find(p => p.id === participantRef.id);
+                    return participant ? participant.attributes.stats.name : null;
+                })
+                .filter(name => name && name !== CONFIG.PLAYER_NAME);
+        }
 
         return {
             matchId: matchData.data.id,
