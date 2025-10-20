@@ -1,13 +1,5 @@
 ---
 **Total notifications sent:** 2
-**Last check:** 2025-10-20T09:53:15.205Z
-
-
-**2025-10-20T10:00:37.354Z** - 🔍 Discord notification check started
-**2025-10-20T10:00:37.899Z** - 📭 No new matches to notify about
-
----
-**Total notifications sent:** 2
 **Last check:** 2025-10-20T10:00:37.900Z
 
 
@@ -105,3 +97,11 @@
 ---
 **Total notifications sent:** 2
 **Last check:** 2025-10-20T13:37:02.511Z
+
+
+**2025-10-20T13:49:20.518Z** - 🔍 Discord notification check started
+**2025-10-20T13:49:20.976Z** - 📭 No new matches to notify about
+
+---
+**Total notifications sent:** 2
+**Last check:** 2025-10-20T13:49:20.977Z
