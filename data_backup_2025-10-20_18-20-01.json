@@ -1,58 +1,5 @@
 [
   {
-    "date": "2025-10-20T17:00:10Z",
-    "team": [
-      {
-        "name": "Mar-0",
-        "kills": 0,
-        "damage": 0,
-        "headshots": 0,
-        "weapons": {},
-        "weaponDamage": {},
-        "weaponStats": {
-          "totalShots": 0,
-          "totalHits": 0,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 0,
-        "boosts": 0,
-        "heals": 0,
-        "revives": 0,
-        "teamKills": 0,
-        "timeSurvived": 482,
-        "walkDistance": 343.42966,
-        "rideDistance": 0,
-        "swimDistance": 0
-      },
-      {
-        "name": "Kilma9",
-        "kills": 0,
-        "damage": 0,
-        "headshots": 0,
-        "weapons": {},
-        "weaponDamage": {
-          "Player Male_ A": 0
-        },
-        "weaponStats": {
-          "totalShots": 0,
-          "totalHits": 112,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 0,
-        "boosts": 0,
-        "heals": 0,
-        "revives": 0,
-        "teamKills": 0,
-        "timeSurvived": 450,
-        "walkDistance": 697.8634,
-        "rideDistance": 0,
-        "swimDistance": 0
-      }
-    ]
-  },
-  {
     "date": "2025-10-18T14:15:08Z",
     "team": [
       {
