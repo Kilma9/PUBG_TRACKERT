@@ -1,9 +1,8 @@
 name: Discord Match Notifications
 
 on:
-schedule:
-    Run every 10 minutes
-- cron: '*/10 * * * *'
+  schedule:
+    - cron: '*/10 * * * *'
   workflow_dispatch:
     inputs:
       force_check:
@@ -14,6 +13,7 @@ schedule:
 permissions:
   contents: write
   actions: read
+
 
 jobs:
   check-and-notify:
