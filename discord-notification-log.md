@@ -1,13 +1,5 @@
 ---
 **Total notifications sent:** 2
-**Last check:** 2025-10-20T12:22:58.923Z
-
-
-**2025-10-20T13:04:11.685Z** - 🔍 Discord notification check started
-**2025-10-20T13:04:12.068Z** - 📭 No new matches to notify about
-
----
-**Total notifications sent:** 2
 **Last check:** 2025-10-20T13:04:12.069Z
 
 
@@ -105,3 +97,11 @@
 ---
 **Total notifications sent:** 2
 **Last check:** 2025-10-20T16:14:10.105Z
+
+
+**2025-10-20T17:28:20.974Z** - 🔍 Discord notification check started
+**2025-10-20T17:28:21.935Z** - 🔔 Notification sent: 0 kills, #23 placement on Baltic_Main
+
+---
+**Total notifications sent:** 3
+**Last check:** 2025-10-20T17:28:21.936Z
