@@ -1,13 +1,5 @@
 ---
 **Total notifications sent:** 2
-**Last check:** 2025-10-20T07:16:51.260Z
-
-
-**2025-10-20T07:32:00.675Z** - 🔍 Discord notification check started
-**2025-10-20T07:32:05.867Z** - 💥 Error: Request failed with status code 404
-
----
-**Total notifications sent:** 2
 **Last check:** 2025-10-20T07:32:05.868Z
 
 
@@ -105,3 +97,11 @@
 ---
 **Total notifications sent:** 2
 **Last check:** 2025-10-20T10:49:17.192Z
+
+
+**2025-10-20T10:56:41.139Z** - 🔍 Discord notification check started
+**2025-10-20T10:56:41.568Z** - 📭 No new matches to notify about
+
+---
+**Total notifications sent:** 2
+**Last check:** 2025-10-20T10:56:41.570Z
