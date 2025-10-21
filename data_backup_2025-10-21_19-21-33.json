@@ -4980,5 +4980,91 @@
         "swimDistance": 0
       }
     ]
+  },
+  {
+    "date": "2025-10-07T17:51:05Z",
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 389.8258,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mk12": 107.67808151245117,
+          "Weap A U G": 282.1477394104004,
+          "Player Male_ A": 0
+        },
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 26,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 5,
+        "heals": 6,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1191,
+        "walkDistance": 2331.5032,
+        "rideDistance": 6075.177,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 2,
+        "damage": 469.57648,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap F N Fal": 177.59999084472656,
+          "Bluezonebomb_ Effect Actor": 61.17647051811218,
+          "Weap H K416": 230.8000030517578
+        },
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 32,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 7,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1191,
+        "walkDistance": 2687.0522,
+        "rideDistance": 6135.364,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 47.360504,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 6.348287105560303,
+          "Weap F N Fal": 21.980504989624023,
+          "Weap Groza": 25.380001068115234
+        },
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 52,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 6,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1191,
+        "walkDistance": 2327.7988,
+        "rideDistance": 6257.084,
+        "swimDistance": 0
+      }
+    ]
   }
 ]
