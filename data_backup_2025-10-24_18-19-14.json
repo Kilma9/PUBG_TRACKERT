@@ -1,268 +1,5 @@
 [
   {
-    "date": "2025-10-24T17:30:42Z",
-    "team": [
-      {
-        "name": "Kilma9",
-        "kills": 1,
-        "damage": 463.28455,
-        "headshots": 0,
-        "weapons": {},
-        "weaponDamage": {
-          "Weap A K47": 30.976238250732422,
-          "Weap Dragunov": 354.30832862854004,
-          "Player Male_ A": 0,
-          "Proj Molotov": 20,
-          "B P_ Fire Effect Controller": 28,
-          "B P_ Molotov Fire Debuff": 30
-        },
-        "weaponStats": {
-          "totalShots": 10,
-          "totalHits": 92,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 1,
-        "boosts": 10,
-        "heals": 6,
-        "revives": 0,
-        "teamKills": 0,
-        "timeSurvived": 1513,
-        "walkDistance": 2831.3213,
-        "rideDistance": 7145.372,
-        "swimDistance": 0
-      },
-      {
-        "name": "codufus",
-        "kills": 0,
-        "damage": 100,
-        "headshots": 0,
-        "weapons": {},
-        "weaponDamage": {
-          "Player Female_ A": 0,
-          "Weap Kar98k": 100
-        },
-        "weaponStats": {
-          "totalShots": 0,
-          "totalHits": 34,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 0,
-        "boosts": 6,
-        "heals": 1,
-        "revives": 0,
-        "teamKills": 0,
-        "timeSurvived": 1403,
-        "walkDistance": 2623.1975,
-        "rideDistance": 6993.416,
-        "swimDistance": 0
-      },
-      {
-        "name": "Mar-0",
-        "kills": 1,
-        "damage": 375.901,
-        "headshots": 1,
-        "weapons": {},
-        "weaponDamage": {
-          "Uaz_ C_01": 14.067593574523926,
-          "Weap H K416": 191.20000076293945,
-          "Weap Mini14": 184.7009677886963
-        },
-        "weaponStats": {
-          "totalShots": 18,
-          "totalHits": 14,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 0,
-        "boosts": 8,
-        "heals": 5,
-        "revives": 3,
-        "teamKills": 0,
-        "timeSurvived": 1543,
-        "walkDistance": 3391.0664,
-        "rideDistance": 5635.683,
-        "swimDistance": 0
-      }
-    ]
-  },
-  {
-    "date": "2025-10-24T17:26:01Z",
-    "team": [
-      {
-        "name": "Kilma9",
-        "kills": 0,
-        "damage": 57.6,
-        "headshots": 0,
-        "weapons": {},
-        "weaponDamage": {
-          "Weap A U G": 57.60000038146973,
-          "Player Male_ A": 0
-        },
-        "weaponStats": {
-          "totalShots": 4,
-          "totalHits": 12,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 0,
-        "boosts": 0,
-        "heals": 0,
-        "revives": 0,
-        "teamKills": 0,
-        "timeSurvived": 139,
-        "walkDistance": 104.10073,
-        "rideDistance": 0,
-        "swimDistance": 0
-      },
-      {
-        "name": "Mar-0",
-        "kills": 0,
-        "damage": 210.08527,
-        "headshots": 0,
-        "weapons": {},
-        "weaponDamage": {
-          "Weap Beryl M762": 52,
-          "Weap Mk12": 131.74505424499512,
-          "Proj Grenade": 26.340200424194336
-        },
-        "weaponStats": {
-          "totalShots": 2,
-          "totalHits": 9,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 1,
-        "boosts": 0,
-        "heals": 0,
-        "revives": 0,
-        "teamKills": 0,
-        "timeSurvived": 163,
-        "walkDistance": 193.84439,
-        "rideDistance": 0,
-        "swimDistance": 0
-      },
-      {
-        "name": "codufus",
-        "kills": 0,
-        "damage": 0,
-        "headshots": 0,
-        "weapons": {},
-        "weaponDamage": {
-          "Player Female_ A": 0
-        },
-        "weaponStats": {
-          "totalShots": 0,
-          "totalHits": 21,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 0,
-        "boosts": 0,
-        "heals": 0,
-        "revives": 0,
-        "teamKills": 0,
-        "timeSurvived": 109,
-        "walkDistance": 25.30386,
-        "rideDistance": 0,
-        "swimDistance": 0
-      }
-    ]
-  },
-  {
-    "date": "2025-10-24T17:15:17Z",
-    "team": [
-      {
-        "name": "Dask_O",
-        "kills": 0,
-        "damage": 0,
-        "headshots": 0,
-        "weapons": {},
-        "weaponDamage": {
-          "Weap A C E32": 53257.900999069214,
-          "Panzer Faust_ S K B D_ Projectile": 5921.7323932647705,
-          "Weap Panzer_ S K B D": 100,
-          "Player Female_ A": 0,
-          "B P_ Fire Effect Controller": 60,
-          "B P_ Molotov Fire Debuff": 144
-        },
-        "weaponStats": {
-          "totalShots": 146,
-          "totalHits": 931,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 146,
-        "boosts": 0,
-        "heals": 0,
-        "revives": 0,
-        "teamKills": 0,
-        "timeSurvived": 489,
-        "walkDistance": 7267.139,
-        "rideDistance": 0,
-        "swimDistance": 0
-      },
-      {
-        "name": "NiDeKaiYang",
-        "kills": 0,
-        "damage": 0,
-        "headshots": 0,
-        "weapons": {},
-        "weaponDamage": {
-          "Player Female_ A": 0
-        },
-        "weaponStats": {
-          "totalShots": 0,
-          "totalHits": 121,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 0,
-        "boosts": 0,
-        "heals": 0,
-        "revives": 0,
-        "teamKills": 0,
-        "timeSurvived": 249,
-        "walkDistance": 3.9006622,
-        "rideDistance": 0,
-        "swimDistance": 0
-      },
-      {
-        "name": "Kilma9",
-        "kills": 0,
-        "damage": 0,
-        "headshots": 0,
-        "weapons": {},
-        "weaponDamage": {
-          "Panzer Faust_ S K B D_ Projectile": 10657.914985656738,
-          "Weap Groza": 49441.697816848755,
-          "Proj Grenade": 3208.2773399353027,
-          "Proj Molotov": 280,
-          "B P_ Fire Effect Controller": 464.3758964538574,
-          "B P_ Molotov Fire Debuff": 416,
-          "B P_ S K B D_ Damage Field Npc Debuff": 225,
-          "Player Male_ A": 0
-        },
-        "weaponStats": {
-          "totalShots": 128,
-          "totalHits": 994,
-          "longestKill": 0,
-          "vehicleDestroys": 0
-        },
-        "assists": 120,
-        "boosts": 0,
-        "heals": 0,
-        "revives": 5,
-        "teamKills": 0,
-        "timeSurvived": 489,
-        "walkDistance": 7202.169,
-        "rideDistance": 0,
-        "swimDistance": 0
-      }
-    ]
-  },
-  {
     "date": "2025-10-23T18:20:02Z",
     "team": [
       {
@@ -4292,6 +4029,267 @@
         "timeSurvived": 1414,
         "walkDistance": 3171.9695,
         "rideDistance": 2559.935,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-10-10T17:31:58Z",
+    "team": [
+      {
+        "name": "Pecasss",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Nagant M1895": 651.2478065490723,
+          "Weap Origin S12": 11982.500957489014,
+          "Weap A U G": 40144,
+          "S L B Zombie_ Grenade": 276.5442371368408
+        },
+        "weaponStats": {
+          "totalShots": 225,
+          "totalHits": 845,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1050,
+        "walkDistance": 2346.5674,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M9": 9038.772725105286,
+          "S L B_ Anti Zombie Molotov": 40,
+          "S L B_ Anti Zombie Fire Effect Controller_ B P": 220,
+          "S L B_ Anti Zombie Fire Debuff": 290,
+          "Weap M249": 14415.600018501282,
+          "Weap Berreta686": 839.8000049591064,
+          "Proj_ S L B_ Grenade": 336.9949645996094,
+          "S L B Zombie_ Grenade": 384.98677825927734,
+          "S L B_ Strong Anti Zombie Molotov": 70,
+          "S L B_ S Anti Zombie Fire Effect Controller_ B P": 1764,
+          "S L B_ Anti Zombie Fire Debuff U P": 1760,
+          "Player Male_ A": 0
+        },
+        "weaponStats": {
+          "totalShots": 154,
+          "totalHits": 1253,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1049,
+        "walkDistance": 2086.8066,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M9": 1739.040693283081,
+          "Weap Berreta686": 6937.04753112793,
+          "Weap Famas G2": 13111.800086975098,
+          "S L B Zombie_ Grenade": 123.4941177368164,
+          "S L B_ Anti Zombie Molotov": 0,
+          "S L B_ Anti Zombie Fire Debuff U P": 120,
+          "S L B_ Anti Zombie Fire Effect Controller_ B P": 96,
+          "S L B_ Anti Zombie Fire Debuff": 10
+        },
+        "weaponStats": {
+          "totalShots": 132,
+          "totalHits": 704,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 10,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1052,
+        "walkDistance": 2434.653,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Qcq8S6bSSf06E",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Desert Eagle": 598.3000011444092,
+          "S L B_weap_ Table Leg": 70,
+          "Weap M249": 26863.200031280518,
+          "S L B Zombie_ Grenade": 1328.6116943359375,
+          "Weap Berreta686": 3297.711569786072,
+          "Weap Saiga12": 2778.079616546631
+        },
+        "weaponStats": {
+          "totalShots": 196,
+          "totalHits": 748,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1046,
+        "walkDistance": 2166.8303,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-10-10T17:03:27Z",
+    "team": [
+      {
+        "name": "RESTSahin",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M9": 271.681095123291,
+          "Weap Mk14": 5043.600025177002,
+          "Weap A U G": 28294,
+          "S L B Zombie_ Grenade": 411.80433654785156,
+          "Weap D P12": 11436.042202949524
+        },
+        "weaponStats": {
+          "totalShots": 198,
+          "totalHits": 1063,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 12,
+        "heals": 3,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1252,
+        "walkDistance": 2723.5571,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "TEIXr",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Berreta686": 2136.5814576148987,
+          "Weap U Z I": 3002.3779830932617,
+          "Weap Desert Eagle": 855.6000003814697,
+          "Weap G18": 2729.277777194977,
+          "Weap M P9": 437.3605651855469,
+          "Weap Origin S12": 21409.74356651306,
+          "Weap Saiga12": 316.7319278717041,
+          "S L B Zombie_ Grenade": 209.1527557373047,
+          "Player Female_ A": 0
+        },
+        "weaponStats": {
+          "totalShots": 130,
+          "totalHits": 461,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1254,
+        "walkDistance": 2389.9893,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M9": 5472.477235794067,
+          "Weap Berreta686": 1367.6000022888184,
+          "Weap M P9": 8000.459874153137,
+          "S L B Zombie_ Grenade": 1327.354393005371,
+          "Weap Winchester": 140.40000343322754,
+          "Weap Saiga12": 2787.92591714859,
+          "Weap Mk14": 3944.7000122070312,
+          "Weap M249": 5731.800013542175,
+          "S L B_ Anti Zombie Molotov": 20
+        },
+        "weaponStats": {
+          "totalShots": 152,
+          "totalHits": 657,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 13,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1256,
+        "walkDistance": 2305.2175,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "axe125",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M9": 1636.050464630127,
+          "Weap Origin S12": 43899.46021080017,
+          "S L B Zombie_ Grenade": 519.0021615028381,
+          "Weap M249": 13952.300022125244,
+          "S L B_ S Anti Zombie Fire Effect Controller_ B P": 1564,
+          "S L B_ Anti Zombie Fire Debuff U P": 1640
+        },
+        "weaponStats": {
+          "totalShots": 201,
+          "totalHits": 1360,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1249,
+        "walkDistance": 3142.8792,
+        "rideDistance": 0,
         "swimDistance": 0
       }
     ]
