@@ -297,8 +297,26 @@ async function getMatchDetails(matchId) {
   // Parse game mode to determine type and perspective
   const gameMode = matchInfo.gameMode;
   const isRanked = gameMode.includes('ranked');
-  const isArcade = gameMode.includes('arcade') || gameMode.includes('event') || gameMode.includes('custom');
+  
+  // Enhanced arcade mode detection - check for various arcade mode patterns
+  const isArcade = gameMode.includes('arcade') || 
+                   gameMode.includes('event') || 
+                   gameMode.includes('custom') ||
+                   gameMode.includes('war-') || 
+                   gameMode.includes('zombie') || 
+                   gameMode.includes('tdm') || 
+                   gameMode.includes('conquest') || 
+                   gameMode.includes('training') || 
+                   gameMode.includes('lab-') ||
+                   gameMode.includes('esports') ||
+                   gameMode.startsWith('arcade') ||
+                   gameMode.includes('mini-') ||
+                   gameMode.includes('fantasy');
+                   
   const isNormal = !isRanked && !isArcade;
+  
+  // Debug: Log the game mode for analysis
+  console.log(`🎮 Game Mode Analysis: "${gameMode}" -> Type: ${isRanked ? 'ranked' : isArcade ? 'arcade' : 'normal'}`);
   
   // Determine team size
   let teamSize = 'solo';

@@ -210,7 +210,22 @@ class DiscordNotifier {
                     name: '🎮 Game Mode',
                     value: (() => {
                         const isRanked = matchStats.gameMode.includes('ranked');
-                        const isArcade = matchStats.gameMode.includes('arcade') || matchStats.gameMode.includes('event') || matchStats.gameMode.includes('custom');
+                        
+                        // Enhanced arcade mode detection
+                        const isArcade = matchStats.gameMode.includes('arcade') || 
+                                       matchStats.gameMode.includes('event') || 
+                                       matchStats.gameMode.includes('custom') ||
+                                       matchStats.gameMode.includes('war-') || 
+                                       matchStats.gameMode.includes('zombie') || 
+                                       matchStats.gameMode.includes('tdm') || 
+                                       matchStats.gameMode.includes('conquest') || 
+                                       matchStats.gameMode.includes('training') || 
+                                       matchStats.gameMode.includes('lab-') ||
+                                       matchStats.gameMode.includes('esports') ||
+                                       matchStats.gameMode.startsWith('arcade') ||
+                                       matchStats.gameMode.includes('mini-') ||
+                                       matchStats.gameMode.includes('fantasy');
+                                       
                         const gameTypeIcon = isRanked ? '🏆' : isArcade ? '🎪' : '⚔️';
                         const gameTypeText = isRanked ? 'Ranked' : isArcade ? 'Arcade' : 'Normal';
                         
