@@ -384,6 +384,38 @@
     </div>
   </div>
 
+  <!-- Welcome Screen -->
+  <div id="welcomeScreen" class="content-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; padding: 30px; margin: 20px 0; text-align: center;">
+    <h2 style="margin: 0 0 20px 0; font-size: 28px;">🎮 Welcome to PUBG Performance Tracker!</h2>
+    
+    <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 20px; margin: 20px 0; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <h3 style="margin: 0 0 15px 0; color: #fff;">📖 Quick Start Guide</h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 15px;">
+        <div>
+          <strong>👥 Select a Player</strong>
+          <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Choose from 6 squad members below to view their individual stats and match history</p>
+        </div>
+        <div>
+          <strong>📊 View Statistics</strong>
+          <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Use the day/match dropdowns to explore detailed performance data and charts</p>
+        </div>
+        <div>
+          <strong>🤡 Special Sections</strong>
+          <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Check out Meme Dashboard, Team Records, and Changelog using the buttons in the header</p>
+        </div>
+      </div>
+      
+      <div style="background: rgba(255, 255, 255, 0.15); border-radius: 6px; padding: 12px; margin-top: 15px;">
+        <strong>💡 Pro Tip:</strong> Data is automatically collected 3 times daily (8PM, 9PM, 10PM Prague time) via GitHub Actions
+      </div>
+    </div>
+    
+    <div style="margin-top: 10px; font-size: 18px; font-weight: bold;">
+      ⬇️ Select a Player Below to Get Started ⬇️
+    </div>
+  </div>
+
   <!-- Player Selection -->
   <div class="content-section">
     <div class="section-header">👥 Select Player</div>
@@ -435,39 +467,6 @@
         </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Welcome Screen -->
-  <div id="welcomeScreen" class="content-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; padding: 30px; margin: 20px 0; text-align: center;">
-    <h2 style="margin: 0 0 20px 0; font-size: 28px;">🎮 Welcome to PUBG Performance Tracker!</h2>
-    
-    <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 20px; margin: 20px 0; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
-      <h3 style="margin: 0 0 15px 0; color: #fff;">📖 Quick Start Guide</h3>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 15px;">
-        <div>
-          <strong>👥 Select a Player</strong>
-          <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Choose from 6 squad members above to view their individual stats and match history</p>
-        </div>
-        <div>
-          <strong>📊 View Statistics</strong>
-          <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Use the day/match dropdowns to explore detailed performance data and charts</p>
-        </div>
-        <div>
-          <strong>🤡 Special Sections</strong>
-          <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Check out Meme Dashboard, Team Records, and Changelog using the buttons above</p>
-        </div>
-      </div>
-      
-      <div style="background: rgba(255, 255, 255, 0.15); border-radius: 6px; padding: 12px; margin-top: 15px;">
-        <strong>💡 Pro Tip:</strong> Data is automatically collected 3 times daily (8PM, 9PM, 10PM Prague time) via GitHub Actions
-      </div>
-    </div>
-    
-    <button onclick="document.getElementById('welcomeScreen').classList.add('hidden')" 
-            style="background: white; color: #667eea; border: none; padding: 12px 30px; border-radius: 25px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s;">
-      ✨ Get Started - Select a Player Above
-    </button>
   </div>
   
   <div id="knownBugs" class="content-section hidden" style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 10px; margin: 10px 0;">
