@@ -294,8 +294,29 @@ async function getMatchDetails(matchId) {
     }
   }
 
+  // Parse game mode to determine type and perspective
+  const gameMode = matchInfo.gameMode;
+  const isRanked = gameMode.includes('ranked');
+  const isArcade = gameMode.includes('arcade') || gameMode.includes('event') || gameMode.includes('custom');
+  const isNormal = !isRanked && !isArcade;
+  
+  // Determine team size
+  let teamSize = 'solo';
+  if (gameMode.includes('duo')) teamSize = 'duo';
+  else if (gameMode.includes('squad')) teamSize = 'squad';
+  
+  // Determine perspective
+  const perspective = gameMode.includes('-fpp') ? 'fpp' : 'tpp';
+  
   return {
     date: matchInfo.createdAt,
+    gameMode: gameMode,
+    gameType: isRanked ? 'ranked' : isArcade ? 'arcade' : 'normal',
+    teamSize: teamSize,
+    perspective: perspective,
+    mapName: matchInfo.mapName,
+    duration: matchInfo.duration,
+    placement: teamRank,
     team: teamSummary
   };
 }

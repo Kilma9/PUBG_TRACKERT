@@ -207,7 +207,24 @@ class DiscordNotifier {
             color: color,
             fields: [
                 {
-                    name: '�️ Map',
+                    name: '🎮 Game Mode',
+                    value: (() => {
+                        const isRanked = matchStats.gameMode.includes('ranked');
+                        const isArcade = matchStats.gameMode.includes('arcade') || matchStats.gameMode.includes('event') || matchStats.gameMode.includes('custom');
+                        const gameTypeIcon = isRanked ? '🏆' : isArcade ? '🎪' : '⚔️';
+                        const gameTypeText = isRanked ? 'Ranked' : isArcade ? 'Arcade' : 'Normal';
+                        
+                        let teamSizeText = 'Solo';
+                        if (matchStats.gameMode.includes('duo')) teamSizeText = 'Duo';
+                        else if (matchStats.gameMode.includes('squad')) teamSizeText = 'Squad';
+                        
+                        const perspective = matchStats.gameMode.includes('-fpp') ? 'FPP' : 'TPP';
+                        return `${gameTypeIcon} ${gameTypeText} ${teamSizeText} ${perspective}`;
+                    })(),
+                    inline: true
+                },
+                {
+                    name: '🗺️ Map',
                     value: matchStats.mapName || 'Unknown',
                     inline: true
                 },
@@ -222,7 +239,7 @@ class DiscordNotifier {
                     inline: true
                 },
                 {
-                    name: '� Match Time',
+                    name: '🕒 Match Time',
                     value: matchTime,
                     inline: false
                 }

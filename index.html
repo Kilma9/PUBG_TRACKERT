@@ -320,6 +320,29 @@
         <option value="">Loading...</option>
       </select>
       
+      <label><strong>Game Type:</strong></label>
+      <select id="gameTypeSelect">
+        <option value="all">All Types</option>
+        <option value="normal">⚔️ Normal</option>
+        <option value="ranked">🏆 Ranked</option>
+        <option value="arcade">🎪 Arcade</option>
+      </select>
+      
+      <label><strong>Team Size:</strong></label>
+      <select id="teamSizeSelect">
+        <option value="all">All Sizes</option>
+        <option value="solo">👤 Solo</option>
+        <option value="duo">👥 Duo</option>
+        <option value="squad">👪 Squad</option>
+      </select>
+      
+      <label><strong>Perspective:</strong></label>
+      <select id="perspectiveSelect">
+        <option value="all">All Perspectives</option>
+        <option value="fpp">👁️ First Person (FPP)</option>
+        <option value="tpp">👀 Third Person (TPP)</option>
+      </select>
+      
       <label><strong>Select Match:</strong></label>
       <select id="matchSelect" disabled>
         <option value="">Choose a match...</option>
@@ -509,14 +532,26 @@
       matchSelect.innerHTML = '<option value="">Choose a match...</option>';
       
       const teamComposition = document.getElementById('teamCompositionSelect').value;
-      const dayMatches = getFilteredMatches(selectedDay, teamComposition);
+      const gameType = document.getElementById('gameTypeSelect').value;
+      const teamSize = document.getElementById('teamSizeSelect').value;
+      const perspective = document.getElementById('perspectiveSelect').value;
+      const dayMatches = getFilteredMatches(selectedDay, teamComposition, gameType, teamSize, perspective);
       
       dayMatches.forEach((match, index) => {
         const option = document.createElement('option');
         option.value = index.toString();
         const time = new Date(match.date).toLocaleTimeString();
         const teamNames = match.team.map(p => p.name).join(', ');
-        option.textContent = `Match ${index + 1} (${time}) - ${teamNames}`;
+        
+        // Add game mode info if available
+        let modeInfo = '';
+        if (match.gameType && match.teamSize && match.perspective) {
+          const typeIcon = match.gameType === 'ranked' ? '🏆' : match.gameType === 'arcade' ? '🎪' : '⚔️';
+          const sizeText = match.teamSize.charAt(0).toUpperCase() + match.teamSize.slice(1);
+          modeInfo = ` [${typeIcon} ${sizeText} ${match.perspective.toUpperCase()}]`;
+        }
+        
+        option.textContent = `Match ${index + 1} (${time})${modeInfo} - ${teamNames}`;
         matchSelect.appendChild(option);
       });
       
@@ -555,14 +590,39 @@
       }).length;
     }
 
-    // Filter matches by team composition
-    function getFilteredMatches(day, teamComposition = 'all') {
+    // Filter matches by team composition and game modes
+    function getFilteredMatches(day, teamComposition = 'all', gameType = 'all', teamSize = 'all', perspective = 'all') {
       let filtered = matchData.filter(match => match.date.split('T')[0] === day);
       
+      // Filter by team composition
       if (teamComposition !== 'all') {
         filtered = filtered.filter(match => {
           const teamNames = match.team.map(player => player.name).sort().join(', ');
           return teamNames === teamComposition;
+        });
+      }
+      
+      // Filter by game type (normal/ranked/arcade)
+      if (gameType !== 'all') {
+        filtered = filtered.filter(match => {
+          if (!match.gameType) return false; // Skip matches without gameType data
+          return match.gameType === gameType;
+        });
+      }
+      
+      // Filter by team size (solo/duo/squad)
+      if (teamSize !== 'all') {
+        filtered = filtered.filter(match => {
+          if (!match.teamSize) return false; // Skip matches without teamSize data
+          return match.teamSize === teamSize;
+        });
+      }
+      
+      // Filter by perspective (fpp/tpp)
+      if (perspective !== 'all') {
+        filtered = filtered.filter(match => {
+          if (!match.perspective) return false; // Skip matches without perspective data
+          return match.perspective === perspective;
         });
       }
       
@@ -572,10 +632,13 @@
     function showDaySummary(day) {
       destroyCharts();
       const teamComposition = document.getElementById('teamCompositionSelect').value;
-      const dayMatches = getFilteredMatches(day, teamComposition);
+      const gameType = document.getElementById('gameTypeSelect').value;
+      const teamSize = document.getElementById('teamSizeSelect').value;
+      const perspective = document.getElementById('perspectiveSelect').value;
+      const dayMatches = getFilteredMatches(day, teamComposition, gameType, teamSize, perspective);
       
       console.log('Processing day:', day, 'with', dayMatches.length, 'matches');
-      console.log('Team composition filter:', teamComposition);
+      console.log('Filters:', { teamComposition, gameType, teamSize, perspective });
       
       if (dayMatches.length === 0) {
         document.getElementById('daySummary').innerHTML = `
@@ -1122,6 +1185,42 @@
         populateMatchDropdown(selectedDay);
         showDaySummary(selectedDay);
         // Reset match selection when composition changes
+        document.getElementById('matchSelect').value = '';
+        document.getElementById('matchContent').classList.add('hidden');
+      }
+    });
+
+    // Game type filter event listener
+    document.getElementById('gameTypeSelect').addEventListener('change', function() {
+      const selectedDay = document.getElementById('daySelect').value;
+      
+      if (selectedDay) {
+        populateMatchDropdown(selectedDay);
+        showDaySummary(selectedDay);
+        document.getElementById('matchSelect').value = '';
+        document.getElementById('matchContent').classList.add('hidden');
+      }
+    });
+
+    // Team size filter event listener
+    document.getElementById('teamSizeSelect').addEventListener('change', function() {
+      const selectedDay = document.getElementById('daySelect').value;
+      
+      if (selectedDay) {
+        populateMatchDropdown(selectedDay);
+        showDaySummary(selectedDay);
+        document.getElementById('matchSelect').value = '';
+        document.getElementById('matchContent').classList.add('hidden');
+      }
+    });
+
+    // Perspective filter event listener
+    document.getElementById('perspectiveSelect').addEventListener('change', function() {
+      const selectedDay = document.getElementById('daySelect').value;
+      
+      if (selectedDay) {
+        populateMatchDropdown(selectedDay);
+        showDaySummary(selectedDay);
         document.getElementById('matchSelect').value = '';
         document.getElementById('matchContent').classList.add('hidden');
       }
