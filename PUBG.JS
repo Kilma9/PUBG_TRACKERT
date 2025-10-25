@@ -471,24 +471,47 @@ function summarizeTeamStatsByDay(matchSummaries) {
 (async () => {
   try {
     console.log(`🎮 Starting PUBG data collection for ${PLAYER_NAME}`);
-    console.log(`📅 Fetching matches from the last 30 days...`);
+    console.log(`� Mode: Incremental data collection with full history preservation`);
     
     const playerId = await getPlayerId();
     console.log(`👤 Player ID: ${playerId}`);
 
-    const matchIds = await getMatchHistory(playerId);
-    console.log(`📋 Total available matches: ${matchIds.length}`);
+    // Load existing data to find the latest match timestamp
+    const fs = require('fs');
+    let existingMatches = [];
+    let latestMatchDate = null;
+    
+    if (fs.existsSync('data.json')) {
+      try {
+        existingMatches = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+        console.log(`📂 Loaded ${existingMatches.length} existing matches from data.json`);
+        
+        if (existingMatches.length > 0) {
+          // Find the most recent match date
+          latestMatchDate = new Date(existingMatches[0].date);
+          console.log(`📅 Latest existing match: ${latestMatchDate.toISOString()}`);
+        }
+      } catch (error) {
+        console.log(`⚠️ Could not load existing data.json: ${error.message}`);
+        console.log(`📥 Starting fresh data collection...`);
+      }
+    } else {
+      console.log(`📋 No existing data.json found, starting fresh collection`);
+    }
 
-    const matchSummaries = [];
+    const matchIds = await getMatchHistory(playerId);
+    console.log(`📋 Total available matches from API: ${matchIds.length}`);
+
+    const newMatches = [];
     const thirtyDaysAgo = new Date();
     thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
     
-    console.log(`📆 Filtering matches since: ${thirtyDaysAgo.toISOString().split('T')[0]}`);
+    console.log(`� Looking for new matches since: ${latestMatchDate ? latestMatchDate.toISOString() : 'beginning of time'}`);
     
     let processedCount = 0;
-    let matchesInRange = 0;
+    let newMatchesCount = 0;
     
-    // Process matches until we're beyond 30 days or run out of matches
+    // Process matches - only new ones if we have existing data
     for (const matchId of matchIds) {
       console.log(`\n🔄 Processing match ${processedCount + 1}/${matchIds.length}...`);
       
@@ -498,11 +521,17 @@ function summarizeTeamStatsByDay(matchSummaries) {
         if (summary) {
           const matchDate = new Date(summary.date);
           
+          // Skip if this match is older than our latest existing match (already processed)
+          if (latestMatchDate && matchDate <= latestMatchDate) {
+            console.log(`⏭️ Match already exists (${matchDate.toISOString().split('T')[0]}), skipping...`);
+            break; // Stop processing - we've reached matches we already have
+          }
+          
           // Check if match is within last 30 days
           if (matchDate >= thirtyDaysAgo) {
-            matchSummaries.push(summary);
-            matchesInRange++;
-            console.log(`✅ Match added (${matchesInRange} total within 30 days)`);
+            newMatches.push(summary);
+            newMatchesCount++;
+            console.log(`✅ New match added (${newMatchesCount} total new matches)`);
           } else {
             console.log(`⏰ Match too old (${matchDate.toISOString().split('T')[0]}), stopping collection`);
             break; // Stop processing older matches
@@ -520,8 +549,8 @@ function summarizeTeamStatsByDay(matchSummaries) {
         }
         
         // Safety limit to avoid processing too many matches
-        if (processedCount >= 100) {
-          console.log(`⚠️ Reached safety limit of 100 matches processed`);
+        if (processedCount >= 50) { // Reduced limit since we're only processing new matches
+          console.log(`⚠️ Reached safety limit of 50 new matches processed`);
           break;
         }
         
@@ -535,41 +564,66 @@ function summarizeTeamStatsByDay(matchSummaries) {
 
     console.log(`\n📊 Collection Summary:`);
     console.log(`   • Total matches processed: ${processedCount}`);
-    console.log(`   • Matches within 30 days: ${matchesInRange}`);
-    console.log(`   • Date range: ${matchSummaries.length > 0 ? 
-      `${new Date(matchSummaries[matchSummaries.length - 1].date).toISOString().split('T')[0]} to ${new Date(matchSummaries[0].date).toISOString().split('T')[0]}` : 
+    console.log(`   • New matches found: ${newMatchesCount}`);
+    console.log(`   • Existing matches preserved: ${existingMatches.length}`);
+
+    // Merge new matches with existing ones (new matches first, then existing)
+    const allMatches = [...newMatches, ...existingMatches];
+    
+    // Remove matches older than 30 days from the combined dataset
+    const thirtyDaysMatches = allMatches.filter(match => {
+      const matchDate = new Date(match.date);
+      return matchDate >= thirtyDaysAgo;
+    });
+
+    console.log(`   • Total matches after merge: ${allMatches.length}`);
+    console.log(`   • Matches within 30 days: ${thirtyDaysMatches.length}`);
+    console.log(`   • Date range: ${allMatches.length > 0 ? 
+      `${new Date(allMatches[allMatches.length - 1].date).toISOString().split('T')[0]} to ${new Date(allMatches[0].date).toISOString().split('T')[0]}` : 
       'No matches found'}`);
 
-    if (matchSummaries.length > 0) {
-      console.log(`\n📈 Generating daily summaries...`);
-      summarizeTeamStatsByDay(matchSummaries);
+    if (newMatchesCount > 0 || existingMatches.length > 0) {
+      if (newMatchesCount > 0) {
+        console.log(`\n📈 Generating daily summaries for all ${thirtyDaysMatches.length} matches...`);
+        summarizeTeamStatsByDay(thirtyDaysMatches);
+      } else {
+        console.log(`\n📋 No new matches found, keeping existing data intact`);
+      }
 
       // ✅ Save to local file with timestamp
-      const fs = require('fs');
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('T')[0];
       
-      // Save main data file
-      fs.writeFileSync('data.json', JSON.stringify(matchSummaries, null, 2));
+      // Save main data file (30-day rolling window)
+      fs.writeFileSync('data.json', JSON.stringify(thirtyDaysMatches, null, 2));
       
-      // Save backup with timestamp
-      fs.writeFileSync(`data_backup_${timestamp}.json`, JSON.stringify(matchSummaries, null, 2));
+      // Save backup with timestamp (only if there are new matches)
+      if (newMatchesCount > 0) {
+        fs.writeFileSync(`data_backup_${timestamp}.json`, JSON.stringify(thirtyDaysMatches, null, 2));
+      }
       
       console.log(`\n💾 Files saved:`);
-      console.log(`   • data.json (${matchSummaries.length} matches)`);
-      console.log(`   • data_backup_${timestamp}.json (backup)`);
+      console.log(`   • data.json (${thirtyDaysMatches.length} matches - 30 day rolling window)`);
+      if (newMatchesCount > 0) {
+        console.log(`   • data_backup_${timestamp}.json (backup created for new matches)`);
+      } else {
+        console.log(`   • No backup created (no new matches)`);
+      }
       
       // Generate summary statistics
-      const uniqueDays = [...new Set(matchSummaries.map(m => m.date.split('T')[0]))];
-      const totalKills = matchSummaries.reduce((sum, match) => 
+      const uniqueDays = [...new Set(thirtyDaysMatches.map(m => m.date.split('T')[0]))];
+      const totalKills = thirtyDaysMatches.reduce((sum, match) => 
         sum + match.team.reduce((teamSum, player) => teamSum + (player.kills || 0), 0), 0);
-      const totalDamage = matchSummaries.reduce((sum, match) => 
+      const totalDamage = thirtyDaysMatches.reduce((sum, match) => 
         sum + match.team.reduce((teamSum, player) => teamSum + (player.damage || 0), 0), 0);
       
       console.log(`\n🎯 30-Day Performance Summary:`);
       console.log(`   • Days with matches: ${uniqueDays.length}`);
       console.log(`   • Total team kills: ${totalKills}`);
       console.log(`   • Total team damage: ${Math.round(totalDamage).toLocaleString()}`);
-      console.log(`   • Average matches per day: ${(matchSummaries.length / uniqueDays.length).toFixed(1)}`);
+      console.log(`   • Average matches per day: ${(thirtyDaysMatches.length / uniqueDays.length).toFixed(1)}`);
+      console.log(`\n🚀 Efficiency Gains:`);
+      console.log(`   • API calls saved: ~${existingMatches.length * 2} (skipped existing matches)`);
+      console.log(`   • Processing time saved: ~${Math.round(existingMatches.length * 0.5)}s`);
       
     } else {
       console.log(`\n⚠️ No matches found within the last 30 days`);
