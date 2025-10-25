@@ -289,16 +289,13 @@
 
     /* Player Selection Styles */
     .player-selection {
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
+      margin-bottom: 20px;
     }
 
     .player-buttons {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 15px;
-      flex: 1;
     }
 
     .player-btn {
@@ -347,8 +344,8 @@
       border: 1px solid #dee2e6;
       border-radius: 12px;
       padding: 20px;
-      flex: 1;
-      max-width: 300px;
+      width: 100%;
+      margin-top: 20px;
     }
 
     .player-bio h3 {
@@ -357,9 +354,17 @@
       font-size: 20px;
     }
 
+    .bio-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
     .bio-content p {
-      margin: 8px 0;
-      line-height: 1.5;
+      margin: 5px 0;
+      line-height: 1.4;
+      flex: 1;
+      min-width: 250px;
     }
   </style>
 </head>
@@ -407,17 +412,17 @@
             <div class="player-role">Squad Member</div>
           </button>
         </div>
-        
-        <!-- Player Bio Section -->
-        <div id="playerBio" class="player-bio">
-          <h3 id="bioPlayerName">Kilma9</h3>
-          <div id="bioContent" class="bio-content">
-            <p><strong>🎮 Main Player & Squad Leader</strong></p>
-            <p>📊 Primary statistics tracking and dashboard owner</p>
-            <p>🏆 Active PUBG player focused on squad gameplay</p>
-            <p>⚔️ Prefers strategic positioning and team coordination</p>
-            <p>📈 Tracks detailed performance metrics for team improvement</p>
-          </div>
+      </div>
+      
+      <!-- Player Bio Section - Now below the buttons -->
+      <div id="playerBio" class="player-bio">
+        <h3 id="bioPlayerName">Kilma9</h3>
+        <div id="bioContent" class="bio-content">
+          <p><strong>🎮 Main Player & Squad Leader</strong></p>
+          <p>📊 Primary statistics tracking and dashboard owner</p>
+          <p>🏆 Active PUBG player focused on squad gameplay</p>
+          <p>⚔️ Prefers strategic positioning and team coordination</p>
+          <p>📈 Tracks detailed performance metrics for team improvement</p>
         </div>
       </div>
     </div>
@@ -526,9 +531,9 @@
     const playerData = {
       'Kilma9': {
         icon: '🎮',
-        role: 'Main Player',
+        role: 'Web Owner',
         bio: `
-          <p><strong>🎮 Main Player & Squad Leader</strong></p>
+          <p><strong>� Web Owner</strong></p>
           <p>📊 Primary statistics tracking and dashboard owner</p>
           <p>🏆 Active PUBG player focused on squad gameplay</p>
           <p>⚔️ Prefers strategic positioning and team coordination</p>

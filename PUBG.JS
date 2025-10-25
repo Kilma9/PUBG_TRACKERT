@@ -13,7 +13,8 @@ const PLAYERS = [
   'Veru_13'
 ];
 
-const TARGET_PLAYER = process.env.PLAYER_NAME || 'Kilma9';
+// Get target player from command line argument, environment variable, or default to 'Kilma9'
+const TARGET_PLAYER = process.argv[2] || process.env.PLAYER_NAME || 'Kilma9';
 const PLATFORM = process.env.PLATFORM || 'steam';
 
 // Check if running in cloud environment
@@ -482,11 +483,12 @@ function summarizeTeamStatsByDay(matchSummaries) {
 
 // Function to collect data for a specific player
 async function collectPlayerData(playerName) {
-  console.log(`\n🎮 Starting PUBG data collection for ${playerName}`);
-  console.log(`📊 Mode: Incremental data collection with full history preservation`);
-  
-  const playerId = await getPlayerId(playerName);
-  console.log(`👤 Player ID: ${playerId}`);
+  try {
+    console.log(`\n🎮 Starting PUBG data collection for ${playerName}`);
+    console.log(`📊 Mode: Incremental data collection with full history preservation`);
+    
+    const playerId = await getPlayerId(playerName);
+    console.log(`👤 Player ID: ${playerId}`);
 
     // Load existing data to find the latest match timestamp
     const fs = require('fs');
@@ -659,13 +661,20 @@ async function collectPlayerData(playerName) {
 (async () => {
   try {
     console.log(`🚀 PUBG Multi-Player Data Collection System`);
-    console.log(`📊 Players to collect: ${PLAYERS.join(', ')}`);
+    console.log(`📊 Available players: ${PLAYERS.join(', ')}`);
     
-    if (TARGET_PLAYER && PLAYERS.includes(TARGET_PLAYER)) {
-      // Collect data for specific player (used by GitHub Actions)
-      await collectPlayerData(TARGET_PLAYER);
+    // Check if a specific player was requested via command line or environment
+    if (TARGET_PLAYER !== 'Kilma9' || process.argv[2] || process.env.PLAYER_NAME) {
+      if (PLAYERS.includes(TARGET_PLAYER)) {
+        console.log(`🎯 Collecting data for specific player: ${TARGET_PLAYER}`);
+        await collectPlayerData(TARGET_PLAYER);
+      } else {
+        console.error(`❌ Player "${TARGET_PLAYER}" not found in player list!`);
+        console.log(`📋 Available players: ${PLAYERS.join(', ')}`);
+        process.exit(1);
+      }
     } else {
-      // Collect data for all players (local development)
+      // Collect data for all players (local development default)
       console.log(`\n🔄 Collecting data for all players...`);
       
       for (const player of PLAYERS) {

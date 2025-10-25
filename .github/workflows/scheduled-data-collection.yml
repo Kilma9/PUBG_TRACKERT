@@ -44,27 +44,44 @@ jobs:
         npm install
         echo "✅ Dependencies installed successfully"
       
-    - name: 🎮 Run PUBG data collection
+    - name: 🎮 Run PUBG data collection for all players
       env:
         PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
-        PLAYER_NAME: 'Kilma9'
         PLATFORM: 'steam'
       run: |
-        echo "🎯 Starting PUBG data collection..."
+        echo "🎯 Starting PUBG data collection for all players..."
         echo "⏰ Current time: $(date)"
         echo "📅 Collecting data for the last ${{ github.event.inputs.days_to_collect || '1' }} day(s)"
         
-        # Create backup of existing data
+        # List of all players to collect data for
+        PLAYERS=("Kilma9" "Mar-0" "Hyottokko" "Baron_Frajeris" "codufus" "Veru_13")
+        
+        # Create backup of existing main data file
         if [ -f "data.json" ]; then
           cp data.json "data_backup_$(date +%Y-%m-%d_%H-%M-%S).json"
           echo "💾 Created backup of existing data"
         fi
         
-        # Run the PUBG data collection script
-        node PUBG.JS
+        # Collect data for each player
+        for PLAYER in "${PLAYERS[@]}"; do
+          echo "👤 Collecting data for player: $PLAYER"
+          export PLAYER_NAME="$PLAYER"
+          
+          # Run the PUBG data collection script for this player
+          node PUBG.JS "$PLAYER"
+          
+          echo "✅ Data collection completed for $PLAYER"
+          
+          # Add delay between players to respect rate limits
+          if [ "$PLAYER" != "Veru_13" ]; then
+            echo "⏳ Waiting 10 seconds before next player..."
+            sleep 10
+          fi
+        done
         
-        echo "✅ Data collection completed"
-        echo "📊 Current data.json size: $(wc -c < data.json 2>/dev/null || echo '0') bytes"
+        echo "🎉 All players data collection completed!"
+        echo "📊 Data files created:"
+        ls -la data*.json 2>/dev/null || echo "No data files found"
         
         # Create timestamp file for accurate sync tracking
         cat > last-sync.json << EOF
@@ -80,24 +97,37 @@ jobs:
         
     - name: 📈 Generate collection report
       run: |
-        echo "## 🎮 PUBG Data Collection Report" > collection_report.md
+        echo "## 🎮 PUBG Multi-Player Data Collection Report" > collection_report.md
         echo "**Collection Date:** $(date)" >> collection_report.md
         echo "**Trigger:** ${{ github.event_name }}" >> collection_report.md
+        echo "" >> collection_report.md
         
-        if [ -f "data.json" ]; then
-          MATCHES_COUNT=$(jq length data.json 2>/dev/null || echo "0")
-          echo "**Total Matches:** $MATCHES_COUNT" >> collection_report.md
+        PLAYERS=("Kilma9" "Mar-0" "Hyottokko" "Baron_Frajeris" "codufus" "Veru_13")
+        TOTAL_MATCHES=0
+        
+        for PLAYER in "${PLAYERS[@]}"; do
+          DATA_FILE="data_${PLAYER}.json"
+          if [ "$PLAYER" == "Kilma9" ]; then
+            DATA_FILE="data.json"  # Main player uses data.json
+          fi
           
-          # Get latest match date
-          LATEST_MATCH=$(jq -r '.[0].date // "No matches"' data.json 2>/dev/null)
-          echo "**Latest Match:** $LATEST_MATCH" >> collection_report.md
+          echo "### 👤 $PLAYER" >> collection_report.md
           
-          # Get unique players
-          PLAYERS=$(jq -r '.[].team[].name' data.json 2>/dev/null | sort | uniq | tr '\n' ', ' | sed 's/,$//')
-          echo "**Players Found:** $PLAYERS" >> collection_report.md
-        else
-          echo "**Status:** ❌ No data.json file found" >> collection_report.md
-        fi
+          if [ -f "$DATA_FILE" ]; then
+            MATCHES_COUNT=$(jq length "$DATA_FILE" 2>/dev/null || echo "0")
+            TOTAL_MATCHES=$((TOTAL_MATCHES + MATCHES_COUNT))
+            echo "- **Matches:** $MATCHES_COUNT" >> collection_report.md
+            
+            # Get latest match date
+            LATEST_MATCH=$(jq -r '.[0].date // "No matches"' "$DATA_FILE" 2>/dev/null)
+            echo "- **Latest Match:** $LATEST_MATCH" >> collection_report.md
+          else
+            echo "- **Status:** ❌ No data file found" >> collection_report.md
+          fi
+          echo "" >> collection_report.md
+        done
+        
+        echo "**Total Matches Across All Players:** $TOTAL_MATCHES" >> collection_report.md
         
         cat collection_report.md
         
