@@ -1697,6 +1697,9 @@
         // Update dashboard title
         document.querySelector('.header h1').textContent = `🎮 ${playerName}'s PUBG Performance Dashboard`;
         
+        // Update sync information
+        await updateSyncInfo(matchData);
+        
         // Clear cached records to force recalculation with full dataset
         cachedRecords = null;
         
