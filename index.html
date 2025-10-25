@@ -369,10 +369,19 @@
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>🎮 PUBG Performance Dashboard</h1>
-    <p>Track your team's performance with detailed statistics and weapon analytics</p>
-    <p><small id="lastUpdated">Loading sync information...</small></p>
+  <div class="header" id="mainHeader">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="flex: 1;">
+        <h1>🎮 PUBG Performance Dashboard</h1>
+        <p>Track your team's performance with detailed statistics and weapon analytics</p>
+        <p><small id="lastUpdated">Loading sync information...</small></p>
+      </div>
+      <div>
+        <button id="returnToDashboard" class="special-btn" style="display: none; padding: 12px 24px; font-size: 14px; background: #6c757d; border-color: #6c757d;">
+          🏠 Return to Dashboard
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- Player Selection -->
@@ -1387,6 +1396,9 @@
       document.getElementById('welcomeScreen').classList.add('hidden');
       document.getElementById('knownBugs').classList.remove('hidden');
       
+      // Show return to dashboard button
+      document.getElementById('returnToDashboard').style.display = 'block';
+      
       // Update active button state
       document.querySelectorAll('.player-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -1406,6 +1418,40 @@
       document.getElementById('matchSelect').value = '';
       document.getElementById('dayContent').classList.add('hidden');
       document.getElementById('matchContent').classList.add('hidden');
+    }
+    
+    // Function to return to main dashboard (welcome screen)
+    function returnToMainDashboard() {
+      // Show welcome screen
+      document.getElementById('welcomeScreen').classList.remove('hidden');
+      
+      // Hide all content sections
+      document.getElementById('dayContent').classList.add('hidden');
+      document.getElementById('matchContent').classList.add('hidden');
+      document.getElementById('bioContent').classList.add('hidden');
+      document.getElementById('memeContent').classList.add('hidden');
+      document.getElementById('recordsContent').classList.add('hidden');
+      document.getElementById('changelogContent').classList.add('hidden');
+      document.getElementById('playerBio').classList.add('hidden');
+      document.getElementById('knownBugs').classList.add('hidden');
+      
+      // Hide return button
+      document.getElementById('returnToDashboard').style.display = 'none';
+      
+      // Reset header to default
+      document.querySelector('.header h1').textContent = '🎮 PUBG Performance Dashboard';
+      document.getElementById('lastUpdated').textContent = 'Loading sync information...';
+      
+      // Remove active state from all player buttons
+      document.querySelectorAll('.player-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Reset special buttons
+      resetSpecialButtons();
+      
+      // Clear current player
+      currentPlayer = null;
     }
 
     function updatePlayerBio(playerName) {
@@ -1680,6 +1726,11 @@
         const playerName = btn.dataset.player;
         switchPlayer(playerName);
       });
+    });
+    
+    // Return to dashboard button event listener
+    document.getElementById('returnToDashboard').addEventListener('click', function() {
+      returnToMainDashboard();
     });
 
     // Team composition filter event listener
