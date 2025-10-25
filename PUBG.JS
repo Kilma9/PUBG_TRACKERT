@@ -643,19 +643,37 @@ async function collectPlayerData(playerName) {
     } else {
       // Collect data for all players (local development default)
       console.log(`\n🔄 Collecting data for all players...`);
+      console.log(`⚠️  WARNING: Collecting all players locally may hit rate limits!`);
+      console.log(`💡 TIP: Run "node PUBG.js PlayerName" to collect for single player`);
+      console.log(`📋 Available players: ${PLAYERS.join(', ')}\n`);
       
       for (const player of PLAYERS) {
-        try {
-          await collectPlayerData(player);
-          
-          // Add delay between players to respect API limits
-          if (PLAYERS.indexOf(player) < PLAYERS.length - 1) {
-            console.log(`\n⏸️ Pausing 10 seconds before next player...`);
-            await new Promise(resolve => setTimeout(resolve, 10000));
+        let attempts = 0;
+        const maxAttempts = 2;
+        
+        while (attempts < maxAttempts) {
+          try {
+            await collectPlayerData(player);
+            break; // Success, exit retry loop
+            
+          } catch (error) {
+            attempts++;
+            console.error(`❌ Failed to collect data for ${player} (attempt ${attempts}/${maxAttempts}):`, error.message);
+            
+            if (error.response?.status === 429 && attempts < maxAttempts) {
+              console.log(`⏳ Rate limit hit, waiting 60 seconds before retry...`);
+              await new Promise(resolve => setTimeout(resolve, 60000));
+            } else {
+              console.log(`🔄 Continuing with next player...`);
+              break; // Give up and continue to next player
+            }
           }
-        } catch (error) {
-          console.error(`❌ Failed to collect data for ${player}:`, error.message);
-          console.log(`🔄 Continuing with next player...`);
+        }
+        
+        // Add delay between players to respect API limits
+        if (PLAYERS.indexOf(player) < PLAYERS.length - 1) {
+          console.log(`\n⏸️ Pausing 30 seconds before next player to avoid rate limits...`);
+          await new Promise(resolve => setTimeout(resolve, 30000));
         }
       }
     }
