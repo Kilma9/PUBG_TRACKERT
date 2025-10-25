@@ -369,7 +369,7 @@
   </style>
 </head>
 <body>
-  <div class="header" id="mainHeader">
+  <div class="header" id="mainHeader" style="display: none;">
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <div style="flex: 1;">
         <h1>🎮 PUBG Performance Dashboard</h1>
@@ -1392,8 +1392,9 @@
     function switchPlayer(playerName) {
       currentPlayer = playerName;
       
-      // Hide welcome screen and show known bugs section when player is selected
+      // Hide welcome screen and show main header
       document.getElementById('welcomeScreen').classList.add('hidden');
+      document.getElementById('mainHeader').style.display = 'block';
       document.getElementById('knownBugs').classList.remove('hidden');
       
       // Show return to dashboard button
@@ -1422,8 +1423,9 @@
     
     // Function to return to main dashboard (welcome screen)
     function returnToMainDashboard() {
-      // Show welcome screen
+      // Show welcome screen and hide header
       document.getElementById('welcomeScreen').classList.remove('hidden');
+      document.getElementById('mainHeader').style.display = 'none';
       
       // Hide all content sections
       document.getElementById('dayContent').classList.add('hidden');
