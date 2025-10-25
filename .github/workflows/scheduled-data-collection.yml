@@ -74,8 +74,8 @@ jobs:
           
           # Add delay between players to respect rate limits
           if [ "$PLAYER" != "Veru_13" ]; then
-            echo "⏳ Waiting 10 seconds before next player..."
-            sleep 10
+            echo "⏳ Waiting 30 seconds before next player to avoid rate limits..."
+            sleep 30
           fi
         done
         

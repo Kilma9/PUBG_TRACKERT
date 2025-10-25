@@ -250,41 +250,6 @@ async function getMatchDetails(matchId, targetPlayerName) {
         }
       }
 
-      // Enhanced logging with more weapon details
-      if (killEvents.length > 0 || Object.keys(weaponDamage).length > 0) {
-        console.log(`  🔫 Weapon Statistics:`);
-        
-        if (Object.keys(weaponKills).length > 0) {
-          console.log(`    Kills by weapon:`);
-          Object.entries(weaponKills).forEach(([weapon, count]) => {
-            console.log(`      - ${weapon}: ${count} kills`);
-          });
-        }
-        
-        if (Object.keys(weaponDamage).length > 0) {
-          console.log(`    Damage by weapon:`);
-          Object.entries(weaponDamage)
-            .sort((a, b) => b[1] - a[1])
-            .slice(0, 5) // Top 5 weapons by damage
-            .forEach(([weapon, damage]) => {
-              console.log(`      - ${weapon}: ${Math.round(damage)} dmg`);
-            });
-        }
-        
-        if (weaponStats.longestKill > 0) {
-          console.log(`    Longest kill: ${weaponStats.longestKill}m`);
-        }
-        
-        if (weaponStats.totalShots > 0) {
-          const accuracy = ((weaponStats.totalHits / weaponStats.totalShots) * 100).toFixed(1);
-          console.log(`    Estimated accuracy: ${accuracy}% (${weaponStats.totalHits}/${weaponStats.totalShots})`);
-        }
-        
-        if (weaponStats.vehicleDestroys > 0) {
-          console.log(`    Vehicle destroys: ${weaponStats.vehicleDestroys}`);
-        }
-      }
-
       teamSummary.push({
         name: stats.name,
         kills: stats.kills,
@@ -663,8 +628,10 @@ async function collectPlayerData(playerName) {
     console.log(`🚀 PUBG Multi-Player Data Collection System`);
     console.log(`📊 Available players: ${PLAYERS.join(', ')}`);
     
-    // Check if a specific player was requested via command line or environment
-    if (TARGET_PLAYER !== 'Kilma9' || process.argv[2] || process.env.PLAYER_NAME) {
+    // Check if a specific player was requested (command line arg or environment variable)
+    const isSpecificPlayerMode = process.argv[2] || process.env.PLAYER_NAME;
+    
+    if (isSpecificPlayerMode) {
       if (PLAYERS.includes(TARGET_PLAYER)) {
         console.log(`🎯 Collecting data for specific player: ${TARGET_PLAYER}`);
         await collectPlayerData(TARGET_PLAYER);
