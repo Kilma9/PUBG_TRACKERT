@@ -1134,6 +1134,13 @@
       const match = dayMatches[matchIndex];
       
       console.log('Showing match details for match', matchIndex);
+      console.log('Match data:', match);
+      
+      if (!match) {
+        console.error('No match found at index', matchIndex);
+        document.getElementById('matchSummary').innerHTML = '<div class="stat-card"><div class="stat-title">Error</div><div class="stat-value">Match not found</div></div>';
+        return;
+      }
       
       // Match summary
       const summaryHtml = `
@@ -1173,7 +1180,12 @@
       document.getElementById('matchCharts').innerHTML = chartsHtml;
 
       // Show match content
-      document.getElementById('matchContent').classList.remove('hidden');
+      const matchContentEl = document.getElementById('matchContent');
+      console.log('Match content element:', matchContentEl);
+      console.log('Match content classes before:', matchContentEl.className);
+      matchContentEl.classList.remove('hidden');
+      console.log('Match content classes after:', matchContentEl.className);
+      console.log('Match content display:', window.getComputedStyle(matchContentEl).display);
 
       // Create match charts with delay
       setTimeout(() => {
@@ -1345,7 +1357,8 @@
         toggleMainDashboard(false);
         
         // Reset bio and special dropdowns
-        document.getElementById('bioSelect').value = '';
+        const bioSelect = document.getElementById('bioSelect');
+        if (bioSelect) bioSelect.value = '';
         resetSpecialButtons();
         document.getElementById('bioContent').classList.add('hidden');
         document.getElementById('memeContent').classList.add('hidden');
@@ -1515,23 +1528,26 @@
       console.log('Match selected:', matchIndex, 'for day:', selectedDay);
       
       if (!isNaN(matchIndex) && selectedDay) {
-        // Ensure main dashboard is visible when match is selected
-        toggleMainDashboard(false);
+        // Show known bugs section
+        const knownBugs = document.getElementById('knownBugs');
+        if (knownBugs) knownBugs.style.display = 'block';
         
         // Reset bio and special dropdowns
-        document.getElementById('bioSelect').value = '';
+        const bioSelect = document.getElementById('bioSelect');
+        if (bioSelect) bioSelect.value = '';
         resetSpecialButtons();
         document.getElementById('bioContent').classList.add('hidden');
         document.getElementById('memeContent').classList.add('hidden');
         document.getElementById('recordsContent').classList.add('hidden');
         document.getElementById('changelogContent').classList.add('hidden');
         
+        // Hide day summary when match is selected
+        document.getElementById('dayContent').classList.add('hidden');
+        
         const teamComposition = document.getElementById('teamCompositionSelect').value;
         const teamSize = document.getElementById('teamSizeSelect').value;
         const dayMatches = getFilteredMatches(selectedDay, teamComposition, teamSize);
         showMatchDetails(dayMatches, matchIndex);
-        // Hide day summary when match is selected
-        document.getElementById('dayContent').classList.add('hidden');
       } else {
         document.getElementById('matchContent').classList.add('hidden');
         // Show day summary again when no match is selected
@@ -1574,19 +1590,21 @@
     }
 
     // BIO dropdown event listener
-    document.getElementById('bioSelect').addEventListener('change', function() {
-      const selectedPlayer = this.value;
-      
-      console.log('Player BIO selected:', selectedPlayer);
-      
-      if (selectedPlayer) {
-        // Hide main dashboard when showing bio
-        toggleMainDashboard(true);
-        showPlayerBio(selectedPlayer);
+    const bioSelectEl = document.getElementById('bioSelect');
+    if (bioSelectEl) {
+      bioSelectEl.addEventListener('change', function() {
+        const selectedPlayer = this.value;
         
-        // Reset other dropdowns
-        resetSpecialButtons();
-        document.getElementById('memeContent').classList.add('hidden');
+        console.log('Player BIO selected:', selectedPlayer);
+        
+        if (selectedPlayer) {
+          // Hide main dashboard when showing bio
+          toggleMainDashboard(true);
+          showPlayerBio(selectedPlayer);
+          
+          // Reset other dropdowns
+          resetSpecialButtons();
+          document.getElementById('memeContent').classList.add('hidden');
         document.getElementById('recordsContent').classList.add('hidden');
         document.getElementById('changelogContent').classList.add('hidden');
       } else {
@@ -1595,6 +1613,7 @@
         document.getElementById('bioContent').classList.add('hidden');
       }
     });
+    }
 
     // Helper function to reset special button states
     function resetSpecialButtons() {
@@ -1632,7 +1651,8 @@
       showMemesDashboard();
       
       // Reset bio dropdown
-      document.getElementById('bioSelect').value = '';
+      const bioSelect = document.getElementById('bioSelect');
+      if (bioSelect) bioSelect.value = '';
       document.getElementById('bioContent').classList.add('hidden');
     });
 
@@ -1658,7 +1678,8 @@
       showTeamRecords();
       
       // Reset bio dropdown
-      document.getElementById('bioSelect').value = '';
+      const bioSelect = document.getElementById('bioSelect');
+      if (bioSelect) bioSelect.value = '';
       document.getElementById('bioContent').classList.add('hidden');
     });
 
@@ -1684,7 +1705,8 @@
       showChangelog();
       
       // Reset bio dropdown
-      document.getElementById('bioSelect').value = '';
+      const bioSelect = document.getElementById('bioSelect');
+      if (bioSelect) bioSelect.value = '';
       document.getElementById('bioContent').classList.add('hidden');
     });
 
