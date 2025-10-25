@@ -523,6 +523,7 @@
 
   <script>
     let matchData = [];
+    let fullMatchData = []; // Keep full dataset for memes, records, changelog
     let currentCharts = [];
     let cachedRecords = null; // Cache for pre-calculated records
     let currentPlayer = 'Kilma9'; // Default player
@@ -1374,17 +1375,45 @@
         
         // Add cache busting with timestamp
         const timestamp = new Date().getTime();
-        const response = await fetch(`${player.dataFile}?t=${timestamp}`);
         
-        if (!response.ok) {
-          throw new Error(`Failed to load data for ${playerName}: ${response.status}`);
+        // Try to load player-specific file first, fallback to main data.json
+        let response;
+        let dataFile = player.dataFile;
+        
+        try {
+          response = await fetch(`${dataFile}?t=${timestamp}`);
+          if (!response.ok) throw new Error('Player file not found');
+        } catch (error) {
+          console.log(`⚠️ Player-specific file not found for ${playerName}, trying main data.json...`);
+          dataFile = 'data.json';
+          response = await fetch(`${dataFile}?t=${timestamp}`);
+          
+          if (!response.ok) {
+            throw new Error(`Failed to load any data file: ${response.status}`);
+          }
         }
         
-        matchData = await response.json();
-        console.log(`✅ Loaded ${matchData.length} matches for ${playerName}`);
+        const allData = await response.json();
+        
+        // Always keep the full dataset for global functions (memes, records, changelog)
+        fullMatchData = allData;
+        
+        // Filter data for the specific player if using main data.json
+        if (dataFile === 'data.json' && playerName !== 'Kilma9') {
+          matchData = allData.filter(match => 
+            match.team && match.team.some(teammate => teammate.name === playerName)
+          );
+          console.log(`✅ Filtered ${matchData.length} matches for ${playerName} from main data`);
+        } else {
+          matchData = allData;
+          console.log(`✅ Loaded ${matchData.length} matches for ${playerName}`);
+        }
         
         // Update dashboard title
         document.querySelector('.header h1').textContent = `🎮 ${playerName}'s PUBG Performance Dashboard`;
+        
+        // Clear cached records to force recalculation with full dataset
+        cachedRecords = null;
         
         // Repopulate dropdowns and data
         populateDayDropdown();
@@ -1866,7 +1895,7 @@
 
     // Function to calculate meme statistics
     function calculateMemeStats() {
-      if (!matchData || matchData.length === 0) {
+      if (!fullMatchData || fullMatchData.length === 0) {
         return {
           mostRevives: 'Unknown',
           topDamager: 'Unknown',
@@ -1875,7 +1904,7 @@
       }
 
       const playerStats = {};
-      matchData.forEach(match => {
+      fullMatchData.forEach(match => {
         match.team.forEach(player => {
           if (!playerStats[player.name]) {
             playerStats[player.name] = { 
@@ -1907,7 +1936,7 @@
 
     // Function to calculate team records
     function calculateTeamRecords() {
-      if (!matchData || matchData.length === 0) {
+      if (!fullMatchData || fullMatchData.length === 0) {
         return {
           topDamage: { player: 'Unknown', value: 0, date: 'N/A' },
           topKills: { player: 'Unknown', value: 0, date: 'N/A' },
@@ -1925,7 +1954,7 @@
       let topHeals = { player: '', value: 0, date: '' };
       let topBoosts = { player: '', value: 0, date: '' };
 
-      matchData.forEach(match => {
+      fullMatchData.forEach(match => {
         let matchTeamDamage = 0;
         const matchDate = new Date(match.date).toLocaleDateString('en-GB', {
           day: '2-digit',
