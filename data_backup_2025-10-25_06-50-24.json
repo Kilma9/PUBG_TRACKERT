@@ -1,13 +1,6 @@
 [
   {
     "date": "2025-10-24T19:51:02Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Baltic_Main",
-    "duration": 1580,
-    "placement": 1,
     "team": [
       {
         "name": "Hyottokko",
@@ -131,13 +124,6 @@
   },
   {
     "date": "2025-10-24T19:22:16Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Desert_Main",
-    "duration": 1539,
-    "placement": 3,
     "team": [
       {
         "name": "Mar-0",
@@ -236,13 +222,6 @@
   },
   {
     "date": "2025-10-24T19:14:40Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Desert_Main",
-    "duration": 1583,
-    "placement": 19,
     "team": [
       {
         "name": "Hyottokko",
@@ -327,13 +306,6 @@
   },
   {
     "date": "2025-10-24T18:50:04Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "DihorOtok_Main",
-    "duration": 1474,
-    "placement": 6,
     "team": [
       {
         "name": "ownedbyphysics",
@@ -451,13 +423,6 @@
   },
   {
     "date": "2025-10-24T18:37:37Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Baltic_Main",
-    "duration": 1545,
-    "placement": 21,
     "team": [
       {
         "name": "Mar-0",
@@ -565,13 +530,6 @@
   },
   {
     "date": "2025-10-24T18:09:11Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Neon_Main",
-    "duration": 1652,
-    "placement": 4,
     "team": [
       {
         "name": "Kilma9",
@@ -658,13 +616,6 @@
   },
   {
     "date": "2025-10-24T17:58:31Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Tiger_Main",
-    "duration": 1582,
-    "placement": 16,
     "team": [
       {
         "name": "Mar-0",
@@ -745,13 +696,6 @@
   },
   {
     "date": "2025-10-24T17:30:42Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Tiger_Main",
-    "duration": 1565,
-    "placement": 3,
     "team": [
       {
         "name": "Kilma9",
@@ -840,13 +784,6 @@
   },
   {
     "date": "2025-10-24T17:26:01Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Tiger_Main",
-    "duration": 1527,
-    "placement": 27,
     "team": [
       {
         "name": "Kilma9",
@@ -930,13 +867,6 @@
   },
   {
     "date": "2025-10-24T17:15:17Z",
-    "gameMode": "skbd",
-    "gameType": "normal",
-    "teamSize": "solo",
-    "perspective": "tpp",
-    "mapName": "Desert_Main",
-    "duration": 489,
-    "placement": 1,
     "team": [
       {
         "name": "Dask_O",
@@ -1029,13 +959,6 @@
   },
   {
     "date": "2025-10-23T18:20:02Z",
-    "gameMode": "skbd",
-    "gameType": "normal",
-    "teamSize": "solo",
-    "perspective": "tpp",
-    "mapName": "Desert_Main",
-    "duration": 1169,
-    "placement": 1,
     "team": [
       {
         "name": "SAANBAKERSAAN",
@@ -1135,13 +1058,6 @@
   },
   {
     "date": "2025-10-22T18:19:13Z",
-    "gameMode": "skbd",
-    "gameType": "normal",
-    "teamSize": "solo",
-    "perspective": "tpp",
-    "mapName": "Desert_Main",
-    "duration": 846,
-    "placement": 1,
     "team": [
       {
         "name": "ludnic",
@@ -1241,13 +1157,6 @@
   },
   {
     "date": "2025-10-22T18:14:54Z",
-    "gameMode": "skbd",
-    "gameType": "normal",
-    "teamSize": "solo",
-    "perspective": "tpp",
-    "mapName": "Desert_Main",
-    "duration": 95,
-    "placement": 1,
     "team": [
       {
         "name": "Kilma9",
@@ -1283,13 +1192,6 @@
   },
   {
     "date": "2025-10-22T18:07:07Z",
-    "gameMode": "skbd",
-    "gameType": "normal",
-    "teamSize": "solo",
-    "perspective": "tpp",
-    "mapName": "Desert_Main",
-    "duration": 335,
-    "placement": 1,
     "team": [
       {
         "name": "Kilma9",
@@ -1409,13 +1311,6 @@
   },
   {
     "date": "2025-10-22T18:04:04Z",
-    "gameMode": "skbd",
-    "gameType": "normal",
-    "teamSize": "solo",
-    "perspective": "tpp",
-    "mapName": "Desert_Main",
-    "duration": 93,
-    "placement": 1,
     "team": [
       {
         "name": "BadNameBunny",
@@ -1499,13 +1394,6 @@
   },
   {
     "date": "2025-10-20T17:00:10Z",
-    "gameMode": "duo-fpp",
-    "gameType": "normal",
-    "teamSize": "duo",
-    "perspective": "fpp",
-    "mapName": "Baltic_Main",
-    "duration": 1640,
-    "placement": 23,
     "team": [
       {
         "name": "Mar-0",
@@ -1559,13 +1447,6 @@
   },
   {
     "date": "2025-10-18T14:15:08Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Kiki_Main",
-    "duration": 1567,
-    "placement": 2,
     "team": [
       {
         "name": "Kilma9",
@@ -1659,13 +1540,6 @@
   },
   {
     "date": "2025-10-18T14:04:03Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Tiger_Main",
-    "duration": 1556,
-    "placement": 15,
     "team": [
       {
         "name": "Baron_Frajeris",
@@ -1749,13 +1623,6 @@
   },
   {
     "date": "2025-10-18T13:36:44Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Desert_Main",
-    "duration": 1618,
-    "placement": 4,
     "team": [
       {
         "name": "Kilma9",
@@ -1848,13 +1715,6 @@
   },
   {
     "date": "2025-10-18T13:14:03Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Tiger_Main",
-    "duration": 1501,
-    "placement": 7,
     "team": [
       {
         "name": "Baron_Frajeris",
@@ -1950,13 +1810,6 @@
   },
   {
     "date": "2025-10-18T12:50:42Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Desert_Main",
-    "duration": 1389,
-    "placement": 5,
     "team": [
       {
         "name": "Mar-0",
@@ -2041,13 +1894,6 @@
   },
   {
     "date": "2025-10-18T12:24:15Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Desert_Main",
-    "duration": 1590,
-    "placement": 5,
     "team": [
       {
         "name": "Baron_Frajeris",
@@ -2161,13 +2007,6 @@
   },
   {
     "date": "2025-10-18T12:20:18Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Kiki_Main",
-    "duration": 1573,
-    "placement": 29,
     "team": [
       {
         "name": "Kilma9",
@@ -2275,13 +2114,6 @@
   },
   {
     "date": "2025-10-18T12:15:59Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Kiki_Main",
-    "duration": 1551,
-    "placement": 26,
     "team": [
       {
         "name": "Mar-0",
@@ -2387,13 +2219,6 @@
   },
   {
     "date": "2025-10-18T11:50:00Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "DihorOtok_Main",
-    "duration": 1492,
-    "placement": 4,
     "team": [
       {
         "name": "Kilma9",
@@ -2482,13 +2307,6 @@
   },
   {
     "date": "2025-10-18T11:29:43Z",
-    "gameMode": "duo-fpp",
-    "gameType": "normal",
-    "teamSize": "duo",
-    "perspective": "fpp",
-    "mapName": "Desert_Main",
-    "duration": 1607,
-    "placement": 17,
     "team": [
       {
         "name": "Kilma9",
@@ -2549,13 +2367,6 @@
   },
   {
     "date": "2025-10-18T11:21:12Z",
-    "gameMode": "duo-fpp",
-    "gameType": "normal",
-    "teamSize": "duo",
-    "perspective": "fpp",
-    "mapName": "Kiki_Main",
-    "duration": 1542,
-    "placement": 38,
     "team": [
       {
         "name": "Kilma9",
@@ -2612,13 +2423,6 @@
   },
   {
     "date": "2025-10-16T18:44:19Z",
-    "gameMode": "duo-fpp",
-    "gameType": "normal",
-    "teamSize": "duo",
-    "perspective": "fpp",
-    "mapName": "Neon_Main",
-    "duration": 1660,
-    "placement": 2,
     "team": [
       {
         "name": "Veru_13",
@@ -2681,13 +2485,6 @@
   },
   {
     "date": "2025-10-16T18:37:16Z",
-    "gameMode": "duo-fpp",
-    "gameType": "normal",
-    "teamSize": "duo",
-    "perspective": "fpp",
-    "mapName": "Tiger_Main",
-    "duration": 1618,
-    "placement": 25,
     "team": [
       {
         "name": "Veru_13",
@@ -2744,13 +2541,6 @@
   },
   {
     "date": "2025-10-16T18:04:52Z",
-    "gameMode": "duo-fpp",
-    "gameType": "normal",
-    "teamSize": "duo",
-    "perspective": "fpp",
-    "mapName": "Desert_Main",
-    "duration": 1824,
-    "placement": 1,
     "team": [
       {
         "name": "Veru_13",
@@ -2813,13 +2603,6 @@
   },
   {
     "date": "2025-10-16T17:40:42Z",
-    "gameMode": "duo-fpp",
-    "gameType": "normal",
-    "teamSize": "duo",
-    "perspective": "fpp",
-    "mapName": "Kiki_Main",
-    "duration": 1544,
-    "placement": 6,
     "team": [
       {
         "name": "Kilma9",
@@ -2881,13 +2664,6 @@
   },
   {
     "date": "2025-10-15T18:50:31Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Desert_Main",
-    "duration": 1600,
-    "placement": 13,
     "team": [
       {
         "name": "Mar-0",
@@ -2999,13 +2775,6 @@
   },
   {
     "date": "2025-10-15T18:43:00Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Baltic_Main",
-    "duration": 1553,
-    "placement": 19,
     "team": [
       {
         "name": "Mar-0",
@@ -3117,13 +2886,6 @@
   },
   {
     "date": "2025-10-15T18:15:00Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Kiki_Main",
-    "duration": 1535,
-    "placement": 1,
     "team": [
       {
         "name": "Baron_Frajeris",
@@ -3243,13 +3005,6 @@
   },
   {
     "date": "2025-10-15T17:46:40Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Tiger_Main",
-    "duration": 1593,
-    "placement": 2,
     "team": [
       {
         "name": "Kilma9",
@@ -3370,13 +3125,6 @@
   },
   {
     "date": "2025-10-15T17:39:25Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Kiki_Main",
-    "duration": 1587,
-    "placement": 22,
     "team": [
       {
         "name": "Kilma9",
@@ -3485,13 +3233,6 @@
   },
   {
     "date": "2025-10-15T17:27:28Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Tiger_Main",
-    "duration": 1608,
-    "placement": 19,
     "team": [
       {
         "name": "Baron_Frajeris",
@@ -3603,13 +3344,6 @@
   },
   {
     "date": "2025-10-15T17:15:51Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Baltic_Main",
-    "duration": 1544,
-    "placement": 19,
     "team": [
       {
         "name": "Kilma9",
@@ -3722,13 +3456,6 @@
   },
   {
     "date": "2025-10-15T17:00:26Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "DihorOtok_Main",
-    "duration": 1546,
-    "placement": 17,
     "team": [
       {
         "name": "Kilma9",
@@ -3813,13 +3540,6 @@
   },
   {
     "date": "2025-10-15T16:56:24Z",
-    "gameMode": "duo-fpp",
-    "gameType": "normal",
-    "teamSize": "duo",
-    "perspective": "fpp",
-    "mapName": "Desert_Main",
-    "duration": 1506,
-    "placement": 44,
     "team": [
       {
         "name": "Kilma9",
@@ -3875,13 +3595,6 @@
   },
   {
     "date": "2025-10-13T19:17:16Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Kiki_Main",
-    "duration": 1590,
-    "placement": 5,
     "team": [
       {
         "name": "meRy_cz",
@@ -3998,13 +3711,6 @@
   },
   {
     "date": "2025-10-13T18:49:08Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Desert_Main",
-    "duration": 1569,
-    "placement": 2,
     "team": [
       {
         "name": "Mar-0",
@@ -4122,13 +3828,6 @@
   },
   {
     "date": "2025-10-13T18:36:58Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Kiki_Main",
-    "duration": 1425,
-    "placement": 16,
     "team": [
       {
         "name": "Mar-0",
@@ -4245,13 +3944,6 @@
   },
   {
     "date": "2025-10-13T18:29:55Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Baltic_Main",
-    "duration": 1460,
-    "placement": 23,
     "team": [
       {
         "name": "Kilma9",
@@ -4336,13 +4028,6 @@
   },
   {
     "date": "2025-10-13T18:18:18Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Tiger_Main",
-    "duration": 1477,
-    "placement": 20,
     "team": [
       {
         "name": "MattoniusCZE",
@@ -4452,13 +4137,6 @@
   },
   {
     "date": "2025-10-13T18:10:27Z",
-    "gameMode": "squad-fpp",
-    "gameType": "normal",
-    "teamSize": "squad",
-    "perspective": "fpp",
-    "mapName": "Tiger_Main",
-    "duration": 1722,
-    "placement": 24,
     "team": [
       {
         "name": "Kilma9",
@@ -4543,13 +4221,6 @@
   },
   {
     "date": "2025-10-13T17:40:34Z",
-    "gameMode": "duo-fpp",
-    "gameType": "normal",
-    "teamSize": "duo",
-    "perspective": "fpp",
-    "mapName": "Baltic_Main",
-    "duration": 1545,
-    "placement": 1,
     "team": [
       {
         "name": "Baron_Frajeris",
@@ -4612,13 +4283,6 @@
   },
   {
     "date": "2025-10-13T17:34:53Z",
-    "gameMode": "duo-fpp",
-    "gameType": "normal",
-    "teamSize": "duo",
-    "perspective": "fpp",
-    "mapName": "Neon_Main",
-    "duration": 1519,
-    "placement": 35,
     "team": [
       {
         "name": "Baron_Frajeris",
@@ -4669,6 +4333,88 @@
         "teamKills": 0,
         "timeSurvived": 219,
         "walkDistance": 289.08337,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-10-10T19:47:33Z",
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 1,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Panzer Faust100 M_ Projectile": 100,
+          "Weap H K416": 0,
+          "Player Male_ A": 0
+        },
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 9,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 383,
+        "walkDistance": 633.8748,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 0,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 113,
+        "walkDistance": 68.01341,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 309.382,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 67.78199768066406,
+          "Player Male_ A": 0,
+          "Weap H K416": 241.5999984741211
+        },
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 30,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 373,
+        "walkDistance": 477.39288,
         "rideDistance": 0,
         "swimDistance": 0
       }
