@@ -487,7 +487,13 @@ async function collectPlayerData(playerName) {
     const thirtyDaysAgo = new Date();
     thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
     
-    console.log(`� Looking for new matches since: ${latestMatchDate ? latestMatchDate.toISOString() : 'beginning of time'}`);
+    // Determine collection mode
+    const isInitialCollection = existingMatches.length === 0;
+    const collectionMode = isInitialCollection ? 'FULL (30 days)' : 'INCREMENTAL (new matches only)';
+    
+    console.log(`📅 Collection Mode: ${collectionMode}`);
+    console.log(`📅 Looking for matches since: ${latestMatchDate ? latestMatchDate.toISOString() : '30 days ago'}`);
+    console.log(`📅 30-day cutoff: ${thirtyDaysAgo.toISOString()}`);
     
     let processedCount = 0;
     let newMatchesCount = 0;
@@ -504,7 +510,7 @@ async function collectPlayerData(playerName) {
           
           // Skip if this match is older than our latest existing match (already processed)
           if (latestMatchDate && matchDate <= latestMatchDate) {
-            console.log(`⏭️ Match already exists (${matchDate.toISOString().split('T')[0]}), skipping...`);
+            console.log(`⏭️ Match already exists (${matchDate.toISOString().split('T')[0]}), skipping remaining matches...`);
             break; // Stop processing - we've reached matches we already have
           }
           
@@ -512,7 +518,7 @@ async function collectPlayerData(playerName) {
           if (matchDate >= thirtyDaysAgo) {
             newMatches.push(summary);
             newMatchesCount++;
-            console.log(`✅ New match added (${newMatchesCount} total new matches)`);
+            console.log(`✅ New match added (${newMatchesCount} total new matches, ${matchDate.toISOString().split('T')[0]})`);
           } else {
             console.log(`⏰ Match too old (${matchDate.toISOString().split('T')[0]}), stopping collection`);
             break; // Stop processing older matches
@@ -530,8 +536,11 @@ async function collectPlayerData(playerName) {
         }
         
         // Safety limit to avoid processing too many matches
-        if (processedCount >= 50) { // Reduced limit since we're only processing new matches
-          console.log(`⚠️ Reached safety limit of 50 new matches processed`);
+        if (isInitialCollection && processedCount >= 100) {
+          console.log(`⚠️ Reached safety limit of 100 matches for initial collection`);
+          break;
+        } else if (!isInitialCollection && processedCount >= 20) {
+          console.log(`⚠️ Reached safety limit of 20 matches for incremental collection`);
           break;
         }
         
