@@ -47,6 +47,12 @@ jobs:
           cp data.json deploy/
           echo "✅ data.json copied. Size: $(wc -c < deploy/data.json) bytes"
           
+          # Copy ALL individual player data files
+          echo "📊 Copying individual player data files..."
+          cp data_*.json deploy/ 2>/dev/null || echo "No individual player data files"
+          echo "✅ Individual player data files copied:"
+          ls -la deploy/data_*.json 2>/dev/null || echo "No data_*.json files found"
+          
           # Copy sync timestamp file
           cp last-sync.json deploy/ 2>/dev/null || echo "No sync timestamp file"
           
@@ -141,6 +147,8 @@ jobs:
             **/node_modules/**
             **/.env
             **/PUBG.JS
+            **/data_backup_*.json
+            **/.github/**
             
       - name: ✅ Deployment Success
         if: success()
