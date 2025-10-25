@@ -57,6 +57,7 @@ jobs:
         
         # Copy data files
         cp data.json deploy/ 2>/dev/null || echo "No data.json yet"
+        cp data_*.json deploy/ 2>/dev/null || echo "No individual player data files yet"
         
         # Copy README
         cp README.md deploy/
