@@ -13,16 +13,24 @@ app.get('/data.json', (req, res) => {
   res.sendFile(path.join(__dirname, 'data.json'));
 });
 
-// Serve individual player data files
-app.get('/data_*.json', (req, res) => {
-  const fileName = req.path.substring(1); // Remove leading slash
-  res.sendFile(path.join(__dirname, fileName));
+// Serve individual player data files using parameter syntax
+app.get('/data_:playerName.json', (req, res) => {
+  const fileName = `data_${req.params.playerName}.json`;
+  res.sendFile(path.join(__dirname, fileName), (err) => {
+    if (err) {
+      res.status(404).json({ error: 'Player data file not found' });
+    }
+  });
 });
 
 // Serve any JSON file in the root directory (for flexibility)
-app.get('/*.json', (req, res) => {
-  const fileName = req.path.substring(1); // Remove leading slash
-  res.sendFile(path.join(__dirname, fileName));
+app.get('/:filename.json', (req, res) => {
+  const fileName = `${req.params.filename}.json`;
+  res.sendFile(path.join(__dirname, fileName), (err) => {
+    if (err) {
+      res.status(404).json({ error: 'File not found' });
+    }
+  });
 });
 
 app.listen(3000, () => {
