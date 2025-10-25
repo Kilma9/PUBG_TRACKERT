@@ -55,12 +55,16 @@ jobs:
         cp package.json deploy/
         cp package-lock.json deploy/
         
-        # Copy data files
+        # Copy ALL data files (main and individual player data files)
         cp data.json deploy/ 2>/dev/null || echo "No data.json yet"
         cp data_*.json deploy/ 2>/dev/null || echo "No individual player data files yet"
         
+        # List data files being deployed for debugging
+        echo "📊 Data files being deployed:"
+        ls -lh deploy/data*.json 2>/dev/null || echo "No data files found"
+        
         # Copy README
-        cp README.md deploy/
+        cp README.md deploy/ 2>/dev/null || echo "No README"
         
         # Create .htaccess for Apache (if needed)
         echo "DirectoryIndex index.html" > deploy/.htaccess
@@ -69,21 +73,23 @@ jobs:
         echo "RewriteCond %{REQUEST_FILENAME} !-d" >> deploy/.htaccess
         echo "RewriteRule ^(.*)$ index.html [QSA,L]" >> deploy/.htaccess
         
-    - name: 📤 Deploy to Production FTP (Main Branch Only)
+    - name: 📤 Deploy to webzdarma.cz (Main Branch)
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       if: github.ref == 'refs/heads/main'
       with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
+        server: ${{ secrets.WEBZDARMA_FTP_SERVER }}
+        username: ${{ secrets.WEBZDARMA_FTP_USERNAME }}
+        password: ${{ secrets.WEBZDARMA_FTP_PASSWORD }}
         local-dir: ./deploy/
-        server-dir: ${{ secrets.FTP_SERVER_DIR }}
+        server-dir: ${{ secrets.WEBZDARMA_FTP_DIR }}
         exclude: |
           **/.git*
           **/.git*/**
           **/node_modules/**
           **/.env
           **/PUBG.JS
+          **/.github/**
+          **/data_backup_*.json
           
     - name: 📤 Deploy to Dev FTP (Dev Branch Only) 
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
