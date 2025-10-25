@@ -1,6 +1,6 @@
 ## 🎮 PUBG Data Collection Report
-**Collection Date:** Sat Oct 18 20:13:11 UTC 2025
-**Trigger:** schedule
-**Total Matches:** 60
-**Latest Match:** 2025-10-18T14:15:08Z
-**Players Found:** Baron_Frajeris,Hyottokko,Kilma9,Majk_the_Reaper,Mar-0,MattoniusCZE,Pecasss,Qcq8S6bSSf06E,RESTSahin,TEIXr,Veru_13,axe125,codufus,meRy_cz
+**Collection Date:** Fri Oct 24 20:20:43 UTC 2025
+**Trigger:** workflow_dispatch
+**Total Matches:** 49
+**Latest Match:** 2025-10-24T19:51:02Z
+**Players Found:** Avocado7894,BadNameBunny,Baron_Frajeris,Dask_O,Hyottokko,Kilma9,Klitorany_vosh,Majk_the_Reaper,Mar-0,MattoniusCZE,NatoCro,NiDeKaiYang,Nico18bicholas,SAANBAKERSAAN,SAMII23,Veru_13,codufus,ludnic,meRy_cz,ownedbyphysics,rostichc
