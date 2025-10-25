@@ -1,6 +1,29 @@
-## 🎮 PUBG Data Collection Report
-**Collection Date:** Sat Oct 25 06:51:20 UTC 2025
+## 🎮 PUBG Multi-Player Data Collection Report
+**Collection Date:** Sat Oct 25 07:39:00 UTC 2025
 **Trigger:** workflow_dispatch
-**Total Matches:** 48
-**Latest Match:** 2025-10-24T19:51:02Z
-**Players Found:** Avocado7894,BadNameBunny,Baron_Frajeris,Dask_O,Hyottokko,Kilma9,Klitorany_vosh,Mar-0,MattoniusCZE,NatoCro,NiDeKaiYang,Nico18bicholas,SAANBAKERSAAN,SAMII23,Veru_13,codufus,ludnic,meRy_cz,ownedbyphysics,rostichc
+
+### 👤 Kilma9
+- **Matches:** 48
+- **Latest Match:** 2025-10-24T19:51:02Z
+
+### 👤 Mar-0
+- **Matches:** 41
+- **Latest Match:** 2025-10-24T21:29:46Z
+
+### 👤 Hyottokko
+- **Matches:** 20
+- **Latest Match:** 2025-10-24T21:29:46Z
+
+### 👤 Baron_Frajeris
+- **Matches:** 26
+- **Latest Match:** 2025-10-18T14:15:08Z
+
+### 👤 codufus
+- **Matches:** 50
+- **Latest Match:** 2025-10-24T21:29:46Z
+
+### 👤 Veru_13
+- **Matches:** 28
+- **Latest Match:** 2025-10-19T17:50:35Z
+
+**Total Matches Across All Players:** 213
