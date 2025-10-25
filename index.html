@@ -415,7 +415,7 @@
       </div>
       
       <!-- Player Bio Section - Now below the buttons -->
-      <div id="playerBio" class="player-bio">
+      <div id="playerBio" class="player-bio hidden">
         <h3 id="bioPlayerName">Kilma9</h3>
         <div id="bioContent" class="bio-content">
           <p><strong>🎮 Main Player & Squad Leader</strong></p>
@@ -428,7 +428,40 @@
     </div>
   </div>
   
-  <div id="knownBugs" class="content-section" style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 10px; margin: 10px 0;">
+  <!-- Welcome Screen -->
+  <div id="welcomeScreen" class="content-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; padding: 30px; margin: 20px 0; text-align: center;">
+    <h2 style="margin: 0 0 20px 0; font-size: 28px;">🎮 Welcome to PUBG Performance Tracker!</h2>
+    
+    <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 20px; margin: 20px 0; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <h3 style="margin: 0 0 15px 0; color: #fff;">📖 Quick Start Guide</h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 15px;">
+        <div>
+          <strong>👥 Select a Player</strong>
+          <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Choose from 6 squad members above to view their individual stats and match history</p>
+        </div>
+        <div>
+          <strong>📊 View Statistics</strong>
+          <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Use the day/match dropdowns to explore detailed performance data and charts</p>
+        </div>
+        <div>
+          <strong>🤡 Special Sections</strong>
+          <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Check out Meme Dashboard, Team Records, and Changelog using the buttons above</p>
+        </div>
+      </div>
+      
+      <div style="background: rgba(255, 255, 255, 0.15); border-radius: 6px; padding: 12px; margin-top: 15px;">
+        <strong>💡 Pro Tip:</strong> Data is automatically collected 3 times daily (8PM, 9PM, 10PM Prague time) via GitHub Actions
+      </div>
+    </div>
+    
+    <button onclick="document.getElementById('welcomeScreen').classList.add('hidden')" 
+            style="background: white; color: #667eea; border: none; padding: 12px 30px; border-radius: 25px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s;">
+      ✨ Get Started - Select a Player Above
+    </button>
+  </div>
+  
+  <div id="knownBugs" class="content-section hidden" style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 10px; margin: 10px 0;">
     <div class="section-header" style="color: #856404; font-size: 14px; margin-bottom: 5px;">⚠️ Known Issues</div>
     <div style="font-size: 12px; color: #856404;">
       <ul style="margin: 5px 0; padding-left: 20px;">
@@ -621,13 +654,13 @@
 
     // Initialize with default player data
     async function initializeDashboard() {
-      // Load default player (Kilma9) on startup
-      await loadPlayerData(currentPlayer);
+      // Don't load any player by default - show welcome screen instead
+      console.log('Dashboard initialized - showing welcome screen');
       
-      // Update sync info
-      if (matchData.length > 0) {
-        await updateSyncInfo(matchData);
-      }
+      // Remove active state from all player buttons
+      document.querySelectorAll('.player-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
     }
 
     // Initialize dashboard on page load
@@ -1337,6 +1370,10 @@
     function switchPlayer(playerName) {
       currentPlayer = playerName;
       
+      // Hide welcome screen and show known bugs section when player is selected
+      document.getElementById('welcomeScreen').classList.add('hidden');
+      document.getElementById('knownBugs').classList.remove('hidden');
+      
       // Update active button state
       document.querySelectorAll('.player-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -1363,6 +1400,8 @@
       if (player) {
         document.getElementById('bioPlayerName').textContent = playerName;
         document.getElementById('bioContent').innerHTML = player.bio;
+        // Show the bio section when a player is selected
+        document.getElementById('playerBio').classList.remove('hidden');
       }
     }
 
@@ -1488,7 +1527,8 @@
         document.getElementById('changelogContent').classList.add('hidden');
         
         const teamComposition = document.getElementById('teamCompositionSelect').value;
-        const dayMatches = getFilteredMatches(selectedDay, teamComposition);
+        const teamSize = document.getElementById('teamSizeSelect').value;
+        const dayMatches = getFilteredMatches(selectedDay, teamComposition, teamSize);
         showMatchDetails(dayMatches, matchIndex);
         // Hide day summary when match is selected
         document.getElementById('dayContent').classList.add('hidden');
@@ -1574,6 +1614,12 @@
     document.getElementById('memesBtn').addEventListener('click', function() {
       console.log('Memes button clicked');
       
+      // Check if player data is loaded
+      if (!fullMatchData || fullMatchData.length === 0) {
+        alert('⚠️ Please select a player first!');
+        return;
+      }
+      
       // Reset other buttons and hide all sections first
       resetSpecialButtons();
       hideAllSpecialSections();
@@ -1594,6 +1640,12 @@
     document.getElementById('recordsBtn').addEventListener('click', function() {
       console.log('Records button clicked');
       
+      // Check if player data is loaded
+      if (!fullMatchData || fullMatchData.length === 0) {
+        alert('⚠️ Please select a player first!');
+        return;
+      }
+      
       // Reset other buttons and hide all sections first
       resetSpecialButtons();
       hideAllSpecialSections();
@@ -1613,6 +1665,12 @@
     // Changelog button event listener
     document.getElementById('changelogBtn').addEventListener('click', function() {
       console.log('Changelog button clicked');
+      
+      // Check if player data is loaded
+      if (!fullMatchData || fullMatchData.length === 0) {
+        alert('⚠️ Please select a player first!');
+        return;
+      }
       
       // Reset other buttons and hide all sections first
       resetSpecialButtons();
