@@ -286,6 +286,81 @@
       background: linear-gradient(135deg, #5a67d8, #553c9a);
       transform: translateY(0);
     }
+
+    /* Player Selection Styles */
+    .player-selection {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .player-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      flex: 1;
+    }
+
+    .player-btn {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border: 2px solid #dee2e6;
+      border-radius: 12px;
+      padding: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      font-family: inherit;
+    }
+
+    .player-btn:hover {
+      background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+      border-color: #667eea;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+    }
+
+    .player-btn.active {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-color: #667eea;
+      color: white;
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    }
+
+    .player-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .player-name {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .player-role {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    .player-bio {
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      padding: 20px;
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .player-bio h3 {
+      color: #667eea;
+      margin: 0 0 15px 0;
+      font-size: 20px;
+    }
+
+    .bio-content p {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -293,6 +368,59 @@
     <h1>🎮 PUBG Performance Dashboard</h1>
     <p>Track your team's performance with detailed statistics and weapon analytics</p>
     <p><small id="lastUpdated">Loading sync information...</small></p>
+  </div>
+
+  <!-- Player Selection -->
+  <div class="content-section">
+    <div class="section-header">👥 Select Player</div>
+    <div class="section-content">
+      <div class="player-selection">
+        <div class="player-buttons">
+          <button class="player-btn active" data-player="Kilma9">
+            <div class="player-icon">🎮</div>
+            <div class="player-name">Kilma9</div>
+            <div class="player-role">Main Player</div>
+          </button>
+          <button class="player-btn" data-player="Mar-0">
+            <div class="player-icon">⚔️</div>
+            <div class="player-name">Mar-0</div>
+            <div class="player-role">Squad Member</div>
+          </button>
+          <button class="player-btn" data-player="Hyottokko">
+            <div class="player-icon">🔥</div>
+            <div class="player-name">Hyottokko</div>
+            <div class="player-role">Squad Member</div>
+          </button>
+          <button class="player-btn" data-player="Baron_Frajeris">
+            <div class="player-icon">👑</div>
+            <div class="player-name">Baron_Frajeris</div>
+            <div class="player-role">Squad Member</div>
+          </button>
+          <button class="player-btn" data-player="codufus">
+            <div class="player-icon">🎯</div>
+            <div class="player-name">codufus</div>
+            <div class="player-role">Squad Member</div>
+          </button>
+          <button class="player-btn" data-player="Veru_13">
+            <div class="player-icon">🛡️</div>
+            <div class="player-name">Veru_13</div>
+            <div class="player-role">Squad Member</div>
+          </button>
+        </div>
+        
+        <!-- Player Bio Section -->
+        <div id="playerBio" class="player-bio">
+          <h3 id="bioPlayerName">Kilma9</h3>
+          <div id="bioContent" class="bio-content">
+            <p><strong>🎮 Main Player & Squad Leader</strong></p>
+            <p>📊 Primary statistics tracking and dashboard owner</p>
+            <p>🏆 Active PUBG player focused on squad gameplay</p>
+            <p>⚔️ Prefers strategic positioning and team coordination</p>
+            <p>📈 Tracks detailed performance metrics for team improvement</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   
   <div id="knownBugs" class="content-section" style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 10px; margin: 10px 0;">
@@ -333,16 +461,7 @@
         <option value="">Choose a match...</option>
       </select>
       
-      <label><strong>Player BIO:</strong></label>
-      <select id="bioSelect">
-        <option value="">Choose a player...</option>
-        <option value="Kilma9">Kilma9</option>
-        <option value="Veru_13">Veru_13</option>
-        <option value="Mar-0">Mar-0</option>
-        <option value="Hyottokko">Hyottokko</option>
-        <option value="Baron_Frajeris">Baron_Frajeris</option>
-        <option value="codufus">codufus</option>
-      </select>
+
       
       <label><strong>Special Sections:</strong></label>
       <div class="special-buttons">
@@ -401,6 +520,83 @@
     let matchData = [];
     let currentCharts = [];
     let cachedRecords = null; // Cache for pre-calculated records
+    let currentPlayer = 'Kilma9'; // Default player
+
+    // Player data and BIO information
+    const playerData = {
+      'Kilma9': {
+        icon: '🎮',
+        role: 'Main Player',
+        bio: `
+          <p><strong>🎮 Main Player & Squad Leader</strong></p>
+          <p>📊 Primary statistics tracking and dashboard owner</p>
+          <p>🏆 Active PUBG player focused on squad gameplay</p>
+          <p>⚔️ Prefers strategic positioning and team coordination</p>
+          <p>📈 Tracks detailed performance metrics for team improvement</p>
+        `,
+        dataFile: 'data.json'
+      },
+      'Mar-0': {
+        icon: '⚔️',
+        role: 'Squad Member',
+        bio: `
+          <p><strong>⚔️ Aggressive Fragger</strong></p>
+          <p>🔥 Known for high-kill games and aggressive pushes</p>
+          <p>🎯 Excellent with assault rifles and SMGs</p>
+          <p>🏃 Fast-paced playstyle with strong mechanical skills</p>
+          <p>💪 Team's primary entry fragger and damage dealer</p>
+        `,
+        dataFile: 'data_Mar-0.json'
+      },
+      'Hyottokko': {
+        icon: '🔥',
+        role: 'Squad Member',
+        bio: `
+          <p><strong>🔥 Versatile Player</strong></p>
+          <p>🎯 Balanced approach between aggression and strategy</p>
+          <p>🛡️ Reliable team player with consistent performance</p>
+          <p>📈 Steady improvement and adaptation to team needs</p>
+          <p>🤝 Strong communication and tactical awareness</p>
+        `,
+        dataFile: 'data_Hyottokko.json'
+      },
+      'Baron_Frajeris': {
+        icon: '👑',
+        role: 'Squad Member',
+        bio: `
+          <p><strong>👑 Strategic Mind</strong></p>
+          <p>🧠 Tactical player with excellent game sense</p>
+          <p>🎯 Sniper specialist with long-range expertise</p>
+          <p>🗺️ Map knowledge expert and rotation caller</p>
+          <p>🎖️ Clutch player in high-pressure situations</p>
+        `,
+        dataFile: 'data_Baron_Frajeris.json'
+      },
+      'codufus': {
+        icon: '🎯',
+        role: 'Squad Member',
+        bio: `
+          <p><strong>🎯 Precision Player</strong></p>
+          <p>🏹 Accurate shooter with excellent aim</p>
+          <p>🔍 Detail-oriented with strong positioning</p>
+          <p>🛠️ Equipment and utility specialist</p>
+          <p>⚖️ Balanced playstyle adapting to team needs</p>
+        `,
+        dataFile: 'data_codufus.json'
+      },
+      'Veru_13': {
+        icon: '🛡️',
+        role: 'Squad Member',
+        bio: `
+          <p><strong>🛡️ Support Specialist</strong></p>
+          <p>🏥 Team medic and support player</p>
+          <p>🚗 Vehicle expert and rotation coordinator</p>
+          <p>👁️ Excellent scout with strong awareness</p>
+          <p>🤲 Selfless team player focused on squad success</p>
+        `,
+        dataFile: 'data_Veru_13.json'
+      }
+    };
 
     // Utility function to clean weapon names
     function cleanWeaponName(weapon) {
@@ -417,27 +613,19 @@
       currentCharts = [];
     }
 
-    // Load and process data
-    // Add cache-busting parameter to force fresh data loading
-    const timestamp = new Date().getTime();
-    fetch(`/data.json?v=${timestamp}`)
-      .then(res => res.json())
-      .then(async (data) => {
-        matchData = data;
-        
-        // Pre-calculate records automatically on every data load
-        console.log('📊 Pre-calculating team records...');
-        cachedRecords = calculateTeamRecords();
-        console.log('✅ Records calculated and cached');
-        
-        populateDayDropdown();
-        populateTeamCompositions();
-        await updateSyncInfo(data);
-      })
-      .catch(error => {
-        console.error('Error loading data:', error);
-        document.getElementById('lastUpdated').textContent = 'Error loading data - check connection';
-      });
+    // Initialize with default player data
+    async function initializeDashboard() {
+      // Load default player (Kilma9) on startup
+      await loadPlayerData(currentPlayer);
+      
+      // Update sync info
+      if (matchData.length > 0) {
+        await updateSyncInfo(matchData);
+      }
+    }
+
+    // Initialize dashboard on page load
+    initializeDashboard();
 
     // Update sync information with Prague time
     async function updateSyncInfo(data) {
@@ -1137,6 +1325,89 @@
         document.getElementById('matchContent').classList.add('hidden');
         destroyCharts();
       }
+    });
+
+    // Player selection functionality
+    function switchPlayer(playerName) {
+      currentPlayer = playerName;
+      
+      // Update active button state
+      document.querySelectorAll('.player-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.player === playerName) {
+          btn.classList.add('active');
+        }
+      });
+      
+      // Update player bio
+      updatePlayerBio(playerName);
+      
+      // Load player data
+      loadPlayerData(playerName);
+      
+      // Reset dashboard state
+      document.getElementById('daySelect').value = '';
+      document.getElementById('matchSelect').value = '';
+      document.getElementById('dayContent').classList.add('hidden');
+      document.getElementById('matchContent').classList.add('hidden');
+    }
+
+    function updatePlayerBio(playerName) {
+      const player = playerData[playerName];
+      if (player) {
+        document.getElementById('bioPlayerName').textContent = playerName;
+        document.getElementById('bioContent').innerHTML = player.bio;
+      }
+    }
+
+    async function loadPlayerData(playerName) {
+      const player = playerData[playerName];
+      if (!player) return;
+      
+      try {
+        console.log(`📊 Loading data for ${playerName}...`);
+        
+        // Add cache busting with timestamp
+        const timestamp = new Date().getTime();
+        const response = await fetch(`${player.dataFile}?t=${timestamp}`);
+        
+        if (!response.ok) {
+          throw new Error(`Failed to load data for ${playerName}: ${response.status}`);
+        }
+        
+        matchData = await response.json();
+        console.log(`✅ Loaded ${matchData.length} matches for ${playerName}`);
+        
+        // Update dashboard title
+        document.querySelector('.header h1').textContent = `🎮 ${playerName}'s PUBG Performance Dashboard`;
+        
+        // Repopulate dropdowns and data
+        populateDayDropdown();
+        populateTeamCompositions();
+        
+      } catch (error) {
+        console.error(`❌ Error loading data for ${playerName}:`, error);
+        matchData = [];
+        
+        // Show error message
+        document.getElementById('daySummary').innerHTML = `
+          <div class="stat-card">
+            <div class="stat-title">No Data Available</div>
+            <div class="stat-value">Data for ${playerName} not found or failed to load</div>
+            <div style="margin-top: 10px; font-size: 12px; color: #666;">
+              Make sure the data collection has been run for this player
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // Add event listeners for player buttons
+    document.querySelectorAll('.player-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const playerName = btn.dataset.player;
+        switchPlayer(playerName);
+      });
     });
 
     // Team composition filter event listener

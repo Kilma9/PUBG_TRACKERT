@@ -2,14 +2,26 @@ const axios = require('axios');
 
 // Use environment variables for cloud execution, fallback to hardcoded values for local development
 const API_KEY = process.env.PUBG_API_KEY || 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiYjE4YmYzMC04YzA4LTAxM2UtZGUwMy0yNmQxYTJiMzY4ZGYiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNzYwNTQxNzY4LCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InptcmRpX2FwaV9wdWJnIn0.VxVk7vF2bR25_Z0YZa-QB8v0mEOmwDi0Lreu20d5rE0';
-const PLAYER_NAME = process.env.PLAYER_NAME || 'Kilma9';
+
+// Multi-player configuration
+const PLAYERS = [
+  'Kilma9',
+  'Mar-0', 
+  'Hyottokko',
+  'Baron_Frajeris',
+  'codufus',
+  'Veru_13'
+];
+
+const TARGET_PLAYER = process.env.PLAYER_NAME || 'Kilma9';
 const PLATFORM = process.env.PLATFORM || 'steam';
 
 // Check if running in cloud environment
 const IS_CLOUD = process.env.GITHUB_ACTIONS === 'true';
 
 console.log(`🔧 Environment: ${IS_CLOUD ? 'GitHub Actions (Cloud)' : 'Local Development'}`);
-console.log(`🎮 Player: ${PLAYER_NAME}`);
+console.log(`🎮 Target Player: ${TARGET_PLAYER}`);
+console.log(`👥 All Players: ${PLAYERS.join(', ')}`);
 console.log(`🖥️ Platform: ${PLATFORM}`);
 
 const headers = {
@@ -17,9 +29,9 @@ const headers = {
   Accept: 'application/vnd.api+json'
 };
 
-async function getPlayerId() {
-  console.log(`🔍 Looking up player: ${PLAYER_NAME}`);
-  const url = `https://api.pubg.com/shards/${PLATFORM}/players?filter[playerNames]=${PLAYER_NAME}`;
+async function getPlayerId(playerName) {
+  console.log(`🔍 Looking up player: ${playerName}`);
+  const url = `https://api.pubg.com/shards/${PLATFORM}/players?filter[playerNames]=${playerName}`;
   try {
     const response = await axios.get(url, { headers });
     console.log(`✅ Player found successfully`);
@@ -44,7 +56,7 @@ async function getMatchHistory(playerId) {
   }
 }
 
-async function getMatchDetails(matchId) {
+async function getMatchDetails(matchId, targetPlayerName) {
   const url = `https://api.pubg.com/shards/${PLATFORM}/matches/${matchId}`;
   const response = await axios.get(url, { headers });
   const match = response.data;
@@ -56,27 +68,27 @@ async function getMatchDetails(matchId) {
   console.log(`- Duration: ${matchInfo.duration} seconds`);
   console.log(`- Started at: ${matchInfo.createdAt}`);
 
-  const kilmaParticipant = match.included.find(item =>
+  const playerParticipant = match.included.find(item =>
     item.type === 'participant' &&
-    item.attributes.stats.name === PLAYER_NAME
+    item.attributes.stats.name === targetPlayerName
   );
-  if (!kilmaParticipant) {
-    console.log(`❌ Kilma9 not found in match ${matchId}`);
+  if (!playerParticipant) {
+    console.log(`❌ ${targetPlayerName} not found in match ${matchId}`);
     return null;
   }
 
-  const kilmaId = kilmaParticipant.id;
+  const playerId = playerParticipant.id;
 
-  const kilmaRoster = match.included.find(item =>
+  const playerRoster = match.included.find(item =>
     item.type === 'roster' &&
-    item.relationships.participants.data.some(p => p.id === kilmaId)
+    item.relationships.participants.data.some(p => p.id === playerId)
   );
-  if (!kilmaRoster) {
-    console.log(`❌ Kilma9's team not found`);
+  if (!playerRoster) {
+    console.log(`❌ ${targetPlayerName}'s team not found`);
     return null;
   }
 
-  const teamRank = kilmaRoster.attributes.stats.rank;
+  const teamRank = playerRoster.attributes.stats.rank;
   console.log(`🏅 Team Placement: ${teamRank}`);
   console.log(`👥 Team Members:`);
 
@@ -102,7 +114,7 @@ async function getMatchDetails(matchId) {
 
   const teamSummary = [];
 
-  for (const participantRef of kilmaRoster.relationships.participants.data) {
+  for (const participantRef of playerRoster.relationships.participants.data) {
     const teammate = match.included.find(item =>
       item.type === 'participant' && item.id === participantRef.id
     );
@@ -468,23 +480,25 @@ function summarizeTeamStatsByDay(matchSummaries) {
   }
 }
 
-(async () => {
-  try {
-    console.log(`🎮 Starting PUBG data collection for ${PLAYER_NAME}`);
-    console.log(`� Mode: Incremental data collection with full history preservation`);
-    
-    const playerId = await getPlayerId();
-    console.log(`👤 Player ID: ${playerId}`);
+// Function to collect data for a specific player
+async function collectPlayerData(playerName) {
+  console.log(`\n🎮 Starting PUBG data collection for ${playerName}`);
+  console.log(`📊 Mode: Incremental data collection with full history preservation`);
+  
+  const playerId = await getPlayerId(playerName);
+  console.log(`👤 Player ID: ${playerId}`);
 
     // Load existing data to find the latest match timestamp
     const fs = require('fs');
     let existingMatches = [];
     let latestMatchDate = null;
     
-    if (fs.existsSync('data.json')) {
+    const dataFile = playerName === 'Kilma9' ? 'data.json' : `data_${playerName}.json`;
+    
+    if (fs.existsSync(dataFile)) {
       try {
-        existingMatches = JSON.parse(fs.readFileSync('data.json', 'utf8'));
-        console.log(`📂 Loaded ${existingMatches.length} existing matches from data.json`);
+        existingMatches = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+        console.log(`📂 Loaded ${existingMatches.length} existing matches from ${dataFile}`);
         
         if (existingMatches.length > 0) {
           // Find the most recent match date
@@ -516,7 +530,7 @@ function summarizeTeamStatsByDay(matchSummaries) {
       console.log(`\n🔄 Processing match ${processedCount + 1}/${matchIds.length}...`);
       
       try {
-        const summary = await getMatchDetails(matchId);
+        const summary = await getMatchDetails(matchId, playerName);
         
         if (summary) {
           const matchDate = new Date(summary.date);
@@ -594,11 +608,12 @@ function summarizeTeamStatsByDay(matchSummaries) {
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('T')[0];
       
       // Save main data file (30-day rolling window)
-      fs.writeFileSync('data.json', JSON.stringify(thirtyDaysMatches, null, 2));
+      fs.writeFileSync(dataFile, JSON.stringify(thirtyDaysMatches, null, 2));
       
       // Save backup with timestamp (only if there are new matches)
       if (newMatchesCount > 0) {
-        fs.writeFileSync(`data_backup_${timestamp}.json`, JSON.stringify(thirtyDaysMatches, null, 2));
+        const backupFile = playerName === 'Kilma9' ? `data_backup_${timestamp}.json` : `data_backup_${playerName}_${timestamp}.json`;
+        fs.writeFileSync(backupFile, JSON.stringify(thirtyDaysMatches, null, 2));
       }
       
       console.log(`\n💾 Files saved:`);
@@ -630,11 +645,49 @@ function summarizeTeamStatsByDay(matchSummaries) {
     }
     
   } catch (error) {
-    console.error('\n💥 Fatal Error:', error.response?.data || error.message);
+    console.error(`\n💥 Fatal Error for ${playerName}:`, error.response?.data || error.message);
     if (error.response?.status === 429) {
       console.error('🚫 Rate limit exceeded. Please wait a few minutes before trying again.');
     } else if (error.response?.status === 401) {
       console.error('🔑 Authentication failed. Please check your API key.');
     }
+    throw error;
+  }
+}
+
+// Main execution
+(async () => {
+  try {
+    console.log(`🚀 PUBG Multi-Player Data Collection System`);
+    console.log(`📊 Players to collect: ${PLAYERS.join(', ')}`);
+    
+    if (TARGET_PLAYER && PLAYERS.includes(TARGET_PLAYER)) {
+      // Collect data for specific player (used by GitHub Actions)
+      await collectPlayerData(TARGET_PLAYER);
+    } else {
+      // Collect data for all players (local development)
+      console.log(`\n🔄 Collecting data for all players...`);
+      
+      for (const player of PLAYERS) {
+        try {
+          await collectPlayerData(player);
+          
+          // Add delay between players to respect API limits
+          if (PLAYERS.indexOf(player) < PLAYERS.length - 1) {
+            console.log(`\n⏸️ Pausing 10 seconds before next player...`);
+            await new Promise(resolve => setTimeout(resolve, 10000));
+          }
+        } catch (error) {
+          console.error(`❌ Failed to collect data for ${player}:`, error.message);
+          console.log(`🔄 Continuing with next player...`);
+        }
+      }
+    }
+    
+    console.log(`\n✅ Data collection completed successfully!`);
+    
+  } catch (error) {
+    console.error('\n💥 Fatal Error:', error.message);
+    process.exit(1);
   }
 })();
