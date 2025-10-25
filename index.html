@@ -491,6 +491,7 @@
       <select id="daySelect">
         <option value="">Choose a day...</option>
       </select>
+      <button id="clearDayBtn" class="clear-btn" style="display: none; margin-left: 8px; padding: 4px 12px; background: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">✕ Clear</button>
       
       <label><strong>Team Filter:</strong></label>
       <select id="teamCompositionSelect">
@@ -1385,6 +1386,9 @@
       console.log('Day selected:', selectedDay);
       
       if (selectedDay) {
+        // Show clear button
+        document.getElementById('clearDayBtn').style.display = 'inline-block';
+        
         // Hide player BIO when viewing day summary
         document.getElementById('playerBio').classList.add('hidden');
         
@@ -1406,6 +1410,9 @@
         document.getElementById('matchSelect').value = '';
         document.getElementById('matchContent').classList.add('hidden');
       } else {
+        // Hide clear button
+        document.getElementById('clearDayBtn').style.display = 'none';
+        
         // If no day selected, show player BIO again
         if (currentPlayer) {
           document.getElementById('playerBio').classList.remove('hidden');
@@ -1416,6 +1423,13 @@
         document.getElementById('matchContent').classList.add('hidden');
         destroyCharts();
       }
+    });
+    
+    // Clear day button handler
+    document.getElementById('clearDayBtn').addEventListener('click', function() {
+      document.getElementById('daySelect').value = '';
+      // Trigger the change event to update UI
+      document.getElementById('daySelect').dispatchEvent(new Event('change'));
     });
 
     // Player selection functionality
@@ -1444,6 +1458,7 @@
       // Reset dashboard state and show player BIO
       document.getElementById('daySelect').value = '';
       document.getElementById('matchSelect').value = '';
+      document.getElementById('clearDayBtn').style.display = 'none';
       document.getElementById('dayContent').classList.add('hidden');
       document.getElementById('matchContent').classList.add('hidden');
       
@@ -2024,6 +2039,7 @@
           // Reset to player's main view (show BIO, hide day/match content)
           document.getElementById('daySelect').value = '';
           document.getElementById('matchSelect').value = '';
+          document.getElementById('clearDayBtn').style.display = 'none';
           document.getElementById('dayContent').classList.add('hidden');
           document.getElementById('matchContent').classList.add('hidden');
           document.getElementById('playerBio').classList.remove('hidden');
@@ -2037,7 +2053,7 @@
     
     // Return to dashboard button event listener
     document.getElementById('returnToDashboard').addEventListener('click', function() {
-      returnToMainDashboard();
+      location.reload();
     });
 
     // Team composition filter event listener
