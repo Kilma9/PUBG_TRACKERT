@@ -414,6 +414,20 @@
     <div style="margin-top: 10px; font-size: 18px; font-weight: bold;">
       ⬇️ Select a Player Below to Get Started ⬇️
     </div>
+    
+    <!-- Known Issues on Welcome Page -->
+    <div id="knownBugs" class="content-section" style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 10px; margin: 20px auto; max-width: 900px; text-align: left;">
+      <div class="section-header" style="color: #856404; font-size: 14px; margin-bottom: 5px;">⚠️ Known Issues</div>
+      <div style="font-size: 12px; color: #856404;">
+        <ul style="margin: 5px 0; padding-left: 20px;">
+          <li><strong>Weapon Damage:</strong> Includes damage to wildlife (bears) and self/team damage from grenades/vehicles</li>
+          <li><strong>Team Damage:</strong> Friendly fire and environmental damage is counted in statistics</li>
+          <li><strong>Data Sync:</strong> Cache issues may show outdated match data - use hard refresh (Ctrl+Shift+R)</li>
+        </ul>
+        <small style="font-style: italic;">These will be addressed in future updates</small>
+      </div>
+    </div>
+
   </div>
 
   <!-- Player Selection -->
@@ -469,17 +483,7 @@
     </div>
   </div>
   
-  <div id="knownBugs" class="content-section hidden" style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 10px; margin: 10px 0;">
-    <div class="section-header" style="color: #856404; font-size: 14px; margin-bottom: 5px;">⚠️ Known Issues</div>
-    <div style="font-size: 12px; color: #856404;">
-      <ul style="margin: 5px 0; padding-left: 20px;">
-        <li><strong>Weapon Damage:</strong> Includes damage to wildlife (bears) and self/team damage from grenades/vehicles</li>
-        <li><strong>Team Damage:</strong> Friendly fire and environmental damage is counted in statistics</li>
-        <li><strong>Data Sync:</strong> Cache issues may show outdated match data - use hard refresh (Ctrl+Shift+R)</li>
-      </ul>
-      <small style="font-style: italic;">These will be addressed in future updates</small>
-    </div>
-  </div>
+  
   
   <div class="controls">
     <div class="dropdown-container">
@@ -869,9 +873,17 @@
           stats.revives += player.revives || 0;
           stats.matches++;
           
-          // Aggregate weapon damage
+          // Aggregate weapon damage with anomaly filtering
+          const playerTotalDamage = player.damage || 0;
           Object.entries(player.weaponDamage || {}).forEach(([weapon, damage]) => {
             if (weapon.includes('Player') || weapon.includes('Effect')) return;
+            
+            // Filter out anomalous weapon damage where single weapon exceeds total match damage
+            if (damage > playerTotalDamage && playerTotalDamage > 0) {
+              console.warn(`⚠️ Anomalous weapon damage: ${weapon} (${damage}) > total (${playerTotalDamage})`);
+              return;
+            }
+            
             const cleanName = cleanWeaponName(weapon);
             if (!stats.weaponDamage[cleanName]) stats.weaponDamage[cleanName] = 0;
             stats.weaponDamage[cleanName] += damage;
@@ -1304,8 +1316,20 @@
           weaponChartsContainer.innerHTML = '';
           
           match.team.forEach(player => {
+            const playerTotalDamage = player.damage || 0;
             const weapons = Object.entries(player.weaponDamage || {})
-              .filter(([weapon, damage]) => damage > 0 && !weapon.includes('Player') && !weapon.includes('Effect'))
+              .filter(([weapon, damage]) => {
+                // Filter out zero damage, player damage, and anomalous weapon damage
+                if (damage <= 0 || weapon.includes('Player') || weapon.includes('Effect')) return false;
+                
+                // Skip anomalous weapon damage (exceeds total match damage)
+                if (damage > playerTotalDamage && playerTotalDamage > 0) {
+                  console.warn(`⚠️ Match weapon anomaly: ${weapon} (${damage}) > total (${playerTotalDamage})`);
+                  return false;
+                }
+                
+                return true;
+              })
               .map(([weapon, damage]) => [cleanWeaponName(weapon), damage])
               .sort((a, b) => b[1] - a[1]);
             
@@ -1407,10 +1431,7 @@
         }
       });
       
-      // Update player bio
-      updatePlayerBio(playerName);
-      
-      // Load player data
+      // Load player data (this will call updatePlayerBio after data is loaded)
       loadPlayerData(playerName);
       
       // Reset dashboard state
@@ -1433,8 +1454,7 @@
       document.getElementById('memeContent').classList.add('hidden');
       document.getElementById('recordsContent').classList.add('hidden');
       document.getElementById('changelogContent').classList.add('hidden');
-      document.getElementById('playerBio').classList.add('hidden');
-      document.getElementById('knownBugs').classList.add('hidden');
+  document.getElementById('playerBio').classList.add('hidden');
       
       // Hide return button
       document.getElementById('returnToDashboard').style.display = 'none';
@@ -1480,16 +1500,33 @@
         return;
       }
       
-      // Calculate overall statistics
+      // Filter to ONLY duo and squad matches
+      const duoSquadMatches = playerMatches.filter(match => {
+        const teamSize = match.teamSize || (match.team.length === 1 ? 'solo' : match.team.length === 2 ? 'duo' : 'squad');
+        return teamSize === 'duo' || teamSize === 'squad';
+      });
+      
+      if (duoSquadMatches.length === 0) {
+        document.getElementById('bioContent').innerHTML = `
+          <div style="text-align: center; padding: 20px;">
+            <p>No duo or squad matches found for ${playerName}</p>
+            ${player.bio}
+          </div>
+        `;
+        document.getElementById('playerBio').classList.remove('hidden');
+        return;
+      }
+      
+      // Calculate overall statistics from duo and squad matches only
       let totalKills = 0;
       let totalDamage = 0;
       let totalHeadshots = 0;
       let totalAssists = 0;
       let totalRevives = 0;
       const weaponDamage = {};
-      const damagePerMatch = [];
+      const damageByDay = {}; // Track damage per day for averaging
       
-      playerMatches.forEach(match => {
+      duoSquadMatches.forEach(match => {
         const playerData = match.team.find(p => p.name === playerName);
         if (playerData) {
           totalKills += playerData.kills || 0;
@@ -1498,16 +1535,27 @@
           totalAssists += playerData.assists || 0;
           totalRevives += playerData.revives || 0;
           
-          // Track damage per match for chart
-          damagePerMatch.push({
-            date: match.date,
-            damage: playerData.damage || 0
-          });
+          // Group damage by day for daily average calculation
+          const day = match.date.split('T')[0]; // Get YYYY-MM-DD
+          if (!damageByDay[day]) {
+            damageByDay[day] = { totalDamage: 0, matchCount: 0, date: match.date };
+          }
+          damageByDay[day].totalDamage += playerData.damage || 0;
+          damageByDay[day].matchCount++;
           
-          // Aggregate weapon damage
+          // Aggregate weapon damage with anomaly filtering
           if (playerData.weaponDamage) {
+            const playerTotalDamage = playerData.damage || 0;
             Object.entries(playerData.weaponDamage).forEach(([weapon, damage]) => {
               if (weapon.includes('Player') || weapon.includes('Effect')) return;
+              
+              // Filter out anomalous weapon damage (bug in PUBG API data)
+              // If a single weapon's damage exceeds the player's total match damage, skip it
+              if (damage > playerTotalDamage && playerTotalDamage > 0) {
+                console.warn(`⚠️ Anomalous weapon damage detected: ${weapon} (${damage}) exceeds total damage (${playerTotalDamage}) in match ${match.date}`);
+                return;
+              }
+              
               const cleanName = cleanWeaponName(weapon);
               if (!weaponDamage[cleanName]) weaponDamage[cleanName] = 0;
               weaponDamage[cleanName] += damage;
@@ -1525,11 +1573,18 @@
       const favoriteWeapon2 = topWeapons[1] ? `${topWeapons[1][0]} (${Math.round(topWeapons[1][1]).toLocaleString()} dmg)` : 'N/A';
       
       // Calculate averages
-      const avgKills = (totalKills / playerMatches.length).toFixed(1);
-      const avgDamage = Math.round(totalDamage / playerMatches.length);
+      const avgKills = (totalKills / duoSquadMatches.length).toFixed(1);
+      const avgDamage = Math.round(totalDamage / duoSquadMatches.length);
       
-      // Sort matches by date for chart
-      damagePerMatch.sort((a, b) => new Date(a.date) - new Date(b.date));
+      // Convert daily damage data to array and calculate averages per day
+      const damagePerDay = Object.entries(damageByDay)
+        .map(([day, data]) => ({
+          date: day,
+          avgDamage: data.totalDamage / data.matchCount,
+          matchCount: data.matchCount,
+          totalDamage: data.totalDamage
+        }))
+        .sort((a, b) => new Date(a.date) - new Date(b.date));
       
       // Create dynamic bio content
       const bioHtml = `
@@ -1537,7 +1592,7 @@
           <div>
             <h4 style="margin: 0 0 10px 0; color: #667eea;">📊 Career Statistics</h4>
             <div style="background: #f8f9fa; border-radius: 8px; padding: 15px;">
-              <p style="margin: 5px 0;"><strong>Total Matches:</strong> ${playerMatches.length}</p>
+              <p style="margin: 5px 0;"><strong>Total Matches:</strong> ${duoSquadMatches.length}</p>
               <p style="margin: 5px 0;"><strong>Total Kills:</strong> ${totalKills} (avg: ${avgKills})</p>
               <p style="margin: 5px 0;"><strong>Total Damage:</strong> ${Math.round(totalDamage).toLocaleString()} (avg: ${avgDamage.toLocaleString()})</p>
               <p style="margin: 5px 0;"><strong>Total Headshots:</strong> ${totalHeadshots}</p>
@@ -1551,7 +1606,6 @@
             <div style="background: #f8f9fa; border-radius: 8px; padding: 15px;">
               <p style="margin: 5px 0;"><strong>🥇 #1:</strong> ${favoriteWeapon1}</p>
               <p style="margin: 5px 0;"><strong>🥈 #2:</strong> ${favoriteWeapon2}</p>
-              <p style="margin: 15px 0 5px 0; font-size: 12px; color: #666;">Based on total damage across all matches</p>
             </div>
             
             <div style="margin-top: 15px;">
@@ -1561,9 +1615,16 @@
         </div>
         
         <div style="margin-top: 20px;">
-          <h4 style="margin: 0 0 10px 0; color: #667eea;">📈 Damage Trend (All Matches)</h4>
+          <h4 style="margin: 0 0 10px 0; color: #667eea;">📈 Daily Average Damage Trend</h4>
           <div style="background: white; border-radius: 8px; padding: 15px; height: 250px;">
             <canvas id="playerDamageTrendChart"></canvas>
+          </div>
+        </div>
+        
+        <div style="margin-top: 20px;">
+          <h4 style="margin: 0 0 10px 0; color: #667eea;">👥 All Players Daily Average Comparison</h4>
+          <div style="background: white; border-radius: 8px; padding: 15px; height: 300px;">
+            <canvas id="allPlayersDamageTrendChart"></canvas>
           </div>
         </div>
       `;
@@ -1588,17 +1649,17 @@
         new Chart(canvas, {
           type: 'line',
           data: {
-            labels: damagePerMatch.map((m, i) => `Match ${i + 1}`),
+            labels: damagePerDay.map(d => d.date),
             datasets: [{
-              label: 'Damage per Match',
-              data: damagePerMatch.map(m => m.damage),
+              label: 'Avg Damage per Day',
+              data: damagePerDay.map(d => d.avgDamage),
               borderColor: '#667eea',
               backgroundColor: 'rgba(102, 126, 234, 0.1)',
               borderWidth: 2,
               fill: true,
               tension: 0.3,
-              pointRadius: 3,
-              pointHoverRadius: 5
+              pointRadius: 4,
+              pointHoverRadius: 6
             }]
           },
           options: {
@@ -1613,17 +1674,16 @@
                 callbacks: {
                   title: (items) => {
                     const index = items[0].dataIndex;
-                    const matchDate = new Date(damagePerMatch[index].date);
-                    return matchDate.toLocaleString('en-GB', {
-                      day: '2-digit',
-                      month: '2-digit',
-                      year: 'numeric',
-                      hour: '2-digit',
-                      minute: '2-digit'
-                    });
+                    return damagePerDay[index].date;
                   },
                   label: (item) => {
-                    return `Damage: ${Math.round(item.parsed.y).toLocaleString()}`;
+                    const index = item.dataIndex;
+                    const dayData = damagePerDay[index];
+                    return [
+                      `Avg Damage: ${Math.round(dayData.avgDamage).toLocaleString()}`,
+                      `Total Damage: ${Math.round(dayData.totalDamage).toLocaleString()}`,
+                      `Matches: ${dayData.matchCount}`
+                    ];
                   }
                 }
               }
@@ -1633,22 +1693,179 @@
                 beginAtZero: true,
                 title: {
                   display: true,
-                  text: 'Damage'
+                  text: 'Average Damage'
                 }
               },
               x: {
                 title: {
                   display: true,
-                  text: 'Match History'
+                  text: 'Date'
                 },
                 ticks: {
-                  maxTicksLimit: 15
+                  maxRotation: 45,
+                  minRotation: 45
                 }
               }
             }
           }
         });
+        
+        // Create all-players comparison chart
+        createAllPlayersComparisonChart();
       }, 100);
+    }
+    
+    // Function to create all-players daily average damage comparison chart
+    function createAllPlayersComparisonChart() {
+      const canvas = document.getElementById('allPlayersDamageTrendChart');
+      if (!canvas) {
+        console.error('All players damage trend canvas not found');
+        return;
+      }
+      
+      // Destroy existing chart if any
+      const existingChart = Chart.getChart(canvas);
+      if (existingChart) {
+        existingChart.destroy();
+      }
+      
+      if (!fullMatchData || fullMatchData.length === 0) {
+        console.warn('No full match data available for all-players chart');
+        return;
+      }
+      
+      // Only include the 6 tracked players (from playerData object)
+      const playerNames = Object.keys(playerData);
+      console.log('Creating all-players chart for tracked players:', playerNames);
+      
+      // Calculate daily averages for each player
+      const playerDailyData = {};
+      const allDays = new Set();
+      
+      playerNames.forEach(playerName => {
+        // Filter to duo/squad matches for this player
+        const playerMatches = fullMatchData.filter(match => {
+          if (!match.team) return false;
+          const teamSize = match.teamSize || (match.team.length === 1 ? 'solo' : match.team.length === 2 ? 'duo' : 'squad');
+          const isDuoOrSquad = teamSize === 'duo' || teamSize === 'squad';
+          const hasPlayer = match.team.some(p => p.name === playerName);
+          return isDuoOrSquad && hasPlayer;
+        });
+        
+        const damageByDay = {};
+        
+        playerMatches.forEach(match => {
+          const playerData = match.team.find(p => p.name === playerName);
+          if (playerData) {
+            const day = match.date.split('T')[0];
+            allDays.add(day);
+            
+            if (!damageByDay[day]) {
+              damageByDay[day] = { totalDamage: 0, matchCount: 0 };
+            }
+            damageByDay[day].totalDamage += playerData.damage || 0;
+            damageByDay[day].matchCount++;
+          }
+        });
+        
+        playerDailyData[playerName] = damageByDay;
+      });
+      
+      // Sort all days chronologically
+      const sortedDays = Array.from(allDays).sort();
+      
+      // Color palette for different players
+      const colors = [
+        { border: '#667eea', bg: 'rgba(102, 126, 234, 0.1)' },   // Purple
+        { border: '#ff6b6b', bg: 'rgba(255, 107, 107, 0.1)' },   // Red
+        { border: '#4ecdc4', bg: 'rgba(78, 205, 196, 0.1)' },    // Teal
+        { border: '#f7b731', bg: 'rgba(247, 183, 49, 0.1)' },    // Yellow
+        { border: '#5f27cd', bg: 'rgba(95, 39, 205, 0.1)' },     // Dark Purple
+        { border: '#26de81', bg: 'rgba(38, 222, 129, 0.1)' }     // Green
+      ];
+      
+      // Create datasets for each player
+      const datasets = playerNames.map((playerName, index) => {
+        const color = colors[index % colors.length];
+        const dailyData = playerDailyData[playerName];
+        
+        // Map each day to its average damage (or null if player didn't play that day)
+        const data = sortedDays.map(day => {
+          if (dailyData[day]) {
+            return dailyData[day].totalDamage / dailyData[day].matchCount;
+          }
+          return null; // No data for this day
+        });
+        
+        return {
+          label: playerName,
+          data: data,
+          borderColor: color.border,
+          backgroundColor: color.bg,
+          borderWidth: 2,
+          fill: false,
+          tension: 0.3,
+          pointRadius: 3,
+          pointHoverRadius: 5,
+          spanGaps: true // Connect points even if there are null values
+        };
+      });
+      
+      new Chart(canvas, {
+        type: 'line',
+        data: {
+          labels: sortedDays,
+          datasets: datasets
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top'
+            },
+            tooltip: {
+              mode: 'index',
+              intersect: false,
+              callbacks: {
+                label: (context) => {
+                  const playerName = context.dataset.label;
+                  const avgDamage = context.parsed.y;
+                  if (avgDamage === null) return null;
+                  
+                  const day = sortedDays[context.dataIndex];
+                  const dailyData = playerDailyData[playerName][day];
+                  
+                  return [
+                    `${playerName}: ${Math.round(avgDamage).toLocaleString()} avg`,
+                    `  (${dailyData.matchCount} matches)`
+                  ];
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Average Damage per Day'
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Date'
+              },
+              ticks: {
+                maxRotation: 45,
+                minRotation: 45
+              }
+            }
+          }
+        }
+      });
     }
 
     async function loadPlayerData(playerName) {
@@ -1699,6 +1916,9 @@
         
         // Update sync information
         await updateSyncInfo(matchData);
+        
+        // Update player bio with loaded data
+        updatePlayerBio(playerName);
         
         // Clear cached records to force recalculation with full dataset
         cachedRecords = null;
