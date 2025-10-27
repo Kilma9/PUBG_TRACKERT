@@ -13,6 +13,11 @@ app.get('/game.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'game.html'));
 });
 
+// Serve 3D game page
+app.get('/game3d.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'game3d.html'));
+});
+
 // Serve main data file
 app.get('/data.json', (req, res) => {
   res.sendFile(path.join(__dirname, 'data.json'));

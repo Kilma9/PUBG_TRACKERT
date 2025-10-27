@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUBG Highway Chase - 3D Mode</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 100%);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: white;
+    }
+    
+    h1 {
+      margin: 20px 0;
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+      font-size: 42px;
+      color: #ffd700;
+    }
+    
+    .subtitle {
+      color: #00ff00;
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    
+    #gameCanvas {
+      border: 4px solid #ffd700;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+      background: #000;
+      cursor: crosshair;
+    }
+    
+    .ui-panel {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 30px;
+      margin: 15px 0;
+      border-radius: 10px;
+      border: 2px solid #ffd700;
+      display: flex;
+      gap: 40px;
+      font-size: 18px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+    
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .stat-label {
+      color: #aaa;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    
+    .stat-value {
+      color: #ffd700;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    }
+    
+    .game-over {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: rgba(0, 0, 0, 0.95);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      border: 3px solid #ffd700;
+      box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
+      transition: transform 0.3s ease;
+      min-width: 400px;
+    }
+    
+    .game-over.show {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .game-over h2 {
+      color: #ff6b6b;
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
+    }
+    
+    .game-over p {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    
+    button {
+      background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+      color: #000;
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+    }
+    
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+    }
+    
+    button:active {
+      transform: translateY(0);
+    }
+
+    .back-button {
+      background: linear-gradient(135deg, #666 0%, #888 100%);
+      color: white;
+      margin-top: 15px;
+    }
+
+    .controls-info {
+      background: rgba(255, 215, 0, 0.1);
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+
+    .controls-info p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #ffed4e;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚗 PUBG HIGHWAY CHASE 🚗</h1>
+  <div class="subtitle">3D Mode - Dodge the obstacles!</div>
+  
+  <div class="controls-info">
+    <p><strong>Controls:</strong> ← → or A/D to switch lanes | SPACE to shoot</p>
+  </div>
+
+  <canvas id="gameCanvas" width="1200" height="400"></canvas>
+  
+  <div class="ui-panel">
+    <div class="stat">
+      <span class="stat-label">Distance</span>
+      <span class="stat-value" id="distanceDisplay">0m</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Score</span>
+      <span class="stat-value" id="scoreDisplay">0</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">High Score</span>
+      <span class="stat-value" id="highScoreDisplayUI">0</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Ammo</span>
+      <span class="stat-value" id="ammoDisplay">0</span>
+    </div>
+  </div>
+
+  <button class="back-button" onclick="window.location.href='game.html'">⬅ Back to 2D Game</button>
+  
+  <div class="game-over" id="gameOverScreen">
+    <h2>💀 GAME OVER</h2>
+    <p id="kilmaRoast" style="color: #ff6b6b; font-size: 24px; font-weight: bold; margin: 15px 0; text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);">You crashed! 😂</p>
+    <p>Distance: <span id="finalDistance">0</span>m</p>
+    <p>Score: <span id="finalScore">0</span></p>
+    <p>High Score: <span id="highScoreDisplay">0</span></p>
+    
+    <div style="margin: 20px 0; padding: 15px; background: rgba(255, 255, 255, 0.1); border-radius: 10px;">
+      <h3 style="margin: 0 0 10px 0; color: #ffd700;">🏆 Total Kill Count</h3>
+      <div id="killStatsDisplay" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 14px; text-align: left;"></div>
+    </div>
+    
+    <button onclick="restartGame()">🔄 Play Again</button>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Game state
+    let gameRunning = false;
+    let gameOver = false;
+    
+    // Ground
+    const GROUND_Y = canvas.height - 60;
+    
+    // Player UAZ
+    let uaz = {
+      lane: 2, // 0-4 (5 lanes total, start in middle)
+      targetLane: 2,
+      laneTransition: 0
+    };
+    
+    // Game objects
+    let obstacles = [];
+    let bullets = [];
+    let particles = [];
+    
+    // Game stats
+    let distance = 0;
+    let ammo = 3; // Start with 3 ammo
+    let score = 0;
+    let gameSpeed = 6;
+    let highScore = parseInt(localStorage.getItem('pubgHighwayHighScore')) || 0;
+    
+    // Kill statistics
+    let killStats = {
+      'Kilma9': 0,
+      'Mar-0': 0,
+      'Hyottokko': 0,
+      'Baron_Frajeris': 0,
+      'codufus': 0,
+      'Veru_13': 0
+    };
+    
+    let matchKills = {
+      'Kilma9': 0,
+      'Mar-0': 0,
+      'Hyottokko': 0,
+      'Baron_Frajeris': 0,
+      'codufus': 0,
+      'Veru_13': 0
+    };
+    
+    // Load kill stats
+    const savedKillStats = localStorage.getItem('pubgHighwayKillStats');
+    if (savedKillStats) {
+      killStats = JSON.parse(savedKillStats);
+    }
+    
+    let spawnTimer = 0;
+    
+    // Event listeners
+    document.addEventListener('keydown', (e) => {
+      if (gameRunning && !gameOver) {
+        if (e.key === 'a' || e.key === 'A' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          if (uaz.targetLane > 0) {
+            uaz.targetLane--;
+          }
+        } else if (e.key === 'd' || e.key === 'D' || e.key === 'ArrowRight') {
+          e.preventDefault();
+          if (uaz.targetLane < 4) {
+            uaz.targetLane++;
+          }
+        } else if (e.key === ' ') {
+          e.preventDefault();
+          shoot();
+        }
+      }
+    }, { passive: false });
+    
+    canvas.addEventListener('click', () => {
+      if (!gameRunning || gameOver) {
+        startGame();
+      }
+    });
+    
+    function startGame() {
+      if (!gameRunning || gameOver) {
+        resetGame();
+        gameRunning = true;
+        gameOver = false;
+        document.getElementById('gameOverScreen').classList.remove('show');
+        gameLoop();
+      }
+    }
+    
+    function resetGame() {
+      uaz.lane = 2;
+      uaz.targetLane = 2;
+      uaz.laneTransition = 0;
+      obstacles = [];
+      bullets = [];
+      particles = [];
+      distance = 0;
+      ammo = 3;
+      score = 0;
+      gameSpeed = 6;
+      spawnTimer = 0;
+      
+      // Reset match kills
+      for (const name in matchKills) {
+        matchKills[name] = 0;
+      }
+      
+      // Initial obstacles
+      for (let i = 0; i < 5; i++) {
+        const randomLane = Math.floor(Math.random() * 5);
+        obstacles.push({
+          type: ['enemy', 'tree', 'rock'][Math.floor(Math.random() * 3)],
+          lane: randomLane,
+          z: 400 + i * 250,
+          name: ['Kilma9', 'Mar-0', 'Hyottokko', 'Baron_Frajeris', 'codufus', 'Veru_13'][Math.floor(Math.random() * 6)]
+        });
+      }
+    }
+    
+    function shoot() {
+      if (ammo > 0) {
+        ammo--;
+        
+        // Create bullet in current lane
+        bullets.push({
+          lane: uaz.lane + uaz.laneTransition,
+          z: 100,
+          speed: 15
+        });
+        
+        // Muzzle flash particles
+        for (let i = 0; i < 10; i++) {
+          particles.push({
+            x: canvas.width / 2,
+            y: canvas.height - 120,
+            vx: (Math.random() - 0.5) * 5,
+            vy: (Math.random() - 0.5) * 5,
+            life: 15,
+            alpha: 1,
+            color: '#ffeb3b'
+          });
+        }
+      }
+    }
+    
+    function updateUAZ() {
+      // Smooth lane transition
+      const laneSpeed = 0.15;
+      if (uaz.lane < uaz.targetLane) {
+        uaz.laneTransition += laneSpeed;
+        if (uaz.laneTransition >= 1) {
+          uaz.lane++;
+          uaz.laneTransition = 0;
+        }
+      } else if (uaz.lane > uaz.targetLane) {
+        uaz.laneTransition -= laneSpeed;
+        if (uaz.laneTransition <= -1) {
+          uaz.lane--;
+          uaz.laneTransition = 0;
+        }
+      } else {
+        uaz.laneTransition = 0;
+      }
+      
+      // Add distance
+      distance += gameSpeed * 0.1;
+      score += Math.floor(gameSpeed * 0.1);
+      
+      // Gradually increase speed
+      if (distance > 0 && distance % 100 < 0.5) {
+        gameSpeed += 0.15;
+      }
+    }
+    
+    function updateObstacles() {
+      // Move obstacles toward player
+      for (let i = obstacles.length - 1; i >= 0; i--) {
+        obstacles[i].z -= gameSpeed * 1.5;
+        
+        // Remove if passed player
+        if (obstacles[i].z < -50) {
+          obstacles.splice(i, 1);
+          score += 100;
+          continue;
+        }
+        
+        // Check collision with player
+        if (obstacles[i].z < 80 && obstacles[i].z > -20) {
+          const playerLanePos = uaz.lane + uaz.laneTransition;
+          const obstacleLane = obstacles[i].lane;
+          
+          if (Math.abs(playerLanePos - obstacleLane) < 0.4) {
+            if (obstacles[i].type === 'enemy') {
+              // Run over enemy
+              if (obstacles[i].name && matchKills[obstacles[i].name] !== undefined) {
+                matchKills[obstacles[i].name]++;
+              }
+              score += 150;
+              
+              // Blood explosion
+              for (let k = 0; k < 25; k++) {
+                particles.push({
+                  x: canvas.width / 2,
+                  y: canvas.height - 150,
+                  vx: (Math.random() - 0.5) * 10,
+                  vy: (Math.random() - 0.5) * 10,
+                  life: 30,
+                  alpha: 1,
+                  color: '#8b0000'
+                });
+              }
+              
+              obstacles.splice(i, 1);
+            } else {
+              // Hit tree or rock - game over
+              endGame();
+              return;
+            }
+          }
+        }
+      }
+      
+      // Update bullets
+      for (let i = bullets.length - 1; i >= 0; i--) {
+        bullets[i].z += bullets[i].speed;
+        
+        // Remove if too far
+        if (bullets[i].z > 1200) {
+          bullets.splice(i, 1);
+          continue;
+        }
+        
+        // Check collision with obstacles
+        for (let j = obstacles.length - 1; j >= 0; j--) {
+          if (Math.abs(bullets[i].z - obstacles[j].z) < 50 && 
+              Math.abs(bullets[i].lane - obstacles[j].lane) < 0.3) {
+            
+            // Hit!
+            if (obstacles[j].type === 'enemy') {
+              score += 50;
+              if (obstacles[j].name && matchKills[obstacles[j].name] !== undefined) {
+                matchKills[obstacles[j].name]++;
+              }
+            } else {
+              score += 30; // Trees and rocks
+            }
+            
+            // Explosion particles
+            for (let k = 0; k < 20; k++) {
+              particles.push({
+                x: canvas.width / 2,
+                y: canvas.height / 2,
+                vx: (Math.random() - 0.5) * 8,
+                vy: (Math.random() - 0.5) * 8,
+                life: 25,
+                alpha: 1,
+                color: obstacles[j].type === 'enemy' ? '#ff0000' : '#8B4513'
+              });
+            }
+            
+            obstacles.splice(j, 1);
+            bullets.splice(i, 1);
+            break;
+          }
+        }
+      }
+      
+      // Spawn new obstacles
+      spawnTimer++;
+      if (spawnTimer > 50) {
+        spawnTimer = 0;
+        const randomLane = Math.floor(Math.random() * 5);
+        const obstacleType = Math.random();
+        
+        obstacles.push({
+          type: obstacleType < 0.4 ? 'enemy' : (obstacleType < 0.7 ? 'tree' : 'rock'),
+          lane: randomLane,
+          z: 1000,
+          name: ['Kilma9', 'Mar-0', 'Hyottokko', 'Baron_Frajeris', 'codufus', 'Veru_13'][Math.floor(Math.random() * 6)]
+        });
+      }
+      
+      // Randomly spawn ammo
+      if (Math.random() < 0.005 && obstacles.length < 12) {
+        const randomLane = Math.floor(Math.random() * 5);
+        obstacles.push({
+          type: 'ammo',
+          lane: randomLane,
+          z: 1000
+        });
+      }
+    }
+    
+    function updateParticles() {
+      particles = particles.filter(p => p.life > 0);
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.life--;
+        p.alpha = p.life / 30;
+      });
+    }
+    
+    function updateDisplay() {
+      document.getElementById('distanceDisplay').textContent = Math.floor(distance) + 'm';
+      document.getElementById('scoreDisplay').textContent = score;
+      document.getElementById('highScoreDisplayUI').textContent = highScore;
+      document.getElementById('ammoDisplay').textContent = ammo;
+    }
+    
+    function drawBackground() {
+      // Dark sky with stars
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height * 0.5);
+      gradient.addColorStop(0, '#0a0a1a');
+      gradient.addColorStop(1, '#1a1a3a');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Stars
+      ctx.fillStyle = '#ffffff';
+      for (let i = 0; i < 50; i++) {
+        const x = (i * 73) % canvas.width;
+        const y = (i * 41) % (canvas.height * 0.5);
+        ctx.fillRect(x, y, 2, 2);
+      }
+      
+      // Horizon glow
+      const horizonGradient = ctx.createLinearGradient(0, 80, 0, 200);
+      horizonGradient.addColorStop(0, 'rgba(255, 100, 0, 0.3)');
+      horizonGradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      ctx.fillStyle = horizonGradient;
+      ctx.fillRect(0, 80, canvas.width, 120);
+      
+      // Highway perspective
+      const vanishingY = 150;
+      const roadBottom = canvas.height;
+      const roadTopWidth = 180;
+      
+      // Road base
+      ctx.fillStyle = '#1a1a1a';
+      ctx.beginPath();
+      ctx.moveTo((canvas.width - roadTopWidth) / 2, vanishingY);
+      ctx.lineTo(canvas.width - (canvas.width - roadTopWidth) / 2, vanishingY);
+      ctx.lineTo(canvas.width, roadBottom);
+      ctx.lineTo(0, roadBottom);
+      ctx.closePath();
+      ctx.fill();
+      
+      // Road texture
+      ctx.strokeStyle = '#2a2a2a';
+      ctx.lineWidth = 2;
+      for (let i = 0; i < 10; i++) {
+        const y = vanishingY + (roadBottom - vanishingY) * (i / 10);
+        const width = roadTopWidth + (canvas.width - roadTopWidth) * (i / 10);
+        ctx.beginPath();
+        ctx.moveTo((canvas.width - width) / 2, y);
+        ctx.lineTo(canvas.width - (canvas.width - width) / 2, y);
+        ctx.stroke();
+      }
+      
+      // Lane dividers
+      const laneWidth = canvas.width / 5;
+      const dashOffset = (Date.now() / 30) % 40;
+      
+      for (let i = 1; i < 5; i++) {
+        const topX = (canvas.width - roadTopWidth) / 2 + (roadTopWidth / 5) * i;
+        const bottomX = laneWidth * i;
+        
+        ctx.strokeStyle = i === 2 ? '#ffeb3b' : '#ffffff';
+        ctx.lineWidth = 3;
+        ctx.setLineDash([20, 20]);
+        ctx.lineDashOffset = -dashOffset;
+        ctx.beginPath();
+        ctx.moveTo(topX, vanishingY);
+        ctx.lineTo(bottomX, roadBottom);
+        ctx.stroke();
+      }
+      ctx.setLineDash([]);
+      ctx.lineDashOffset = 0;
+      
+      // Road edges
+      ctx.strokeStyle = '#ffeb3b';
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.moveTo((canvas.width - roadTopWidth) / 2, vanishingY);
+      ctx.lineTo(0, roadBottom);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(canvas.width - (canvas.width - roadTopWidth) / 2, vanishingY);
+      ctx.lineTo(canvas.width, roadBottom);
+      ctx.stroke();
+      
+      // Barrier posts
+      ctx.fillStyle = '#cc0000';
+      for (let i = 0; i < 8; i++) {
+        const y = vanishingY + (roadBottom - vanishingY) * (i / 8);
+        const scale = i / 8;
+        const width = 5 + scale * 10;
+        
+        const leftX = (canvas.width - roadTopWidth) / 2 - (canvas.width - roadTopWidth) / 2 * scale;
+        ctx.fillRect(leftX - width, y - width, width, width * 2);
+        
+        const rightX = canvas.width - (canvas.width - roadTopWidth) / 2 + (canvas.width - roadTopWidth) / 2 * scale;
+        ctx.fillRect(rightX, y - width, width, width * 2);
+      }
+    }
+    
+    function drawUAZ() {
+      const laneWidth = canvas.width / 5;
+      const laneCenter = laneWidth / 2;
+      const currentLaneX = uaz.lane * laneWidth + laneCenter + (uaz.laneTransition * laneWidth);
+      
+      const uazWidth = 100;
+      const uazHeight = 140;
+      const uazX = currentLaneX - uazWidth / 2;
+      const uazY = canvas.height - 200;
+      
+      ctx.save();
+      
+      // Shadow
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+      ctx.ellipse(uazX + uazWidth / 2, uazY + uazHeight + 15, uazWidth / 1.8, 20, 0, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Main body
+      ctx.fillStyle = '#3d4a3a';
+      ctx.fillRect(uazX + 12, uazY + 25, uazWidth - 24, uazHeight - 50);
+      
+      // Body highlights
+      ctx.fillStyle = '#4a5a47';
+      ctx.fillRect(uazX + 12, uazY + 25, uazWidth - 24, 5);
+      
+      // Roof
+      ctx.fillStyle = '#2d3a2a';
+      ctx.fillRect(uazX + 18, uazY, uazWidth - 36, 35);
+      
+      // Rear window
+      ctx.fillStyle = 'rgba(60, 80, 100, 0.9)';
+      ctx.fillRect(uazX + 24, uazY + 8, uazWidth - 48, 22);
+      
+      // Window reflection
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+      ctx.fillRect(uazX + 26, uazY + 10, uazWidth - 52, 8);
+      
+      // Rear lights
+      ctx.fillStyle = '#ff0000';
+      ctx.shadowColor = '#ff0000';
+      ctx.shadowBlur = 10;
+      ctx.fillRect(uazX + 8, uazY + 35, 10, 14);
+      ctx.fillRect(uazX + uazWidth - 18, uazY + 35, 10, 14);
+      ctx.shadowBlur = 0;
+      
+      // Rear bumper
+      ctx.fillStyle = '#2a2a2a';
+      ctx.fillRect(uazX + 5, uazY + uazHeight - 20, uazWidth - 10, 12);
+      
+      // License plate
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(uazX + uazWidth / 2 - 20, uazY + uazHeight - 18, 40, 8);
+      ctx.fillStyle = '#000000';
+      ctx.font = 'bold 6px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText('UAZ-469', uazX + uazWidth / 2, uazY + uazHeight - 13);
+      
+      // Wheels
+      const wheelWidth = 18;
+      const wheelHeight = 28;
+      
+      ctx.fillStyle = '#1a1a1a';
+      ctx.fillRect(uazX + 5, uazY + 40, wheelWidth, wheelHeight);
+      ctx.fillRect(uazX + 5, uazY + uazHeight - 63, wheelWidth, wheelHeight);
+      ctx.fillRect(uazX + uazWidth - 23, uazY + 40, wheelWidth, wheelHeight);
+      ctx.fillRect(uazX + uazWidth - 23, uazY + uazHeight - 63, wheelWidth, wheelHeight);
+      
+      // Wheel rims
+      ctx.fillStyle = '#888';
+      ctx.fillRect(uazX + 8, uazY + 46, 12, 16);
+      ctx.fillRect(uazX + 8, uazY + uazHeight - 57, 12, 16);
+      ctx.fillRect(uazX + uazWidth - 20, uazY + 46, 12, 16);
+      ctx.fillRect(uazX + uazWidth - 20, uazY + uazHeight - 57, 12, 16);
+      
+      // Spare tire
+      ctx.fillStyle = '#1a1a1a';
+      ctx.beginPath();
+      ctx.arc(uazX + uazWidth / 2, uazY + uazHeight - 12, 12, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#555';
+      ctx.beginPath();
+      ctx.arc(uazX + uazWidth / 2, uazY + uazHeight - 12, 7, 0, Math.PI * 2);
+      ctx.fill();
+      
+      ctx.restore();
+    }
+    
+    function drawObstacle(obstacle) {
+      const vanishingY = 150;
+      const roadBottom = canvas.height;
+      const laneWidth = canvas.width / 5;
+      const roadTopWidth = 180;
+      
+      const scale = Math.max(0.05, Math.min(1, (1000 - obstacle.z) / 1000));
+      const perspectiveY = vanishingY + (roadBottom - vanishingY) * scale;
+      
+      const topLaneWidth = roadTopWidth / 5;
+      const bottomLaneWidth = laneWidth;
+      const laneWidthAtDepth = topLaneWidth + (bottomLaneWidth - topLaneWidth) * scale;
+      const roadLeft = (canvas.width - roadTopWidth) / 2 + (0 - (canvas.width - roadTopWidth) / 2) * scale;
+      const laneCenter = roadLeft + laneWidthAtDepth * obstacle.lane + laneWidthAtDepth / 2;
+      
+      const size = 60 * scale;
+      
+      if (obstacle.type === 'ammo') {
+        // Ammo crate
+        ctx.fillStyle = '#8B4513';
+        ctx.fillRect(laneCenter - size / 2, perspectiveY - size / 2, size, size);
+        
+        ctx.fillStyle = '#A0522D';
+        ctx.fillRect(laneCenter - size / 2 + 5, perspectiveY - size / 2 + 5, size - 10, size - 10);
+        
+        // Ammo symbol
+        ctx.fillStyle = '#ffeb3b';
+        ctx.font = `bold ${size * 0.5}px Arial`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('⚡', laneCenter, perspectiveY);
+        
+      } else if (obstacle.type === 'enemy') {
+        // Name tag
+        if (scale > 0.3) {
+          const nameWidth = 70 * scale;
+          const nameHeight = 16 * scale;
+          
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+          ctx.fillRect(laneCenter - nameWidth / 2, perspectiveY - size - nameHeight - 5, nameWidth, nameHeight);
+          
+          ctx.strokeStyle = '#000000';
+          ctx.lineWidth = 2 * scale;
+          ctx.strokeRect(laneCenter - nameWidth / 2, perspectiveY - size - nameHeight - 5, nameWidth, nameHeight);
+          
+          ctx.fillStyle = '#000000';
+          ctx.font = `bold ${11 * scale}px Arial`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(obstacle.name, laneCenter, perspectiveY - size - nameHeight / 2 - 5);
+        }
+        
+        // Helmet
+        ctx.fillStyle = '#455a64';
+        ctx.beginPath();
+        ctx.arc(laneCenter, perspectiveY - size * 0.7, size * 0.18, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Head
+        ctx.fillStyle = '#ffccbc';
+        ctx.beginPath();
+        ctx.arc(laneCenter, perspectiveY - size * 0.65, size * 0.15, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Body
+        ctx.fillStyle = '#37474f';
+        ctx.fillRect(laneCenter - size * 0.2, perspectiveY - size * 0.5, size * 0.4, size * 0.5);
+        
+      } else if (obstacle.type === 'tree') {
+        // Tree trunk
+        ctx.fillStyle = '#5d4037';
+        ctx.fillRect(laneCenter - size * 0.15, perspectiveY - size * 0.8, size * 0.3, size * 0.8);
+        
+        // Tree foliage
+        ctx.fillStyle = '#2e7d32';
+        ctx.beginPath();
+        ctx.arc(laneCenter, perspectiveY - size * 0.7, size * 0.4, 0, Math.PI * 2);
+        ctx.fill();
+        
+        ctx.fillStyle = '#388e3c';
+        ctx.beginPath();
+        ctx.arc(laneCenter - size * 0.2, perspectiveY - size * 0.8, size * 0.3, 0, Math.PI * 2);
+        ctx.arc(laneCenter + size * 0.2, perspectiveY - size * 0.8, size * 0.3, 0, Math.PI * 2);
+        ctx.fill();
+        
+      } else if (obstacle.type === 'rock') {
+        ctx.fillStyle = '#757575';
+        ctx.beginPath();
+        ctx.moveTo(laneCenter - size * 0.3, perspectiveY);
+        ctx.lineTo(laneCenter, perspectiveY - size * 0.6);
+        ctx.lineTo(laneCenter + size * 0.3, perspectiveY);
+        ctx.closePath();
+        ctx.fill();
+        
+        ctx.fillStyle = '#616161';
+        ctx.beginPath();
+        ctx.moveTo(laneCenter, perspectiveY - size * 0.6);
+        ctx.lineTo(laneCenter + size * 0.3, perspectiveY);
+        ctx.lineTo(laneCenter, perspectiveY - size * 0.2);
+        ctx.closePath();
+        ctx.fill();
+      }
+    }
+    
+    function drawBullet(bullet) {
+      const vanishingY = 150;
+      const roadBottom = canvas.height;
+      const laneWidth = canvas.width / 5;
+      const roadTopWidth = 180;
+      
+      const scale = Math.max(0.05, Math.min(1, (1000 - bullet.z) / 1000));
+      const perspectiveY = vanishingY + (roadBottom - vanishingY) * scale;
+      
+      const topLaneWidth = roadTopWidth / 5;
+      const bottomLaneWidth = laneWidth;
+      const laneWidthAtDepth = topLaneWidth + (bottomLaneWidth - topLaneWidth) * scale;
+      const roadLeft = (canvas.width - roadTopWidth) / 2 + (0 - (canvas.width - roadTopWidth) / 2) * scale;
+      const laneCenter = roadLeft + laneWidthAtDepth * bullet.lane + laneWidthAtDepth / 2;
+      
+      const size = 10 * scale;
+      
+      ctx.fillStyle = '#ffeb3b';
+      ctx.shadowColor = '#ffeb3b';
+      ctx.shadowBlur = 10;
+      ctx.beginPath();
+      ctx.arc(laneCenter, perspectiveY, size, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+    
+    function drawParticles() {
+      particles.forEach(p => {
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.alpha;
+        ctx.fillRect(p.x, p.y, 4, 4);
+      });
+      ctx.globalAlpha = 1;
+    }
+    
+    function endGame() {
+      gameOver = true;
+      gameRunning = false;
+      
+      // Update high score
+      if (score > highScore) {
+        highScore = score;
+        localStorage.setItem('pubgHighwayHighScore', highScore);
+      }
+      
+      // Update kill stats
+      for (const name in matchKills) {
+        if (matchKills[name] > 0) {
+          killStats[name]++;
+        }
+      }
+      localStorage.setItem('pubgHighwayKillStats', JSON.stringify(killStats));
+      
+      // Roast message
+      const roastMessages = [
+        "You crashed like Kilma! 😂",
+        "That's some Kilma-level driving! 🤡",
+        "Even Kilma does better on the highway! 💀",
+        "Highway patrol called - they want Kilma's license back! 🚔",
+        "Achievement unlocked: Kilma's co-pilot! 🎓"
+      ];
+      
+      const randomRoast = roastMessages[Math.floor(Math.random() * roastMessages.length)];
+      
+      // Populate kill stats
+      const killStatsDisplay = document.getElementById('killStatsDisplay');
+      killStatsDisplay.innerHTML = '';
+      const playerNames = ['Kilma9', 'Mar-0', 'Hyottokko', 'Baron_Frajeris', 'codufus', 'Veru_13'];
+      playerNames.forEach(name => {
+        const killCount = killStats[name] || 0;
+        const statItem = document.createElement('div');
+        statItem.style.cssText = 'padding: 5px; background: rgba(0, 0, 0, 0.3); border-radius: 5px; border: 1px solid rgba(255, 255, 255, 0.2);';
+        statItem.innerHTML = `<span style="color: #ff3333; font-weight: bold;">${name}</span>: <span style="color: #ffd700;">${killCount}</span> kills`;
+        killStatsDisplay.appendChild(statItem);
+      });
+      
+      // Show game over
+      document.getElementById('kilmaRoast').textContent = randomRoast;
+      document.getElementById('finalDistance').textContent = Math.floor(distance);
+      document.getElementById('finalScore').textContent = score;
+      document.getElementById('highScoreDisplay').textContent = highScore;
+      document.getElementById('gameOverScreen').classList.add('show');
+    }
+    
+    function restartGame() {
+      document.getElementById('gameOverScreen').classList.remove('show');
+      setTimeout(() => startGame(), 100);
+    }
+    
+    function gameLoop() {
+      if (!gameRunning || gameOver) return;
+      
+      // Update
+      updateUAZ();
+      updateObstacles();
+      updateParticles();
+      updateDisplay();
+      
+      // Draw
+      drawBackground();
+      obstacles.forEach(drawObstacle);
+      bullets.forEach(drawBullet);
+      drawParticles();
+      drawUAZ();
+      
+      requestAnimationFrame(gameLoop);
+    }
+    
+    // Initialize
+    updateDisplay();
+    document.getElementById('highScoreDisplayUI').textContent = highScore;
+    
+    // Show start message
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#ffd700';
+    ctx.font = 'bold 48px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('PUBG HIGHWAY CHASE', canvas.width / 2, canvas.height / 2 - 40);
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '24px Arial';
+    ctx.fillText('Click to Start', canvas.width / 2, canvas.height / 2 + 20);
+  </script>
+</body>
+</html>
