@@ -45,6 +45,7 @@ jobs:
         
         # Copy frontend files
         cp index.html deploy/
+        cp game.html deploy/
         cp -r public deploy/ 2>/dev/null || echo "No public directory"
         
         # Copy backend files (for Node.js hosting)
