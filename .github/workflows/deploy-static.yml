@@ -42,6 +42,7 @@ jobs:
           cp index.html deploy/
           cp game.html deploy/
           cp gamebr.html deploy/
+          cp analytics.html deploy/
           
           # Force copy data.json with verification
           echo "📊 Copying data.json..."
