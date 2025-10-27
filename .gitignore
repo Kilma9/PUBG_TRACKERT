@@ -77,6 +77,9 @@ public
 tmp/
 temp/
 
+# Analytics data (privacy)
+analytics.json
+
 # IDE files
 .vscode/
 .idea/

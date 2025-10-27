@@ -41,7 +41,7 @@ jobs:
           # Copy main application files
           cp index.html deploy/
           cp game.html deploy/
-          cp game3d.html deploy/
+          cp gamebr.html deploy/
           
           # Force copy data.json with verification
           echo "📊 Copying data.json..."
