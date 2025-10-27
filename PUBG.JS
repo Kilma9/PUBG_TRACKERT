@@ -257,6 +257,7 @@ async function getMatchDetails(matchId, targetPlayerName) {
         headshots: stats.headshotKills,
         weapons: weaponKills,
         weaponDamage: weaponDamage,
+        weaponKills: weaponKills, // Explicitly add weaponKills for clarity
         weaponStats: weaponStats,
         // Additional stats from PUBG API
         assists: stats.assists || 0,
@@ -332,6 +333,7 @@ function summarizeTeamStatsByDay(matchSummaries) {
           headshots: 0,
           weapons: {},
           weaponDamage: {},
+          weaponKills: {}, // Add weaponKills tracking
           assists: 0,
           boosts: 0,
           heals: 0,
@@ -369,6 +371,14 @@ function summarizeTeamStatsByDay(matchSummaries) {
           dailyStats[date][player.name].weapons[weapon] = 0;
         }
         dailyStats[date][player.name].weapons[weapon] += count;
+      }
+      
+      // Aggregate weaponKills (same as weapons for backward compatibility)
+      for (const [weapon, count] of Object.entries(player.weaponKills || player.weapons || {})) {
+        if (!dailyStats[date][player.name].weaponKills[weapon]) {
+          dailyStats[date][player.name].weaponKills[weapon] = 0;
+        }
+        dailyStats[date][player.name].weaponKills[weapon] += count;
       }
 
       // Aggregate weapon damage
