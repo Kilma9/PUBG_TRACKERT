@@ -675,7 +675,7 @@
         <button id="memesBtn" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px;">🤡 Meme Dashboard</button>
         <button id="recordsBtn" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px;">🏆 Team Records</button>
         <button id="changelogBtn" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px;">📋 Changelog</button>
-        <button onclick="window.location.href='game.html'" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px; background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);">🎮 Play Mini Game</button>
+        <button id="playGameBtn" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px; background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);">🎮 Play Mini Game</button>
       </div>
     </div>
     
@@ -2595,6 +2595,11 @@
       const bioSelect = document.getElementById('bioSelect');
       if (bioSelect) bioSelect.value = '';
       document.getElementById('bioContent').classList.add('hidden');
+    });
+
+    // Play Mini Game button event listener
+    document.getElementById('playGameBtn').addEventListener('click', function() {
+      window.location.href = '/game.html';
     });
 
     // Changelog button event listener
