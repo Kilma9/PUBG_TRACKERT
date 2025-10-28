@@ -1,7 +1,20 @@
 const axios = require('axios');
 
-// Use environment variables for cloud execution, fallback to hardcoded values for local development
-const API_KEY = process.env.PUBG_API_KEY || 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiYjE4YmYzMC04YzA4LTAxM2UtZGUwMy0yNmQxYTJiMzY4ZGYiLCJpc3MiOiJnYW1lbG9ja2VyIiwiaWF0IjoxNzYwNTQxNzY4LCJwdWIiOiJibHVlaG9sZSIsInRpdGxlIjoicHViZyIsImFwcCI6InptcmRpX2FwaV9wdWJnIn0.VxVk7vF2bR25_Z0YZa-QB8v0mEOmwDi0Lreu20d5rE0';
+// Use environment variable for API key (set via GitHub Secrets or local .env)
+const API_KEY = process.env.PUBG_API_KEY;
+
+if (!API_KEY) {
+  console.error('❌ ERROR: PUBG_API_KEY environment variable is not set!');
+  console.error('');
+  console.error('For local development:');
+  console.error('  Set environment variable: export PUBG_API_KEY="your-api-key-here"');
+  console.error('  Or create .env file with: PUBG_API_KEY=your-api-key-here');
+  console.error('');
+  console.error('For GitHub Actions:');
+  console.error('  Add PUBG_API_KEY to repository secrets');
+  console.error('  Settings → Secrets and variables → Actions → New repository secret');
+  process.exit(1);
+}
 
 // Multi-player configuration
 const PLAYERS = [
