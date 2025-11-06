@@ -1,5 +1,139 @@
 [
   {
+    "date": "2025-11-06T18:27:53Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1642,
+    "placement": 3,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 47.109177,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 47.10917663574219,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 7,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 883,
+        "walkDistance": 2048.2634,
+        "rideDistance": 5397.015,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 2,
+        "damage": 375.0361,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 231.09458923339844,
+          "Weap M P5 K": 143.94150924682617
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1586,
+        "walkDistance": 2018.4735,
+        "rideDistance": 5323.484,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-06T18:08:41Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1587,
+    "placement": 11,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 1,
+        "damage": 162.54547,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Proj Grenade": 0,
+          "Weap S C A R- L": 118.27150535583496,
+          "Weap Kar98k": 44.27397537231445
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 8,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1034,
+        "walkDistance": 1828.9652,
+        "rideDistance": 5119.709,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 1,
+        "damage": 319.1877,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A U G": 99.99999809265137,
+          "Weap Mini14": 219.18770217895508,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 11,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1032,
+        "walkDistance": 1691.6749,
+        "rideDistance": 5196.4497,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-06T17:42:21Z",
     "gameMode": "duo-fpp",
     "gameType": "normal",
