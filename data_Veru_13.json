@@ -1,5 +1,258 @@
 [
   {
+    "date": "2025-11-07T19:41:27Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1550,
+    "placement": 5,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 22.11516,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Blanc_ Esports": 12.113912582397461,
+          "Weap J S9": 22.11515998840332,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 23,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1055,
+        "walkDistance": 1904.7915,
+        "rideDistance": 4711.37,
+        "swimDistance": 0
+      },
+      {
+        "name": "Adys8",
+        "kills": 0,
+        "damage": 115.00672,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Blanc_ Esports": 12.113912582397461,
+          "Weap Mk12": 37.60672950744629,
+          "Weap H K416": 77.39999961853027,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1051,
+        "walkDistance": 1789.5513,
+        "rideDistance": 4788.2275,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 15.677547,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Blanc_ Esports": 12.113912582397461,
+          "Weap Mini14": 15.677547454833984
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 2,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1055,
+        "walkDistance": 1719.4374,
+        "rideDistance": 5351.202,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-07T19:19:29Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1521,
+    "placement": 6,
+    "team": [
+      {
+        "name": "Adys8",
+        "kills": 0,
+        "damage": 163.9337,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mk12": 163.9336977005005,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 24,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 10,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1177,
+        "walkDistance": 2456.1245,
+        "rideDistance": 2064.9417,
+        "swimDistance": 157.04497
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 1,
+        "damage": 118.74711,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 118.74710845947266,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 4,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 4,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1177,
+        "walkDistance": 2381.7725,
+        "rideDistance": 2540.5613,
+        "swimDistance": 292.70374
+      },
+      {
+        "name": "Veru_13",
+        "kills": 1,
+        "damage": 180.55035,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 180.55035495758057,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 61,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1145,
+        "walkDistance": 2554.3235,
+        "rideDistance": 1426.0099,
+        "swimDistance": 153.90329
+      }
+    ]
+  },
+  {
+    "date": "2025-11-07T19:07:55Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1764,
+    "placement": 26,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 194.92572,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M P5 K": 194.92572212219238
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 16,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 251,
+        "walkDistance": 249.3349,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 67,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 195,
+        "walkDistance": 44.45693,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-07T18:46:04Z",
     "gameMode": "duo-fpp",
     "gameType": "normal",
