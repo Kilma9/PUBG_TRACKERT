@@ -1,5 +1,211 @@
 [
   {
+    "date": "2025-11-08T18:47:20Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1712,
+    "placement": 29,
+    "team": [
+      {
+        "name": "JeesusIsWatchinU",
+        "kills": 1,
+        "damage": 186.41553,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Vector": 140.22448348999023,
+          "Weap Kar98k": 46.19103240966797
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 8,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 1,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 618,
+        "walkDistance": 1318.4838,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "codufus",
+        "kills": 2,
+        "damage": 223.15378,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Vector": 99.99999618530273,
+          "Weap A U G": 44.662689208984375,
+          "Weap Mk12": 59.73470497131348,
+          "Proj Grenade": 18.756397247314453,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 618,
+        "walkDistance": 1397.1921,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-08T18:21:21Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1532,
+    "placement": 5,
+    "team": [
+      {
+        "name": "codufus",
+        "kills": 0,
+        "damage": 54.560997,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 54.560997009277344,
+          "B P_ Porter": 33.24757385253906
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 3,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 8,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1385,
+        "walkDistance": 3429.9526,
+        "rideDistance": 6137.211,
+        "swimDistance": 64.12311
+      },
+      {
+        "name": "JeesusIsWatchinU",
+        "kills": 3,
+        "damage": 275,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Vector": 174.99999809265137,
+          "Weap V S S": 100.0000057220459,
+          "B P_ Porter": 33.24757385253906,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 18,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 9,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1385,
+        "walkDistance": 3376.338,
+        "rideDistance": 6156.5547,
+        "swimDistance": 61.57375
+      }
+    ]
+  },
+  {
+    "date": "2025-11-08T18:00:12Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1547,
+    "placement": 12,
+    "team": [
+      {
+        "name": "JeesusIsWatchinU",
+        "kills": 2,
+        "damage": 116.07257,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 42.37718391418457,
+          "Weap Dragunov": 73.69538307189941
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 8,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1101,
+        "walkDistance": 3174.109,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "codufus",
+        "kills": 4,
+        "damage": 645.49786,
+        "headshots": 2,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A K47": 99.99999809265137,
+          "Weap A U G": 136.52344512939453,
+          "Weap Mini14": 100.00000381469727,
+          "Weap M24": 308.97445011138916,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 5,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1101,
+        "walkDistance": 3006.1763,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-08T17:45:54Z",
     "gameMode": "duo-fpp",
     "gameType": "normal",
