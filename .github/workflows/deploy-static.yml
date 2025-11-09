@@ -1,8 +1,9 @@
 name: Deploy to Webzdarma.cz Hosting
 
 on:
-  push:
-    branches: [ main ]
+  # Disabled automatic deployment on push - only manual deployment via workflow_dispatch
+  # push:
+  #   branches: [ main ]
   workflow_dispatch:
 
 jobs:

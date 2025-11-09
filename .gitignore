@@ -80,6 +80,10 @@ temp/
 # Analytics data (privacy)
 analytics.json
 
+# Data backup files (no longer created, excluded from repo)
+data_backup_*.json
+backups_archive/
+
 # IDE files
 .vscode/
 .idea/
