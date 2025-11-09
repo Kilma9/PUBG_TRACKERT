@@ -80,6 +80,13 @@ async function collectCareerStats() {
   
   const allPlayerStats = {};
   
+  // Empty stats template for players with no season activity
+  const emptyStats = {
+    gameModeStats: {},
+    rankedGameModeStats: {},
+    seasonId: null
+  };
+  
   try {
     // Get seasons
     const { all: allSeasons, current: currentSeason } = await getSeasons();
@@ -99,16 +106,17 @@ async function collectCareerStats() {
         const playerId = await getPlayerId(playerName);
         const seasonStats = await getPlayerSeasonStats(playerId, currentSeason.id);
         
+        // Include player even if no season stats (with empty stats)
+        allPlayerStats[playerName] = {
+          playerId: playerId,
+          currentSeason: currentSeason.id,
+          stats: seasonStats || emptyStats
+        };
+        
         if (seasonStats) {
-          allPlayerStats[playerName] = {
-            playerId: playerId,
-            currentSeason: currentSeason.id,
-            stats: seasonStats
-          };
-          
           // Log summary
           const squadFpp = seasonStats.gameModeStats['squad-fpp'];
-          if (squadFpp) {
+          if (squadFpp && squadFpp.roundsPlayed > 0) {
             console.log(`📈 Squad FPP Stats:`);
             console.log(`   • Matches: ${squadFpp.roundsPlayed}`);
             console.log(`   • Wins: ${squadFpp.wins} (${(squadFpp.wins / squadFpp.roundsPlayed * 100).toFixed(1)}%)`);
@@ -116,7 +124,11 @@ async function collectCareerStats() {
             console.log(`   • Kills: ${squadFpp.kills}`);
             console.log(`   • K/D Ratio: ${(squadFpp.kills / Math.max(squadFpp.losses, 1)).toFixed(2)}`);
             console.log(`   • Avg Damage: ${Math.round(squadFpp.damageDealt / squadFpp.roundsPlayed)}`);
+          } else {
+            console.log(`ℹ️ No squad-fpp matches this season`);
           }
+        } else {
+          console.log(`ℹ️ No season stats available - player added with empty stats`);
         }
         
         // Delay between players to respect API rate limits
@@ -127,6 +139,14 @@ async function collectCareerStats() {
         
       } catch (error) {
         console.error(`❌ Error processing ${playerName}:`, error.message);
+        // Still add player with empty stats even if there's an error
+        allPlayerStats[playerName] = {
+          playerId: 'unknown',
+          currentSeason: currentSeason.id,
+          stats: emptyStats,
+          error: error.message
+        };
+        console.log(`⚠️ Player added with empty stats due to error`);
         continue;
       }
     }
