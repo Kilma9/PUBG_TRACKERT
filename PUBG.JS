@@ -603,25 +603,14 @@ async function collectPlayerData(playerName) {
         console.log(`\n📋 No new matches found, keeping existing data intact`);
       }
 
-      // ✅ Save to local file with timestamp
+      // ✅ Save to local file
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('T')[0];
       
       // Save main data file (30-day rolling window)
       fs.writeFileSync(dataFile, JSON.stringify(thirtyDaysMatches, null, 2));
       
-      // Save backup with timestamp (only if there are new matches)
-      if (newMatchesCount > 0) {
-        const backupFile = playerName === 'Kilma9' ? `data_backup_${timestamp}.json` : `data_backup_${playerName}_${timestamp}.json`;
-        fs.writeFileSync(backupFile, JSON.stringify(thirtyDaysMatches, null, 2));
-      }
-      
-      console.log(`\n💾 Files saved:`);
-      console.log(`   • data.json (${thirtyDaysMatches.length} matches - 30 day rolling window)`);
-      if (newMatchesCount > 0) {
-        console.log(`   • data_backup_${timestamp}.json (backup created for new matches)`);
-      } else {
-        console.log(`   • No backup created (no new matches)`);
-      }
+      console.log(`\n💾 File saved:`);
+      console.log(`   • ${dataFile} (${thirtyDaysMatches.length} matches - 30 day rolling window)`);
       
       // Generate summary statistics
       const uniqueDays = [...new Set(thirtyDaysMatches.map(m => m.date.split('T')[0]))];

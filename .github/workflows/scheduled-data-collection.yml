@@ -56,12 +56,6 @@ jobs:
         # List of all players to collect data for
         PLAYERS=("Kilma9" "Mar-0" "Hyottokko" "Baron_Frajeris" "codufus" "Veru_13")
         
-        # Create backup of existing main data file
-        if [ -f "data.json" ]; then
-          cp data.json "data_backup_$(date +%Y-%m-%d_%H-%M-%S).json"
-          echo "💾 Created backup of existing data"
-        fi
-        
         # Collect data for each player
         for PLAYER in "${PLAYERS[@]}"; do
           echo "👤 Collecting data for player: $PLAYER"
