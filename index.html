@@ -672,19 +672,30 @@
         <h3 style="margin: 0 0 18px 0; color: #fff; font-size: 20px; font-weight: 700;">⚔️ Latest Update</h3>
         
         <div style="background: rgba(255, 255, 255, 0.15); border-radius: 8px; padding: 18px; border-left: 4px solid #ff1493;">
-          <div style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px;">Mini Game v0.2 - PUBG BR</div>
-          <div style="font-size: 13px; opacity: 0.9; margin-bottom: 15px; background: rgba(255, 20, 147, 0.8); display: inline-block; padding: 4px 10px; border-radius: 4px;">27.10.2025</div>
+          <div style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px;">v1.1 - Official Statistics API Integration</div>
+          <div style="font-size: 13px; opacity: 0.9; margin-bottom: 15px; background: rgba(255, 20, 147, 0.8); display: inline-block; padding: 4px 10px; border-radius: 4px;">09.11.2025</div>
           
           <div style="font-size: 14px; line-height: 1.7; margin-bottom: 15px;">
-            <strong style="color: #ffeb3b;">🎮 Major Features:</strong>
+            <strong style="color: #4ade80;">� NEW FEATURE: Official Career Statistics</strong>
             <ul style="margin: 8px 0; padding-left: 20px; opacity: 0.95;">
-              <li>Top-down Battle Royale shooter</li>
-              <li>Solo & Duos modes with tactical AI</li>
-              <li>Ultra-detailed pixel graphics</li>
-              <li>Full weapon system (Pistol, Beryl, Shotgun, MG3)</li>
-              <li>Armor & loot drops</li>
-              <li>Continuous zone shrinking</li>
-              <li>Smart spawn validation</li>
+              <li>Integrated PUBG Official API for season statistics</li>
+              <li>New "Official Career Logs" page with player performance metrics</li>
+              <li>K/D ratio, win rate, top 10%, total kills & damage tracking</li>
+              <li>Visual comparison charts for all players</li>
+              <li>Automated daily collection at 20:00 Prague time</li>
+            </ul>
+            
+            <strong style="color: #60a5fa;">🔧 Data Collection Improvements:</strong>
+            <ul style="margin: 8px 0; padding-left: 20px; opacity: 0.95;">
+              <li>Fixed missing matches due to out-of-order API responses</li>
+              <li>Changed from 30-day rolling window to season-based tracking (since Sept 1, 2025)</li>
+              <li>Historical data now persists indefinitely from season start</li>
+            </ul>
+            
+            <strong style="color: #f59e0b;">🏆 Team Records Fix:</strong>
+            <ul style="margin: 8px 0; padding-left: 20px; opacity: 0.95;">
+              <li>Filtered out arcade/custom games from records calculation</li>
+              <li>Records now match regular statistics (normal squad games only)</li>
             </ul>
           </div>
           
