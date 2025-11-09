@@ -1,6 +1,6 @@
 ## 🎮 PUBG Multi-Player Data Collection Report
-**Collection Date:** Sun Nov  9 19:12:55 UTC 2025
-**Trigger:** workflow_dispatch
+**Collection Date:** Sun Nov  9 19:24:07 UTC 2025
+**Trigger:** schedule
 
 ### 👤 Kilma9
 - **Matches:** 110
