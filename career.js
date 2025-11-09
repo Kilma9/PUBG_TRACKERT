@@ -14,7 +14,7 @@ const PLAYERS = [
   'Mar-0', 
   'Hyottokko',
   'Baron_Frajeris',
-  'codufus',
+  'Codufus',
   'Veru_13'
 ];
 
