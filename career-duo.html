@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PUBG Official Career Stats</title>
+  <title>PUBG Official Career Stats - Duo FPP</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     * {
@@ -20,13 +20,13 @@
     }
     
     .header {
-      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+      background: linear-gradient(135deg, #f59e0b 0%, #f97316 50%, #ef4444 100%);
       color: white;
       padding: 30px;
       border-radius: 16px;
       margin-bottom: 30px;
       text-align: center;
-      box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+      box-shadow: 0 10px 40px rgba(245, 158, 11, 0.3);
     }
     
     .header h1 {
@@ -67,12 +67,12 @@
       border-radius: 12px;
       margin-bottom: 30px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      border-left: 4px solid #6366f1;
+      border-left: 4px solid #f59e0b;
     }
     
     .season-info h2 {
       margin: 0 0 10px 0;
-      color: #6366f1;
+      color: #f59e0b;
       font-size: 24px;
     }
     
@@ -87,7 +87,7 @@
       border-radius: 16px;
       padding: 25px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      border: 1px solid rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.1);
       transition: all 0.3s ease;
     }
     
@@ -122,7 +122,7 @@
     
     .stats-section h3 {
       font-size: 16px;
-      color: #6366f1;
+      color: #f59e0b;
       margin: 0 0 12px 0;
       font-weight: 700;
       text-transform: uppercase;
@@ -139,7 +139,7 @@
       background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
       padding: 12px;
       border-radius: 8px;
-      border-left: 3px solid #6366f1;
+      border-left: 3px solid #f59e0b;
     }
     
     .stat-label {
@@ -158,7 +158,7 @@
     }
     
     .stat-value.highlight {
-      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -189,7 +189,7 @@
     }
     
     .comparison-chart h2 {
-      color: #6366f1;
+      color: #f59e0b;
       margin: 0 0 20px 0;
       font-size: 22px;
     }
@@ -204,8 +204,8 @@
   <button class="back-button" onclick="window.location.href='index.html'">← Back to Dashboard</button>
   
   <div class="header">
-    <h1>📊 Official Career Statistics - Squad FPP</h1>
-    <p>PUBG API Season Stats - Squad Mode Performance</p>
+    <h1>👥 Official Career Statistics - Duo FPP</h1>
+    <p>PUBG API Season Stats - Duo Mode Performance</p>
     <p id="lastUpdate"><small>Loading...</small></p>
   </div>
   
@@ -298,7 +298,7 @@
       
       document.getElementById('seasonName').textContent = `Season: ${data.seasonName || data.currentSeason}`;
       document.getElementById('seasonDetails').textContent = 
-        `Official statistics from PUBG API for ${Object.keys(data.players).length} players`;
+        `Official Duo FPP statistics from PUBG API for ${Object.keys(data.players).length} players`;
     }
     
     function displayPlayerStats(data) {
@@ -307,29 +307,29 @@
       
       Object.entries(data.players).forEach(([playerName, playerData]) => {
         const stats = playerData.stats.gameModeStats;
-        const squadFpp = stats['squad-fpp'] || {};
+        const duoFpp = stats['duo-fpp'] || {};
         
         const card = document.createElement('div');
         card.className = 'player-card';
         
-        const kd = squadFpp.roundsPlayed > 0 
-          ? (squadFpp.kills / Math.max(squadFpp.losses || 1, 1)).toFixed(2)
+        const kd = duoFpp.roundsPlayed > 0 
+          ? (duoFpp.kills / Math.max(duoFpp.losses || 1, 1)).toFixed(2)
           : '0.00';
         
-        const winRate = squadFpp.roundsPlayed > 0
-          ? ((squadFpp.wins / squadFpp.roundsPlayed) * 100).toFixed(1)
+        const winRate = duoFpp.roundsPlayed > 0
+          ? ((duoFpp.wins / duoFpp.roundsPlayed) * 100).toFixed(1)
           : '0.0';
         
-        const top10Rate = squadFpp.roundsPlayed > 0
-          ? ((squadFpp.top10s / squadFpp.roundsPlayed) * 100).toFixed(1)
+        const top10Rate = duoFpp.roundsPlayed > 0
+          ? ((duoFpp.top10s / duoFpp.roundsPlayed) * 100).toFixed(1)
           : '0.0';
         
-        const avgDamage = squadFpp.roundsPlayed > 0
-          ? Math.round(squadFpp.damageDealt / squadFpp.roundsPlayed)
+        const avgDamage = duoFpp.roundsPlayed > 0
+          ? Math.round(duoFpp.damageDealt / duoFpp.roundsPlayed)
           : 0;
         
-        const avgKills = squadFpp.roundsPlayed > 0
-          ? (squadFpp.kills / squadFpp.roundsPlayed).toFixed(2)
+        const avgKills = duoFpp.roundsPlayed > 0
+          ? (duoFpp.kills / duoFpp.roundsPlayed).toFixed(2)
           : '0.00';
         
         card.innerHTML = `
@@ -339,15 +339,15 @@
           </div>
           
           <div class="stats-section">
-            <h3>🎮 Squad FPP Performance</h3>
+            <h3>👥 Duo FPP Performance</h3>
             <div class="stats-grid">
               <div class="stat-item">
                 <div class="stat-label">Matches Played</div>
-                <div class="stat-value highlight">${squadFpp.roundsPlayed || 0}</div>
+                <div class="stat-value highlight">${duoFpp.roundsPlayed || 0}</div>
               </div>
               <div class="stat-item">
                 <div class="stat-label">Wins</div>
-                <div class="stat-value highlight">${squadFpp.wins || 0}</div>
+                <div class="stat-value highlight">${duoFpp.wins || 0}</div>
               </div>
               <div class="stat-item">
                 <div class="stat-label">Win Rate</div>
@@ -355,7 +355,7 @@
               </div>
               <div class="stat-item">
                 <div class="stat-label">Top 10s</div>
-                <div class="stat-value">${squadFpp.top10s || 0} (${top10Rate}%)</div>
+                <div class="stat-value">${duoFpp.top10s || 0} (${top10Rate}%)</div>
               </div>
             </div>
           </div>
@@ -365,7 +365,7 @@
             <div class="stats-grid">
               <div class="stat-item">
                 <div class="stat-label">Total Kills</div>
-                <div class="stat-value highlight">${squadFpp.kills || 0}</div>
+                <div class="stat-value highlight">${duoFpp.kills || 0}</div>
               </div>
               <div class="stat-item">
                 <div class="stat-label">K/D Ratio</div>
@@ -377,11 +377,11 @@
               </div>
               <div class="stat-item">
                 <div class="stat-label">Headshot Kills</div>
-                <div class="stat-value">${squadFpp.headshotKills || 0}</div>
+                <div class="stat-value">${duoFpp.headshotKills || 0}</div>
               </div>
               <div class="stat-item">
                 <div class="stat-label">Total Damage</div>
-                <div class="stat-value">${Math.round(squadFpp.damageDealt || 0).toLocaleString()}</div>
+                <div class="stat-value">${Math.round(duoFpp.damageDealt || 0).toLocaleString()}</div>
               </div>
               <div class="stat-item">
                 <div class="stat-label">Avg Damage</div>
@@ -395,27 +395,27 @@
             <div class="stats-grid">
               <div class="stat-item">
                 <div class="stat-label">Assists</div>
-                <div class="stat-value">${squadFpp.assists || 0}</div>
+                <div class="stat-value">${duoFpp.assists || 0}</div>
               </div>
               <div class="stat-item">
                 <div class="stat-label">DBNOs</div>
-                <div class="stat-value">${squadFpp.dBNOs || 0}</div>
+                <div class="stat-value">${duoFpp.dBNOs || 0}</div>
               </div>
               <div class="stat-item">
                 <div class="stat-label">Revives</div>
-                <div class="stat-value">${squadFpp.revives || 0}</div>
+                <div class="stat-value">${duoFpp.revives || 0}</div>
               </div>
               <div class="stat-item">
                 <div class="stat-label">Longest Kill</div>
-                <div class="stat-value">${Math.round(squadFpp.longestKill || 0)}m</div>
+                <div class="stat-value">${Math.round(duoFpp.longestKill || 0)}m</div>
               </div>
               <div class="stat-item">
                 <div class="stat-label">Road Kills</div>
-                <div class="stat-value">${squadFpp.roadKills || 0}</div>
+                <div class="stat-value">${duoFpp.roadKills || 0}</div>
               </div>
               <div class="stat-item">
                 <div class="stat-label">Vehicle Destroys</div>
-                <div class="stat-value">${squadFpp.vehicleDestroys || 0}</div>
+                <div class="stat-value">${duoFpp.vehicleDestroys || 0}</div>
               </div>
             </div>
           </div>
@@ -428,12 +428,12 @@
     function createComparisonCharts(data) {
       const players = Object.keys(data.players);
       const colors = [
-        '#6366f1', '#8b5cf6', '#d946ef', '#f97316', '#22c55e', '#06b6d4'
+        '#f59e0b', '#f97316', '#ef4444', '#ec4899', '#a855f7', '#06b6d4'
       ];
       
       // Kills Chart
       const killsData = players.map(name => {
-        const stats = data.players[name].stats.gameModeStats['squad-fpp'];
+        const stats = data.players[name].stats.gameModeStats['duo-fpp'];
         return stats?.kills || 0;
       });
       
@@ -462,7 +462,7 @@
       
       // Damage Chart
       const damageData = players.map(name => {
-        const stats = data.players[name].stats.gameModeStats['squad-fpp'];
+        const stats = data.players[name].stats.gameModeStats['duo-fpp'];
         return Math.round(stats?.damageDealt || 0);
       });
       
@@ -491,7 +491,7 @@
       
       // Win Rate Chart
       const winRateData = players.map(name => {
-        const stats = data.players[name].stats.gameModeStats['squad-fpp'];
+        const stats = data.players[name].stats.gameModeStats['duo-fpp'];
         if (!stats || stats.roundsPlayed === 0) return 0;
         return ((stats.wins / stats.roundsPlayed) * 100).toFixed(1);
       });
