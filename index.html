@@ -702,7 +702,8 @@
         <button id="memesBtn" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px;">🤡 Meme Dashboard</button>
         <button id="recordsBtn" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px;">🏆 Team Records</button>
         <button id="changelogBtn" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px;">📋 Changelog</button>
-        <button onclick="window.open('analytics.html', '_blank')" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">📊 Analytics</button>
+        <button onclick="window.open('career.html', '_blank')" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px; background: linear-gradient(135deg, #10b981 0%, #059669 100%);">📊 Official Career Logs</button>
+        <button onclick="window.open('analytics.html', '_blank')" class="special-btn" style="padding: 15px 50px; font-size: 16px; min-width: 250px; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">� Analytics</button>
       </div>
     </div>
     
@@ -3129,6 +3130,10 @@
       let topBoosts = { player: '', value: 0, date: '' };
 
       fullMatchData.forEach(match => {
+        // Only process normal squad games (exclude arcade, custom, training modes)
+        if (match.gameType !== 'normal' || match.teamSize !== 'squad') {
+          return; // Skip non-normal or non-squad games
+        }
         let matchTeamDamage = 0;
         const matchDate = new Date(match.date).toLocaleDateString('en-GB', {
           day: '2-digit',

@@ -89,6 +89,26 @@ jobs:
         
         echo "🕒 Created timestamp file: last-sync.json"
         
+    - name: 📊 Collect career stats (once per day on 20:00 run only)
+      if: github.event.schedule == '0 18 * * *' || github.event_name == 'workflow_dispatch'
+      env:
+        PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
+        PLATFORM: 'steam'
+      run: |
+        echo "📊 Starting PUBG career stats collection..."
+        echo "⏰ Current time: $(date)"
+        
+        node career.js
+        
+        echo "✅ Career stats collection completed!"
+        
+        if [ -f "career_stats.json" ]; then
+          echo "📈 Career stats file created successfully"
+          echo "📊 File size: $(du -h career_stats.json | cut -f1)"
+        else
+          echo "⚠️ Career stats file not found (may have failed)"
+        fi
+        
     - name: 📈 Generate collection report
       run: |
         echo "## 🎮 PUBG Multi-Player Data Collection Report" > collection_report.md
@@ -133,6 +153,7 @@ jobs:
         
         # Add all data files
         git add data*.json
+        git add career_stats.json 2>/dev/null || echo "No career stats to add"
         git add last-sync.json 2>/dev/null || echo "No sync timestamp to add"
         git add collection_report.md 2>/dev/null || echo "No collection report to add"
         

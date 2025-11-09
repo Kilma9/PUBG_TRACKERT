@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUBG Official Career Stats</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+    }
+    
+    .header h1 {
+      margin: 0 0 10px 0;
+      font-size: 32px;
+      font-weight: 700;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .header p {
+      margin: 5px 0;
+      opacity: 0.95;
+      font-size: 16px;
+    }
+    
+    .back-button {
+      background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+    }
+    
+    .season-info {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-left: 4px solid #6366f1;
+    }
+    
+    .season-info h2 {
+      margin: 0 0 10px 0;
+      color: #6366f1;
+      font-size: 24px;
+    }
+    
+    .players-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+    }
+    
+    .player-card {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid rgba(99, 102, 241, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .player-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+    
+    .player-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    
+    .player-icon {
+      font-size: 40px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    
+    .player-name {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1f2937;
+    }
+    
+    .stats-section {
+      margin-bottom: 20px;
+    }
+    
+    .stats-section h3 {
+      font-size: 16px;
+      color: #6366f1;
+      margin: 0 0 12px 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    
+    .stat-item {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      padding: 12px;
+      border-radius: 8px;
+      border-left: 3px solid #6366f1;
+    }
+    
+    .stat-label {
+      font-size: 11px;
+      color: #6b7280;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    
+    .stat-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1f2937;
+    }
+    
+    .stat-value.highlight {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 60px;
+      font-size: 18px;
+      color: #6b7280;
+    }
+    
+    .error {
+      background: #fee;
+      color: #c33;
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 4px solid #c33;
+      margin: 20px 0;
+    }
+    
+    .comparison-chart {
+      margin-top: 30px;
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .comparison-chart h2 {
+      color: #6366f1;
+      margin: 0 0 20px 0;
+      font-size: 22px;
+    }
+    
+    .chart-container {
+      position: relative;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <button class="back-button" onclick="window.location.href='index.html'">← Back to Dashboard</button>
+  
+  <div class="header">
+    <h1>📊 Official Career Statistics</h1>
+    <p>PUBG API Season Stats - Current Season Performance</p>
+    <p id="lastUpdate"><small>Loading...</small></p>
+  </div>
+  
+  <div id="seasonInfo" class="season-info" style="display: none;">
+    <h2 id="seasonName">Loading...</h2>
+    <p id="seasonDetails">Fetching season information...</p>
+  </div>
+  
+  <div id="loading" class="loading">
+    <p>🔄 Loading official career statistics...</p>
+  </div>
+  
+  <div id="error" class="error" style="display: none;">
+    <strong>⚠️ Error Loading Data</strong>
+    <p id="errorMessage"></p>
+  </div>
+  
+  <div id="playersContainer" class="players-grid" style="display: none;"></div>
+  
+  <div id="comparisonCharts" style="display: none;">
+    <div class="comparison-chart">
+      <h2>🎯 Kill Comparison</h2>
+      <div class="chart-container">
+        <canvas id="killsChart"></canvas>
+      </div>
+    </div>
+    
+    <div class="comparison-chart">
+      <h2>💥 Damage Comparison</h2>
+      <div class="chart-container">
+        <canvas id="damageChart"></canvas>
+      </div>
+    </div>
+    
+    <div class="comparison-chart">
+      <h2>🏆 Win Rate Comparison</h2>
+      <div class="chart-container">
+        <canvas id="winRateChart"></canvas>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const playerIcons = {
+      'Kilma9': '🎮',
+      'Mar-0': '⚔️',
+      'Hyottokko': '🔥',
+      'Baron_Frajeris': '👑',
+      'codufus': '🎯',
+      'Veru_13': '🛡️'
+    };
+    
+    async function loadCareerStats() {
+      try {
+        const response = await fetch('career_stats.json');
+        
+        if (!response.ok) {
+          throw new Error('Failed to load career stats. Please run career data collection first.');
+        }
+        
+        const data = await response.json();
+        
+        displaySeasonInfo(data);
+        displayPlayerStats(data);
+        createComparisonCharts(data);
+        
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('seasonInfo').style.display = 'block';
+        document.getElementById('playersContainer').style.display = 'grid';
+        document.getElementById('comparisonCharts').style.display = 'block';
+        
+      } catch (error) {
+        console.error('Error loading career stats:', error);
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('errorMessage').textContent = error.message;
+      }
+    }
+    
+    function displaySeasonInfo(data) {
+      const updateDate = new Date(data.collectedAt);
+      document.getElementById('lastUpdate').innerHTML = 
+        `<small>Last Updated: ${updateDate.toLocaleString('en-GB', { 
+          day: '2-digit', 
+          month: '2-digit', 
+          year: 'numeric', 
+          hour: '2-digit', 
+          minute: '2-digit' 
+        })}</small>`;
+      
+      document.getElementById('seasonName').textContent = `Season: ${data.seasonName || data.currentSeason}`;
+      document.getElementById('seasonDetails').textContent = 
+        `Official statistics from PUBG API for ${Object.keys(data.players).length} players`;
+    }
+    
+    function displayPlayerStats(data) {
+      const container = document.getElementById('playersContainer');
+      container.innerHTML = '';
+      
+      Object.entries(data.players).forEach(([playerName, playerData]) => {
+        const stats = playerData.stats.gameModeStats;
+        const squadFpp = stats['squad-fpp'] || {};
+        
+        const card = document.createElement('div');
+        card.className = 'player-card';
+        
+        const kd = squadFpp.roundsPlayed > 0 
+          ? (squadFpp.kills / Math.max(squadFpp.losses || 1, 1)).toFixed(2)
+          : '0.00';
+        
+        const winRate = squadFpp.roundsPlayed > 0
+          ? ((squadFpp.wins / squadFpp.roundsPlayed) * 100).toFixed(1)
+          : '0.0';
+        
+        const top10Rate = squadFpp.roundsPlayed > 0
+          ? ((squadFpp.top10s / squadFpp.roundsPlayed) * 100).toFixed(1)
+          : '0.0';
+        
+        const avgDamage = squadFpp.roundsPlayed > 0
+          ? Math.round(squadFpp.damageDealt / squadFpp.roundsPlayed)
+          : 0;
+        
+        const avgKills = squadFpp.roundsPlayed > 0
+          ? (squadFpp.kills / squadFpp.roundsPlayed).toFixed(2)
+          : '0.00';
+        
+        card.innerHTML = `
+          <div class="player-header">
+            <div class="player-icon">${playerIcons[playerName] || '👤'}</div>
+            <div class="player-name">${playerName}</div>
+          </div>
+          
+          <div class="stats-section">
+            <h3>🎮 Squad FPP Performance</h3>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-label">Matches Played</div>
+                <div class="stat-value highlight">${squadFpp.roundsPlayed || 0}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Wins</div>
+                <div class="stat-value highlight">${squadFpp.wins || 0}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Win Rate</div>
+                <div class="stat-value">${winRate}%</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Top 10s</div>
+                <div class="stat-value">${squadFpp.top10s || 0} (${top10Rate}%)</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stats-section">
+            <h3>⚔️ Combat Stats</h3>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-label">Total Kills</div>
+                <div class="stat-value highlight">${squadFpp.kills || 0}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">K/D Ratio</div>
+                <div class="stat-value highlight">${kd}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Avg Kills/Match</div>
+                <div class="stat-value">${avgKills}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Headshot Kills</div>
+                <div class="stat-value">${squadFpp.headshotKills || 0}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Total Damage</div>
+                <div class="stat-value">${Math.round(squadFpp.damageDealt || 0).toLocaleString()}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Avg Damage</div>
+                <div class="stat-value">${avgDamage.toLocaleString()}</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="stats-section">
+            <h3>🎯 Additional Stats</h3>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-label">Assists</div>
+                <div class="stat-value">${squadFpp.assists || 0}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">DBNOs</div>
+                <div class="stat-value">${squadFpp.dBNOs || 0}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Revives</div>
+                <div class="stat-value">${squadFpp.revives || 0}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Longest Kill</div>
+                <div class="stat-value">${Math.round(squadFpp.longestKill || 0)}m</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Road Kills</div>
+                <div class="stat-value">${squadFpp.roadKills || 0}</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Vehicle Destroys</div>
+                <div class="stat-value">${squadFpp.vehicleDestroys || 0}</div>
+              </div>
+            </div>
+          </div>
+        `;
+        
+        container.appendChild(card);
+      });
+    }
+    
+    function createComparisonCharts(data) {
+      const players = Object.keys(data.players);
+      const colors = [
+        '#6366f1', '#8b5cf6', '#d946ef', '#f97316', '#22c55e', '#06b6d4'
+      ];
+      
+      // Kills Chart
+      const killsData = players.map(name => {
+        const stats = data.players[name].stats.gameModeStats['squad-fpp'];
+        return stats?.kills || 0;
+      });
+      
+      new Chart(document.getElementById('killsChart'), {
+        type: 'bar',
+        data: {
+          labels: players,
+          datasets: [{
+            label: 'Total Kills',
+            data: killsData,
+            backgroundColor: colors,
+            borderRadius: 8
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+      
+      // Damage Chart
+      const damageData = players.map(name => {
+        const stats = data.players[name].stats.gameModeStats['squad-fpp'];
+        return Math.round(stats?.damageDealt || 0);
+      });
+      
+      new Chart(document.getElementById('damageChart'), {
+        type: 'bar',
+        data: {
+          labels: players,
+          datasets: [{
+            label: 'Total Damage',
+            data: damageData,
+            backgroundColor: colors,
+            borderRadius: 8
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+      
+      // Win Rate Chart
+      const winRateData = players.map(name => {
+        const stats = data.players[name].stats.gameModeStats['squad-fpp'];
+        if (!stats || stats.roundsPlayed === 0) return 0;
+        return ((stats.wins / stats.roundsPlayed) * 100).toFixed(1);
+      });
+      
+      new Chart(document.getElementById('winRateChart'), {
+        type: 'bar',
+        data: {
+          labels: players,
+          datasets: [{
+            label: 'Win Rate (%)',
+            data: winRateData,
+            backgroundColor: colors,
+            borderRadius: 8
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: { 
+              beginAtZero: true,
+              max: 100,
+              ticks: {
+                callback: function(value) {
+                  return value + '%';
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+    
+    // Load data on page load
+    loadCareerStats();
+  </script>
+</body>
+</html>

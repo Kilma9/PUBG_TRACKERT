@@ -507,16 +507,15 @@ async function collectPlayerData(playerName) {
     console.log(`📋 Total available matches from API: ${matchIds.length}`);
 
     const newMatches = [];
-    const thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+    const seasonStartDate = new Date('2025-09-01T00:00:00Z');
     
     // Determine collection mode
     const isInitialCollection = existingMatches.length === 0;
-    const collectionMode = isInitialCollection ? 'FULL (30 days)' : 'INCREMENTAL (new matches only)';
+    const collectionMode = isInitialCollection ? 'FULL (since Sept 1, 2025)' : 'INCREMENTAL (new matches only)';
     
     console.log(`📅 Collection Mode: ${collectionMode}`);
-    console.log(`📅 Looking for matches since: ${latestMatchDate ? latestMatchDate.toISOString() : '30 days ago'}`);
-    console.log(`📅 30-day cutoff: ${thirtyDaysAgo.toISOString()}`);
+    console.log(`📅 Looking for matches since: ${latestMatchDate ? latestMatchDate.toISOString() : 'September 1, 2025'}`);
+    console.log(`📅 Season start cutoff: ${seasonStartDate.toISOString()}`);
     
     let processedCount = 0;
     let newMatchesCount = 0;
@@ -531,14 +530,14 @@ async function collectPlayerData(playerName) {
         if (summary) {
           const matchDate = new Date(summary.date);
           
-          // Skip if this match is older than our latest existing match (already processed)
+          // Skip if this match already exists (but continue checking remaining matches)
           if (latestMatchDate && matchDate <= latestMatchDate) {
-            console.log(`⏭️ Match already exists (${matchDate.toISOString().split('T')[0]}), skipping remaining matches...`);
-            break; // Stop processing - we've reached matches we already have
+            console.log(`⏭️ Match already exists (${matchDate.toISOString().split('T')[0]}), skipping this match...`);
+            continue; // Skip this match but keep processing - API order may not be perfectly chronological
           }
           
-          // Check if match is within last 30 days
-          if (matchDate >= thirtyDaysAgo) {
+          // Check if match is since September 1, 2025
+          if (matchDate >= seasonStartDate) {
             newMatches.push(summary);
             newMatchesCount++;
             console.log(`✅ New match added (${newMatchesCount} total new matches, ${matchDate.toISOString().split('T')[0]})`);
@@ -583,22 +582,22 @@ async function collectPlayerData(playerName) {
     // Merge new matches with existing ones (new matches first, then existing)
     const allMatches = [...newMatches, ...existingMatches];
     
-    // Remove matches older than 30 days from the combined dataset
-    const thirtyDaysMatches = allMatches.filter(match => {
+    // Remove matches older than September 1, 2025 from the combined dataset
+    const seasonMatches = allMatches.filter(match => {
       const matchDate = new Date(match.date);
-      return matchDate >= thirtyDaysAgo;
+      return matchDate >= seasonStartDate;
     });
 
     console.log(`   • Total matches after merge: ${allMatches.length}`);
-    console.log(`   • Matches within 30 days: ${thirtyDaysMatches.length}`);
+    console.log(`   • Matches since Sept 1, 2025: ${seasonMatches.length}`);
     console.log(`   • Date range: ${allMatches.length > 0 ? 
       `${new Date(allMatches[allMatches.length - 1].date).toISOString().split('T')[0]} to ${new Date(allMatches[0].date).toISOString().split('T')[0]}` : 
       'No matches found'}`);
 
     if (newMatchesCount > 0 || existingMatches.length > 0) {
       if (newMatchesCount > 0) {
-        console.log(`\n📈 Generating daily summaries for all ${thirtyDaysMatches.length} matches...`);
-        summarizeTeamStatsByDay(thirtyDaysMatches);
+        console.log(`\n📈 Generating daily summaries for all ${seasonMatches.length} matches...`);
+        summarizeTeamStatsByDay(seasonMatches);
       } else {
         console.log(`\n📋 No new matches found, keeping existing data intact`);
       }
@@ -606,30 +605,30 @@ async function collectPlayerData(playerName) {
       // ✅ Save to local file
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('T')[0];
       
-      // Save main data file (30-day rolling window)
-      fs.writeFileSync(dataFile, JSON.stringify(thirtyDaysMatches, null, 2));
+      // Save main data file (since September 1, 2025)
+      fs.writeFileSync(dataFile, JSON.stringify(seasonMatches, null, 2));
       
       console.log(`\n💾 File saved:`);
-      console.log(`   • ${dataFile} (${thirtyDaysMatches.length} matches - 30 day rolling window)`);
+      console.log(`   • ${dataFile} (${seasonMatches.length} matches - since Sept 1, 2025)`);
       
       // Generate summary statistics
-      const uniqueDays = [...new Set(thirtyDaysMatches.map(m => m.date.split('T')[0]))];
-      const totalKills = thirtyDaysMatches.reduce((sum, match) => 
+      const uniqueDays = [...new Set(seasonMatches.map(m => m.date.split('T')[0]))];
+      const totalKills = seasonMatches.reduce((sum, match) => 
         sum + match.team.reduce((teamSum, player) => teamSum + (player.kills || 0), 0), 0);
-      const totalDamage = thirtyDaysMatches.reduce((sum, match) => 
+      const totalDamage = seasonMatches.reduce((sum, match) => 
         sum + match.team.reduce((teamSum, player) => teamSum + (player.damage || 0), 0), 0);
       
-      console.log(`\n🎯 30-Day Performance Summary:`);
+      console.log(`\n🎯 Season Performance Summary (since Sept 1, 2025):`);
       console.log(`   • Days with matches: ${uniqueDays.length}`);
       console.log(`   • Total team kills: ${totalKills}`);
       console.log(`   • Total team damage: ${Math.round(totalDamage).toLocaleString()}`);
-      console.log(`   • Average matches per day: ${(thirtyDaysMatches.length / uniqueDays.length).toFixed(1)}`);
+      console.log(`   • Average matches per day: ${(seasonMatches.length / uniqueDays.length).toFixed(1)}`);
       console.log(`\n🚀 Efficiency Gains:`);
       console.log(`   • API calls saved: ~${existingMatches.length * 2} (skipped existing matches)`);
       console.log(`   • Processing time saved: ~${Math.round(existingMatches.length * 0.5)}s`);
       
     } else {
-      console.log(`\n⚠️ No matches found within the last 30 days`);
+      console.log(`\n⚠️ No matches found since September 1, 2025`);
     }
     
   } catch (error) {
