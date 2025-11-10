@@ -1,14 +1,15 @@
-name: Discord Match Notifications
+name: Discord Match Notifications (DISABLED)
 
-#on:
-  schedule:
-    - cron: '*/10 * * * *'
-  workflow_dispatch:
-    inputs:
-      force_check:
-        description: 'Force check for new matches'
-        required: false
-        default: 'false'
+# WORKFLOW DISABLED - Uncomment 'on:' section below to re-enable
+# on:
+#   schedule:
+#     - cron: '*/10 * * * *'
+#   workflow_dispatch:
+#     inputs:
+#       force_check:
+#         description: 'Force check for new matches'
+#         required: false
+#         default: 'false'
 
 permissions:
   contents: write
