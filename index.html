@@ -672,30 +672,15 @@
         <h3 style="margin: 0 0 18px 0; color: #fff; font-size: 20px; font-weight: 700;">⚔️ Latest Update</h3>
         
         <div style="background: rgba(255, 255, 255, 0.15); border-radius: 8px; padding: 18px; border-left: 4px solid #ff1493;">
-          <div style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px;">v1.1 - Official Statistics API Integration</div>
-          <div style="font-size: 13px; opacity: 0.9; margin-bottom: 15px; background: rgba(255, 20, 147, 0.8); display: inline-block; padding: 4px 10px; border-radius: 4px;">09.11.2025</div>
+          <div style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px;">Version 1.1.1 - UI Fixes & Chart Improvements 🔧</div>
+          <div style="font-size: 13px; opacity: 0.9; margin-bottom: 15px; background: rgba(255, 20, 147, 0.8); display: inline-block; padding: 4px 10px; border-radius: 4px;">10.11.2025</div>
           
           <div style="font-size: 14px; line-height: 1.7; margin-bottom: 15px;">
-            <strong style="color: #4ade80;">� NEW FEATURE: Official Career Statistics</strong>
             <ul style="margin: 8px 0; padding-left: 20px; opacity: 0.95;">
-              <li>Integrated PUBG Official API for season statistics</li>
-              <li>New "Official Career Logs" page with player performance metrics</li>
-              <li>K/D ratio, win rate, top 10%, total kills & damage tracking</li>
-              <li>Visual comparison charts for all players</li>
-              <li>Automated daily collection at 20:00 Prague time</li>
-            </ul>
-            
-            <strong style="color: #60a5fa;">🔧 Data Collection Improvements:</strong>
-            <ul style="margin: 8px 0; padding-left: 20px; opacity: 0.95;">
-              <li>Fixed missing matches due to out-of-order API responses</li>
-              <li>Changed from 30-day rolling window to season-based tracking (since Sept 1, 2025)</li>
-              <li>Historical data now persists indefinitely from season start</li>
-            </ul>
-            
-            <strong style="color: #f59e0b;">🏆 Team Records Fix:</strong>
-            <ul style="margin: 8px 0; padding-left: 20px; opacity: 0.95;">
-              <li>Filtered out arcade/custom games from records calculation</li>
-              <li>Records now match regular statistics (normal squad games only)</li>
+              <li><strong>Career Charts Update:</strong> Changed to per-game averages for kills, damage, and headshots</li>
+              <li><strong>New Charts:</strong> Added longest kill distance and headshot tracking for both Squad & Duo FPP</li>
+              <li><strong>Bug Fixes:</strong> Removed duplicate Analytics button, fixed changelog display</li>
+              <li><strong>Analytics Page:</strong> Added "Under Construction" notice with planned features</li>
             </ul>
           </div>
           
@@ -2868,6 +2853,45 @@
     }
 
     // Function to show changelog
+    // Changelog data - single source of truth
+    const changelogData = [
+      {
+        version: "Version 1.1.1 - UI Fixes & Chart Improvements 🔧",
+        date: "10.11.2025",
+        color: "#9333ea",
+        items: [
+          "<strong>Career Charts Update:</strong> Changed to per-game averages for kills, damage, and headshots",
+          "<strong>New Charts:</strong> Added longest kill distance and headshot tracking for both Squad & Duo FPP",
+          "<strong>Bug Fixes:</strong> Removed duplicate Analytics button, fixed changelog display",
+          "<strong>Analytics Page:</strong> Added \"Under Construction\" notice with planned features"
+        ]
+      },
+      {
+        version: "⚔️ Mini Game v0.2 - PUBG BR 🎯",
+        date: "27.10.2025",
+        color: "#ff1493",
+        items: [
+          "<strong>🎮 New Battle Royale Game:</strong> Top-down shooter with full BR mechanics (6 players, shrinking zone, loot)",
+          "<strong>🎨 Ultra-Detailed Graphics:</strong> Multi-layer desert terrain, detailed buildings with windows/doors, realistic weapon sprites",
+          "<strong>👥 Solo & Duos Modes:</strong> Play solo or in teams with leader/follower AI behavior",
+          "<strong>🔫 Weapon System:</strong> M1911 Pistol (starting), Beryl M762, S12K Shotgun, MG3 machine gun",
+          "<strong>🛡️ Armor System:</strong> Special loot drops every 30s (Armor + MG3) with 50% damage reduction",
+          "<strong>🏢 Tactical Bunkers:</strong> 5 unique compound presets (L-shaped, U-shaped, square, double, large)",
+          "<strong>🤖 Smart AI:</strong> Cover-seeking, tactical positioning, team coordination in duos mode",
+          "<strong>👨‍👦 Duos Leader/Follower:</strong> Alphabetically first name leads, follower sticks close (100 units)",
+          "<strong>🌐 Continuous Zone:</strong> Smooth shrinking (not stepped), minimum 50 radius for extended gameplay",
+          "<strong>✨ Visual Polish:</strong> Shadows, helmets, armor indicators, gradient UI, tracer effects",
+          "<strong>⏱️ Frame-Rate Independent:</strong> Delta time implementation for consistent gameplay across all monitors",
+          "<strong>🎯 Smart Spawning:</strong> Players and AI spawn outside obstacles (up to 100 validation attempts)",
+          "<strong>🏠 Removed 3D Highway:</strong> Cleaned up navigation, streamlined game selection",
+          "<strong>🎮 Dashboard Integration:</strong> Separate buttons for 2D Runner and Battle Royale on main page"
+        ],
+        highlight: "Access Battle Royale via \"⚔️ Battle Royale\" button on dashboard! Choose Solo or Duos mode, collect weapons, survive the zone, and be the last one standing! Features squad member names (Kilma9, Mar-0, Hyottokko, Baron_Frajeris, codufus, Veru_13) as AI opponents.",
+        highlightColor: "#ffe0f0",
+        highlightTextColor: "#c71585"
+      }
+    ];
+
     function showChangelog() {
       const changelogHtml = `
         <div style="max-width: 800px; margin: 0 auto;">
