@@ -227,21 +227,35 @@
   
   <div id="comparisonCharts" style="display: none;">
     <div class="comparison-chart">
-      <h2>🎯 Kill Comparison</h2>
+      <h2>🎯 Average Kills Per Game</h2>
       <div class="chart-container">
         <canvas id="killsChart"></canvas>
       </div>
     </div>
     
     <div class="comparison-chart">
-      <h2>💥 Damage Comparison</h2>
+      <h2>💥 Average Damage Per Game</h2>
       <div class="chart-container">
         <canvas id="damageChart"></canvas>
       </div>
     </div>
     
     <div class="comparison-chart">
-      <h2>🏆 Win Rate Comparison</h2>
+      <h2>🎯 Average Headshot Kills Per Game</h2>
+      <div class="chart-container">
+        <canvas id="headshotChart"></canvas>
+      </div>
+    </div>
+    
+    <div class="comparison-chart">
+      <h2>� Longest Kill Distance</h2>
+      <div class="chart-container">
+        <canvas id="longestKillChart"></canvas>
+      </div>
+    </div>
+    
+    <div class="comparison-chart">
+      <h2>🏆 Win Rate</h2>
       <div class="chart-container">
         <canvas id="winRateChart"></canvas>
       </div>
@@ -431,10 +445,11 @@
         '#f59e0b', '#f97316', '#ef4444', '#ec4899', '#a855f7', '#06b6d4'
       ];
       
-      // Kills Chart
-      const killsData = players.map(name => {
+      // Average Kills Per Game Chart
+      const avgKillsData = players.map(name => {
         const stats = data.players[name].stats.gameModeStats['duo-fpp'];
-        return stats?.kills || 0;
+        if (!stats || stats.roundsPlayed === 0) return 0;
+        return (stats.kills / stats.roundsPlayed).toFixed(2);
       });
       
       new Chart(document.getElementById('killsChart'), {
@@ -442,8 +457,8 @@
         data: {
           labels: players,
           datasets: [{
-            label: 'Total Kills',
-            data: killsData,
+            label: 'Avg Kills/Game',
+            data: avgKillsData,
             backgroundColor: colors,
             borderRadius: 8
           }]
@@ -460,10 +475,11 @@
         }
       });
       
-      // Damage Chart
-      const damageData = players.map(name => {
+      // Average Damage Per Game Chart
+      const avgDamageData = players.map(name => {
         const stats = data.players[name].stats.gameModeStats['duo-fpp'];
-        return Math.round(stats?.damageDealt || 0);
+        if (!stats || stats.roundsPlayed === 0) return 0;
+        return Math.round(stats.damageDealt / stats.roundsPlayed);
       });
       
       new Chart(document.getElementById('damageChart'), {
@@ -471,8 +487,67 @@
         data: {
           labels: players,
           datasets: [{
-            label: 'Total Damage',
-            data: damageData,
+            label: 'Avg Damage/Game',
+            data: avgDamageData,
+            backgroundColor: colors,
+            borderRadius: 8
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+      
+      // Average Headshot Kills Per Game Chart
+      const avgHeadshotData = players.map(name => {
+        const stats = data.players[name].stats.gameModeStats['duo-fpp'];
+        if (!stats || stats.roundsPlayed === 0) return 0;
+        return (stats.headshotKills / stats.roundsPlayed).toFixed(2);
+      });
+      
+      new Chart(document.getElementById('headshotChart'), {
+        type: 'bar',
+        data: {
+          labels: players,
+          datasets: [{
+            label: 'Avg Headshots/Game',
+            data: avgHeadshotData,
+            backgroundColor: colors,
+            borderRadius: 8
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+      
+      // Longest Kill Distance Chart
+      const longestKillData = players.map(name => {
+        const stats = data.players[name].stats.gameModeStats['duo-fpp'];
+        return Math.round(stats?.longestKill || 0);
+      });
+      
+      new Chart(document.getElementById('longestKillChart'), {
+        type: 'bar',
+        data: {
+          labels: players,
+          datasets: [{
+            label: 'Longest Kill (m)',
+            data: longestKillData,
             backgroundColor: colors,
             borderRadius: 8
           }]
