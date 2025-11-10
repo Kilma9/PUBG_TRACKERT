@@ -30,6 +30,10 @@ async function getPlayerId(playerName) {
   const url = `https://api.pubg.com/shards/${PLATFORM}/players?filter[playerNames]=${playerName}`;
   const response = await axios.get(url, { headers });
   console.log(`✅ Player found successfully`);
+  
+  // Add delay after API call to avoid rate limiting
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  
   return response.data.data[0].id;
 }
 
@@ -59,6 +63,9 @@ async function getPlayerSeasonStats(playerId, seasonId) {
     const stats = response.data.data.attributes;
     
     console.log(`✅ Season stats retrieved`);
+    
+    // Add delay after API call to avoid rate limiting
+    await new Promise(resolve => setTimeout(resolve, 1000));
     
     return {
       gameModeStats: stats.gameModeStats,
@@ -133,8 +140,8 @@ async function collectCareerStats() {
         
         // Delay between players to respect API rate limits
         if (PLAYERS.indexOf(playerName) < PLAYERS.length - 1) {
-          console.log(`⏸️ Pausing 2 seconds before next player...`);
-          await new Promise(resolve => setTimeout(resolve, 2000));
+          console.log(`⏸️ Pausing 3 seconds before next player...`);
+          await new Promise(resolve => setTimeout(resolve, 3000));
         }
         
       } catch (error) {
