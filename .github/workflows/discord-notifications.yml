@@ -1,6 +1,15 @@
 name: Discord Match Notifications (DISABLED)
 
-# WORKFLOW DISABLED - Uncomment 'on:' section below to re-enable
+# WORKFLOW DISABLED - Only runs manually via workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      force_check:
+        description: 'Force check for new matches (DISABLED - DO NOT USE)'
+        required: false
+        default: 'false'
+
+# Scheduled trigger is disabled - uncomment to re-enable
 # on:
 #   schedule:
 #     - cron: '*/10 * * * *'
