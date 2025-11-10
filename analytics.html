@@ -119,12 +119,27 @@
     <a href="/" class="back-btn">🏠 Back to Dashboard</a>
   </div>
   
-  <div id="loading" class="loading">
+  <div class="error">
+    <div style="font-size: 64px; margin-bottom: 20px;">🚧</div>
+    <h2 style="color: #ff6b6b; margin-bottom: 15px;">Under Construction</h2>
+    <p style="font-size: 18px; margin-bottom: 10px;">The Analytics Dashboard is currently being developed!</p>
+    <p style="opacity: 0.8; margin-top: 15px;">We're working on bringing you comprehensive visitor statistics including:</p>
+    <ul style="text-align: left; max-width: 500px; margin: 20px auto; line-height: 1.8;">
+      <li>📈 Daily traffic trends</li>
+      <li>👥 Unique visitor tracking</li>
+      <li>📄 Page popularity metrics</li>
+      <li>🌐 Traffic source analysis</li>
+      <li>📊 Real-time visitor insights</li>
+    </ul>
+    <p style="margin-top: 20px; opacity: 0.7;">Check back soon for updates!</p>
+  </div>
+  
+  <div id="loading" class="loading" style="display: none;">
     <div style="font-size: 48px; margin-bottom: 20px;">📊</div>
     <div>Loading analytics data...</div>
   </div>
   
-  <div id="error" class="error" style="display: none;">
+  <div id="error-old" class="error" style="display: none;">
     <h3>⚠️ No Analytics Data Available</h3>
     <p style="margin-top: 10px;">Analytics tracking is only available when running the Node.js server locally.</p>
     <p style="margin-top: 10px; opacity: 0.8;">Run <code style="background: rgba(0,0,0,0.3); padding: 4px 8px; border-radius: 4px;">node server.js</code> to enable tracking.</p>
