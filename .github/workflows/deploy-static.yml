@@ -1,10 +1,12 @@
-name: Deploy to Webzdarma.cz Hosting
+name: Deploy to Webzdarma.cz Hosting (DEPRECATED - Use deploy-staged.yml)
 
+# This workflow is deprecated - use deploy-staged.yml for better control
 on:
-  # Disabled automatic deployment on push - only manual deployment via workflow_dispatch
-  # push:
-  #   branches: [ main ]
   workflow_dispatch:
+    inputs:
+      skip:
+        description: 'This workflow is deprecated. Use deploy-staged.yml instead.'
+        required: false
 
 jobs:
   deploy-to-webzdarma:

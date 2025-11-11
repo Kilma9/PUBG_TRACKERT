@@ -1,0 +1,249 @@
+name: Staged Deployment to Webzdarma.cz
+
+on:
+  # Automatic deployment on push to main branch
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      deploy_target:
+        description: 'What to deploy'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - code-only
+          - data-only
+          - static-only
+
+jobs:
+  # Job 1: Deploy Code Files (HTML, JS, CSS)
+  deploy-code:
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'push' || 
+      github.event.inputs.deploy_target == 'all' || 
+      github.event.inputs.deploy_target == 'code-only' ||
+      github.event.inputs.deploy_target == 'static-only'
+    environment:
+      name: production
+      url: http://kilma-pubg.wz.cz:8080/
+    
+    steps:
+      - name: 🚚 Checkout
+        uses: actions/checkout@v4
+        
+      - name: 📁 Prepare code files
+        run: |
+          echo "🏗️ Preparing code files for deployment"
+          mkdir -p deploy
+          
+          # Copy HTML files
+          cp index.html deploy/
+          cp game.html deploy/
+          cp gamebr.html deploy/
+          cp game3d.html deploy/ 2>/dev/null || echo "No game3d.html"
+          cp analytics.html deploy/
+          cp career.html deploy/
+          cp career-duo.html deploy/
+          
+          # Copy public directory (CSS, JS, assets)
+          if [ -d "public" ]; then
+            cp -r public deploy/
+            echo "📂 Copied public directory"
+          fi
+          
+          # Copy server files
+          cp server.js deploy/
+          cp package.json deploy/
+          cp package-lock.json deploy/
+          
+          # Create .htaccess
+          cat > deploy/.htaccess << 'EOF'
+          DirectoryIndex index.html
+          RewriteEngine On
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule ^(.*)$ index.html [QSA,L]
+          
+          <IfModule mod_headers.c>
+              Header always set X-Frame-Options DENY
+              Header always set X-Content-Type-Options nosniff
+          </IfModule>
+          
+          <IfModule mod_expires.c>
+              ExpiresActive On
+              ExpiresByType text/css "access plus 1 month"
+              ExpiresByType application/javascript "access plus 1 month"
+              ExpiresByType application/json "access plus 0 seconds"
+          </IfModule>
+          
+          <Files "*.json">
+              <IfModule mod_headers.c>
+                  Header set Cache-Control "no-cache, no-store, must-revalidate"
+                  Header set Pragma "no-cache" 
+                  Header set Expires "0"
+              </IfModule>
+          </Files>
+          
+          <IfModule mod_deflate.c>
+              AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+          </IfModule>
+          EOF
+          
+          echo "📋 Code files prepared:"
+          ls -la deploy/
+          
+      - name: 📤 Deploy code files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.WEBZDARMA_FTP_SERVER }}
+          username: ${{ secrets.WEBZDARMA_FTP_USERNAME }}  
+          password: ${{ secrets.WEBZDARMA_FTP_PASSWORD }}
+          local-dir: ./deploy/
+          server-dir: ${{ secrets.WEBZDARMA_FTP_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.env
+            **/PUBG.JS
+            **/data_backup_*.json
+            **/.github/**
+            **/*.json
+            
+      - name: ✅ Code deployment complete
+        run: echo "✅ Code files deployed successfully!"
+
+  # Job 2: Deploy Data Files (JSON)
+  deploy-data:
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'push' || 
+      github.event.inputs.deploy_target == 'all' || 
+      github.event.inputs.deploy_target == 'data-only'
+    environment:
+      name: production
+      url: http://kilma-pubg.wz.cz:8080/
+    
+    steps:
+      - name: 🚚 Checkout
+        uses: actions/checkout@v4
+        
+      - name: 📁 Prepare data files
+        run: |
+          echo "📊 Preparing data files for deployment"
+          mkdir -p deploy
+          
+          # Copy main data file
+          if [ -f "data.json" ]; then
+            cp data.json deploy/
+            echo "✅ data.json copied. Size: $(wc -c < data.json) bytes"
+          else
+            echo "⚠️ data.json not found"
+          fi
+          
+          # Copy individual player data files
+          cp data_*.json deploy/ 2>/dev/null || echo "⚠️ No individual player data files"
+          
+          # Copy career stats
+          if [ -f "career_stats.json" ]; then
+            cp career_stats.json deploy/
+            echo "✅ career_stats.json copied"
+          fi
+          
+          # Copy sync timestamp
+          if [ -f "last-sync.json" ]; then
+            cp last-sync.json deploy/
+            echo "✅ last-sync.json copied"
+          fi
+          
+          # Copy last notified match
+          if [ -f "last-notified-match.json" ]; then
+            cp last-notified-match.json deploy/
+            echo "✅ last-notified-match.json copied"
+          fi
+          
+          echo "📋 Data files prepared:"
+          ls -lh deploy/*.json 2>/dev/null || echo "No JSON files found"
+          
+      - name: 📤 Deploy data files to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.WEBZDARMA_FTP_SERVER }}
+          username: ${{ secrets.WEBZDARMA_FTP_USERNAME }}  
+          password: ${{ secrets.WEBZDARMA_FTP_PASSWORD }}
+          local-dir: ./deploy/
+          server-dir: ${{ secrets.WEBZDARMA_FTP_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.env
+            **/PUBG.JS
+            **/data_backup_*.json
+            **/.github/**
+            **/*.html
+            **/*.js
+            **/*.css
+            **/public/**
+            
+      - name: ✅ Data deployment complete
+        run: echo "✅ Data files deployed successfully!"
+
+  # Job 3: Deploy Static Assets Only
+  deploy-static:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.deploy_target == 'static-only'
+    environment:
+      name: production
+      url: http://kilma-pubg.wz.cz:8080/
+    
+    steps:
+      - name: 🚚 Checkout
+        uses: actions/checkout@v4
+        
+      - name: 📁 Prepare static assets
+        run: |
+          echo "🎨 Preparing static assets for deployment"
+          mkdir -p deploy
+          
+          # Copy only public directory
+          if [ -d "public" ]; then
+            cp -r public deploy/
+            echo "📂 Copied public directory"
+          fi
+          
+          echo "📋 Static assets prepared:"
+          ls -la deploy/
+          
+      - name: 📤 Deploy static assets to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.WEBZDARMA_FTP_SERVER }}
+          username: ${{ secrets.WEBZDARMA_FTP_USERNAME }}  
+          password: ${{ secrets.WEBZDARMA_FTP_PASSWORD }}
+          local-dir: ./deploy/
+          server-dir: ${{ secrets.WEBZDARMA_FTP_DIR }}
+          
+      - name: ✅ Static assets deployment complete
+        run: echo "✅ Static assets deployed successfully!"
+
+  # Summary Job
+  deployment-summary:
+    runs-on: ubuntu-latest
+    needs: [deploy-code, deploy-data, deploy-static]
+    if: always()
+    
+    steps:
+      - name: 📊 Deployment Summary
+        run: |
+          echo "🎉 Deployment workflow completed!"
+          echo "🌐 Live URL: http://kilma-pubg.wz.cz:8080/"
+          echo "⏰ Completed at: $(date)"
+          echo ""
+          echo "Jobs status:"
+          echo "  Code: ${{ needs.deploy-code.result }}"
+          echo "  Data: ${{ needs.deploy-data.result }}"
+          echo "  Static: ${{ needs.deploy-static.result }}"
