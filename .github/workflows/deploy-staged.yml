@@ -48,10 +48,15 @@ jobs:
           cp career.html deploy/
           cp career-duo.html deploy/
           
+          # Copy JavaScript files needed by frontend
+          cp career.js deploy/ 2>/dev/null || echo "No career.js"
+          
           # Copy public directory (CSS, JS, assets)
           if [ -d "public" ]; then
-            cp -r public deploy/
+            mkdir -p deploy/public
+            cp -r public/* deploy/public/
             echo "📂 Copied public directory"
+            ls -la deploy/public/
           fi
           
           # Copy server files
@@ -176,6 +181,7 @@ jobs:
           password: ${{ secrets.WEBZDARMA_FTP_PASSWORD }}
           local-dir: ./deploy/
           server-dir: ${{ secrets.WEBZDARMA_FTP_DIR }}
+          dangerous-clean-slate: false
           exclude: |
             **/.git*
             **/.git*/**
@@ -184,10 +190,6 @@ jobs:
             **/PUBG.JS
             **/data_backup_*.json
             **/.github/**
-            **/*.html
-            **/*.js
-            **/*.css
-            **/public/**
             
       - name: ✅ Data deployment complete
         run: echo "✅ Data files deployed successfully!"
