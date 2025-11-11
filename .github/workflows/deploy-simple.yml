@@ -1,0 +1,79 @@
+name: Deploy to Webzdarma.cz
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: http://kilma-pubg.wz.cz:8080/
+    
+    steps:
+      - name: 🚚 Checkout
+        uses: actions/checkout@v4
+        
+      - name: 📁 Prepare files
+        run: |
+          echo "🏗️ Preparing files for deployment"
+          mkdir -p deploy
+          
+          # Copy HTML files
+          cp *.html deploy/ 2>/dev/null || echo "Copying HTML files"
+          
+          # Copy JavaScript files
+          cp career.js deploy/ 2>/dev/null || echo "No career.js"
+          
+          # Copy public directory
+          if [ -d "public" ]; then
+            mkdir -p deploy/public
+            cp -r public/* deploy/public/
+            echo "📂 Copied public directory"
+          fi
+          
+          # Copy server files
+          cp server.js deploy/
+          cp package*.json deploy/
+          
+          # Copy ALL JSON data files
+          cp *.json deploy/ 2>/dev/null || echo "Copying JSON files"
+          
+          # Create .htaccess
+          cat > deploy/.htaccess << 'EOF'
+          DirectoryIndex index.html
+          RewriteEngine On
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule ^(.*)$ index.html [QSA,L]
+          
+          <Files "*.json">
+              <IfModule mod_headers.c>
+                  Header set Cache-Control "no-cache, no-store, must-revalidate"
+              </IfModule>
+          </Files>
+          EOF
+          
+          echo "📋 Files ready:"
+          ls -lah deploy/
+          
+      - name: 📤 Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.WEBZDARMA_FTP_SERVER }}
+          username: ${{ secrets.WEBZDARMA_FTP_USERNAME }}  
+          password: ${{ secrets.WEBZDARMA_FTP_PASSWORD }}
+          local-dir: ./deploy/
+          server-dir: ${{ secrets.WEBZDARMA_FTP_DIR }}
+          exclude: |
+            **/.git*
+            **/node_modules/**
+            **/.env
+            **/PUBG.JS
+            **/data_backup_*.json
+            **/.github/**
+            
+      - name: ✅ Done
+        run: echo "🎉 Deployed to http://kilma-pubg.wz.cz:8080/"
