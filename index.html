@@ -766,6 +766,13 @@
               <div style="font-size: 12px; opacity: 0.9;">Current limitations</div>
             </div>
           </button>
+          <button id="mapRotationBtn" class="special-btn" style="width: 100%; padding: 15px; font-size: 15px; text-align: left; display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 24px;">🗺️</span>
+            <div>
+              <div style="font-weight: 700;">Map Rotation</div>
+              <div style="font-size: 12px; opacity: 0.9;">Current spawn rates</div>
+            </div>
+          </button>
         </div>
       </div>
     </div>
@@ -860,40 +867,120 @@
         </div>
       </div>
       
-      <!-- Known Issues -->
-      <div style="background: rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 25px; text-align: left; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
-        <h3 style="margin: 0 0 18px 0; color: #fff; font-size: 20px; font-weight: 700;">⚠️ Known Issues</h3>
-        <div style="font-size: 14px; line-height: 1.8;">
-          <ul style="margin: 8px 0; padding-left: 25px;">
-            <li style="margin-bottom: 12px;"><strong>Weapon Damage:</strong> Includes damage to wildlife (bears) and self/team damage from grenades/vehicles</li>
-            <li style="margin-bottom: 12px;"><strong>Team Damage:</strong> Friendly fire and environmental damage is counted in statistics</li>
-            <li style="margin-bottom: 12px;"><strong>Filtered Data:</strong> Some weapon damage is filtered in case it exceeds total match damage by at least 100 points</li>
-            <li style="margin-bottom: 12px;"><strong>Error Recovery:</strong> When anything breaks - reload the page or click Return to Dashboard button</li>
-          </ul>
-          <small style="font-style: italic; opacity: 0.8;">These will be addressed in future updates</small>
-        </div>
+    <!-- Known Issues (Collapsible) -->
+    <div id="knownIssuesSection" style="display: none; background: rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 25px; text-align: left; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+        <h3 style="margin: 0; color: #fff; font-size: 20px; font-weight: 700;">⚠️ Known Issues</h3>
+        <button onclick="document.getElementById('knownIssuesSection').style.display='none'" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600;">Close ✕</button>
       </div>
       
-      <!-- Latest Update -->
-      <div style="background: rgba(255, 20, 147, 0.25); border-radius: 12px; padding: 25px; text-align: left; backdrop-filter: blur(10px); border: 2px solid rgba(255, 20, 147, 0.5); box-shadow: 0 0 20px rgba(255, 20, 147, 0.3);">
-        <h3 style="margin: 0 0 18px 0; color: #fff; font-size: 20px; font-weight: 700;">⚔️ Latest Update</h3>
+      <div style="font-size: 14px; line-height: 1.8;">
+        <ul style="margin: 8px 0; padding-left: 25px;">
+          <li style="margin-bottom: 12px;"><strong>Weapon Damage:</strong> Includes damage to wildlife (bears) and self/team damage from grenades/vehicles</li>
+          <li style="margin-bottom: 12px;"><strong>Team Damage:</strong> Friendly fire and environmental damage is counted in statistics</li>
+          <li style="margin-bottom: 12px;"><strong>Filtered Data:</strong> Some weapon damage is filtered in case it exceeds total match damage by at least 100 points</li>
+          <li style="margin-bottom: 12px;"><strong>Error Recovery:</strong> When anything breaks - reload the page or click Return to Dashboard button</li>
+        </ul>
+        <small style="font-style: italic; opacity: 0.8;">These will be addressed in future updates</small>
+      </div>
+    </div>
+
+    <!-- Map Rotation (Collapsible) -->
+    <div id="mapRotationSection" style="display: none; background: rgba(255, 255, 255, 0.15); border-radius: 12px; padding: 25px; text-align: left; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+        <h3 style="margin: 0; color: #fff; font-size: 20px; font-weight: 700;">🗺️ Current Map Rotation - Normal Games</h3>
+        <button onclick="document.getElementById('mapRotationSection').style.display='none'" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600;">Close ✕</button>
+      </div>
+      
+      <div style="font-size: 14px; line-height: 1.8;">
+        <div style="margin-bottom: 10px; opacity: 0.9; font-size: 13px;">Spawn rate percentages based on current rotation:</div>
         
-        <div style="background: rgba(255, 255, 255, 0.15); border-radius: 8px; padding: 18px; border-left: 4px solid #ff1493;">
-          <div style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px;">Version 1.1.1 - UI Fixes & Chart Improvements 🔧</div>
-          <div style="font-size: 13px; opacity: 0.9; margin-bottom: 15px; background: rgba(255, 20, 147, 0.8); display: inline-block; padding: 4px 10px; border-radius: 4px;">10.11.2025</div>
-          
-          <div style="font-size: 14px; line-height: 1.7; margin-bottom: 15px;">
-            <ul style="margin: 8px 0; padding-left: 20px; opacity: 0.95;">
-              <li><strong>Career Charts Update:</strong> Changed to per-game averages for kills, damage, and headshots</li>
-              <li><strong>New Charts:</strong> Added longest kill distance and headshot tracking for both Squad & Duo FPP</li>
-              <li><strong>Bug Fixes:</strong> Removed duplicate Analytics button, fixed changelog display</li>
-              <li><strong>Analytics Page:</strong> Added "Under Construction" notice with planned features</li>
-            </ul>
+        <!-- Map rotation bars -->
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
+          <!-- Erangel -->
+          <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 18.1%; background: linear-gradient(90deg, rgba(76, 175, 80, 0.6), rgba(76, 175, 80, 0.2)); border-radius: 8px 0 0 8px;"></div>
+            <div style="position: relative; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; font-size: 15px;">🏝️ Erangel</span>
+              <span style="font-weight: 700; font-size: 16px; color: #4caf50;">18.1%</span>
+            </div>
           </div>
           
-          <button onclick="document.getElementById('changelogBtn').click()" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%); color: white; border: none; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(255, 20, 147, 0.6)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(255, 20, 147, 0.4)'">
-            📋 View Full Changelog
-          </button>
+          <!-- Taego -->
+          <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 16.4%; background: linear-gradient(90deg, rgba(255, 152, 0, 0.6), rgba(255, 152, 0, 0.2)); border-radius: 8px 0 0 8px;"></div>
+            <div style="position: relative; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; font-size: 15px;">🌸 Taego</span>
+              <span style="font-weight: 700; font-size: 16px; color: #ff9800;">16.4%</span>
+            </div>
+          </div>
+          
+          <!-- Vikendi -->
+          <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 13.3%; background: linear-gradient(90deg, rgba(33, 150, 243, 0.6), rgba(33, 150, 243, 0.2)); border-radius: 8px 0 0 8px;"></div>
+            <div style="position: relative; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; font-size: 15px;">❄️ Vikendi</span>
+              <span style="font-weight: 700; font-size: 16px; color: #2196f3;">13.3%</span>
+            </div>
+          </div>
+          
+          <!-- Miramar -->
+          <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 12.8%; background: linear-gradient(90deg, rgba(255, 193, 7, 0.6), rgba(255, 193, 7, 0.2)); border-radius: 8px 0 0 8px;"></div>
+            <div style="position: relative; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; font-size: 15px;">🏜️ Miramar</span>
+              <span style="font-weight: 700; font-size: 16px; color: #ffc107;">12.8%</span>
+            </div>
+          </div>
+          
+          <!-- Rondo -->
+          <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 9.9%; background: linear-gradient(90deg, rgba(156, 39, 176, 0.6), rgba(156, 39, 176, 0.2)); border-radius: 8px 0 0 8px;"></div>
+            <div style="position: relative; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; font-size: 15px;">🏙️ Rondo</span>
+              <span style="font-weight: 700; font-size: 16px; color: #9c27b0;">9.9%</span>
+            </div>
+          </div>
+          
+          <!-- Deston -->
+          <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 9.1%; background: linear-gradient(90deg, rgba(63, 81, 181, 0.6), rgba(63, 81, 181, 0.2)); border-radius: 8px 0 0 8px;"></div>
+            <div style="position: relative; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; font-size: 15px;">🌆 Deston</span>
+              <span style="font-weight: 700; font-size: 16px; color: #3f51b5;">9.1%</span>
+            </div>
+          </div>
+          
+          <!-- Sanhok -->
+          <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 8.1%; background: linear-gradient(90deg, rgba(0, 150, 136, 0.6), rgba(0, 150, 136, 0.2)); border-radius: 8px 0 0 8px;"></div>
+            <div style="position: relative; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; font-size: 15px;">🌴 Sanhok</span>
+              <span style="font-weight: 700; font-size: 16px; color: #009688;">8.1%</span>
+            </div>
+          </div>
+          
+          <!-- Karakin -->
+          <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6.5%; background: linear-gradient(90deg, rgba(121, 85, 72, 0.6), rgba(121, 85, 72, 0.2)); border-radius: 8px 0 0 8px;"></div>
+            <div style="position: relative; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; font-size: 15px;">🏔️ Karakin</span>
+              <span style="font-weight: 700; font-size: 16px; color: #795548;">6.5%</span>
+            </div>
+          </div>
+          
+          <!-- Paramo -->
+          <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px; position: relative; overflow: hidden;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 5.8%; background: linear-gradient(90deg, rgba(96, 125, 139, 0.6), rgba(96, 125, 139, 0.2)); border-radius: 8px 0 0 8px;"></div>
+            <div style="position: relative; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700; font-size: 15px;">🌋 Paramo</span>
+              <span style="font-weight: 700; font-size: 16px; color: #607d8b;">5.8%</span>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 18px; padding: 12px; background: rgba(255, 255, 255, 0.1); border-radius: 8px; font-size: 12px; opacity: 0.85; border-left: 3px solid rgba(255, 255, 255, 0.4);">
+          <strong>Note:</strong> These percentages represent the current spawn rate distribution for Normal mode matches. Rotation may change with game updates.
         </div>
       </div>
     </div>
@@ -2820,6 +2907,12 @@
     // Issues button event listener
     document.getElementById('issuesBtn').addEventListener('click', function() {
       const section = document.getElementById('knownIssuesSection');
+      section.style.display = section.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Map Rotation button event listener
+    document.getElementById('mapRotationBtn').addEventListener('click', function() {
+      const section = document.getElementById('mapRotationSection');
       section.style.display = section.style.display === 'none' ? 'block' : 'none';
     });
 
