@@ -1,5 +1,267 @@
 [
   {
+    "date": "2025-11-11T18:34:06Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1474,
+    "placement": 4,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 267.8411,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 29.094140768051147,
+          "Weap A U G": 176.30000114440918,
+          "Weap M24": 91.54109191894531
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 19,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1031,
+        "walkDistance": 3652.088,
+        "rideDistance": 5306.836,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 183.14035,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Beryl M762": 19.645540237426758,
+          "Weap Dragunov": 111.49480056762695,
+          "B P_ Fire Effect Controller": 12,
+          "B P_ Molotov Fire Debuff": 40
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 11,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1314,
+        "walkDistance": 4213.976,
+        "rideDistance": 6697.0786,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-11T18:29:31Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1529,
+    "placement": 38,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 19,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 154,
+        "walkDistance": 158.93643,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {},
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 0,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 155,
+        "walkDistance": 219.86745,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-11T18:07:00Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1542,
+    "placement": 7,
+    "team": [
+      {
+        "name": "Baron_Frajeris",
+        "kills": 3,
+        "damage": 300.00003,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Beryl M762": 199.99999809265137,
+          "Weap Dragunov": 100
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 17,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1211,
+        "walkDistance": 2232.241,
+        "rideDistance": 8569.432,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 198.65948,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Dragunov": 198.65949630737305,
+          "Player Male_ A": 0.8433837890625
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 79,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1019,
+        "walkDistance": 1989.3345,
+        "rideDistance": 910.9159,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-11T17:58:43Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1455,
+    "placement": 35,
+    "team": [
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 62.181,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap S K S": 62.18099784851074,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 11,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 257,
+        "walkDistance": 486.44156,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 37.819,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap S K S": 37.81899833679199
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 2,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 257,
+        "walkDistance": 462.34552,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-04T19:43:16Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
