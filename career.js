@@ -31,8 +31,8 @@ async function getPlayerId(playerName) {
   const response = await axios.get(url, { headers });
   console.log(`✅ Player found successfully`);
   
-  // Add delay after API call to avoid rate limiting
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  // Add delay after API call to avoid rate limiting (increased to 3 seconds)
+  await new Promise(resolve => setTimeout(resolve, 3000));
   
   return response.data.data[0].id;
 }
@@ -64,8 +64,8 @@ async function getPlayerSeasonStats(playerId, seasonId) {
     
     console.log(`✅ Season stats retrieved`);
     
-    // Add delay after API call to avoid rate limiting
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Add delay after API call to avoid rate limiting (increased to 3 seconds)
+    await new Promise(resolve => setTimeout(resolve, 3000));
     
     return {
       gameModeStats: stats.gameModeStats,
@@ -138,10 +138,10 @@ async function collectCareerStats() {
           console.log(`ℹ️ No season stats available - player added with empty stats`);
         }
         
-        // Delay between players to respect API rate limits
+        // Delay between players to respect API rate limits (increased to 8 seconds)
         if (PLAYERS.indexOf(playerName) < PLAYERS.length - 1) {
-          console.log(`⏸️ Pausing 5 seconds before next player...`);
-          await new Promise(resolve => setTimeout(resolve, 5000));
+          console.log(`⏸️ Pausing 8 seconds before next player...`);
+          await new Promise(resolve => setTimeout(resolve, 8000));
         }
         
       } catch (error) {
