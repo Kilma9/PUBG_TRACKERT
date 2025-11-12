@@ -1,5 +1,267 @@
 [
   {
+    "date": "2025-11-12T19:42:19Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1483,
+    "placement": 13,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 157.79567,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M249": 58.465660095214844,
+          "Dacia_ A_03_v2_ Esports": 10.072957515716553,
+          "Weap A C E32": 99.32999801635742,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 27,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 614,
+        "walkDistance": 1157.4943,
+        "rideDistance": 1620.063,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 1,
+        "damage": 446.59967,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap J S9": 405.78518295288086,
+          "Player Male_ A": 0,
+          "Dacia_ A_03_v2_ Esports": 10.072957515716553,
+          "Weap F N Fal": 27.90936851501465,
+          "Proj Grenade": 12.905141830444336
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 15,
+          "totalHits": 75,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 700,
+        "walkDistance": 1451.3378,
+        "rideDistance": 1582.4177,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 116.39559,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 19.94999885559082,
+          "Weap A C E32": 89.11444282531738,
+          "Dacia_ A_03_v2_ Esports": 10.072957515716553,
+          "Proj Grenade": 7.331150054931641,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 10,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 655,
+        "walkDistance": 1527.3002,
+        "rideDistance": 1588.7257,
+        "swimDistance": 0
+      },
+      {
+        "name": "Hyottokko",
+        "kills": 1,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A C E32": 100.00000190734863,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 9,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 426,
+        "walkDistance": 808.6457,
+        "rideDistance": 238.27338,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-12T19:19:16Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1483,
+    "placement": 5,
+    "team": [
+      {
+        "name": "Hyottokko",
+        "kills": 1,
+        "damage": 179.49527,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A U G": 97.49526786804199,
+          "Dacia_ A_04_v2": 5.2845048904418945,
+          "Weap M24": 82,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 12,
+          "totalHits": 38,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 7,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1246,
+        "walkDistance": 3416.5725,
+        "rideDistance": 2361.3914,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 282.47833,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Proj Grenade": 183.67996978759766,
+          "Player Male_ A": 0,
+          "Weap Beryl M762": 23.760000228881836,
+          "Weap Mk47 Mutant": 22.040325164794922,
+          "Dacia_ A_04_v2": 78.96488666534424,
+          "Weap F N Fal": 76.75804138183594,
+          "Dacia_ A_02_v2": 92
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 33,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 5,
+        "heals": 14,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1264,
+        "walkDistance": 2813.5322,
+        "rideDistance": 2589.4678,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 2,
+        "damage": 591.65247,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap V S S": 90.17187309265137,
+          "Weap Beryl M762": 192.17500686645508,
+          "Dacia_ A_04_v2": 5.2845048904418945,
+          "Weap M24": 281.01979064941406,
+          "Player Male_ A": 0,
+          "Proj Grenade": 28.285722732543945
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 27,
+          "totalHits": 30,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 7,
+        "heals": 8,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1271,
+        "walkDistance": 2957.0562,
+        "rideDistance": 2770.0198,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 3,
+        "damage": 579.6037,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mk47 Mutant": 293.0599937438965,
+          "Weap A U G": 211.88877868652344,
+          "Player Male_ A": 9.183953404426575,
+          "Dacia_ A_04_v2": 5.2845048904418945,
+          "Weap Mini14": 74.65499877929688
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 15,
+          "totalHits": 84,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 4,
+        "heals": 6,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1271,
+        "walkDistance": 3433.145,
+        "rideDistance": 2278.593,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-12T18:36:37Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
