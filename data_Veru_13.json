@@ -1,5 +1,211 @@
 [
   {
+    "date": "2025-11-13T18:40:21Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1592,
+    "placement": 6,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 4,
+        "damage": 602.8949,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M249": 179.67928504943848,
+          "Weap Mk12": 180.43520545959473,
+          "Weap H K416": 79.15050506591797,
+          "Weap Mini14": 163.63000106811523,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 20,
+          "totalHits": 38,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1357,
+        "walkDistance": 3995.726,
+        "rideDistance": 253.92783,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 1,
+        "damage": 174.72403,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Proj Grenade": 41.88581848144531,
+          "Weap M P5 K": 96.46820449829102,
+          "Weap Kar98k": 36.3699951171875
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 18,
+          "totalHits": 7,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 3,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1357,
+        "walkDistance": 4226.877,
+        "rideDistance": 256.25964,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-13T18:25:17Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1541,
+    "placement": 14,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 25.127615,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Pico Bus": 28.037172317504883,
+          "Weap U M P": 25.127614974975586
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 3,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 786,
+        "walkDistance": 1850.8007,
+        "rideDistance": 5752.134,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Pico Bus": 28.037172317504883,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 40,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 786,
+        "walkDistance": 1857.6625,
+        "rideDistance": 5777.5747,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-13T18:00:37Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1561,
+    "placement": 5,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 1,
+        "damage": 292.20142,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Pico Bus": 5.855966091156006,
+          "Weap A U G": 168.771577835083,
+          "Bluezonebomb_ Effect Actor": 65.17644739151001,
+          "Proj Grenade": 58.25339889526367,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 30,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 13,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1336,
+        "walkDistance": 2734.8608,
+        "rideDistance": 2875.8408,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 2,
+        "damage": 266.2315,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Pico Bus": 5.855966091156006,
+          "Weap M P5 K": 266.2315273284912,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 15,
+          "totalHits": 76,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 2,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1318,
+        "walkDistance": 2418.31,
+        "rideDistance": 3466.1797,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-13T17:29:29Z",
     "gameMode": "duo-fpp",
     "gameType": "normal",
