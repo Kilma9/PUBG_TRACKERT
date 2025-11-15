@@ -2200,16 +2200,21 @@
         }
       });
       
-      // Find top 2 weapons
+      // Find top 10 weapons
       const topWeapons = Object.entries(weaponDamage)
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 5);
+        .slice(0, 10);
       
       const favoriteWeapon1 = topWeapons[0] ? `${topWeapons[0][0]} (${Math.round(topWeapons[0][1]).toLocaleString()} dmg)` : 'N/A';
       const favoriteWeapon2 = topWeapons[1] ? `${topWeapons[1][0]} (${Math.round(topWeapons[1][1]).toLocaleString()} dmg)` : 'N/A';
       const favoriteWeapon3 = topWeapons[2] ? `${topWeapons[2][0]} (${Math.round(topWeapons[2][1]).toLocaleString()} dmg)` : 'N/A';
       const favoriteWeapon4 = topWeapons[3] ? `${topWeapons[3][0]} (${Math.round(topWeapons[3][1]).toLocaleString()} dmg)` : 'N/A';
       const favoriteWeapon5 = topWeapons[4] ? `${topWeapons[4][0]} (${Math.round(topWeapons[4][1]).toLocaleString()} dmg)` : 'N/A';
+      const favoriteWeapon6 = topWeapons[5] ? `${topWeapons[5][0]} (${Math.round(topWeapons[5][1]).toLocaleString()} dmg)` : 'N/A';
+      const favoriteWeapon7 = topWeapons[6] ? `${topWeapons[6][0]} (${Math.round(topWeapons[6][1]).toLocaleString()} dmg)` : 'N/A';
+      const favoriteWeapon8 = topWeapons[7] ? `${topWeapons[7][0]} (${Math.round(topWeapons[7][1]).toLocaleString()} dmg)` : 'N/A';
+      const favoriteWeapon9 = topWeapons[8] ? `${topWeapons[8][0]} (${Math.round(topWeapons[8][1]).toLocaleString()} dmg)` : 'N/A';
+      const favoriteWeapon10 = topWeapons[9] ? `${topWeapons[9][0]} (${Math.round(topWeapons[9][1]).toLocaleString()} dmg)` : 'N/A';
       
       // Calculate averages
       const avgKills = (totalKills / duoSquadMatches.length).toFixed(1);
@@ -2300,6 +2305,11 @@
               <p style="margin: 5px 0; padding-left: 15px;">🥉 #3: ${favoriteWeapon3}</p>
               <p style="margin: 5px 0; padding-left: 15px;">🏅 #4: ${favoriteWeapon4}</p>
               <p style="margin: 5px 0; padding-left: 15px;">🎖️ #5: ${favoriteWeapon5}</p>
+              <p style="margin: 5px 0; padding-left: 15px;">⭐ #6: ${favoriteWeapon6}</p>
+              <p style="margin: 5px 0; padding-left: 15px;">💫 #7: ${favoriteWeapon7}</p>
+              <p style="margin: 5px 0; padding-left: 15px;">✨ #8: ${favoriteWeapon8}</p>
+              <p style="margin: 5px 0; padding-left: 15px;">🌟 #9: ${favoriteWeapon9}</p>
+              <p style="margin: 5px 0; padding-left: 15px;">💥 #10: ${favoriteWeapon10}</p>
             </div>
             ${specialStatsHtml}
           </div>
