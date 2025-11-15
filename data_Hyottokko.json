@@ -1,5 +1,43 @@
 [
   {
+    "date": "2025-11-15T19:43:25Z",
+    "gameMode": "solo-fpp",
+    "gameType": "normal",
+    "teamSize": "solo",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1626,
+    "placement": 61,
+    "team": [
+      {
+        "name": "Hyottokko",
+        "kills": 0,
+        "damage": 89.46,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Q B Z95": 89.45999908447266
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 4,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 239,
+        "walkDistance": 395.518,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-15T14:13:44Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
