@@ -1921,7 +1921,8 @@
                 return true;
               })
               .map(([weapon, damage]) => [cleanWeaponName(weapon), damage])
-              .sort((a, b) => b[1] - a[1]);
+              .sort((a, b) => b[1] - a[1])
+              .slice(0, 10); // Top 10 weapons
             
             if (weapons.length > 0) {
               const chartDiv = document.createElement('div');
