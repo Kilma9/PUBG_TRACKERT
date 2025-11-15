@@ -1,5 +1,135 @@
 [
   {
+    "date": "2025-11-15T14:13:44Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1631,
+    "placement": 4,
+    "team": [
+      {
+        "name": "codufus",
+        "kills": 1,
+        "damage": 310.9731,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Panzer Faust100 M_ Projectile": 100,
+          "B P_ Niva_05": 53.48567581176758,
+          "Player Female_ A": 0,
+          "Weap Beryl M762": 203.9600212574005,
+          "Weap M24": 107.01312255859375
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 40,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 6,
+        "heals": 11,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1522,
+        "walkDistance": 3431.7974,
+        "rideDistance": 7112.008,
+        "swimDistance": 0
+      },
+      {
+        "name": "ownedbyphysics",
+        "kills": 2,
+        "damage": 121.3,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Jerrycan": 4.824209213256836,
+          "B P_ Niva_05": 53.48567581176758,
+          "Weap M24": 75,
+          "Weap H K416": 46.30000305175781
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 28,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 16,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1513,
+        "walkDistance": 3837.9639,
+        "rideDistance": 7151.6006,
+        "swimDistance": 0
+      },
+      {
+        "name": "shinestt",
+        "kills": 0,
+        "damage": 57.668324,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 1.6604770421981812,
+          "B P_ Niva_06": 2.707796096801758,
+          "Weap M24": 57.6683235168457
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 15,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1406,
+        "walkDistance": 3275.517,
+        "rideDistance": 8340.087,
+        "swimDistance": 0
+      },
+      {
+        "name": "Hyottokko",
+        "kills": 2,
+        "damage": 499.7767,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Niva_05": 53.48567581176758,
+          "Proj Grenade": 46.73904800415039,
+          "Weap A U G": 269.79995918273926,
+          "Player Male_ A": 0,
+          "Weap M24": 183.23768997192383
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 15,
+          "totalHits": 47,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 3,
+        "boosts": 9,
+        "heals": 12,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1517,
+        "walkDistance": 3516.9006,
+        "rideDistance": 7177.058,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-15T13:52:20Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
