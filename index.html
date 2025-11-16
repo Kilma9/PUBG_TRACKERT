@@ -1385,9 +1385,11 @@
       }).length;
     }
 
-    // Filter matches by team composition and team size
+    // Filter matches by team composition and team size (NORMAL mode only)
     function getFilteredMatches(day, teamComposition = 'all', teamSize = 'squad') {
-      let filtered = matchData.filter(match => match.date.split('T')[0] === day);
+      let filtered = matchData.filter(match => {
+        return match.date.split('T')[0] === day && match.gameType === 'normal';
+      });
       
       // Filter by team composition
       if (teamComposition !== 'all') {
@@ -2123,10 +2125,10 @@
         return;
       }
       
-      // Filter to ONLY duo and squad matches
+      // Filter to ONLY normal duo and squad matches (exclude arcade, custom, training)
       const duoSquadMatches = playerMatches.filter(match => {
         const teamSize = match.teamSize || (match.team.length === 1 ? 'solo' : match.team.length === 2 ? 'duo' : 'squad');
-        return teamSize === 'duo' || teamSize === 'squad';
+        return (teamSize === 'duo' || teamSize === 'squad') && match.gameType === 'normal';
       });
       
       if (duoSquadMatches.length === 0) {
@@ -2510,18 +2512,19 @@
       const playerDailyData = {};
       
       playerNames.forEach(playerName => {
-        // Filter to duo/squad matches for this player
+        // Filter to normal duo/squad matches for this player
         const playerMatches = fullMatchData.filter(match => {
           if (!match.team) return false;
           const teamSize = match.teamSize || (match.team.length === 1 ? 'solo' : match.team.length === 2 ? 'duo' : 'squad');
           const isDuoOrSquad = teamSize === 'duo' || teamSize === 'squad';
           const hasPlayer = match.team.some(p => p.name === playerName);
+          const isNormal = match.gameType === 'normal';
           
           // Also filter by date range
           const matchDate = match.date.split('T')[0];
           const isInRange = matchDate >= allDays[0] && matchDate <= allDays[allDays.length - 1];
           
-          return isDuoOrSquad && hasPlayer && isInRange;
+          return isDuoOrSquad && hasPlayer && isInRange && isNormal;
         });
         
         const damageByDay = {};
@@ -3500,9 +3503,10 @@
       let topBoosts = { player: '', value: 0, date: '' };
 
       fullMatchData.forEach(match => {
-        // Only process normal squad games (exclude arcade, custom, training modes)
-        if (match.gameType !== 'normal' || match.teamSize !== 'squad') {
-          return; // Skip non-normal or non-squad games
+        // Only process normal duo/squad games (exclude arcade, custom, training, solo modes)
+        const teamSize = match.teamSize || (match.team.length === 1 ? 'solo' : match.team.length === 2 ? 'duo' : 'squad');
+        if (match.gameType !== 'normal' || (teamSize !== 'duo' && teamSize !== 'squad')) {
+          return; // Skip non-normal or solo games
         }
         let matchTeamDamage = 0;
         const matchDate = new Date(match.date).toLocaleDateString('en-GB', {
