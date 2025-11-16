@@ -1,5 +1,127 @@
 [
   {
+    "date": "2025-11-16T15:36:56Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Chimera_Main",
+    "duration": 1357,
+    "placement": 7,
+    "team": [
+      {
+        "name": "Kaiser_Da_Ripper",
+        "kills": 0,
+        "damage": 79.07714,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M P5 K": 79.07714080810547,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 100,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 450,
+        "walkDistance": 753.48505,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "kahm1s",
+        "kills": 0,
+        "damage": 103.237976,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap S C A R- L": 81.89999771118164,
+          "Player Male_ A": 0,
+          "Weap S K S": 21.337982177734375
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 69,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 423,
+        "walkDistance": 750.5029,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "codufus",
+        "kills": 2,
+        "damage": 372.01663,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Beryl M762": 64.48749542236328,
+          "Weap A U G": 200,
+          "Weap M24": 172.016619682312
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 22,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 3,
+        "revives": 1,
+        "teamKills": 1,
+        "timeSurvived": 777,
+        "walkDistance": 2641.2476,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Roistoreipas",
+        "kills": 3,
+        "damage": 164.02284,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mk47 Mutant": 164.02285385131836,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 82,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 398,
+        "walkDistance": 771.0089,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-15T18:12:13Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
