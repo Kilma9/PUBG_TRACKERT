@@ -3106,70 +3106,86 @@
 
     // Function to show Team Records
     function showTeamRecords() {
-      // Use cached records if available, otherwise calculate fresh
-      const records = cachedRecords || calculateTeamRecords();
-      
-      if (!cachedRecords) {
-        console.log('⚠️ No cached records found, calculating fresh records');
-        cachedRecords = records; // Cache for next time
-      } else {
-        console.log('✅ Using pre-calculated cached records');
+      try {
+        console.log('📊 Showing Team Records...');
+        
+        // Use cached records if available, otherwise calculate fresh
+        const records = cachedRecords || calculateTeamRecords();
+        
+        if (!cachedRecords) {
+          console.log('⚠️ No cached records found, calculating fresh records');
+          cachedRecords = records; // Cache for next time
+        } else {
+          console.log('✅ Using pre-calculated cached records');
+        }
+        
+        console.log('Records data:', records);
+        
+        const recordsHtml = `
+          <div class="records-grid">
+            <div class="record-card">
+              <div class="record-trophy">🏆</div>
+              <div class="record-title">Highest Single Match Damage</div>
+              <div class="record-holder">${records.topDamage.player || 'N/A'}</div>
+              <div class="record-value">${(records.topDamage.value || 0).toLocaleString()}</div>
+              <div class="record-date">📅 ${records.topDamage.date || 'N/A'}</div>
+            </div>
+            
+            <div class="record-card">
+              <div class="record-trophy">💀</div>
+              <div class="record-title">Most Kills in One Match</div>
+              <div class="record-holder">${records.topKills.player || 'N/A'}</div>
+              <div class="record-value">${records.topKills.value || 0}</div>
+              <div class="record-date">📅 ${records.topKills.date || 'N/A'}</div>
+            </div>
+            
+            <div class="record-card">
+              <div class="record-trophy">🎯</div>
+              <div class="record-title">Best Team Damage Combined</div>
+              <div class="record-holder">Team Record</div>
+              <div class="record-value">${(records.teamDamage.value || 0).toLocaleString()}</div>
+              <div class="record-date">📅 ${records.teamDamage.date || 'N/A'}</div>
+            </div>
+            
+            <div class="record-card">
+              <div class="record-trophy">💊</div>
+              <div class="record-title">Most Revives in One Match</div>
+              <div class="record-holder">${records.topRevives.player || 'N/A'}</div>
+              <div class="record-value">${records.topRevives.value || 0}</div>
+              <div class="record-date">📅 ${records.topRevives.date || 'N/A'}</div>
+            </div>
+            
+            <div class="record-card">
+              <div class="record-trophy">🏥</div>
+              <div class="record-title">Healing Champion</div>
+              <div class="record-holder">${records.topHeals.player || 'N/A'}</div>
+              <div class="record-value">${records.topHeals.value || 0}</div>
+              <div class="record-date">📅 ${records.topHeals.date || 'N/A'}</div>
+            </div>
+            
+            <div class="record-card">
+              <div class="record-trophy">🚀</div>
+              <div class="record-title">Boost Master</div>
+              <div class="record-holder">${records.topBoosts.player || 'N/A'}</div>
+              <div class="record-value">${records.topBoosts.value || 0}</div>
+              <div class="record-date">📅 ${records.topBoosts.date || 'N/A'}</div>
+            </div>
+          </div>
+        `;
+        
+        document.getElementById('recordsDetails').innerHTML = recordsHtml;
+        document.getElementById('recordsContent').classList.remove('hidden');
+        console.log('✅ Team Records displayed successfully');
+      } catch (error) {
+        console.error('❌ Error showing team records:', error);
+        document.getElementById('recordsDetails').innerHTML = `
+          <div style="padding: 20px; text-align: center; color: #e74c3c;">
+            <h3>Error loading team records</h3>
+            <p>${error.message}</p>
+          </div>
+        `;
+        document.getElementById('recordsContent').classList.remove('hidden');
       }
-      
-      const recordsHtml = `
-        <div class="records-grid">
-          <div class="record-card">
-            <div class="record-trophy">🏆</div>
-            <div class="record-title">Highest Single Match Damage</div>
-            <div class="record-holder">${records.topDamage.player}</div>
-            <div class="record-value">${records.topDamage.value.toLocaleString()}</div>
-            <div class="record-date">📅 ${records.topDamage.date}</div>
-          </div>
-          
-          <div class="record-card">
-            <div class="record-trophy">💀</div>
-            <div class="record-title">Most Kills in One Match</div>
-            <div class="record-holder">${records.topKills.player}</div>
-            <div class="record-value">${records.topKills.value}</div>
-            <div class="record-date">📅 ${records.topKills.date}</div>
-          </div>
-          
-          <div class="record-card">
-            <div class="record-trophy">🎯</div>
-            <div class="record-title">Best Team Damage Combined</div>
-            <div class="record-holder">Team Record</div>
-            <div class="record-value">${records.teamDamage.value.toLocaleString()}</div>
-            <div class="record-date">📅 ${records.teamDamage.date}</div>
-          </div>
-          
-          <div class="record-card">
-            <div class="record-trophy">💊</div>
-            <div class="record-title">Most Revives in One Match</div>
-            <div class="record-holder">${records.topRevives.player}</div>
-            <div class="record-value">${records.topRevives.value}</div>
-            <div class="record-date">📅 ${records.topRevives.date}</div>
-          </div>
-          
-          <div class="record-card">
-            <div class="record-trophy">🏥</div>
-            <div class="record-title">Healing Champion</div>
-            <div class="record-holder">${records.topHeals.player}</div>
-            <div class="record-value">${records.topHeals.value}</div>
-            <div class="record-date">📅 ${records.topHeals.date}</div>
-          </div>
-          
-          <div class="record-card">
-            <div class="record-trophy">🚀</div>
-            <div class="record-title">Boost Master</div>
-            <div class="record-holder">${records.topBoosts.player}</div>
-            <div class="record-value">${records.topBoosts.value}</div>
-            <div class="record-date">📅 ${records.topBoosts.date}</div>
-          </div>
-        </div>
-      `;
-      
-      document.getElementById('recordsDetails').innerHTML = recordsHtml;
-      document.getElementById('recordsContent').classList.remove('hidden');
     }
 
     // Function to show changelog
