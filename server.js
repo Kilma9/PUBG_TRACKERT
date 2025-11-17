@@ -79,6 +79,11 @@ app.get('/gamebr.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'gamebr.html'));
 });
 
+// Serve Balatro demo page
+app.get('/balatro-demo.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'balatro-demo.html'));
+});
+
 // Serve main data file
 app.get('/data.json', (req, res) => {
   res.sendFile(path.join(__dirname, 'data.json'));

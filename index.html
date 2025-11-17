@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>PUBG Tracker Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="balatro.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -3566,6 +3567,41 @@
 
       return { topDamage, topKills, teamDamage, topRevives, topHeals, topBoosts };
     }
+
+    // Initialize Balatro background with PUBG theme
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('🎨 Initializing Balatro background...');
+      
+      // Check if BalatroBG class exists
+      if (typeof BalatroBG === 'undefined') {
+        console.error('❌ BalatroBG class not found! Script may not have loaded.');
+        return;
+      }
+      
+      const bgContainer = document.createElement('div');
+      bgContainer.id = 'balatro-bg';
+      bgContainer.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.8;';
+      document.body.appendChild(bgContainer);
+      
+      console.log('🎨 Container created:', bgContainer);
+      
+      try {
+        const balatroBg = new BalatroBG('balatro-bg', {
+          color1: '#FF0000',
+          color2: '#000000',
+          color3: '#000000',
+          spinSpeed: 750,
+          contrast: 5.0,
+          pixelFilter: 10000.0,
+          autoRotate: true,
+          isRotate: true,
+          mouseInteraction: true
+        });
+        console.log('✅ Balatro background initialized successfully!', balatroBg);
+      } catch (e) {
+        console.error('❌ Error initializing Balatro:', e);
+      }
+    });
   </script>
 </body>
 </html>
