@@ -64,6 +64,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static('public'));
+app.use('/videos', express.static(path.join(__dirname, 'pubg-react', 'dist')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
@@ -82,6 +83,11 @@ app.get('/gamebr.html', (req, res) => {
 // Serve Balatro demo page
 app.get('/balatro-demo.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'balatro-demo.html'));
+});
+
+// Serve React Video Gallery
+app.get('/videos', (req, res) => {
+  res.sendFile(path.join(__dirname, 'pubg-react', 'dist', 'index.html'));
 });
 
 // Serve main data file

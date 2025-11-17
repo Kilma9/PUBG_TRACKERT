@@ -36,6 +36,13 @@ jobs:
             echo "📂 Copied public directory (both to /public and root)"
           fi
           
+          # Copy React Video Gallery build
+          if [ -d "pubg-react/dist" ]; then
+            mkdir -p deploy/videos
+            cp -r pubg-react/dist/* deploy/videos/
+            echo "🎥 Copied React Video Gallery to /videos"
+          fi
+          
           # Copy server files
           cp server.js deploy/
           cp package*.json deploy/
