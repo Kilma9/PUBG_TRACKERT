@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balatro Background Effect Demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #bg-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.3; /* Make it subtle in the background */
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .control-group {
+      margin-bottom: 20px;
+    }
+
+    .control-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #ffd700;
+    }
+
+    .control-group input[type="range"] {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .control-group input[type="color"] {
+      width: 100px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .control-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .value-display {
+      display: inline-block;
+      margin-left: 10px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+
+    .info-box {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 15px;
+      border: 2px solid rgba(255, 215, 0, 0.3);
+    }
+
+    .info-box h2 {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .info-box p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px 5px;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div id="bg-container"></div>
+
+  <div class="content">
+    <div class="header">
+      <h1>🎨 Balatro Background Effect</h1>
+      <p>WebGL Shader Animation - Move your mouse around!</p>
+    </div>
+
+    <div class="controls">
+      <h2 style="color: #ffd700; margin-bottom: 20px;">🎛️ Controls</h2>
+      
+      <div class="control-group">
+        <label>Color 1 (Primary): <span class="value-display" id="color1-val">#DE443B</span></label>
+        <input type="color" id="color1" value="#DE443B">
+      </div>
+
+      <div class="control-group">
+        <label>Color 2 (Secondary): <span class="value-display" id="color2-val">#006BB4</span></label>
+        <input type="color" id="color2" value="#006BB4">
+      </div>
+
+      <div class="control-group">
+        <label>Color 3 (Accent): <span class="value-display" id="color3-val">#162325</span></label>
+        <input type="color" id="color3" value="#162325">
+      </div>
+
+      <div class="control-group">
+        <label>Spin Speed: <span class="value-display" id="speed-val">7.0</span></label>
+        <input type="range" id="spinSpeed" min="0" max="20" step="0.5" value="7">
+      </div>
+
+      <div class="control-group">
+        <label>Contrast: <span class="value-display" id="contrast-val">3.5</span></label>
+        <input type="range" id="contrast" min="1" max="10" step="0.1" value="3.5">
+      </div>
+
+      <div class="control-group">
+        <label>Pixel Filter (Quality): <span class="value-display" id="pixel-val">745</span></label>
+        <input type="range" id="pixelFilter" min="200" max="1500" step="5" value="745">
+      </div>
+
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="isRotate"> Auto-Rotate
+        </label>
+      </div>
+
+      <div class="control-group">
+        <label>
+          <input type="checkbox" id="mouseInteraction" checked> Mouse Interaction
+        </label>
+      </div>
+
+      <div>
+        <button onclick="applyPreset('pubg')">🎮 PUBG Theme</button>
+        <button onclick="applyPreset('fire')">🔥 Fire</button>
+        <button onclick="applyPreset('ocean')">🌊 Ocean</button>
+        <button onclick="applyPreset('purple')">💜 Purple Haze</button>
+        <button onclick="resetEffect()">🔄 Reset</button>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h2>📝 How to integrate into PUBG Tracker:</h2>
+      <p><strong>1.</strong> Add this to your index.html head: <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 3px;">&lt;script src="public/balatro.js"&gt;&lt;/script&gt;</code></p>
+      <p><strong>2.</strong> Add background container before your content: <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 3px;">&lt;div id="bg-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.2;"&gt;&lt;/div&gt;</code></p>
+      <p><strong>3.</strong> Initialize in your script section: <code style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 3px;">const bg = new BalatroBG(document.getElementById('bg-container'), { color1: '#ff6b6b', color2: '#4ecdc4' });</code></p>
+      <p><strong>Performance:</strong> Uses GPU acceleration via WebGL shaders - very smooth even on lower-end hardware!</p>
+    </div>
+  </div>
+
+  <script src="public/balatro.js"></script>
+  <script>
+    let bgEffect = new BalatroBG(document.getElementById('bg-container'), {
+      color1: '#DE443B',
+      color2: '#006BB4',
+      color3: '#162325',
+      spinSpeed: 7.0,
+      contrast: 3.5,
+      pixelFilter: 745,
+      isRotate: false,
+      mouseInteraction: true
+    });
+
+    // Control listeners
+    document.getElementById('color1').addEventListener('input', (e) => {
+      document.getElementById('color1-val').textContent = e.target.value;
+      resetEffect();
+    });
+
+    document.getElementById('color2').addEventListener('input', (e) => {
+      document.getElementById('color2-val').textContent = e.target.value;
+      resetEffect();
+    });
+
+    document.getElementById('color3').addEventListener('input', (e) => {
+      document.getElementById('color3-val').textContent = e.target.value;
+      resetEffect();
+    });
+
+    document.getElementById('spinSpeed').addEventListener('input', (e) => {
+      document.getElementById('speed-val').textContent = e.target.value;
+      resetEffect();
+    });
+
+    document.getElementById('contrast').addEventListener('input', (e) => {
+      document.getElementById('contrast-val').textContent = e.target.value;
+      resetEffect();
+    });
+
+    document.getElementById('pixelFilter').addEventListener('input', (e) => {
+      document.getElementById('pixel-val').textContent = e.target.value;
+      resetEffect();
+    });
+
+    document.getElementById('isRotate').addEventListener('change', resetEffect);
+    document.getElementById('mouseInteraction').addEventListener('change', resetEffect);
+
+    function resetEffect() {
+      bgEffect.destroy();
+      bgEffect = new BalatroBG(document.getElementById('bg-container'), {
+        color1: document.getElementById('color1').value,
+        color2: document.getElementById('color2').value,
+        color3: document.getElementById('color3').value,
+        spinSpeed: parseFloat(document.getElementById('spinSpeed').value),
+        contrast: parseFloat(document.getElementById('contrast').value),
+        pixelFilter: parseFloat(document.getElementById('pixelFilter').value),
+        isRotate: document.getElementById('isRotate').checked,
+        mouseInteraction: document.getElementById('mouseInteraction').checked
+      });
+    }
+
+    function applyPreset(preset) {
+      const presets = {
+        pubg: {
+          color1: '#ff6b6b',
+          color2: '#ffd93d',
+          color3: '#1a1a2e',
+          spinSpeed: 5,
+          contrast: 4
+        },
+        fire: {
+          color1: '#ff4500',
+          color2: '#ffd700',
+          color3: '#8b0000',
+          spinSpeed: 10,
+          contrast: 5
+        },
+        ocean: {
+          color1: '#006994',
+          color2: '#00d4ff',
+          color3: '#001529',
+          spinSpeed: 3,
+          contrast: 3
+        },
+        purple: {
+          color1: '#667eea',
+          color2: '#764ba2',
+          color3: '#1a1a2e',
+          spinSpeed: 6,
+          contrast: 4
+        }
+      };
+
+      const p = presets[preset];
+      document.getElementById('color1').value = p.color1;
+      document.getElementById('color2').value = p.color2;
+      document.getElementById('color3').value = p.color3;
+      document.getElementById('spinSpeed').value = p.spinSpeed;
+      document.getElementById('contrast').value = p.contrast;
+      
+      document.getElementById('color1-val').textContent = p.color1;
+      document.getElementById('color2-val').textContent = p.color2;
+      document.getElementById('color3-val').textContent = p.color3;
+      document.getElementById('speed-val').textContent = p.spinSpeed;
+      document.getElementById('contrast-val').textContent = p.contrast;
+      
+      resetEffect();
+    }
+  </script>
+</body>
+</html>

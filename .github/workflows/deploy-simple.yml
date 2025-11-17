@@ -31,7 +31,9 @@ jobs:
           if [ -d "public" ]; then
             mkdir -p deploy/public
             cp -r public/* deploy/public/
-            echo "📂 Copied public directory"
+            # Also copy public files to root for Express static serving compatibility
+            cp -r public/* deploy/
+            echo "📂 Copied public directory (both to /public and root)"
           fi
           
           # Copy server files
