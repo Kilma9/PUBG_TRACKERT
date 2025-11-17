@@ -67,6 +67,7 @@ jobs:
           password: ${{ secrets.WEBZDARMA_FTP_PASSWORD }}
           local-dir: ./deploy/
           server-dir: ${{ secrets.WEBZDARMA_FTP_DIR }}
+          dangerous-clean-slate: true
           exclude: |
             **/.git*
             **/node_modules/**
