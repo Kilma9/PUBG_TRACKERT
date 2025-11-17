@@ -1,5 +1,41 @@
 [
   {
+    "date": "2025-11-17T17:26:24Z",
+    "gameMode": "solo-fpp",
+    "gameType": "normal",
+    "teamSize": "solo",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1525,
+    "placement": 36,
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {},
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 0,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 537,
+        "walkDistance": 989.4826,
+        "rideDistance": 4262.88,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-16T11:09:51Z",
     "gameMode": "duo-fpp",
     "gameType": "normal",
