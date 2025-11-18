@@ -2968,15 +2968,24 @@
     document.getElementById('changelogBtn').addEventListener('click', function() {
       console.log('Changelog button clicked');
       
-      // Reset other buttons and hide all sections first
-      resetSpecialButtons();
-      hideAllSpecialSections();
+      const changelogSection = document.getElementById('changelogContent');
+      const isVisible = !changelogSection.classList.contains('hidden');
       
-      // Set this button as active
-      this.classList.add('active');
-      
-      // Show changelog in special section
-      showChangelog();
+      if (isVisible) {
+        // If changelog is already visible, hide it and deactivate button
+        changelogSection.classList.add('hidden');
+        this.classList.remove('active');
+      } else {
+        // Reset other buttons and hide all sections first
+        resetSpecialButtons();
+        hideAllSpecialSections();
+        
+        // Set this button as active
+        this.classList.add('active');
+        
+        // Show changelog in special section
+        showChangelog();
+      }
       
       // Reset bio dropdown
       const bioSelect = document.getElementById('bioSelect');
@@ -3200,7 +3209,7 @@
     // Changelog data - single source of truth
     const changelogData = [
       {
-        version: "Version 1.1.1 - UI Fixes & Chart Improvements 🔧",
+        version: "Version 1.1.0 - UI Fixes & Chart Improvements 🔧",
         date: "10.11.2025",
         color: "#9333ea",
         items: [
@@ -3275,7 +3284,7 @@
           <div style="border-left: 4px solid #9333ea; padding-left: 20px; margin-bottom: 30px;">
             <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h4 style="color: #9333ea; margin: 0;">Version 1.1.1 - UI Fixes & Chart Improvements 🔧</h4>
+                <h4 style="color: #9333ea; margin: 0;">Version 1.1.0 - UI Fixes & Chart Improvements 🔧</h4>
                 <span style="background: #9333ea; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">10.11.2025</span>
               </div>
               <ul style="margin: 10px 0; color: #333;">
@@ -3290,7 +3299,7 @@
           <div style="border-left: 4px solid #ff1493; padding-left: 20px; margin-bottom: 30px;">
             <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h4 style="color: #ff1493; margin: 0;">⚔️ Mini Game v0.2 - PUBG BR 🎯</h4>
+                <h4 style="color: #ff1493; margin: 0;">Version 1.0.0 - Mini Game: PUBG BR 🎯⚔️</h4>
                 <span style="background: #ff1493; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">27.10.2025</span>
               </div>
               <ul style="margin: 10px 0; color: #333;">
@@ -3322,7 +3331,7 @@
           <div style="border-left: 4px solid #00d4ff; padding-left: 20px; margin-bottom: 30px;">
             <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h4 style="color: #00d4ff; margin: 0;">🎮 Mini Game v0.1 - PUBG UAZ Runner EARLY ACCESS! 🚗</h4>
+                <h4 style="color: #00d4ff; margin: 0;">Version 0.9.0 - Mini Game: PUBG UAZ Runner 🎮🚗</h4>
                 <span style="background: #00d4ff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">27.10.2025</span>
               </div>
               <ul style="margin: 10px 0; color: #333;">
@@ -3354,7 +3363,7 @@
           <div style="border-left: 4px solid #ff6b6b; padding-left: 20px; margin-bottom: 30px;">
             <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h4 style="color: #ff6b6b; margin: 0;">Version 1.4 - Welcome Screen & Player Stats Upgrade 🎯</h4>
+                <h4 style="color: #ff6b6b; margin: 0;">Version 0.8.0 - Welcome Screen & Player Stats Upgrade 🎯</h4>
                 <span style="background: #ff6b6b; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">27.10.2025</span>
               </div>
               <ul style="margin: 10px 0; color: #333;">
@@ -3381,7 +3390,7 @@
           <div style="border-left: 4px solid #3498db; padding-left: 20px; margin-bottom: 30px;">
             <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h4 style="color: #3498db; margin: 0;">Version 1.3 - Data Quality & UX Enhancements 📊</h4>
+                <h4 style="color: #3498db; margin: 0;">Version 0.7.0 - Data Quality & UX Enhancements 📊</h4>
                 <span style="background: #3498db; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">25.10.2025</span>
               </div>
               <ul style="margin: 10px 0; color: #333;">
@@ -3408,7 +3417,7 @@
           <div style="border-left: 4px solid #6f42c1; padding-left: 20px; margin-bottom: 30px;">
             <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h4 style="color: #6f42c1; margin: 0;">Version 1.2 - Multi-Player Dashboard 🎮</h4>
+                <h4 style="color: #6f42c1; margin: 0;">Version 0.6.0 - Multi-Player Dashboard 🎮</h4>
                 <span style="background: #6f42c1; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">25.10.2025</span>
               </div>
               <ul style="margin: 10px 0; color: #333;">
@@ -3433,8 +3442,8 @@
           <div style="border-left: 4px solid #e67e22; padding-left: 20px; margin-bottom: 30px;">
             <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h4 style="color: #e67e22; margin: 0;">Version 1.1 - Official Career Statistics �</h4>
-                <span style="background: #e67e22; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">09.11.2025</span>
+                <h4 style="color: #e67e22; margin: 0;">Version 0.5.0 - Official Career Statistics 📈</h4>
+                <span style="background: #e67e22; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">20.10.2025</span>
               </div>
               <ul style="margin: 10px 0; color: #333;">
                 <li><strong>Career Statistics:</strong> Official PUBG API integration for lifetime player stats</li>
@@ -3459,7 +3468,7 @@
           <div style="border-left: 4px solid #28a745; padding-left: 20px; margin-bottom: 30px;">
             <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h4 style="color: #28a745; margin: 0;">Version 1.0 🎉</h4>
+                <h4 style="color: #28a745; margin: 0;">Version 0.1.0 - Initial Release 🎉</h4>
                 <span style="background: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">18.10.2025</span>
               </div>
               <ul style="margin: 10px 0; color: #333;">
@@ -3481,7 +3490,7 @@
           </div>
           
           <div style="text-align: center; color: #666; font-style: italic;">
-            <small>🚀 Latest: Version 1.1.2 - Balatro WebGL animated background for enhanced visual experience! ✨</small>
+            <small>🚀 Latest: Version 1.2.0 - Balatro WebGL animated background & Death Cam Gallery for enhanced experience! 🎥✨</small>
           </div>
         </div>
       `;
