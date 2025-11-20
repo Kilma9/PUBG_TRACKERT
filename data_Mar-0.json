@@ -1,5 +1,132 @@
 [
   {
+    "date": "2025-11-20T19:20:40Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1476,
+    "placement": 4,
+    "team": [
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 142.21498,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Proj Grenade": 0,
+          "Player Male_ A": 0,
+          "B P_ Blanc_ Esports": 32.336544036865234,
+          "Weap Kar98k": 88.875,
+          "Weap Beryl M762": 53.33997917175293
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 20,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 3,
+        "boosts": 4,
+        "heals": 3,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1350,
+        "walkDistance": 3459.819,
+        "rideDistance": 3092.2288,
+        "swimDistance": 0
+      },
+      {
+        "name": "KYBLzBUDEJC",
+        "kills": 1,
+        "damage": 149.13356,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Dragunov": 132.34449577331543,
+          "Weap M P5 K": 0,
+          "Player Male_ A": 0,
+          "Proj Grenade": 16.78907012939453
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 51,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 7,
+        "heals": 2,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1304,
+        "walkDistance": 3879.216,
+        "rideDistance": 1742.083,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cylind3r",
+        "kills": 0,
+        "damage": 83.85084,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 14.968973994255066,
+          "Weap M P5 K": 124.16306495666504,
+          "Proj Grenade": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 14,
+          "totalHits": 35,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1336,
+        "walkDistance": 3319.6636,
+        "rideDistance": 3368.8472,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 7,
+        "damage": 627.89844,
+        "headshots": 4,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 14.586133003234863,
+          "Weap Kar98k": 146.59154891967773,
+          "Weap A U G": 481.30686950683594
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 14,
+          "totalHits": 52,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1350,
+        "walkDistance": 3287.4302,
+        "rideDistance": 2540.2134,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-20T18:55:29Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",

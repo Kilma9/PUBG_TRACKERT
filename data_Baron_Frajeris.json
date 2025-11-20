@@ -1,5 +1,121 @@
 [
   {
+    "date": "2025-11-20T19:20:40Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1476,
+    "placement": 4,
+    "team": [
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 142.21498,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {},
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 0,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 3,
+        "boosts": 4,
+        "heals": 3,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1350,
+        "walkDistance": 3459.819,
+        "rideDistance": 3092.2288,
+        "swimDistance": 0
+      },
+      {
+        "name": "KYBLzBUDEJC",
+        "kills": 1,
+        "damage": 149.13356,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {},
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 0,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 7,
+        "heals": 2,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1304,
+        "walkDistance": 3879.216,
+        "rideDistance": 1742.083,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cylind3r",
+        "kills": 0,
+        "damage": 83.85084,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {},
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 0,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1336,
+        "walkDistance": 3319.6636,
+        "rideDistance": 3368.8472,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 7,
+        "damage": 627.89844,
+        "headshots": 4,
+        "weapons": {
+          "Unknown Weapon": 7
+        },
+        "weaponDamage": {},
+        "weaponKills": {
+          "Unknown Weapon": 7
+        },
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 0,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1350,
+        "walkDistance": 3287.4302,
+        "rideDistance": 2540.2134,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-20T18:55:29Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
