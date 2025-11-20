@@ -1,5 +1,321 @@
 [
   {
+    "date": "2025-11-20T18:55:29Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1549,
+    "placement": 4,
+    "team": [
+      {
+        "name": "Baron_Frajeris",
+        "kills": 2,
+        "damage": 226.60031,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A K47": 125.91999816894531,
+          "Player Male_ A": 0,
+          "B P_ Mirado_ A_03_ Esports": 15.575911521911621,
+          "Weap Kar98k": 43.26613998413086,
+          "Weap A C E32": 57.414175033569336
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 6,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1201,
+        "walkDistance": 2952.0913,
+        "rideDistance": 6846.794,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 4,
+        "damage": 544.11115,
+        "headshots": 3,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 100,
+          "Weap H K416": 144.3999948501587,
+          "Player Male_ A": 0,
+          "Weap A U G": 299.71116828918457
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 14,
+          "totalHits": 65,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 9,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1331,
+        "walkDistance": 3257.2004,
+        "rideDistance": 6846.757,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cylind3r",
+        "kills": 1,
+        "damage": 93.85051,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 1.559960961341858,
+          "Weap H K416": 75,
+          "Weap Vector": 18.850509643554688
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 24,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1215,
+        "walkDistance": 3404.337,
+        "rideDistance": 6471.6978,
+        "swimDistance": 0
+      },
+      {
+        "name": "KYBLzBUDEJC",
+        "kills": 1,
+        "damage": 215.2283,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M P5 K": 153.33901119232178,
+          "Weap Dragunov": 61.8892936706543,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 10,
+          "totalHits": 27,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 6,
+        "heals": 1,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1213,
+        "walkDistance": 3422.6677,
+        "rideDistance": 6476.2646,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-20T18:25:58Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1542,
+    "placement": 3,
+    "team": [
+      {
+        "name": "Cylind3r",
+        "kills": 2,
+        "damage": 262.13654,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap H K416": 85.8000020980835,
+          "Weap M P5 K": 176.33655548095703,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 40,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 11,
+        "heals": 10,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1465,
+        "walkDistance": 3059.837,
+        "rideDistance": 3701.383,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 2,
+        "damage": 326.68216,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 179.08217430114746,
+          "Weap A K47": 102,
+          "Weap A U G": 45.60000038146973,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 10,
+          "totalHits": 20,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 9,
+        "heals": 5,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1406,
+        "walkDistance": 3285.319,
+        "rideDistance": 3833.4224,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 294.3272,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 105.22720623016357,
+          "Player Male_ A": 0,
+          "Weap A U G": 189.10000133514404
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 94,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 8,
+        "heals": 9,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1465,
+        "walkDistance": 3064.5383,
+        "rideDistance": 3702.0378,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-20T18:16:36Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1557,
+    "placement": 24,
+    "team": [
+      {
+        "name": "Cylind3r",
+        "kills": 0,
+        "damage": 96.479996,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A K47": 96.4799919128418,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 17,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 195,
+        "walkDistance": 272.713,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 145.6417,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap H K416": 51.52000427246094,
+          "Weap Mk12": 94.1217041015625
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 10,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 200,
+        "walkDistance": 228.36783,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 23,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 170,
+        "walkDistance": 187.33374,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-12T21:10:29Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
