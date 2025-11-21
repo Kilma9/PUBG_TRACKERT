@@ -1,22 +1,22 @@
 ## 🎮 PUBG Multi-Player Data Collection Report
-**Collection Date:** Thu Nov 20 20:19:29 UTC 2025
+**Collection Date:** Fri Nov 21 18:26:58 UTC 2025
 **Trigger:** schedule
 
 ### 👤 Kilma9
-- **Matches:** 156
-- **Latest Match:** 2025-11-20T10:46:21Z
+- **Matches:** 158
+- **Latest Match:** 2025-11-21T15:36:54Z
 
 ### 👤 Mar-0
-- **Matches:** 195
-- **Latest Match:** 2025-11-20T19:20:40Z
+- **Matches:** 203
+- **Latest Match:** 2025-11-20T21:37:36Z
 
 ### 👤 Hyottokko
 - **Matches:** 116
 - **Latest Match:** 2025-11-17T20:19:04Z
 
 ### 👤 Baron_Frajeris
-- **Matches:** 111
-- **Latest Match:** 2025-11-20T19:20:40Z
+- **Matches:** 119
+- **Latest Match:** 2025-11-20T21:37:36Z
 
 ### 👤 codufus
 - **Matches:** 224
@@ -26,4 +26,4 @@
 - **Matches:** 192
 - **Latest Match:** 2025-11-20T18:50:59Z
 
-**Total Matches Across All Players:** 994
+**Total Matches Across All Players:** 1012
