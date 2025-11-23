@@ -1,5 +1,45 @@
 [
   {
+    "date": "2025-11-23T14:33:52Z",
+    "gameMode": "solo-fpp",
+    "gameType": "normal",
+    "teamSize": "solo",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1544,
+    "placement": 8,
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 87.53908,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 1.9099243879318237,
+          "Weapvz61 Skorpion": 87.53907012939453,
+          "B P_ Motorglider": 53.29868698120117
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 23,
+          "totalHits": 9,
+          "longestKill": 0,
+          "vehicleDestroys": 1
+        },
+        "assists": 0,
+        "boosts": 9,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1296,
+        "walkDistance": 2047.7856,
+        "rideDistance": 14934.452,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-22T14:12:36Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
