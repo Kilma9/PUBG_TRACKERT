@@ -1,5 +1,251 @@
 [
   {
+    "date": "2025-11-23T19:28:21Z",
+    "gameMode": "ibr",
+    "gameType": "normal",
+    "teamSize": "solo",
+    "perspective": "tpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 275,
+    "placement": 1,
+    "team": [
+      {
+        "name": "ALE---__---XXX",
+        "kills": 5,
+        "damage": 239.26086,
+        "headshots": 2,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap J S9": 141.16080474853516,
+          "Player Male_ A": 8.088038444519043,
+          "Weap Mini14": 98.10004806518555
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 26,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 275,
+        "walkDistance": 494.32898,
+        "rideDistance": 1317.3834,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 57.825455,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M P5 K": 14.996480941772461,
+          "Proj Grenade": 42.82897186279297
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 2,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 275,
+        "walkDistance": 633.83136,
+        "rideDistance": 126.13075,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 1,
+        "damage": 53.8,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Q B Z95": 53.79999923706055,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 107,
+        "walkDistance": 202.31262,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "ABO-WATAN-",
+        "kills": 1,
+        "damage": 281.1102,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Beryl M762": 222.3199987411499,
+          "Weap Q B U88": 58.7901725769043,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 21,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 4,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 253,
+        "walkDistance": 710.33813,
+        "rideDistance": 451.4267,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-23T19:19:17Z",
+    "gameMode": "ibr",
+    "gameType": "normal",
+    "teamSize": "solo",
+    "perspective": "tpp",
+    "mapName": "Neon_Main",
+    "duration": 453,
+    "placement": 2,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 1,
+        "damage": 395.4403,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 263.85968017578125,
+          "Weap S C A R- L": 131.58062362670898,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 24,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 2,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 387,
+        "walkDistance": 878.7499,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "NO--MAD",
+        "kills": 0,
+        "damage": 346.38156,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0,
+          "Weap Mk12": 124.5499038696289,
+          "Proj Grenade": 120.37213134765625,
+          "Weap S C A R- L": 101.45952415466309
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 29,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 3,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 450,
+        "walkDistance": 1122.632,
+        "rideDistance": 178.93646,
+        "swimDistance": 0
+      },
+      {
+        "name": "T_O_X_A-TOPEZ",
+        "kills": 1,
+        "damage": 92,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Dragunov": 92,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 10,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 339,
+        "walkDistance": 887.9071,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 178.52185,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M P9": 66.12643337249756,
+          "Weap Kar98k": 112.39542007446289,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 15,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 412,
+        "walkDistance": 1042.6912,
+        "rideDistance": 171.488,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-23T19:08:12Z",
     "gameMode": "ibr",
     "gameType": "normal",
