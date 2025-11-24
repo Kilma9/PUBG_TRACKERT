@@ -1,5 +1,75 @@
 [
   {
+    "date": "2025-11-24T17:55:04Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Kiki_Main",
+    "duration": 1438,
+    "placement": 8,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 2,
+        "damage": 298.6641,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A U G": 299.7244119644165,
+          "Weap Mini14": 143.74083137512207,
+          "B P_ Coupe R B": 3.6279423236846924,
+          "Proj Grenade": 37.53886795043945
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 14,
+          "totalHits": 34,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 5,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1209,
+        "walkDistance": 2448.8467,
+        "rideDistance": 5813.7505,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 1,
+        "damage": 165.86833,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Coupe R B": 3.6279423236846924,
+          "Proj Grenade": 92.21537399291992,
+          "Weap Mini14": 73.65295696258545,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 13,
+          "totalHits": 29,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 16,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1208,
+        "walkDistance": 2596.398,
+        "rideDistance": 5814.4717,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-23T19:28:21Z",
     "gameMode": "ibr",
     "gameType": "normal",
