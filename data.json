@@ -1,5 +1,46 @@
 [
   {
+    "date": "2025-11-28T18:09:18Z",
+    "gameMode": "solo-fpp",
+    "gameType": "normal",
+    "teamSize": "solo",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1532,
+    "placement": 21,
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 1,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Buggy_ A_05": 2.6290290355682373,
+          "Panzer Faust100 M_ Projectile": 37.32085037231445,
+          "Weap A W M": 62.67914962768555,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 6,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 9,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1070,
+        "walkDistance": 2426.5076,
+        "rideDistance": 7247.8833,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-27T18:02:48Z",
     "gameMode": "solo-fpp",
     "gameType": "normal",
