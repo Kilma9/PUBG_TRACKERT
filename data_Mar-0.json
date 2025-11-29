@@ -1,5 +1,144 @@
 [
   {
+    "date": "2025-11-29T12:05:47Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1465,
+    "placement": 4,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 2,
+        "damage": 215.375,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Niva_04": 15.816140174865723,
+          "B P_ Motorglider": 21.29110050201416,
+          "Weap M24": 21.375,
+          "Weap A U G": 194.00000190734863
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 14,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 12,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1337,
+        "walkDistance": 3676.7104,
+        "rideDistance": 4541.577,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 1,
+        "damage": 81.625,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 29.96919021010399,
+          "Weap A K47": 99.35999488830566,
+          "B P_ Motorglider": 89.82748603820801,
+          "Proj Grenade": 81.625
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 45,
+          "longestKill": 0,
+          "vehicleDestroys": 1
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1145,
+        "walkDistance": 2956.928,
+        "rideDistance": 4562.0376,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-29T11:38:09Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1471,
+    "placement": 1,
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 3,
+        "damage": 524.47797,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap S K S": 267.2754135131836,
+          "Weap Beryl M762": 261.8514881134033,
+          "Weap M G3": 104.35834312438965,
+          "Proj Grenade": 41.63269805908203
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 21,
+          "totalHits": 37,
+          "longestKill": 0,
+          "vehicleDestroys": 1
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1471,
+        "walkDistance": 2964.1428,
+        "rideDistance": 8090.6377,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 5,
+        "damage": 375.97302,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 375.97301292419434,
+          "Player Male_ A": 0,
+          "Weap A U G": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 13,
+          "totalHits": 34,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 8,
+        "heals": 10,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1471,
+        "walkDistance": 2772.8152,
+        "rideDistance": 8196.296,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-25T20:20:52Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
