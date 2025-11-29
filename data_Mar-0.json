@@ -1,5 +1,493 @@
 [
   {
+    "date": "2025-11-29T18:53:11Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1476,
+    "placement": 3,
+    "team": [
+      {
+        "name": "Cylind3r",
+        "kills": 0,
+        "damage": 162.2949,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap S K S": 162.2949104309082,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 31,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 6,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1038,
+        "walkDistance": 2048.6882,
+        "rideDistance": 2663.239,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 2,
+        "damage": 218.20833,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 136.20833206176758,
+          "Weap A C E32": 82.00000190734863,
+          "Jerrycan": 0,
+          "Jerrycan Fire": 0,
+          "Dacia_ A_04_v2": 7.871899604797363,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 34,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1304,
+        "walkDistance": 2576.8237,
+        "rideDistance": 2907.4155,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 4,
+        "damage": 508.6312,
+        "headshots": 2,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap H K416": 174.54688262939453,
+          "Weap Mini14": 0,
+          "Player Male_ A": 10.925954818725586,
+          "Weap M24": 203.7843360900879,
+          "Weap A U G": 130.30000114440918
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 28,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 11,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1417,
+        "walkDistance": 3222.3308,
+        "rideDistance": 2658.3655,
+        "swimDistance": 50.31304
+      },
+      {
+        "name": "garsgar",
+        "kills": 0,
+        "damage": 43.453117,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A U G": 43.4531192779541,
+          "Player Female_ A": 4.0145263671875
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 12,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 786,
+        "walkDistance": 1501.6246,
+        "rideDistance": 2701.0046,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-29T18:36:07Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1452,
+    "placement": 12,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Dacia_ A_01_v2": 100,
+          "Weap A C E32": 1423.9999694824219,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 47,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 798,
+        "walkDistance": 1804.5348,
+        "rideDistance": 3468.5828,
+        "swimDistance": 0
+      },
+      {
+        "name": "garsgar",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {},
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 0,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 807,
+        "walkDistance": 1822.786,
+        "rideDistance": 3415.5066,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cylind3r",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M249": 2395,
+          "Player Female_ A": 17.796289443969727
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 62,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 807,
+        "walkDistance": 1929.6188,
+        "rideDistance": 3481.1404,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Weap A U G": 2281
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 91,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 807,
+        "walkDistance": 1719.4569,
+        "rideDistance": 3484.8672,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-29T18:15:11Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1596,
+    "placement": 13,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 3,
+        "damage": 572.47394,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 233.67394638061523,
+          "Weap A U G": 338.7999963760376,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 48,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 8,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1076,
+        "walkDistance": 2478.3076,
+        "rideDistance": 4371.4478,
+        "swimDistance": 0
+      },
+      {
+        "name": "garsgar",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 6.04429817199707
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 35,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 9,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1001,
+        "walkDistance": 2036.3033,
+        "rideDistance": 4338.331,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 47.918045,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Weap Dragunov": 47.918046951293945
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 38,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 8,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 879,
+        "walkDistance": 1496.0004,
+        "rideDistance": 4224.6973,
+        "swimDistance": 102.34593
+      },
+      {
+        "name": "Cylind3r",
+        "kills": 0,
+        "damage": 93.479996,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0,
+          "Weap M249": 93.47999572753906
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 21,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 14,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1076,
+        "walkDistance": 2059.8994,
+        "rideDistance": 4324.7363,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-11-29T17:54:48Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1563,
+    "placement": 12,
+    "team": [
+      {
+        "name": "Cylind3r",
+        "kills": 0,
+        "damage": 124.42966,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Winchester": 0,
+          "Weap M249": 24.429655075073242,
+          "Weap Mk12": 99.99999809265137
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 16,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1072,
+        "walkDistance": 2469.913,
+        "rideDistance": 5946.2437,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 91.935165,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap H K416": 18,
+          "Weap Saiga12": 73.93516254425049,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 48,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 5,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 909,
+        "walkDistance": 1435.132,
+        "rideDistance": 6148.381,
+        "swimDistance": 11.074881
+      },
+      {
+        "name": "garsgar",
+        "kills": 0,
+        "damage": 101.0121,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0,
+          "Weap A U G": 22.876420974731445,
+          "Weap Mk12": 78.13567543029785
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 24,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1038,
+        "walkDistance": 2671.445,
+        "rideDistance": 5387.4404,
+        "swimDistance": 62.68361
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M249": 100,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 30,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 5,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 981,
+        "walkDistance": 2064.1968,
+        "rideDistance": 5947.1196,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-29T17:32:05Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
