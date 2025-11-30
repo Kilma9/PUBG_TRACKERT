@@ -1,5 +1,138 @@
 [
   {
+    "date": "2025-11-30T19:23:41Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1518,
+    "placement": 11,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 1,
+        "damage": 327.39178,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 327.39177322387695
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 6,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1158,
+        "walkDistance": 2100.9836,
+        "rideDistance": 2243.019,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 390.6985,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap H K416": 25.540159225463867,
+          "Weap Mini14": 365.15832138061523,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 21,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1158,
+        "walkDistance": 2631.0225,
+        "rideDistance": 2017.1671,
+        "swimDistance": 22.317486
+      }
+    ]
+  },
+  {
+    "date": "2025-11-30T18:59:50Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1629,
+    "placement": 13,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 264.8576,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Pickup Truck_ A_esports": 9.970926284790039,
+          "Weap Mk14": 264.8576021194458,
+          "Player Female_ A": 46.545265197753906
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 12,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1246,
+        "walkDistance": 3049.2424,
+        "rideDistance": 1261.7189,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 40.455612,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 40.45561218261719,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1189,
+        "walkDistance": 2898.9583,
+        "rideDistance": 1554.583,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-11-30T18:38:06Z",
     "gameMode": "duo-fpp",
     "gameType": "normal",
