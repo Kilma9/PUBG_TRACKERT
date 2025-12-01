@@ -1,5 +1,136 @@
 [
   {
+    "date": "2025-12-01T19:27:42Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1507,
+    "placement": 4,
+    "team": [
+      {
+        "name": "KYBLzBUDEJC",
+        "kills": 3,
+        "damage": 403.1199,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap V S S": 100,
+          "Dacia_ A_03_v2_ Esports": 6.6062397956848145,
+          "Player Male_ A": 2.0992696285247803,
+          "Weap M P5 K": 123.1535701751709,
+          "Weap Mk12": 119.55667877197266,
+          "Weap Berreta686": 60.40968608856201
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 56,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 0,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1116,
+        "walkDistance": 2723.4424,
+        "rideDistance": 2146.654,
+        "swimDistance": 0
+      },
+      {
+        "name": "Vitousek_chan",
+        "kills": 6,
+        "damage": 1068.102,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap U M P": 765.8402862548828,
+          "Dacia_ A_03_v2_ Esports": 6.6062397956848145,
+          "Weap Dragunov": 202.64362144470215,
+          "Proj Grenade": 99.6180419921875,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 26,
+          "totalHits": 89,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 7,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1433,
+        "walkDistance": 3576.3794,
+        "rideDistance": 4819.9375,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 2,
+        "damage": 311.44717,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A K47": 95.99999618530273,
+          "Dacia_ A_03_v2_ Esports": 6.6062397956848145,
+          "Weap A U G": 215.4471836090088,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 113,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 920,
+        "walkDistance": 1755.1244,
+        "rideDistance": 2617.6838,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 81.23493,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Vector": 19.838712692260742,
+          "Dacia_ A_03_v2_ Esports": 6.6062397956848145,
+          "Player Male_ A": 0,
+          "Weap Beryl M762": 61.39622116088867
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 37,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 868,
+        "walkDistance": 1926.7367,
+        "rideDistance": 2690.3838,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-12-01T18:58:52Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
