@@ -1,5 +1,129 @@
 [
   {
+    "date": "2025-12-03T18:55:59Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1530,
+    "placement": 4,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 110.756935,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 1.0472534894943237,
+          "Weap M24": 100,
+          "Weap A U G": 10.756936073303223
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 10,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1313,
+        "walkDistance": 2733.5662,
+        "rideDistance": 4646.556,
+        "swimDistance": 0
+      },
+      {
+        "name": "Hyottokko",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 31.593982696533203
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 9,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1238,
+        "walkDistance": 2806.4707,
+        "rideDistance": 2927.3618,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 203.47905,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 34.4733772277832,
+          "Bluezone G L_ Subzero_ Effect Actor": 8,
+          "Weap Kar98k": 115.59405136108398,
+          "Weap Mk14": 87.88499450683594
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 16,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 8,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1242,
+        "walkDistance": 2807.2383,
+        "rideDistance": 4039.7046,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 99.43854,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Uaz_ B_01_esports": 0.29212647676467896,
+          "Player Male_ A": 32.3359260559082,
+          "Dacia_ A_01_v2": 1.0000005960464478,
+          "Weap M24": 99.43853759765625
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 30,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1224,
+        "walkDistance": 2545.5325,
+        "rideDistance": 4491.327,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-12-01T20:38:24Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
