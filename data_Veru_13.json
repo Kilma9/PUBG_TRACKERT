@@ -1,5 +1,263 @@
 [
   {
+    "date": "2025-12-05T19:45:33Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1633,
+    "placement": 8,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 249.33603,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Uaz_ B_01": 16.436901092529297,
+          "Weap Mini14": 71.54851818084717,
+          "Weap A U G": 177.78749465942383
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 18,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 866,
+        "walkDistance": 2269.6726,
+        "rideDistance": 2975.5305,
+        "swimDistance": 0
+      },
+      {
+        "name": "PB-LTU",
+        "kills": 0,
+        "damage": 128.77763,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 48.5908317565918,
+          "Weap H K416": 80.18680000305176,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 6,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 820,
+        "walkDistance": 2105.7944,
+        "rideDistance": 2351.134,
+        "swimDistance": 0
+      },
+      {
+        "name": "Adonisak1",
+        "kills": 0,
+        "damage": 51.723724,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 31.7835636138916,
+          "Weap Mk12": 51.723724365234375
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 11,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 858,
+        "walkDistance": 2414.8706,
+        "rideDistance": 2919.9666,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 70.2752,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 56.51780319213867,
+          "Weap M P5 K": 13.757396697998047,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 15,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 866,
+        "walkDistance": 2119.651,
+        "rideDistance": 3018.7976,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-12-05T19:16:30Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1763,
+    "placement": 5,
+    "team": [
+      {
+        "name": "Adonisak1",
+        "kills": 1,
+        "damage": 316.02863,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mk12": 166.9949073791504,
+          "Player Male_ A": 0,
+          "Weap A U G": 149.03372383117676
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 17,
+          "totalHits": 27,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 10,
+        "heals": 9,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1497,
+        "walkDistance": 2443.6099,
+        "rideDistance": 8121.674,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 229.99724,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 211.9972381591797,
+          "Player Female_ A": 0,
+          "Weap A U G": 18
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 25,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 6,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1497,
+        "walkDistance": 3035.9902,
+        "rideDistance": 8128.089,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-12-05T18:57:50Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1699,
+    "placement": 10,
+    "team": [
+      {
+        "name": "Adonisak1",
+        "kills": 0,
+        "damage": 70.885796,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mk14": 52.88579559326172,
+          "Player Male_ A": 0,
+          "Weap H K416": 18
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 91,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 6,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1014,
+        "walkDistance": 1793.9467,
+        "rideDistance": 3111.8818,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 1,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A U G": 100.00000190734863,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 20,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 996,
+        "walkDistance": 1877.4972,
+        "rideDistance": 3351.6306,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-12-05T15:18:56Z",
     "gameMode": "duo-fpp",
     "gameType": "normal",
