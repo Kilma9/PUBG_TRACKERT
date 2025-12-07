@@ -1,5 +1,656 @@
 [
   {
+    "date": "2025-12-06T22:49:17Z",
+    "gameMode": "normal-squad",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "tpp",
+    "mapName": "MOD_Main",
+    "duration": 336,
+    "placement": 1,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 17,
+        "damage": 1837.1599,
+        "headshots": 7,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A U G": 1837.1599836349487,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 51,
+          "totalHits": 114,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 336,
+        "walkDistance": 964.06647,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 34,
+        "damage": 3720.7979,
+        "headshots": 11,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A U G": 2802.300003051758,
+          "Weap Beryl M762": 151.9999942779541,
+          "Weap Crossbow_1": 37.03976058959961,
+          "Weap A W M": 287.26749420166016,
+          "Weap M G3": 50.150001525878906,
+          "Weap L6": 392.0399932861328
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 72,
+          "totalHits": 142,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 336,
+        "walkDistance": 1295.8849,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-12-06T22:39:52Z",
+    "gameMode": "normal-squad",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "tpp",
+    "mapName": "MOD_Main",
+    "duration": 364,
+    "placement": 2,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 13,
+        "damage": 1266.4246,
+        "headshots": 2,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 124.24431931972504,
+          "Weap M24": 130.51778602600098,
+          "Weap A U G": 699.9999895095825,
+          "Weap Beryl M762": 314.0000047683716,
+          "B P_ Fire Effect Controller": 16,
+          "B P_ Molotov Fire Debuff": 30,
+          "Weap Desert Eagle": 75.9067153930664,
+          "Buggy": 19.59149169921875,
+          "B P_ Dirtbike": 0.2051868736743927
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 34,
+          "totalHits": 63,
+          "longestKill": 0,
+          "vehicleDestroys": 1
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 364,
+        "walkDistance": 2460.6226,
+        "rideDistance": 5995.7314,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-12-06T21:43:24Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1430,
+    "placement": 16,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 31,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 564,
+        "walkDistance": 824.8517,
+        "rideDistance": 3336.2458,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 121.69811,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Proj Grenade": 100.09811401367188,
+          "Weap A K47": 21.599998474121094,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 32,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 585,
+        "walkDistance": 763.932,
+        "rideDistance": 3478.7793,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 241.13907,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Niva_ Esports": 32.556854248046875,
+          "Weap A U G": 241.1390619277954,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 29,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 585,
+        "walkDistance": 682.56305,
+        "rideDistance": 3536.133,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-12-06T21:12:48Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1414,
+    "placement": 10,
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 113.59379,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Dragunov": 84.55378723144531,
+          "Player Male_ A": 0,
+          "Weap Beryl M762": 29.040000915527344
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 19,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 6,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 541,
+        "walkDistance": 1297.8694,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 136.47623,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 61.476226806640625,
+          "Weap H K416": 75.00000190734863
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 5,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 0,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 523,
+        "walkDistance": 1189.9757,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 137.9199,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap S K S": 137.9199104309082,
+          "Proj Grenade": 0,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 541,
+        "walkDistance": 1356.1261,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-12-06T21:06:35Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Savage_Main",
+    "duration": 1302,
+    "placement": 22,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 59.219997,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 59.21999740600586
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 9,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 265,
+        "walkDistance": 342.455,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 92.28,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 92.28000068664551
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 12,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 115,
+        "walkDistance": 70.57086,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Vector": 100.00000286102295,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 20,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 130,
+        "walkDistance": 62.688404,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-12-06T20:41:42Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1441,
+    "placement": 7,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 122.70072,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 122.70072269439697,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 22,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1223,
+        "walkDistance": 2272.3062,
+        "rideDistance": 5451.6914,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 188.12251,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 188.1225128173828
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 7,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1229,
+        "walkDistance": 2743.4507,
+        "rideDistance": 4919.6265,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 1,
+        "damage": 99.53838,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Uaz_ B_01": 20.99830436706543,
+          "Weap S K S": 99.53838348388672,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 22,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1229,
+        "walkDistance": 2588.1072,
+        "rideDistance": 5166.6934,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-12-06T20:23:30Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1426,
+    "placement": 9,
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 1,
+        "damage": 201.38,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 18.249267578125,
+          "B P_ Fire Effect Controller": 4,
+          "Weap A C E32": 197.37999725341797,
+          "B P_ Molotov Fire Debuff": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 957,
+        "walkDistance": 2070.4932,
+        "rideDistance": 4603.03,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 71.7126,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 24.921667478978634,
+          "Weap Mini14": 18.912599563598633,
+          "Weap A U G": 52.79999923706055
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 35,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 957,
+        "walkDistance": 2100.324,
+        "rideDistance": 4452.27,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 120.16223,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 40.96223068237305,
+          "Weap A U G": 79.19999885559082,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 5,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 944,
+        "walkDistance": 1965.9911,
+        "rideDistance": 4620.2026,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-12-06T20:10:02Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1548,
+    "placement": 17,
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 84.2601,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Beryl M762": 84.26010227203369
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 6,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 639,
+        "walkDistance": 1129.9556,
+        "rideDistance": 5087.2085,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Blanc": 12.409883499145508,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 24,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 639,
+        "walkDistance": 928.08844,
+        "rideDistance": 5243.262,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-12-06T15:39:20Z",
     "gameMode": "duo-fpp",
     "gameType": "normal",
