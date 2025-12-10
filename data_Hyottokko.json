@@ -1,5 +1,84 @@
 [
   {
+    "date": "2025-12-09T21:30:05Z",
+    "gameMode": "normal-duo",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "tpp",
+    "mapName": "MOD_Main",
+    "duration": 607,
+    "placement": 0,
+    "team": [
+      {
+        "name": "Hyottokko",
+        "kills": 13,
+        "damage": 1566.5479,
+        "headshots": 11,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 444.8994426727295,
+          "Weap M24": 543.2413444519043,
+          "Weap Nagant M1895": 63.61753845214844,
+          "Weap A U G": 323.99999713897705,
+          "Bluezonebomb_ Effect Actor": 20,
+          "Weap Beryl M762": 99.32999801635742,
+          "Player Male_ A": 217.57658767700195,
+          "B P_ Dirtbike": 30.583759307861328,
+          "Weap G18": 91.45929050445557
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 36,
+          "totalHits": 46,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 607,
+        "walkDistance": 1196.6959,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 24,
+        "damage": 2323.6206,
+        "headshots": 12,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 595.7758026123047,
+          "Weap Kar98k": 2.29547119140625,
+          "Player Male_ A": 214.89884281158447,
+          "Weap Nagant M1895": 106.75387954711914,
+          "Weap Beryl M762": 893.2399806976318,
+          "Weap G18": 530.2473950386047,
+          "Panzer Faust100 M_ Projectile": 95.30783081054688,
+          "Weap A U G": 100
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 84,
+          "totalHits": 97,
+          "longestKill": 0,
+          "vehicleDestroys": 1
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 607,
+        "walkDistance": 828.96625,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-12-03T21:04:54Z",
     "gameMode": "normal-squad",
     "gameType": "normal",
