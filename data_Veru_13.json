@@ -1,5 +1,75 @@
 [
   {
+    "date": "2025-12-13T18:38:17Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1847,
+    "placement": 4,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 3,
+        "damage": 526.869,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0.930895984172821,
+          "Weap M P5 K": 85.85030364990234,
+          "Weap F N Fal": 285.1537227630615,
+          "Weap Bizon P P19": 135.00000190734863,
+          "Proj Grenade": 20.86499786376953
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 37,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1406,
+        "walkDistance": 2753.0269,
+        "rideDistance": 3226.267,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 1,
+        "damage": 620.4322,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 467.9192485809326,
+          "Weap A U G": 75.51293182373047,
+          "Proj Grenade": 77
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 25,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 6,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1767,
+        "walkDistance": 3377.9878,
+        "rideDistance": 7566.706,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-12-06T22:49:17Z",
     "gameMode": "normal-squad",
     "gameType": "normal",
