@@ -1,5 +1,73 @@
 [
   {
+    "date": "2025-12-14T18:47:26Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1534,
+    "placement": 18,
+    "team": [
+      {
+        "name": "Hyottokko",
+        "kills": 1,
+        "damage": 192.025,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 2.550645589828491,
+          "Weap A U G": 156.39999771118164,
+          "Weap M24": 35.625
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 10,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 786,
+        "walkDistance": 1875.9706,
+        "rideDistance": 906.5184,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 224.87439,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A U G": 124.8743896484375,
+          "Weap Kar98k": 100,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 12,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 786,
+        "walkDistance": 1831.6276,
+        "rideDistance": 1057.2014,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-12-10T21:13:54Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
