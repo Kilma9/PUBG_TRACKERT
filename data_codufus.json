@@ -1,5 +1,145 @@
 [
   {
+    "date": "2025-12-18T20:17:38Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1507,
+    "placement": 3,
+    "team": [
+      {
+        "name": "codufus",
+        "kills": 7,
+        "damage": 555.4128,
+        "headshots": 2,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A C E32": 523.0441436767578,
+          "Player Female_ A": 1.5179802179336548,
+          "B P_ Porter": 2.2053215503692627,
+          "B P_ Fire Effect Controller": 20,
+          "B P_ Molotov Fire Debuff": 12.368606567382812
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 14,
+          "totalHits": 77,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 3,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1468,
+        "walkDistance": 3590.9346,
+        "rideDistance": 7516.2036,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 4,
+        "damage": 490.03143,
+        "headshots": 3,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Saiga12": 44.57815408706665,
+          "Player Male_ A": 0,
+          "B P_ Porter": 2.2053215503692627,
+          "Weap Beryl M762": 144.03999710083008,
+          "Weap M24": 301.41325187683105
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 76,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 5,
+        "heals": 2,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1193,
+        "walkDistance": 2910.0945,
+        "rideDistance": 2083.2817,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2025-12-18T19:54:11Z",
+    "gameMode": "duo-fpp",
+    "gameType": "normal",
+    "teamSize": "duo",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1645,
+    "placement": 8,
+    "team": [
+      {
+        "name": "codufus",
+        "kills": 1,
+        "damage": 154.61371,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M P5 K": 111.96261978149414,
+          "Weap M24": 42.65109634399414,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 12,
+          "totalHits": 30,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 6,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1237,
+        "walkDistance": 2724.9324,
+        "rideDistance": 1826.875,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 325.37448,
+        "headshots": 1,
+        "weapons": {},
+        "weaponDamage": {
+          "Dacia_ A_01_v2": 56.30857467651367,
+          "Weap Beryl M762": 178.61918258666992,
+          "Weap M24": 90.44673538208008
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 12,
+          "totalHits": 16,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1237,
+        "walkDistance": 2623.609,
+        "rideDistance": 1976.6158,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2025-12-18T19:32:17Z",
     "gameMode": "duo-fpp",
     "gameType": "normal",
