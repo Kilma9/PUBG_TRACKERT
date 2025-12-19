@@ -538,9 +538,14 @@ async function collectPlayerData(playerName) {
           
           // Check if match is since September 1, 2025
           if (matchDate >= seasonStartDate) {
-            newMatches.push(summary);
-            newMatchesCount++;
-            console.log(`✅ New match added (${newMatchesCount} total new matches, ${matchDate.toISOString().split('T')[0]})`);
+            // Filter for Squad FPP only
+            if (summary.gameMode === 'squad-fpp') {
+              newMatches.push(summary);
+              newMatchesCount++;
+              console.log(`✅ New match added (${newMatchesCount} total new matches, ${matchDate.toISOString().split('T')[0]})`);
+            } else {
+              console.log(`⏭️ Skipping non-Squad FPP match (${summary.gameMode})...`);
+            }
           } else {
             console.log(`⏰ Match too old (${matchDate.toISOString().split('T')[0]}), stopping collection`);
             break; // Stop processing older matches

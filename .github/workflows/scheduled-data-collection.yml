@@ -68,8 +68,8 @@ jobs:
           
           # Add delay between players to respect rate limits
           if [ "$PLAYER" != "Veru_13" ]; then
-            echo "⏳ Waiting 30 seconds before next player to avoid rate limits..."
-            sleep 30
+            echo "⏳ Waiting 60 seconds before next player to avoid rate limits..."
+            sleep 60
           fi
         done
         
@@ -95,6 +95,8 @@ jobs:
         PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
         PLATFORM: 'steam'
       run: |
+        echo "⏳ Waiting 60 seconds before starting career stats collection to avoid rate limits..."
+        sleep 60
         echo "📊 Starting PUBG career stats collection..."
         echo "⏰ Current time: $(date)"
         
