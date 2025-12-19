@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "date":  "2025-12-16T15:49:24Z",
         "gameMode":  "squad-fpp",
@@ -182,7 +182,7 @@
                          "damage":  131.50618,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap F N Fal":  1
                                      },
                          "weaponDamage":  {
                                               "Weap F N Fal":  108.1963062286377,
@@ -191,7 +191,7 @@
                                               "Weap Beryl M762":  23.30986785888672
                                           },
                          "weaponKills":  {
-
+                                             "Weap F N Fal":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  8,
@@ -215,7 +215,7 @@
                          "damage":  550.7611,
                          "headshots":  2,
                          "weapons":  {
-
+                                         "Weap Kar98k":  4
                                      },
                          "weaponDamage":  {
                                               "Weap Saiga12":  199.99999952316284,
@@ -225,7 +225,7 @@
                                               "Weap Kar98k":  215.4445571899414
                                           },
                          "weaponKills":  {
-
+                                             "Weap Kar98k":  4
                                          },
                          "weaponStats":  {
                                              "totalShots":  9,
@@ -249,7 +249,7 @@
                          "damage":  562.25354,
                          "headshots":  2,
                          "weapons":  {
-
+                                         "Weap Mini14":  3
                                      },
                          "weaponDamage":  {
                                               "Weap Sawnoff":  122.6736831665039,
@@ -259,7 +259,7 @@
                                               "Weap A C E32":  46.82013702392578
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  10,
@@ -563,7 +563,7 @@
                          "damage":  100,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap S K S":  1
                                      },
                          "weaponDamage":  {
                                               "Weap S K S":  100,
@@ -571,7 +571,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap S K S":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  2,
@@ -730,7 +730,7 @@
                          "damage":  44.03282,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap M24":  1
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  0,
@@ -738,7 +738,7 @@
                                               "Weap M24":  34.47136688232422
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  2,
@@ -762,7 +762,7 @@
                          "damage":  545.0279,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mk12":  1
                                      },
                          "weaponDamage":  {
                                               "Proj Grenade":  75,
@@ -772,7 +772,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mk12":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  10,
@@ -840,7 +840,7 @@
                          "damage":  283.84906,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap H K416":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mk12":  80.1893482208252,
@@ -848,7 +848,7 @@
                                               "Weap H K416":  203.65970611572266
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  9,
@@ -872,14 +872,14 @@
                          "damage":  118.23785,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap V S S":  1
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  1.068613886833191,
                                               "Weap V S S":  118.23784255981445
                                           },
                          "weaponKills":  {
-
+                                             "Weap V S S":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  11,
@@ -936,7 +936,7 @@
                          "damage":  447.44385,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap F N Fal":  1
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  1.5300348997116089,
@@ -945,7 +945,7 @@
                                               "Weap A C E32":  51.368364334106445
                                           },
                          "weaponKills":  {
-
+                                             "Weap F N Fal":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  8,
@@ -1279,14 +1279,14 @@
                          "damage":  63.17216,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A U G":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  63.17216110229492,
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -1310,7 +1310,7 @@
                          "damage":  468.2728,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap S C A R- L":  2
                                      },
                          "weaponDamage":  {
                                               "Weap S K S":  82.2495231628418,
@@ -1320,7 +1320,7 @@
                                               "B P_ Motorbike_04_ Desert":  1.073290228843689
                                           },
                          "weaponKills":  {
-
+                                             "Weap S C A R- L":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  11,
@@ -1556,7 +1556,7 @@
                          "damage":  282.36542,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Kar98k":  1
                                      },
                          "weaponDamage":  {
                                               "Player Male_ A":  34.59946060180664,
@@ -1565,7 +1565,7 @@
                                               "Bluezonebomb_ Effect Actor_ Subzero":  40
                                           },
                          "weaponKills":  {
-
+                                             "Weap Kar98k":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  9,
@@ -1726,7 +1726,7 @@
                          "damage":  241.13907,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A U G":  1
                                      },
                          "weaponDamage":  {
                                               "B P_ Niva_ Esports":  32.556854248046875,
@@ -1734,7 +1734,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  8,
@@ -1877,13 +1877,13 @@
                          "damage":  59.219997,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  59.21999740600586
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  2,
@@ -2011,13 +2011,13 @@
                          "damage":  188.12251,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap M24":  1
                                      },
                          "weaponDamage":  {
                                               "Weap M24":  188.1225128173828
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  2,
@@ -2041,7 +2041,7 @@
                          "damage":  99.53838,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap S K S":  1
                                      },
                          "weaponDamage":  {
                                               "Uaz_ B_01":  20.99830436706543,
@@ -2049,7 +2049,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap S K S":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  8,
@@ -2085,7 +2085,7 @@
                          "damage":  201.38,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A C E32":  1
                                      },
                          "weaponDamage":  {
                                               "Player Male_ A":  18.249267578125,
@@ -2094,7 +2094,7 @@
                                               "B P_ Molotov Fire Debuff":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A C E32":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  11,
@@ -2560,7 +2560,7 @@
                          "damage":  151.38445,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Beryl M762":  1
                                      },
                          "weaponDamage":  {
                                               "Uaz_ C_01":  0.7694369554519653,
@@ -2570,7 +2570,7 @@
                                               "Weap Beryl M762":  99.08041381835938
                                           },
                          "weaponKills":  {
-
+                                             "Weap Beryl M762":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -2668,7 +2668,7 @@
                          "damage":  394.00684,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "B P_ Coupe R B":  1.6312012672424316,
@@ -2677,7 +2677,7 @@
                                               "Weap Mk14":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  11,
@@ -2745,7 +2745,7 @@
                          "damage":  226.80493,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A C E32":  2
                                      },
                          "weaponDamage":  {
                                               "Weap A C E32":  100,
@@ -2754,7 +2754,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A C E32":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  4,
@@ -3058,7 +3058,7 @@
                          "damage":  533.1506,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M P5 K":  1
                                      },
                          "weaponDamage":  {
                                               "Weap U Z I":  99.39870071411133,
@@ -3067,7 +3067,7 @@
                                               "Weap M24":  161.35377883911133
                                           },
                          "weaponKills":  {
-
+                                             "Weap M P5 K":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  11,
@@ -3091,7 +3091,7 @@
                          "damage":  498.90338,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Vector":  5
                                      },
                          "weaponDamage":  {
                                               "Weap Vector":  377.99999618530273,
@@ -3101,7 +3101,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Vector":  5
                                          },
                          "weaponStats":  {
                                              "totalShots":  25,
@@ -3125,7 +3125,7 @@
                          "damage":  493.2964,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A U G":  2
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  316.60000133514404,
@@ -3134,7 +3134,7 @@
                                               "Weap Mini14":  176.69640731811523
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  21,
@@ -3170,13 +3170,13 @@
                          "damage":  186.99998,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap U M P":  3
                                      },
                          "weaponDamage":  {
                                               "Weap U M P":  186.99999809265137
                                           },
                          "weaponKills":  {
-
+                                             "Weap U M P":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  8,
@@ -3346,7 +3346,7 @@
                          "damage":  103.78583,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A U G":  3
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  103.78582954406738,
@@ -3355,7 +3355,7 @@
                                               "B P_ Niva_07":  20.802677154541016
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -3379,7 +3379,7 @@
                          "damage":  245.775,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap H K416":  3
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  245.77499866485596,
@@ -3387,7 +3387,7 @@
                                               "B P_ Niva_07":  42.379638671875
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  19,
@@ -3411,7 +3411,7 @@
                          "damage":  268.0289,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap M24":  1
                                      },
                          "weaponDamage":  {
                                               "Weap M24":  135.625,
@@ -3421,7 +3421,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  8,
@@ -3457,14 +3457,14 @@
                          "damage":  373.79,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap H K416":  4
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  373.7899990081787,
                                               "Player Male_ A":  8.23358154296875
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  4
                                          },
                          "weaponStats":  {
                                              "totalShots":  14,
@@ -3565,7 +3565,7 @@
                          "damage":  365.8406,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap U Z I":  2
                                      },
                          "weaponDamage":  {
                                               "Weap U Z I":  301.16056537628174,
@@ -3573,7 +3573,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap U Z I":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  11,
@@ -3597,7 +3597,7 @@
                          "damage":  223.47067,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A K47":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  76.93099021911621,
@@ -3605,7 +3605,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A K47":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -3911,7 +3911,7 @@
                          "damage":  857.8882,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap V S S":  8
                                      },
                          "weaponDamage":  {
                                               "Uaz_ C_01":  16.026763916015625,
@@ -3926,7 +3926,7 @@
                                               "B P_ Molotov Fire Debuff":  52
                                           },
                          "weaponKills":  {
-
+                                             "Weap V S S":  8
                                          },
                          "weaponStats":  {
                                              "totalShots":  26,
@@ -3950,7 +3950,7 @@
                          "damage":  524.7346,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Mk12":  4
                                      },
                          "weaponDamage":  {
                                               "Weap Winchester":  3.754357099533081,
@@ -3959,7 +3959,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mk12":  4
                                          },
                          "weaponStats":  {
                                              "totalShots":  19,
@@ -4015,7 +4015,7 @@
                          "damage":  459.0464,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A U G":  2
                                      },
                          "weaponDamage":  {
                                               "B P_ Pony Coupe":  4.850252151489258,
@@ -4024,7 +4024,7 @@
                                               "Proj Grenade":  33.17958068847656
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  15,
@@ -4060,14 +4060,14 @@
                          "damage":  268.01422,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A K47":  1
                                      },
                          "weaponDamage":  {
                                               "Weap S K S":  103.05420684814453,
                                               "Weap A K47":  164.95999908447266
                                           },
                          "weaponKills":  {
-
+                                             "Weap A K47":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  12,
@@ -4091,7 +4091,7 @@
                          "damage":  475.38715,
                          "headshots":  2,
                          "weapons":  {
-
+                                         "Weap Mini14":  4
                                      },
                          "weaponDamage":  {
                                               "B P_ Motorbike_04":  8.687600135803223,
@@ -4100,7 +4100,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  4
                                          },
                          "weaponStats":  {
                                              "totalShots":  14,
@@ -4369,7 +4369,7 @@
                          "damage":  291.55206,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Beryl M762":  3
                                      },
                          "weaponDamage":  {
                                               "Weap Beryl M762":  138.14362716674805,
@@ -4377,7 +4377,7 @@
                                               "Weap Dragunov":  53.40848159790039
                                           },
                          "weaponKills":  {
-
+                                             "Weap Beryl M762":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  13,
@@ -4535,13 +4535,13 @@
                          "damage":  121.6,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A K47":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A K47":  121.59999465942383
                                           },
                          "weaponKills":  {
-
+                                             "Weap A K47":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  2,
@@ -4607,7 +4607,7 @@
                          "damage":  276.69952,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap M P5 K":  1
                                      },
                          "weaponDamage":  {
                                               "B P_ Pickup Truck_ A_esports":  49.72213554382324,
@@ -4617,7 +4617,7 @@
                                               "Weap M24":  42.66352844238281
                                           },
                          "weaponKills":  {
-
+                                             "Weap M P5 K":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  11,
@@ -4675,7 +4675,7 @@
                          "damage":  533.94135,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  2
                                      },
                          "weaponDamage":  {
                                               "B P_ Pickup Truck_ A_esports":  49.72213554382324,
@@ -4683,7 +4683,7 @@
                                               "Weap H K416":  123.65708541870117
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  17,
@@ -4719,7 +4719,7 @@
                          "damage":  752.1768,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  2
                                      },
                          "weaponDamage":  {
                                               "Weap F N Fal":  152.3179588317871,
@@ -4728,7 +4728,7 @@
                                               "Weap Mini14":  314.4588165283203
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  15,
@@ -4752,7 +4752,7 @@
                          "damage":  298.7924,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap M24":  2
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  10.322888374328613,
@@ -4761,7 +4761,7 @@
                                               "Weap M P5 K":  116.09104919433594
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  15,
@@ -4785,7 +4785,7 @@
                          "damage":  459.17676,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap S K S":  2
                                      },
                          "weaponDamage":  {
                                               "Weap S K S":  206.90704727172852,
@@ -4796,7 +4796,7 @@
                                               "Proj Grenade":  37.96799850463867
                                           },
                          "weaponKills":  {
-
+                                             "Weap S K S":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  18,
@@ -4832,7 +4832,7 @@
                          "damage":  119.81887,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Thompson":  1
                                      },
                          "weaponDamage":  {
                                               "Proj Grenade":  51.875274658203125,
@@ -4843,7 +4843,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Thompson":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  24,
@@ -4899,14 +4899,14 @@
                          "damage":  0,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "B P_ Coupe R B":  1
                                      },
                          "weaponDamage":  {
                                               "B P_ Coupe R B":  4.709847450256348,
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "B P_ Coupe R B":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  0,
@@ -4973,14 +4973,14 @@
                          "damage":  100,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap U M P":  1
                                      },
                          "weaponDamage":  {
                                               "Weap U M P":  100.00000381469727,
                                               "Proj Grenade":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap U M P":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -5049,7 +5049,7 @@
                          "damage":  150.4,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Dragunov":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  50.40000057220459,
@@ -5058,7 +5058,7 @@
                                               "B P_ Motorbike_04":  5.299809455871582
                                           },
                          "weaponKills":  {
-
+                                             "Weap Dragunov":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -5082,7 +5082,7 @@
                          "damage":  162.04,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A K47":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A K47":  78.95999145507812,
@@ -5093,7 +5093,7 @@
                                               "B P_ Coupe R B":  30.609651565551758
                                           },
                          "weaponKills":  {
-
+                                             "Weap A K47":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -5117,7 +5117,7 @@
                          "damage":  200,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap H K416":  2
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  199.99999809265137,
@@ -5127,7 +5127,7 @@
                                               "Dacia_ A_01_v2":  3.811716079711914
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  4,
@@ -5151,14 +5151,14 @@
                          "damage":  170.6643,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap S C A R- L":  2
                                      },
                          "weaponDamage":  {
                                               "Weap S C A R- L":  179.34474563598633,
                                               "Player Male_ A":  6.25137984752655
                                           },
                          "weaponKills":  {
-
+                                             "Weap S C A R- L":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  10,
@@ -5225,7 +5225,7 @@
                          "damage":  334.875,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap M16 A4":  2
                                      },
                          "weaponDamage":  {
                                               "Weap M16 A4":  201.00000190734863,
@@ -5233,7 +5233,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap M16 A4":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  6,
@@ -5257,14 +5257,14 @@
                          "damage":  351.5094,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  195.34546279907227,
                                               "Weap H K416":  156.1639232635498
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -5332,7 +5332,7 @@
                          "damage":  883.61566,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap H K416":  4
                                      },
                          "weaponDamage":  {
                                               "Weap A C E32":  200,
@@ -5343,7 +5343,7 @@
                                               "B P_ Pico Bus":  3.6396725177764893
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  4
                                          },
                          "weaponStats":  {
                                              "totalShots":  25,
@@ -5367,7 +5367,7 @@
                          "damage":  161.43892,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Sawnoff":  0,
@@ -5376,7 +5376,7 @@
                                               "Weap Mini14":  80.78891563415527
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  11,
@@ -5400,7 +5400,7 @@
                          "damage":  412.62753,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap V S S":  2
                                      },
                          "weaponDamage":  {
                                               "Weap Beryl M762":  89.87260437011719,
@@ -5411,7 +5411,7 @@
                                               "Weap Crossbow_1":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap V S S":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  17,
@@ -5435,7 +5435,7 @@
                          "damage":  110.022644,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A C E32":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A C E32":  64.89764595031738,
@@ -5444,7 +5444,7 @@
                                               "Weap Dragunov":  25.174999237060547
                                           },
                          "weaponKills":  {
-
+                                             "Weap A C E32":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  7,
@@ -5480,7 +5480,7 @@
                          "damage":  345.39783,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A K47":  2
                                      },
                          "weaponDamage":  {
                                               "Weap Winchester":  33.58000183105469,
@@ -5493,7 +5493,7 @@
                                               "Proj Grenade":  23.862577438354492
                                           },
                          "weaponKills":  {
-
+                                             "Weap A K47":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  18,
@@ -5517,7 +5517,7 @@
                          "damage":  239.47638,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Beryl M762":  1
                                      },
                          "weaponDamage":  {
                                               "Player Male_ A":  0.523059070110321,
@@ -5528,7 +5528,7 @@
                                               "Proj Grenade":  35.19637393951416
                                           },
                          "weaponKills":  {
-
+                                             "Weap Beryl M762":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  9,
@@ -5552,7 +5552,7 @@
                          "damage":  575.27325,
                          "headshots":  3,
                          "weapons":  {
-
+                                         "Weap H K416":  3
                                      },
                          "weaponDamage":  {
                                               "Weap M16 A4":  100,
@@ -5562,7 +5562,7 @@
                                               "Player Female_ A":  0.41949462890625
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  11,
@@ -5586,7 +5586,7 @@
                          "damage":  293.50558,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap S C A R- L":  2
                                      },
                          "weaponDamage":  {
                                               "Weap M16 A4":  81.84037399291992,
@@ -5596,7 +5596,7 @@
                                               "Bluezonebomb_ Effect Actor":  20
                                           },
                          "weaponKills":  {
-
+                                             "Weap S C A R- L":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  9,
@@ -5632,7 +5632,7 @@
                          "damage":  550.2472,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Mini14":  5
                                      },
                          "weaponDamage":  {
                                               "Weap Mk12":  50.81999969482422,
@@ -5642,7 +5642,7 @@
                                               "Weap H K416":  81.89999961853027
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  5
                                          },
                          "weaponStats":  {
                                              "totalShots":  10,
@@ -5666,7 +5666,7 @@
                          "damage":  45.651615,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Dacia_ A_03_v2_ Esports":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A K47":  4,
@@ -5675,7 +5675,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Dacia_ A_03_v2_ Esports":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  7,
@@ -5699,7 +5699,7 @@
                          "damage":  198,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Mini14":  2
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  100,
@@ -5708,7 +5708,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  6,
@@ -5732,7 +5732,7 @@
                          "damage":  265.42996,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  131.95918464660645,
@@ -5740,7 +5740,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  12,
@@ -5808,7 +5808,7 @@
                          "damage":  89.22431,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mk12":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A C E32":  43.50657844543457,
@@ -5816,7 +5816,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mk12":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -5840,7 +5840,7 @@
                          "damage":  34.51,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Proj Grenade":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A C E32":  34.5099983215332,
@@ -5848,7 +5848,7 @@
                                               "Proj Grenade":  54.83003616333008
                                           },
                          "weaponKills":  {
-
+                                             "Proj Grenade":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -5915,7 +5915,7 @@
                          "damage":  260.17532,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap H K416":  1
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  176.57411766052246,
@@ -5923,7 +5923,7 @@
                                               "Weap Mk12":  83.60118675231934
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  6,
@@ -5978,7 +5978,7 @@
                          "damage":  326.01773,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M24":  1
                                      },
                          "weaponDamage":  {
                                               "Weap M24":  304.8677635192871,
@@ -5987,7 +5987,7 @@
                                               "Weap Groza":  21.149999618530273
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  1,
@@ -6055,14 +6055,14 @@
                          "damage":  100,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M24":  1
                                      },
                          "weaponDamage":  {
                                               "Uaz_ B_01":  4.128228187561035,
                                               "Weap M24":  100
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  1,
@@ -6148,7 +6148,7 @@
                          "damage":  128.29977,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mk12":  2
                                      },
                          "weaponDamage":  {
                                               "Weap Mk12":  70.69010925292969,
@@ -6156,7 +6156,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mk12":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  11,
@@ -6192,14 +6192,14 @@
                          "damage":  392.37195,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap S C A R- L":  2
                                      },
                          "weaponDamage":  {
                                               "Weap S C A R- L":  330.8350658416748,
                                               "Weap Saiga12":  61.53691053390503
                                           },
                          "weaponKills":  {
-
+                                             "Weap S C A R- L":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  16,
@@ -6326,14 +6326,14 @@
                          "damage":  267.91998,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A U G":  2
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  144.40000534057617,
                                               "Panzer Faust100 M_ Projectile":  123.52000045776367
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  6,
@@ -6357,7 +6357,7 @@
                          "damage":  115.46501,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A K47":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mk12":  12.200472831726074,
@@ -6365,7 +6365,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A K47":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  2,
@@ -6463,13 +6463,13 @@
                          "damage":  258.88,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A K47":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A K47":  258.8799991607666
                                           },
                          "weaponKills":  {
-
+                                             "Weap A K47":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  4,
@@ -6523,7 +6523,7 @@
                          "damage":  212.14,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap S C A R- L":  1
                                      },
                          "weaponDamage":  {
                                               "Weap S C A R- L":  212.1399974822998,
@@ -6531,7 +6531,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap S C A R- L":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -6690,7 +6690,7 @@
                          "damage":  326.02032,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap M24":  1
                                      },
                          "weaponDamage":  {
                                               "Weap M24":  245.02031326293945,
@@ -6698,7 +6698,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -6902,14 +6902,14 @@
                          "damage":  301.74005,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap M P5 K":  2
                                      },
                          "weaponDamage":  {
                                               "Weap M16 A4":  44.89455604553223,
                                               "Weap M P5 K":  256.8455066680908
                                           },
                          "weaponKills":  {
-
+                                             "Weap M P5 K":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  13,
@@ -7281,7 +7281,7 @@
                          "damage":  100,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap H K416":  1
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  0,
@@ -7289,7 +7289,7 @@
                                               "Weap H K416":  99.99999713897705
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -7891,7 +7891,7 @@
                          "damage":  121.16099,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Kar98k":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Kar98k":  100,
@@ -7899,7 +7899,7 @@
                                               "Weap M P5 K":  21.160987854003906
                                           },
                          "weaponKills":  {
-
+                                             "Weap Kar98k":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  6,
@@ -7965,7 +7965,7 @@
                          "damage":  121.6,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap H K416":  1
                                      },
                          "weaponDamage":  {
                                               "B P_ Pickup Truck_ A_05":  0.34492385387420654,
@@ -7973,7 +7973,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  1,
@@ -8195,14 +8195,14 @@
                          "damage":  231.43538,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Mk12":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mk12":  231.43538665771484,
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mk12":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  16,
@@ -8238,7 +8238,7 @@
                          "damage":  577.5272,
                          "headshots":  2,
                          "weapons":  {
-
+                                         "Weap Kar98k":  3
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  100.00000190734863,
@@ -8248,7 +8248,7 @@
                                               "Weap U M P":  97.27774620056152
                                           },
                          "weaponKills":  {
-
+                                             "Weap Kar98k":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  6,
@@ -8272,7 +8272,7 @@
                          "damage":  100,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A U G":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  100,
@@ -8281,7 +8281,7 @@
                                               "Uaz_ B_01_esports":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -8305,7 +8305,7 @@
                          "damage":  343.45563,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mk12":  1
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  4.514172554016113,
@@ -8313,7 +8313,7 @@
                                               "Weap Mk12":  229.655611038208
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mk12":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  16,
@@ -8337,7 +8337,7 @@
                          "damage":  187.20247,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A U G":  2
                                      },
                          "weaponDamage":  {
                                               "Buggy_ A_03":  8.198407173156738,
@@ -8346,7 +8346,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  16,
@@ -8413,14 +8413,14 @@
                          "damage":  100,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Proj Grenade":  1
                                      },
                          "weaponDamage":  {
                                               "Proj Grenade":  100,
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Proj Grenade":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  0,
@@ -8444,7 +8444,7 @@
                          "damage":  125.50694,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap M24":  1
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  0,
@@ -8452,7 +8452,7 @@
                                               "Weap M P5 K":  2.2000045776367188
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -8476,7 +8476,7 @@
                          "damage":  475.42343,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  322.95353984832764,
@@ -8484,7 +8484,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  19,
@@ -8583,7 +8583,7 @@
                          "damage":  184.63837,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A U G":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  136,
@@ -8591,7 +8591,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  10,
@@ -8830,14 +8830,14 @@
                          "damage":  265.58,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap H K416":  1
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  265.5799980163574,
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  6,
@@ -8861,7 +8861,7 @@
                          "damage":  171.70206,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Beryl M762":  2
                                      },
                          "weaponDamage":  {
                                               "Weap Beryl M762":  71.11999893188477,
@@ -8870,7 +8870,7 @@
                                               "Weap U M P":  32.42725372314453
                                           },
                          "weaponKills":  {
-
+                                             "Weap Beryl M762":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  10,
@@ -8906,14 +8906,14 @@
                          "damage":  130.4,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M1911":  2
                                      },
                          "weaponDamage":  {
                                               "Weap M1911":  130.39999961853027,
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap M1911":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  1,
@@ -8937,7 +8937,7 @@
                          "damage":  425.22638,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Thompson":  98.30487060546875,
@@ -8945,7 +8945,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  19,
@@ -8999,7 +8999,7 @@
                          "damage":  651.28406,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  3
                                      },
                          "weaponDamage":  {
                                               "Weap Beryl M762":  41.79999923706055,
@@ -9009,7 +9009,7 @@
                                               "Proj Grenade":  77
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  12,
@@ -9240,7 +9240,7 @@
                          "damage":  112.047485,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Saiga12":  1
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  23.6617374420166,
@@ -9248,7 +9248,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Saiga12":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  2,
@@ -9376,7 +9376,7 @@
                          "damage":  337.77704,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  0,
@@ -9384,7 +9384,7 @@
                                               "Weap Mini14":  179.89657402038574
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  6,
@@ -9408,14 +9408,14 @@
                          "damage":  0,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M24":  1
                                      },
                          "weaponDamage":  {
                                               "Weap M24":  0,
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  1,
@@ -9451,7 +9451,7 @@
                          "damage":  259.61783,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M P5 K":  2
                                      },
                          "weaponDamage":  {
                                               "Weap M P5 K":  127.68150520324707,
@@ -9460,7 +9460,7 @@
                                               "Weap M24":  100
                                           },
                          "weaponKills":  {
-
+                                             "Weap M P5 K":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  6,
@@ -9484,7 +9484,7 @@
                          "damage":  252.081,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Mk12":  1
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  95.51284217834473,
@@ -9492,7 +9492,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mk12":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  15,
@@ -9516,7 +9516,7 @@
                          "damage":  678.16064,
                          "headshots":  2,
                          "weapons":  {
-
+                                         "Weap M24":  4
                                      },
                          "weaponDamage":  {
                                               "Weap M P5 K":  291.7262153625488,
@@ -9525,7 +9525,7 @@
                                               "Proj Grenade":  26.41848373413086
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  4
                                          },
                          "weaponStats":  {
                                              "totalShots":  21,
@@ -9549,7 +9549,7 @@
                          "damage":  564.80524,
                          "headshots":  3,
                          "weapons":  {
-
+                                         "Weap Mini14":  5
                                      },
                          "weaponDamage":  {
                                               "Proj Grenade":  0,
@@ -9559,7 +9559,7 @@
                                               "Weap Mini14":  550.9631280899048
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  5
                                          },
                          "weaponStats":  {
                                              "totalShots":  13,
@@ -9595,13 +9595,13 @@
                          "damage":  122.90147,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Q B Z95":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Q B Z95":  122.90146827697754
                                           },
                          "weaponKills":  {
-
+                                             "Weap Q B Z95":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  6,
@@ -9730,7 +9730,7 @@
                          "damage":  535.2393,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A U G":  3
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  100.00000381469727,
@@ -9740,7 +9740,7 @@
                                               "Weap Dragunov":  78.25671577453613
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  14,
@@ -9764,7 +9764,7 @@
                          "damage":  400,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Kar98k":  2
                                      },
                          "weaponDamage":  {
                                               "Weap M P5 K":  97.65705013275146,
@@ -9774,7 +9774,7 @@
                                               "Bluezonebomb_ Effect Actor":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Kar98k":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  7,
@@ -9798,7 +9798,7 @@
                          "damage":  92.033066,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Berreta686":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A K47":  5.033063888549805,
@@ -9806,7 +9806,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Berreta686":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  1,
@@ -9873,14 +9873,14 @@
                          "damage":  356,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A U G":  2
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  356.00000762939453,
                                               "Proj Grenade":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  9,
@@ -10053,14 +10053,14 @@
                          "damage":  103.57867,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Dragunov":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Dragunov":  131.12541961669922,
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Dragunov":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -10084,7 +10084,7 @@
                          "damage":  291.15997,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  3
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  194.88010787963867,
@@ -10093,7 +10093,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -10190,7 +10190,7 @@
                          "damage":  317.32617,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A U G":  2
                                      },
                          "weaponDamage":  {
                                               "Dacia_ A_03_v2":  24.679363250732422,
@@ -10199,7 +10199,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  23,
@@ -10223,7 +10223,7 @@
                          "damage":  141.9439,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M P5 K":  3
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  2.0051345825195312,
@@ -10232,7 +10232,7 @@
                                               "Weap M24":  68.67362213134766
                                           },
                          "weaponKills":  {
-
+                                             "Weap M P5 K":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  9,
@@ -10422,7 +10422,7 @@
                          "damage":  154.84236,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Jerrycan Fire":  1
                                      },
                          "weaponDamage":  {
                                               "B P_ Bicycle":  1.4269171953201294,
@@ -10434,7 +10434,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Jerrycan Fire":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -10711,14 +10711,14 @@
                          "damage":  118.74711,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M24":  1
                                      },
                          "weaponDamage":  {
                                               "Weap M24":  118.74710845947266,
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  1,
@@ -10742,14 +10742,14 @@
                          "damage":  180.55035,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  180.55035495758057,
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -11331,13 +11331,13 @@
                          "damage":  295.00003,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Beryl M762":  3
                                      },
                          "weaponDamage":  {
                                               "Weap Beryl M762":  294.9999933242798
                                           },
                          "weaponKills":  {
-
+                                             "Weap Beryl M762":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -11361,7 +11361,7 @@
                          "damage":  156.97655,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mk12":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  76.80000019073486,
@@ -11369,7 +11369,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mk12":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -11424,7 +11424,7 @@
                          "damage":  106.6,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  60.400001525878906,
@@ -11432,7 +11432,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  5,
@@ -11468,14 +11468,14 @@
                          "damage":  143.2,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap H K416":  1
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  143.2000026702881,
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -11499,14 +11499,14 @@
                          "damage":  193.45682,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Kar98k":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Kar98k":  193.4568099975586,
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Kar98k":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  4,
@@ -11807,7 +11807,7 @@
                          "damage":  100,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M24":  1
                                      },
                          "weaponDamage":  {
                                               "B P_ Pickup Truck_ A_esports":  38.24866342544556,
@@ -11815,7 +11815,7 @@
                                               "Weap M24":  100
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -11882,7 +11882,7 @@
                          "damage":  335.68933,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap H K416":  3
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  226.99999141693115,
@@ -11890,7 +11890,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  9,
@@ -11944,7 +11944,7 @@
                          "damage":  441.99298,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap P90":  3
                                      },
                          "weaponDamage":  {
                                               "Weap P90":  314.4971055984497,
@@ -11953,7 +11953,7 @@
                                               "Player Female_ A":  2.8160171508789062
                                           },
                          "weaponKills":  {
-
+                                             "Weap P90":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  15,
@@ -12185,7 +12185,7 @@
                          "damage":  248.26617,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  126.88617706298828,
@@ -12193,7 +12193,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  7,
@@ -12217,7 +12217,7 @@
                          "damage":  384.72327,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A C E32":  3
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  0.301513671875,
@@ -12225,7 +12225,7 @@
                                               "Weap A C E32":  249.23999977111816
                                           },
                          "weaponKills":  {
-
+                                             "Weap A C E32":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  8,
@@ -12598,7 +12598,7 @@
                          "damage":  145.82706,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Vector":  1
                                      },
                          "weaponDamage":  {
                                               "B P_ Bicycle":  9.652506828308105,
@@ -12608,7 +12608,7 @@
                                               "Weap Vector":  79.82705974578857
                                           },
                          "weaponKills":  {
-
+                                             "Weap Vector":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  1,
@@ -12841,7 +12841,7 @@
                          "damage":  488.0044,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A C E32":  4
                                      },
                          "weaponDamage":  {
                                               "Weap M P5 K":  54.99585151672363,
@@ -12853,7 +12853,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap A C E32":  4
                                          },
                          "weaponStats":  {
                                              "totalShots":  46,
@@ -12877,7 +12877,7 @@
                          "damage":  704.07935,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap H K416":  8
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  22.50478506088257,
@@ -12888,7 +12888,7 @@
                                               "Proj Grenade":  76.20962524414062
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  8
                                          },
                          "weaponStats":  {
                                              "totalShots":  17,
@@ -12912,7 +12912,7 @@
                          "damage":  638.24805,
                          "headshots":  2,
                          "weapons":  {
-
+                                         "Weap M24":  3
                                      },
                          "weaponDamage":  {
                                               "Weap M P5 K":  16.126070022583008,
@@ -12921,7 +12921,7 @@
                                               "Weap M24":  326.4022331237793
                                           },
                          "weaponKills":  {
-
+                                             "Weap M24":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  29,
@@ -13025,7 +13025,7 @@
                          "damage":  794.80347,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A U G":  3
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  395.3503017425537,
@@ -13033,7 +13033,7 @@
                                               "Weap A U G":  399.4531259536743
                                           },
                          "weaponKills":  {
-
+                                             "Weap A U G":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  20,
@@ -13057,7 +13057,7 @@
                          "damage":  471.52255,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap S K S":  7
                                      },
                          "weaponDamage":  {
                                               "Weap S K S":  116.50338554382324,
@@ -13069,7 +13069,7 @@
                                               "Weap P90":  50.950401306152344
                                           },
                          "weaponKills":  {
-
+                                             "Weap S K S":  7
                                          },
                          "weaponStats":  {
                                              "totalShots":  31,
@@ -13202,7 +13202,7 @@
                          "damage":  492.31226,
                          "headshots":  3,
                          "weapons":  {
-
+                                         "Weap H K416":  3
                                      },
                          "weaponDamage":  {
                                               "Weap H K416":  452,
@@ -13210,7 +13210,7 @@
                                               "Proj Grenade":  40.312252044677734
                                           },
                          "weaponKills":  {
-
+                                             "Weap H K416":  3
                                          },
                          "weaponStats":  {
                                              "totalShots":  9,
@@ -13234,7 +13234,7 @@
                          "damage":  182,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap U Z I":  2
                                      },
                          "weaponDamage":  {
                                               "Weap U Z I":  134.8414707183838,
@@ -13242,7 +13242,7 @@
                                               "Player Female_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap U Z I":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -13278,7 +13278,7 @@
                          "damage":  319.55435,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M P5 K":  2
                                      },
                          "weaponDamage":  {
                                               "Weap Thompson":  57,
@@ -13289,7 +13289,7 @@
                                               "Weap Mini14":  9.61176872253418
                                           },
                          "weaponKills":  {
-
+                                             "Weap M P5 K":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  14,
@@ -13313,7 +13313,7 @@
                          "damage":  119.75276,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Beryl M762":  1
                                      },
                          "weaponDamage":  {
                                               "B P_ Niva_ Esports":  36.44600296020508,
@@ -13321,7 +13321,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Beryl M762":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -13345,7 +13345,7 @@
                          "damage":  222.90224,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Beryl M762":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A C E32":  43,
@@ -13356,7 +13356,7 @@
                                               "Weap Beryl M762":  939.0520324707031
                                           },
                          "weaponKills":  {
-
+                                             "Weap Beryl M762":  1
                                          },
                          "weaponStats":  {
                                              "totalShots":  9,
@@ -13380,7 +13380,7 @@
                          "damage":  395.29645,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  5
                                      },
                          "weaponDamage":  {
                                               "Weap M P5 K":  100.00000286102295,
@@ -13389,7 +13389,7 @@
                                               "Player Male_ A":  0
                                           },
                          "weaponKills":  {
-
+                                             "Weap Mini14":  5
                                          },
                          "weaponStats":  {
                                              "totalShots":  17,
@@ -13488,13 +13488,13 @@
                          "damage":  254,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap V S S":  2
                                      },
                          "weaponDamage":  {
                                               "Weap V S S":  253.99999618530273
                                           },
                          "weaponKills":  {
-
+                                             "Weap V S S":  2
                                          },
                          "weaponStats":  {
                                              "totalShots":  3,
@@ -13698,7 +13698,7 @@
                          "damage":  92.12842,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Beryl M762":  3
                                      },
                          "weaponDamage":  {
                                               "Uaz_ B_01":  5.855221271514893,
@@ -13720,7 +13720,10 @@
                          "timeSurvived":  1470,
                          "walkDistance":  3061.5913,
                          "rideDistance":  4998.4395,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap Beryl M762":  3
+                                         }
                      },
                      {
                          "name":  "EGOPEAK",
@@ -13757,7 +13760,7 @@
                          "damage":  191.68932,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Beryl M762":  2
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  42.777896881103516,
@@ -13779,7 +13782,10 @@
                          "timeSurvived":  1372,
                          "walkDistance":  3173.864,
                          "rideDistance":  4828.2793,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap Beryl M762":  2
+                                         }
                      },
                      {
                          "name":  "Veru_13",
@@ -13828,7 +13834,7 @@
                          "damage":  75,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A C E32":  1
                                      },
                          "weaponDamage":  {
                                               "Uaz_ C_01":  2.8616578578948975,
@@ -13850,7 +13856,10 @@
                          "timeSurvived":  1028,
                          "walkDistance":  2142.7642,
                          "rideDistance":  6528.378,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap A C E32":  1
+                                         }
                      },
                      {
                          "name":  "Twitch_jPiMikky",
@@ -13887,7 +13896,7 @@
                          "damage":  115.62832,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap Mk12":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mk12":  89.22832870483398,
@@ -13908,7 +13917,10 @@
                          "timeSurvived":  982,
                          "walkDistance":  1704.8334,
                          "rideDistance":  2176.238,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap Mk12":  1
+                                         }
                      },
                      {
                          "name":  "Veru_13",
@@ -13985,7 +13997,7 @@
                          "damage":  428.98962,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap A U G":  3
                                      },
                          "weaponDamage":  {
                                               "Weap A C E32":  99.99999618530273,
@@ -14006,7 +14018,10 @@
                          "timeSurvived":  1606,
                          "walkDistance":  3426.4763,
                          "rideDistance":  6304.476,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap A U G":  3
+                                         }
                      },
                      {
                          "name":  "Veru_13",
@@ -14014,7 +14029,7 @@
                          "damage":  639.56775,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "B P_ Coupe R B":  5.8172125816345215,
@@ -14034,7 +14049,10 @@
                          "timeSurvived":  1606,
                          "walkDistance":  2421.5208,
                          "rideDistance":  6710.178,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap Mini14":  1
+                                         }
                      },
                      {
                          "name":  "Twitch_jPiMikky",
@@ -14114,7 +14132,7 @@
                          "damage":  143.20235,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mk12":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A U G":  0,
@@ -14135,7 +14153,10 @@
                          "timeSurvived":  1136,
                          "walkDistance":  2134.0999,
                          "rideDistance":  6486.6724,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap Mk12":  1
+                                         }
                      },
                      {
                          "name":  "Tarzan_Serif",
@@ -14143,7 +14164,7 @@
                          "damage":  87,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap H K416":  1
                                      },
                          "weaponDamage":  {
                                               "Player Male_ A":  1.8675003051757812,
@@ -14164,7 +14185,10 @@
                          "timeSurvived":  1071,
                          "walkDistance":  1716.2859,
                          "rideDistance":  6514.4087,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap H K416":  1
+                                         }
                      },
                      {
                          "name":  "Twitch_jPiMikky",
@@ -14172,7 +14196,7 @@
                          "damage":  475.41745,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mk12":  4
                                      },
                          "weaponDamage":  {
                                               "Weap Mk12":  284.08447456359863,
@@ -14194,7 +14218,10 @@
                          "timeSurvived":  1549,
                          "walkDistance":  3537.2563,
                          "rideDistance":  7717.881,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap Mk12":  4
+                                         }
                      }
                  ]
     },
@@ -14242,7 +14269,7 @@
                          "damage":  236.94101,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap L6":  3
                                      },
                          "weaponDamage":  {
                                               "Player Male_ A":  6.330297946929932,
@@ -14264,7 +14291,10 @@
                          "timeSurvived":  1297,
                          "walkDistance":  2393.5012,
                          "rideDistance":  1825.6643,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap L6":  3
+                                         }
                      },
                      {
                          "name":  "starz999",
@@ -14272,7 +14302,7 @@
                          "damage":  928.04895,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A C E32":  7
                                      },
                          "weaponDamage":  {
                                               "Weap A C E32":  597.426872253418,
@@ -14295,7 +14325,10 @@
                          "timeSurvived":  1432,
                          "walkDistance":  3590.5374,
                          "rideDistance":  2439.7415,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap A C E32":  7
+                                         }
                      },
                      {
                          "name":  "Veru_13",
@@ -14401,7 +14434,7 @@
                          "damage":  300,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Thompson":  2
                                      },
                          "weaponDamage":  {
                                               "Weap Thompson":  300.00000381469727,
@@ -14421,7 +14454,10 @@
                          "timeSurvived":  210,
                          "walkDistance":  131.13419,
                          "rideDistance":  0,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap Thompson":  2
+                                         }
                      },
                      {
                          "name":  "Bambinooooooo",
@@ -14469,7 +14505,7 @@
                          "damage":  264.59717,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mk12":  1
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  46.9106330871582,
@@ -14490,7 +14526,10 @@
                          "timeSurvived":  1042,
                          "walkDistance":  3083.5327,
                          "rideDistance":  0,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap Mk12":  1
+                                         }
                      },
                      {
                          "name":  "Adonisak1",
@@ -14526,7 +14565,7 @@
                          "damage":  208.6,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap U M P":  1
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  6.85516357421875,
@@ -14548,7 +14587,10 @@
                          "timeSurvived":  1380,
                          "walkDistance":  3408.6853,
                          "rideDistance":  3097.6995,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap U M P":  1
+                                         }
                      },
                      {
                          "name":  "O4A-GLADIATOR",
@@ -14556,7 +14598,7 @@
                          "damage":  293.85376,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Beryl M762":  2
                                      },
                          "weaponDamage":  {
                                               "Player Male_ A":  0,
@@ -14577,7 +14619,10 @@
                          "timeSurvived":  1053,
                          "walkDistance":  3077.2998,
                          "rideDistance":  0,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap Beryl M762":  2
+                                         }
                      }
                  ]
     },
@@ -14776,7 +14821,7 @@
                          "damage":  170.95001,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap A C E32":  1
                                      },
                          "weaponDamage":  {
                                               "Weap A C E32":  170.94999504089355
@@ -14795,7 +14840,10 @@
                          "timeSurvived":  275,
                          "walkDistance":  320.5628,
                          "rideDistance":  427.6394,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap A C E32":  1
+                                         }
                      },
                      {
                          "name":  "Veru_13",
@@ -15005,7 +15053,7 @@
                          "damage":  169.19946,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap M P5 K":  2
                                      },
                          "weaponDamage":  {
                                               "Weap M24":  62.64846420288086,
@@ -15026,7 +15074,10 @@
                          "timeSurvived":  932,
                          "walkDistance":  1583.8572,
                          "rideDistance":  3564.436,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap M P5 K":  2
+                                         }
                      },
                      {
                          "name":  "Adonisak1",
@@ -15063,7 +15114,7 @@
                          "damage":  329.82788,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mini14":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mini14":  161.92228889465332,
@@ -15086,7 +15137,10 @@
                          "timeSurvived":  932,
                          "walkDistance":  1838.9891,
                          "rideDistance":  5128.366,
-                         "swimDistance":  40.604008
+                         "swimDistance":  40.604008,
+                         "weaponKills":  {
+                                             "Weap Mini14":  1
+                                         }
                      }
                  ]
     },
@@ -15351,7 +15405,7 @@
                          "damage":  383.65195,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap Mk12":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mk12":  286.54200553894043,
@@ -15372,7 +15426,10 @@
                          "timeSurvived":  1583,
                          "walkDistance":  4655.7246,
                          "rideDistance":  4944.298,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap Mk12":  1
+                                         }
                      },
                      {
                          "name":  "Veru_13",
@@ -15437,7 +15494,7 @@
                          "damage":  143.60587,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap H K416":  1
                                      },
                          "weaponDamage":  {
                                               "Weap Mk12":  56.60586929321289,
@@ -15458,7 +15515,10 @@
                          "timeSurvived":  1685,
                          "walkDistance":  2291.9453,
                          "rideDistance":  3978.3696,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap H K416":  1
+                                         }
                      }
                  ]
     },
@@ -15478,7 +15538,7 @@
                          "damage":  95.000015,
                          "headshots":  1,
                          "weapons":  {
-
+                                         "Weap M P5 K":  1
                                      },
                          "weaponDamage":  {
                                               "Player Female_ A":  2.724729537963867,
@@ -15498,7 +15558,10 @@
                          "timeSurvived":  1325,
                          "walkDistance":  3213.4016,
                          "rideDistance":  2332.2922,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap M P5 K":  1
+                                         }
                      },
                      {
                          "name":  "Adonisak1",
@@ -15506,7 +15569,7 @@
                          "damage":  75,
                          "headshots":  0,
                          "weapons":  {
-
+                                         "Weap H K416":  1
                                      },
                          "weaponDamage":  {
                                               "Player Male_ A":  6.653307199478149,
@@ -15527,7 +15590,10 @@
                          "timeSurvived":  851,
                          "walkDistance":  1457.8231,
                          "rideDistance":  3471.0764,
-                         "swimDistance":  0
+                         "swimDistance":  0,
+                         "weaponKills":  {
+                                             "Weap H K416":  1
+                                         }
                      },
                      {
                          "name":  "WeThePeopleW",

@@ -156,11 +156,27 @@ async function getMatchDetails(matchId, targetPlayerName) {
       
       console.log(`🎯 Found ${killEvents.length} kill events for ${stats.name}`);
       
-      // If no telemetry data, try to extract basic weapon info from API stats
-      if (telemetryData.length === 0 && stats.kills > 0) {
-        console.log(`⚠️ No telemetry data, using fallback weapon detection`);
-        // Fallback: assume primary weapons for kills when no telemetry
-        weaponKills['Unknown Weapon'] = stats.kills;
+      // If no weapon kills found in telemetry but we have kills in stats
+      if (Object.keys(weaponKills).length === 0 && stats.kills > 0) {
+        console.log(`⚠️ No weapon kills found in telemetry (but has ${stats.kills} kills), using fallback`);
+        
+        // If we have weapon damage data, try to infer weapon
+        const damageWeapons = Object.keys(weaponDamage);
+        if (damageWeapons.length === 1) {
+             // Only used one weapon, safe to assume kills came from it
+             const weapon = damageWeapons[0];
+             weaponKills[weapon] = stats.kills;
+             console.log(`   -> Inferred weapon from damage: ${weapon}`);
+        } else if (damageWeapons.length > 0) {
+             // Multiple weapons used, try to distribute or assign to top damage dealer
+             // For now, assign to the weapon with the most damage
+             const topWeapon = damageWeapons.sort((a, b) => weaponDamage[b] - weaponDamage[a])[0];
+             weaponKills[topWeapon] = stats.kills;
+             console.log(`   -> Inferred weapon from top damage: ${topWeapon}`);
+        } else {
+             // No damage data either
+             weaponKills['Unknown Weapon'] = stats.kills;
+        }
       }
 
       // Collect damage events for weapon damage tracking
