@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>PUBG Tracker Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="public/balatro.js"></script>
+  <script src="balatro.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -2364,54 +2364,7 @@
       
       // Calculate special statistics based on player
       let specialStatsHtml = '';
-      if (playerName === 'Kilma9') {
-        // Track Crossbow and Pistol damage (and kills if available) for Kilma9
-        const crossbowDamage = weaponDamage['Crossbow'] || 0;
-        const crossbowKills = weaponKills['Crossbow'] || 0;
-        
-        // Sum all pistol damage (check for various pistol names)
-        const pistolDamage = Object.entries(weaponDamage)
-          .filter(([weapon]) => {
-            const lowerWeapon = weapon.toLowerCase();
-            return lowerWeapon.includes('p92') || lowerWeapon.includes('p1911') || 
-                   lowerWeapon.includes('p18c') || lowerWeapon.includes('r1895') ||
-                   lowerWeapon.includes('r45') || lowerWeapon.includes('scorpion') ||
-                   lowerWeapon.includes('pistol') || lowerWeapon.includes('deagle') ||
-                   lowerWeapon.includes('sawnoff') || lowerWeapon.includes('nagant');
-          })
-          .reduce((sum, [, damage]) => sum + damage, 0);
-        
-        const pistolKills = Object.entries(weaponKills)
-          .filter(([weapon]) => {
-            const lowerWeapon = weapon.toLowerCase();
-            return lowerWeapon.includes('p92') || lowerWeapon.includes('p1911') || 
-                   lowerWeapon.includes('p18c') || lowerWeapon.includes('r1895') ||
-                   lowerWeapon.includes('r45') || lowerWeapon.includes('scorpion') ||
-                   lowerWeapon.includes('pistol') || lowerWeapon.includes('deagle') ||
-                   lowerWeapon.includes('sawnoff') || lowerWeapon.includes('nagant');
-          })
-          .reduce((sum, [, kills]) => sum + kills, 0);
-        
-        specialStatsHtml = `
-          <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #dee2e6;">
-            <p style="margin: 5px 0;"><strong>🎯 Special Weapon Stats:</strong></p>
-            <p style="margin: 5px 0; padding-left: 15px;">🏹 Crossbow: ${crossbowKills} kills${crossbowDamage > 0 ? ` (${Math.round(crossbowDamage).toLocaleString()} dmg)` : ''}</p>
-            <p style="margin: 5px 0; padding-left: 15px;">🔫 Pistols/Revolvers: ${pistolKills} kills${pistolDamage > 0 ? ` (${Math.round(pistolDamage).toLocaleString()} dmg)` : ''}</p>
-          </div>
-        `;
-      } else if (playerName === 'Baron_Frajeris') {
-        // Track Mortar damage and kills for Baron_Frajeris
-        const mortarDamage = weaponDamage['Mortar'] || 0;
-        const mortarKills = weaponKills['Mortar'] || 0;
-        
-        specialStatsHtml = `
-          <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #dee2e6;">
-            <p style="margin: 5px 0;"><strong>💣 Mortar Statistics:</strong></p>
-            <p style="margin: 5px 0; padding-left: 15px;">☠️ Kills: ${mortarKills}</p>
-            <p style="margin: 5px 0; padding-left: 15px;">💥 Damage: ${Math.round(mortarDamage).toLocaleString()}</p>
-          </div>
-        `;
-      }
+      // Special stats removed for Kilma9 and Baron_Frajeris as requested
       
       // Convert daily damage data to array and calculate averages per day
       const damagePerDay = Object.entries(damageByDay)
@@ -2458,22 +2411,39 @@
         </div>
         
         <div style="margin-top: 20px;">
-          <p style="margin: 0 0 5px 0; font-size: 12px; color: #666; font-style: italic;">Daily average = total damage on that day ÷ number of games played</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <p style="margin: 0; font-size: 12px; color: #666; font-style: italic;">Daily average = total damage on that day ÷ number of games played</p>
+            <div style="background: #f8f9fa; padding: 5px; border-radius: 8px;">
+                <button id="pRange7" class="p-time-range-btn" style="margin: 0 2px; padding: 4px 8px; border: 1px solid #6366f1; background: white; border-radius: 4px; cursor: pointer; font-size: 11px;">Week</button>
+                <button id="pRange30" class="p-time-range-btn" style="margin: 0 2px; padding: 4px 8px; border: 1px solid #6366f1; background: white; border-radius: 4px; cursor: pointer; font-size: 11px;">Month</button>
+                <button id="pRange60" class="p-time-range-btn" style="margin: 0 2px; padding: 4px 8px; border: 1px solid #6366f1; background: white; border-radius: 4px; cursor: pointer; font-size: 11px;">2 Months</button>
+                <button id="pRange90" class="p-time-range-btn" style="margin: 0 2px; padding: 4px 8px; border: 1px solid #6366f1; background: white; border-radius: 4px; cursor: pointer; font-size: 11px;">3 Months</button>
+                <button id="pRangeAll" class="p-time-range-btn active" style="margin: 0 2px; padding: 4px 8px; border: 1px solid #6366f1; background: #6366f1; color: white; border-radius: 4px; cursor: pointer; font-size: 11px;">All Time</button>
+            </div>
+          </div>
           <div style="background: white; border-radius: 8px; padding: 15px; height: 250px;">
             <canvas id="playerDamageTrendChart"></canvas>
           </div>
         </div>
+
+        <div style="margin-top: 20px;">
+          <p style="margin: 0 0 5px 0; font-size: 12px; color: #666; font-style: italic;">Daily Performance vs Period Average</p>
+          <div style="background: white; border-radius: 8px; padding: 15px; height: 250px;">
+            <canvas id="playerDamageDifferenceChart"></canvas>
+          </div>
+        </div>
         
         <div style="margin-top: 20px;">
-          <h4 style="margin: 0 0 12px 0; color: #6366f1; font-weight: 700;">👥 All Players Daily Average Comparison</h4>
-          
-          <!-- Time range selector -->
-          <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; margin-bottom: 10px; text-align: center;">
-            <label style="font-size: 14px; font-weight: bold; margin-right: 10px;">Time Range:</label>
-            <button id="range1Day" class="time-range-btn" style="margin: 0 5px; padding: 8px 16px; border: 2px solid #6366f1; background: white; border-radius: 8px; cursor: pointer; font-size: 13px; transition: all 0.3s ease;">Last Day</button>
-            <button id="range7Days" class="time-range-btn active" style="margin: 0 5px; padding: 8px 16px; border: 2px solid #6366f1; background: #6366f1; color: white; border-radius: 8px; cursor: pointer; font-size: 13px; transition: all 0.3s ease;">Last Week</button>
-            <button id="range14Days" class="time-range-btn" style="margin: 0 5px; padding: 8px 16px; border: 2px solid #6366f1; background: white; border-radius: 8px; cursor: pointer; font-size: 13px; transition: all 0.3s ease;">Last 2 Weeks</button>
-            <button id="range30Days" class="time-range-btn" style="margin: 0 5px; padding: 8px 16px; border: 2px solid #6366f1; background: white; border-radius: 8px; cursor: pointer; font-size: 13px; transition: all 0.3s ease;">Last Month</button>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h4 style="margin: 0; color: #6366f1; font-weight: 700;">👥 All Players Daily Average Comparison</h4>
+            
+            <!-- Time range selector -->
+            <div style="background: #f8f9fa; padding: 5px; border-radius: 8px; text-align: center;">
+              <button id="range1Day" class="time-range-btn" style="margin: 0 2px; padding: 4px 8px; border: 1px solid #6366f1; background: white; border-radius: 4px; cursor: pointer; font-size: 11px; transition: all 0.3s ease;">Last Day</button>
+              <button id="range7Days" class="time-range-btn active" style="margin: 0 2px; padding: 4px 8px; border: 1px solid #6366f1; background: #6366f1; color: white; border-radius: 4px; cursor: pointer; font-size: 11px; transition: all 0.3s ease;">Last Week</button>
+              <button id="range14Days" class="time-range-btn" style="margin: 0 2px; padding: 4px 8px; border: 1px solid #6366f1; background: white; border-radius: 4px; cursor: pointer; font-size: 11px; transition: all 0.3s ease;">Last 2 Weeks</button>
+              <button id="range30Days" class="time-range-btn" style="margin: 0 2px; padding: 4px 8px; border: 1px solid #6366f1; background: white; border-radius: 4px; cursor: pointer; font-size: 11px; transition: all 0.3s ease;">Last Month</button>
+            </div>
           </div>
           
           <div style="background: white; border-radius: 8px; padding: 15px; height: 300px;">
@@ -2486,129 +2456,196 @@
       document.getElementById('playerBio').classList.remove('hidden');
       console.log('✅ Player BIO shown for', playerName, '- playerBio hidden class removed');
       
-      // Create damage trend chart
-      setTimeout(() => {
-        const canvas = document.getElementById('playerDamageTrendChart');
-        if (!canvas) {
-          console.error('Player damage trend canvas not found');
-          return;
-        }
-        
-        // Destroy existing chart if any
-        const existingChart = Chart.getChart(canvas);
-        if (existingChart) {
-          existingChart.destroy();
-        }
-        
-        new Chart(canvas, {
-          type: 'line',
-          data: {
-            labels: damagePerDay.map(d => d.date),
-            datasets: [{
-              label: 'Avg Damage per Day',
-              data: damagePerDay.map(d => d.avgDamage),
-              borderColor: '#6366f1',
-              backgroundColor: 'rgba(99, 102, 241, 0.1)',
-              borderWidth: 3,
-              fill: true,
-              tension: 0.4,
-              pointRadius: 5,
-              pointHoverRadius: 8,
-              pointBackgroundColor: '#6366f1',
-              pointBorderColor: '#fff',
-              pointBorderWidth: 2
-            }]
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: {
-                display: true,
-                position: 'top'
-              },
-              tooltip: {
-                callbacks: {
-                  title: (items) => {
-                    const index = items[0].dataIndex;
-                    return damagePerDay[index].date;
-                  },
-                  label: (item) => {
-                    const index = item.dataIndex;
-                    const dayData = damagePerDay[index];
-                    return [
-                      `Avg Damage: ${Math.round(dayData.avgDamage).toLocaleString()}`,
-                      `Total Damage: ${Math.round(dayData.totalDamage).toLocaleString()}`,
-                      `Matches: ${dayData.matchCount}`
-                    ];
-                  }
-                }
-              }
-            },
-            scales: {
-              y: {
-                beginAtZero: true,
-                title: {
-                  display: true,
-                  text: 'Average Damage'
-                }
-              },
-              x: {
-                title: {
-                  display: true,
-                  text: 'Date'
-                },
-                ticks: {
-                  maxRotation: 45,
-                  minRotation: 45
-                }
-              }
-            }
+      // Function to update charts based on time range
+      const updatePlayerCharts = (days) => {
+          // Filter data based on days
+          let filteredData = damagePerDay;
+          if (days !== 'all') {
+              const cutoffDate = new Date();
+              cutoffDate.setDate(cutoffDate.getDate() - days);
+              const cutoffStr = cutoffDate.toISOString().split('T')[0];
+              filteredData = damagePerDay.filter(d => d.date >= cutoffStr);
           }
-        });
+
+          // Calculate average for the selected period
+          const totalPeriodDamage = filteredData.reduce((sum, d) => sum + d.totalDamage, 0);
+          const totalPeriodMatches = filteredData.reduce((sum, d) => sum + d.matchCount, 0);
+          const periodAvgDamage = totalPeriodMatches > 0 ? Math.round(totalPeriodDamage / totalPeriodMatches) : 0;
+
+          // Update Trend Chart
+          const canvas = document.getElementById('playerDamageTrendChart');
+          if (canvas) {
+            const existingChart = Chart.getChart(canvas);
+            if (existingChart) existingChart.destroy();
+            
+            new Chart(canvas, {
+              type: 'line',
+              data: {
+                labels: filteredData.map(d => d.date),
+                datasets: [{
+                  label: 'Avg Damage per Day',
+                  data: filteredData.map(d => d.avgDamage),
+                  borderColor: '#6366f1',
+                  backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                  borderWidth: 3,
+                  fill: true,
+                  tension: 0.4,
+                  pointRadius: 5,
+                  pointHoverRadius: 8,
+                  pointBackgroundColor: '#6366f1',
+                  pointBorderColor: '#fff',
+                  pointBorderWidth: 2
+                }]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                  legend: { display: true, position: 'top' },
+                  tooltip: {
+                    callbacks: {
+                      title: (items) => items[0].label,
+                      label: (item) => {
+                        const d = filteredData[item.dataIndex];
+                        return [
+                          `Avg Damage: ${Math.round(d.avgDamage).toLocaleString()}`,
+                          `Total Damage: ${Math.round(d.totalDamage).toLocaleString()}`,
+                          `Matches: ${d.matchCount}`
+                        ];
+                      }
+                    }
+                  }
+                },
+                scales: {
+                  y: { beginAtZero: true, title: { display: true, text: 'Average Damage' } },
+                  x: { title: { display: true, text: 'Date' }, ticks: { maxRotation: 45, minRotation: 45 } }
+                }
+              }
+            });
+          }
+
+          // Update Difference Chart
+          const diffCanvas = document.getElementById('playerDamageDifferenceChart');
+          if (diffCanvas) {
+            const existingDiffChart = Chart.getChart(diffCanvas);
+            if (existingDiffChart) existingDiffChart.destroy();
+
+            const diffData = filteredData.map(d => d.avgDamage - periodAvgDamage);
+            const backgroundColors = diffData.map(val => val >= 0 ? 'rgba(75, 192, 192, 0.6)' : 'rgba(255, 99, 132, 0.6)');
+            const borderColors = diffData.map(val => val >= 0 ? 'rgb(75, 192, 192)' : 'rgb(255, 99, 132)');
+
+            new Chart(diffCanvas, {
+                type: 'bar',
+                data: {
+                    labels: filteredData.map(d => d.date),
+                    datasets: [{
+                        label: `Difference from Period Avg (${periodAvgDamage})`,
+                        data: diffData,
+                        backgroundColor: backgroundColors,
+                        borderColor: borderColors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: true },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => {
+                                    const val = context.raw;
+                                    const sign = val >= 0 ? '+' : '';
+                                    const percentage = periodAvgDamage > 0 ? (val / periodAvgDamage * 100).toFixed(1) : '0.0';
+                                    const signPerc = val >= 0 ? '+' : '';
+                                    return `Difference: ${sign}${Math.round(val).toLocaleString()} (${signPerc}${percentage}%) | Daily Avg: ${Math.round(filteredData[context.dataIndex].avgDamage).toLocaleString()}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            grid: {
+                                color: (context) => context.tick.value === 0 ? '#666' : 'rgba(0, 0, 0, 0.1)',
+                                lineWidth: (context) => context.tick.value === 0 ? 2 : 1,
+                            },
+                            title: {
+                                display: true,
+                                text: `Daily Damage (vs Period Avg: ${periodAvgDamage})`
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return Math.round(value + periodAvgDamage).toLocaleString();
+                                }
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45
+                            }
+                        }
+                    }
+                }
+            });
+          }
+      };
+
+      // Initial chart load (All Time)
+      setTimeout(() => {
+          updatePlayerCharts('all');
+
+          // Add event listeners for player bio time range buttons
+          const ranges = [
+              { id: 'pRange7', days: 7 },
+              { id: 'pRange30', days: 30 },
+              { id: 'pRange60', days: 60 },
+              { id: 'pRange90', days: 90 },
+              { id: 'pRangeAll', days: 'all' }
+          ];
+
+          ranges.forEach(range => {
+              const btn = document.getElementById(range.id);
+              if (btn) {
+                  btn.addEventListener('click', function() {
+                      // Update active state
+                      document.querySelectorAll('.p-time-range-btn').forEach(b => {
+                          b.style.background = 'white';
+                          b.style.color = '#6366f1';
+                      });
+                      this.style.background = '#6366f1';
+                      this.style.color = 'white';
+                      
+                      // Update charts
+                      updatePlayerCharts(range.days);
+                  });
+              }
+          });
         
         // Create all-players comparison chart with default 7-day range
         createAllPlayersComparisonChart(7);
         
         // Add event listeners for time range buttons
-        document.getElementById('range1Day').addEventListener('click', function() {
-          document.querySelectorAll('.time-range-btn').forEach(btn => {
-            btn.style.background = 'white';
-            btn.style.color = '#6366f1';
-          });
-          this.style.background = '#6366f1';
-          this.style.color = 'white';
-          createAllPlayersComparisonChart(1);
-        });
-        
-        document.getElementById('range7Days').addEventListener('click', function() {
-          document.querySelectorAll('.time-range-btn').forEach(btn => {
-            btn.style.background = 'white';
-            btn.style.color = '#6366f1';
-          });
-          this.style.background = '#6366f1';
-          this.style.color = 'white';
-          createAllPlayersComparisonChart(7);
-        });
-        
-        document.getElementById('range14Days').addEventListener('click', function() {
-          document.querySelectorAll('.time-range-btn').forEach(btn => {
-            btn.style.background = 'white';
-            btn.style.color = '#6366f1';
-          });
-          this.style.background = '#6366f1';
-          this.style.color = 'white';
-          createAllPlayersComparisonChart(14);
-        });
-        
-        document.getElementById('range30Days').addEventListener('click', function() {
-          document.querySelectorAll('.time-range-btn').forEach(btn => {
-            btn.style.background = 'white';
-            btn.style.color = '#6366f1';
-          });
-          this.style.background = '#6366f1';
-          this.style.color = 'white';
-          createAllPlayersComparisonChart(30);
+        const timeRanges = [
+            { id: 'range1Day', days: 1 },
+            { id: 'range7Days', days: 7 },
+            { id: 'range14Days', days: 14 },
+            { id: 'range30Days', days: 30 }
+        ];
+
+        timeRanges.forEach(range => {
+            const btn = document.getElementById(range.id);
+            if (btn) {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.time-range-btn').forEach(b => {
+                        b.style.background = 'white';
+                        b.style.color = '#6366f1';
+                    });
+                    this.style.background = '#6366f1';
+                    this.style.color = 'white';
+                    createAllPlayersComparisonChart(range.days);
+                });
+            }
         });
       }, 100);
     }
@@ -3383,6 +3420,30 @@
           <div style="background: #f8f9fa; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
             <h3 style="color: #333; margin-top: 0;">📋 PUBG Tracker Development History</h3>
             <p style="color: #666; margin-bottom: 0;">Track the evolution of your favorite PUBG performance dashboard!</p>
+          </div>
+
+          <div style="border-left: 4px solid #2ecc71; padding-left: 20px; margin-bottom: 30px;">
+            <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h4 style="color: #2ecc71; margin: 0;">Version 0.10.0 - Advanced Analytics & Graph Upgrades 📈</h4>
+                <span style="background: #2ecc71; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">21.12.2025</span>
+              </div>
+              <ul style="margin: 10px 0; color: #333;">
+                <li><strong>New Graph:</strong> "Daily Performance vs Global Average" showing deviation from long-term average</li>
+                <li><strong>Dynamic Time Ranges:</strong> Filter player graphs by Week, Month, 2 Months, 3 Months, or All Time</li>
+                <li><strong>Smart Averages:</strong> Baseline average dynamically adjusts to the selected time period</li>
+                <li><strong>Enhanced Tooltips:</strong> Detailed breakdown showing flat difference and percentage change</li>
+                <li><strong>Layout Improvements:</strong> Compact "All Players Comparison" section with inline controls</li>
+                <li><strong>Bug Fixes:</strong> Resolved balatro.js loading issue and syntax errors</li>
+                <li><strong>Cleanup:</strong> Removed deprecated special weapon stats for cleaner interface</li>
+              </ul>
+              <div style="background: #e8f8f5; border-radius: 4px; padding: 10px; margin-top: 15px;">
+                <small style="color: #145a32;">
+                  <strong>Analytics Upgrade:</strong> Dive deeper into your performance trends with the new stock-market style difference graph! 
+                  See exactly how much better (or worse 😅) you performed compared to your average for any specific period.
+                </small>
+              </div>
+            </div>
           </div>
           
           <div style="border-left: 4px solid #667eea; padding-left: 20px; margin-bottom: 30px;">
