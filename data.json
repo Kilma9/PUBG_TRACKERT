@@ -1,5 +1,1296 @@
 [
   {
+    "date": "2026-01-07T20:23:23Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1554,
+    "placement": 9,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 2,
+        "damage": 274.9108,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap A U G": 140.69207382202148,
+          "Bluezone G L_ Subzero_ Effect Actor": 0,
+          "Weap Mini14": 134.21872520446777,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 25,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 7,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1183,
+        "walkDistance": 1899.7172,
+        "rideDistance": 5349.6504,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 78.18462,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Vector": 78.18462562561035,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 18,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 11,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1183,
+        "walkDistance": 1761.6432,
+        "rideDistance": 5770.4033,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Weap M24": 100
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 42,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 7,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1111,
+        "walkDistance": 2151.7341,
+        "rideDistance": 5669.8184,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Bluezonebomb_ Effect Actor_ Subzero": 91.97648882865906
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 10,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 6,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1116,
+        "walkDistance": 1948.0455,
+        "rideDistance": 5739.9585,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-01-07T20:17:13Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1503,
+    "placement": 25,
+    "team": [
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 49.329567,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Saiga12": 49.32956886291504,
+          "Player Male_ A": 0.653393566608429
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 240,
+        "walkDistance": 328.8915,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 35.32717514038086
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 91,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 188,
+        "walkDistance": 33.707745,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 64.00426,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Proj C4": 40.00425720214844,
+          "Weap A U G": 24
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 25,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 240,
+        "walkDistance": 250.54568,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 4,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 114,
+        "walkDistance": 46.41498,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-01-07T19:54:08Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1534,
+    "placement": 8,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 57.35471,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Male_ A": 16.57990837097168,
+          "Weap A U G": 57.35470771789551
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 34,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 6,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1182,
+        "walkDistance": 2905.5754,
+        "rideDistance": 4751.9106,
+        "swimDistance": 19.173796
+      },
+      {
+        "name": "Kilma9",
+        "kills": 1,
+        "damage": 210.54826,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Male_ A": 11.399840354919434,
+          "Weap A K47": 128.7999973297119,
+          "Bluezonebomb_ Effect Actor_ Subzero": 0,
+          "Weap Kar98k": 81.74825668334961
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 28,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 6,
+        "heals": 2,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1230,
+        "walkDistance": 3390.3276,
+        "rideDistance": 4763.315,
+        "swimDistance": 20.279657
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 189.0873,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 67.1170883178711,
+          "Weap Mk12": 144.46659088134766,
+          "Proj Grenade": 4.382170677185059,
+          "Weap Beryl M762": 23.760000228881836,
+          "Weap M24": 20.860719680786133
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 34,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 5,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1221,
+        "walkDistance": 3085.0479,
+        "rideDistance": 4728.2334,
+        "swimDistance": 16.744768
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 160.90802,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 76.9371337890625,
+          "Weap S K S": 26.34784698486328,
+          "Weap F N Fal": 27.10266876220703,
+          "Weap Mini14": 53.04599952697754,
+          "Weap H K416": 54.41150665283203
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 7,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 11,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1230,
+        "walkDistance": 3176.3162,
+        "rideDistance": 4761.269,
+        "swimDistance": 29.459293
+      }
+    ]
+  },
+  {
+    "date": "2026-01-07T19:25:38Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1490,
+    "placement": 1,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 198.01602,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M16 A4": 54.07855415344238,
+          "Player Male_ A": 0,
+          "Weap A U G": 100.00000190734863,
+          "Weap Mk12": 43.93747329711914
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 98,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 6,
+        "heals": 3,
+        "revives": 3,
+        "teamKills": 0,
+        "timeSurvived": 1196,
+        "walkDistance": 2535.7476,
+        "rideDistance": 1348.9702,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 5,
+        "damage": 357.86566,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 5
+        },
+        "weaponDamage": {
+          "Weap V S S": 200,
+          "Player Female_ A": 0,
+          "Weap A U G": 157.86567974090576
+        },
+        "weaponKills": {
+          "Unknown Weapon": 5
+        },
+        "weaponStats": {
+          "totalShots": 13,
+          "totalHits": 119,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1248,
+        "walkDistance": 2974.2307,
+        "rideDistance": 992.41034,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 1,
+        "damage": 140.98956,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Male_ A": 11.320345878601074,
+          "Weap V S S": 20.431814193725586,
+          "Weap Bizon P P19": 82.89999580383301,
+          "Proj Grenade": 37.65776062011719
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 80,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 7,
+        "heals": 11,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1490,
+        "walkDistance": 4594.3154,
+        "rideDistance": 1108.5398,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 3,
+        "damage": 402.90143,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap M16 A4": 60.62999725341797,
+          "Weap M P5 K": 212.061448097229,
+          "Weap Dragunov": 130.20999908447266,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 90,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 4,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1333,
+        "walkDistance": 3444.6987,
+        "rideDistance": 1581.5382,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-01-07T18:59:44Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1518,
+    "placement": 5,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 3,
+        "damage": 385.17975,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap Mini14": 123.46237182617188,
+          "Weap A U G": 261.71738052368164
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 18,
+          "totalHits": 47,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1347,
+        "walkDistance": 3226.5505,
+        "rideDistance": 4577.5815,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 197.88974,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Buggy_ A_03": 23.082427978515625,
+          "Weap M249": 77.8897476196289,
+          "Weap Mk14": 0,
+          "Plantable Blue Bomb_ Subzero_ Effect Actor": 56,
+          "Bluezone G L_ Subzero_ Effect Actor": 8,
+          "Proj Molotov": 20,
+          "B P_ Fire Effect Controller": 16,
+          "B P_ Molotov Fire Debuff": 20,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 18,
+          "totalHits": 42,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1058,
+        "walkDistance": 1870.583,
+        "rideDistance": 5809.4233,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 96.85025,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M24": 96.85024642944336,
+          "Player Male_ A": 43.829925537109375
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 35,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1094,
+        "walkDistance": 1624.4427,
+        "rideDistance": 4951.62,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 147.817,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap F N Fal": 89.81700134277344,
+          "Proj C4": 58,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 15,
+          "longestKill": 0,
+          "vehicleDestroys": 2
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1003,
+        "walkDistance": 1791.8433,
+        "rideDistance": 5172.342,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-01-07T18:51:04Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1472,
+    "placement": 21,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 53.579998,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap S K S": 53.57999801635742,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 49,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 327,
+        "walkDistance": 457.0207,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 72.60862,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Bluezone G L_ Subzero_ Effect Actor": 0,
+          "Weap M P5 K": 72.6086196899414
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 7,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 396,
+        "walkDistance": 761.17303,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 119.89167,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap S C A R- L": 18.88327407836914,
+          "Weap Mk12": 52.0106258392334,
+          "Weap H K416": 48.997772216796875,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 58,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 383,
+        "walkDistance": 680.6801,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 24,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M16 A4": 0,
+          "Weap H K416": 24,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 76,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 396,
+        "walkDistance": 700.2801,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-01-07T18:40:40Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1456,
+    "placement": 18,
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 48.84,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap F N Fal": 0,
+          "Weap Beryl M762": 48.84000015258789,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 68,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 2,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 488,
+        "walkDistance": 862.81006,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 138.20366,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 18.89566993713379,
+          "Weap U Z I": 119.30799865722656
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 9,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 488,
+        "walkDistance": 1000.81415,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 139.26433,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Weap S C A R- L": 139.2643280029297
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 32,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 3,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 411,
+        "walkDistance": 726.65955,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 2,
+        "damage": 200,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap Kar98k": 100,
+          "Weap A C E32": 100,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 128,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 354,
+        "walkDistance": 558.63824,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-01-07T18:33:26Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1556,
+    "placement": 23,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 3,
+        "damage": 280.8,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap S C A R- L": 280.79999923706055,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 25,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 319,
+        "walkDistance": 479.38278,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 54.18,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Weap A C E32": 54.17999839782715
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 55,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 319,
+        "walkDistance": 426.7169,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 27,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 116,
+        "walkDistance": 48.080784,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 58,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 160,
+        "walkDistance": 143.04192,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-01-07T18:26:12Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1447,
+    "placement": 26,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 105.64352,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Dragunov": 105.64352035522461,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 22,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 268,
+        "walkDistance": 293.64282,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {},
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 0,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 292,
+        "walkDistance": 121.84934,
+        "rideDistance": 1.3033397,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 152.15654,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap S K S": 31.756528854370117,
+          "Weap A U G": 120.40000247955322,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 10,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 292,
+        "walkDistance": 424.9598,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Kilma9",
+        "kills": 0,
+        "damage": 27.50633,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M16 A4": 27.506330490112305,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 34,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 291,
+        "walkDistance": 425.04526,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-01-07T18:08:57Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1459,
+    "placement": 10,
+    "team": [
+      {
+        "name": "Kilma9",
+        "kills": 3,
+        "damage": 322.0961,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap M249": 322.09606742858887,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 21,
+          "totalHits": 64,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 878,
+        "walkDistance": 2255.031,
+        "rideDistance": 1152.706,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 1.76923406124115
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 19,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 858,
+        "walkDistance": 2441.3677,
+        "rideDistance": 1698.2346,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 267.11002,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap A C E32": 267.1099967956543
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 16,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 685,
+        "walkDistance": 1500.4019,
+        "rideDistance": 594.12897,
+        "swimDistance": 0
+      },
+      {
+        "name": "ProjectLester",
+        "kills": 1,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M P5 K": 99.99999618530273,
+          "Weap F N Fal": 0,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 19,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 844,
+        "walkDistance": 2815.2742,
+        "rideDistance": 883.66736,
+        "swimDistance": 29.272448
+      }
+    ]
+  },
+  {
     "date": "2026-01-03T20:48:04Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
