@@ -1,5 +1,323 @@
 [
   {
+    "date": "2026-01-23T21:23:41Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1560,
+    "placement": 1,
+    "team": [
+      {
+        "name": "Baron_Frajeris",
+        "kills": 2,
+        "damage": 601.42554,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Mortar_ Projectile": 17.320865631103516,
+          "Weap M24": 555.0647163391113,
+          "Weap Beryl M762": 29.040000915527344
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 24,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1560,
+        "walkDistance": 4379.8765,
+        "rideDistance": 3913.104,
+        "swimDistance": 0
+      },
+      {
+        "name": "Hyottokko",
+        "kills": 1,
+        "damage": 287.01733,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M24": 219.6015625,
+          "Weap Beryl M762": 67.41579055786133
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 16,
+          "totalHits": 7,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 7,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1560,
+        "walkDistance": 4515.031,
+        "rideDistance": 3754.9685,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 676.8042,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Male_ A": 0.42390137910842896,
+          "Weap M24": 525.6240653991699,
+          "Weap Beryl M762": 151.1801986694336
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 12,
+          "totalHits": 25,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 9,
+        "heals": 7,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1560,
+        "walkDistance": 4271.427,
+        "rideDistance": 3815.8508,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-01-23T21:00:44Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1513,
+    "placement": 9,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 83.91733,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Pickup Truck_ A_esports": 37.50756150484085,
+          "Weap M24": 83.91732788085938,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 16,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 863,
+        "walkDistance": 1349.6194,
+        "rideDistance": 5670.5103,
+        "swimDistance": 0
+      },
+      {
+        "name": "Hyottokko",
+        "kills": 2,
+        "damage": 190.45995,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "B P_ Pickup Truck_ A_esports": 37.50756150484085,
+          "Player Male_ A": 52.6849250793457,
+          "Weap F N Fal": 190.45993614196777
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 18,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 7,
+        "heals": 10,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1064,
+        "walkDistance": 2081.366,
+        "rideDistance": 5643.971,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 181.12248,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "B P_ Pickup Truck_ A_esports": 37.50756150484085,
+          "Weap Dragunov": 72.22249698638916,
+          "Player Male_ A": 0,
+          "Weap Beryl M762": 108.89999771118164
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 25,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 4,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1096,
+        "walkDistance": 1999.533,
+        "rideDistance": 5664.02,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-01-23T20:44:31Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1481,
+    "placement": 13,
+    "team": [
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 350.10303,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Male_ A": 8.117976576089859,
+          "Weap Saiga12": 0,
+          "Weap A U G": 170.399995803833,
+          "Weap Mini14": 179.70300674438477,
+          "Dacia_ A_03_v2_ Esports": 5.006867408752441
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 10,
+          "totalHits": 54,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 837,
+        "walkDistance": 1794.2094,
+        "rideDistance": 497.4582,
+        "swimDistance": 0
+      },
+      {
+        "name": "Hyottokko",
+        "kills": 4,
+        "damage": 406.385,
+        "headshots": 2,
+        "weapons": {
+          "Unknown Weapon": 4
+        },
+        "weaponDamage": {
+          "Weap S C A R- L": 214.38501167297363,
+          "Weap Beryl M762": 191.99999618530273,
+          "Player Male_ A": 0.687084972858429,
+          "Dacia_ A_03_v2_ Esports": 5.006867408752441
+        },
+        "weaponKills": {
+          "Unknown Weapon": 4
+        },
+        "weaponStats": {
+          "totalShots": 16,
+          "totalHits": 27,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 8,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 857,
+        "walkDistance": 2048.4326,
+        "rideDistance": 593.23364,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 44.835,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap F N Fal": 44.83499717712402,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 27,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 545,
+        "walkDistance": 859.7214,
+        "rideDistance": 575.4336,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2026-01-21T19:56:06Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
