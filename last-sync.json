@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-01-30T23:15:53Z",
-  "pragueTime": "2026-01-31 00:15:53",
+  "timestamp": "2026-01-31T23:15:10Z",
+  "pragueTime": "2026-02-01 00:15:10",
   "trigger": "schedule",
   "workflow": "scheduled-data-collection"
 }
