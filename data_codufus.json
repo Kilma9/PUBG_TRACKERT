@@ -1,5 +1,501 @@
 [
   {
+    "date": "2026-02-15T20:33:08Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1643,
+    "placement": 6,
+    "team": [
+      {
+        "name": "codufus",
+        "kills": 1,
+        "damage": 100,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Female_ A": 34.964807987213135,
+          "Uaz_ B_01_esports": 79.24198913574219,
+          "Weap Dragunov": 100.00000190734863
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 28,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 12,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1339,
+        "walkDistance": 3088.4194,
+        "rideDistance": 4263.2817,
+        "swimDistance": 0
+      },
+      {
+        "name": "ownedbyphysics",
+        "kills": 0,
+        "damage": 97.33888,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mk12": 97.33888244628906,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 22,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 13,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1458,
+        "walkDistance": 2952.4685,
+        "rideDistance": 4870.922,
+        "swimDistance": 0
+      },
+      {
+        "name": "23camaro",
+        "kills": 0,
+        "damage": 67.519485,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 2.7962892055511475,
+          "Weap Kar98k": 67.51948547363281
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 42,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 805,
+        "walkDistance": 1579.8344,
+        "rideDistance": 2102.392,
+        "swimDistance": 0
+      },
+      {
+        "name": "vova1616",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 1.1656006574630737
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 18,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 721,
+        "walkDistance": 1111.6575,
+        "rideDistance": 2494.2168,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-02-15T20:14:09Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1532,
+    "placement": 15,
+    "team": [
+      {
+        "name": "ownedbyphysics",
+        "kills": 2,
+        "damage": 107.837555,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "B P_ Coupe R B": 25.042343139648438,
+          "Weap A K47": 107.83755683898926
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 9,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 993,
+        "walkDistance": 2825.6362,
+        "rideDistance": 801.77875,
+        "swimDistance": 0
+      },
+      {
+        "name": "mIronMann",
+        "kills": 0,
+        "damage": 133.32822,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Beryl M762": 133.32823181152344,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 17,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 249,
+        "walkDistance": 385.38895,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "codufus",
+        "kills": 0,
+        "damage": 215.33507,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 7.509880423545837,
+          "Weap Kar98k": 66.53509140014648,
+          "Weap H K416": 148.79999923706055
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 16,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 993,
+        "walkDistance": 2731.8254,
+        "rideDistance": 830.14264,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-02-15T19:54:22Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Kiki_Main",
+    "duration": 1618,
+    "placement": 15,
+    "team": [
+      {
+        "name": "itsLiLi",
+        "kills": 1,
+        "damage": 139.20001,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap H K416": 88.79999923706055,
+          "Weap A U G": 94.79999923706055,
+          "B P_ Coupe R B": 1.318558692932129,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 14,
+          "totalHits": 22,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 832,
+        "walkDistance": 2604.417,
+        "rideDistance": 60.67604,
+        "swimDistance": 0
+      },
+      {
+        "name": "ownedbyphysics",
+        "kills": 1,
+        "damage": 123.63567,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap S C A R- L": 99.99999618530273,
+          "Player Female_ A": 0,
+          "Weap Mini14": 23.63567543029785
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 32,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 868,
+        "walkDistance": 2577.0933,
+        "rideDistance": 473.4929,
+        "swimDistance": 31.613138
+      },
+      {
+        "name": "Maximalka",
+        "kills": 2,
+        "damage": 382.02393,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap M P9": 163.30799388885498,
+          "Weap M24": 120.39158630371094,
+          "Proj Grenade": 0,
+          "Player Male_ A": 0,
+          "B P_ Coupe R B": 1.318558692932129,
+          "Weap Beryl M762": 98.32432174682617
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 25,
+          "totalHits": 30,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 3,
+        "boosts": 8,
+        "heals": 2,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1061,
+        "walkDistance": 2659.7144,
+        "rideDistance": 823.2444,
+        "swimDistance": 33.26089
+      },
+      {
+        "name": "codufus",
+        "kills": 3,
+        "damage": 99.38042,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap S C A R- L": 99.38041687011719,
+          "B P_ Coupe R B": 7.846557140350342,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 32,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 995,
+        "walkDistance": 3021.2615,
+        "rideDistance": 1181.3213,
+        "swimDistance": 68.30037
+      }
+    ]
+  },
+  {
+    "date": "2026-02-15T19:24:57Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Kiki_Main",
+    "duration": 1624,
+    "placement": 4,
+    "team": [
+      {
+        "name": "JeesusIsWatchinU",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 2,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1156,
+        "walkDistance": 2371.154,
+        "rideDistance": 6740.585,
+        "swimDistance": 0
+      },
+      {
+        "name": "Daryl_Dix0n",
+        "kills": 1,
+        "damage": 81.989525,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M24": 81.98952674865723,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 31,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1449,
+        "walkDistance": 3424.5479,
+        "rideDistance": 6210.79,
+        "swimDistance": 0
+      },
+      {
+        "name": "codufus",
+        "kills": 0,
+        "damage": 112.22999,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Berreta686": 99.99999618530273,
+          "B P_ Pickup Truck_ A_01": 6.911067962646484,
+          "Weap M24": 64.34999084472656,
+          "Weap S C A R- L": 47.8799991607666,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 3,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1449,
+        "walkDistance": 3164.3079,
+        "rideDistance": 6808.9893,
+        "swimDistance": 0
+      },
+      {
+        "name": "ownedbyphysics",
+        "kills": 1,
+        "damage": 202.68353,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Female_ A": 37.80000114440918,
+          "Weap Mk12": 202.68352890014648
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 10,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1449,
+        "walkDistance": 3405.181,
+        "rideDistance": 6216.78,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2026-02-14T14:50:00Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
