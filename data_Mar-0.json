@@ -1,5 +1,1710 @@
 [
   {
+    "date": "2026-04-11T22:05:29Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1554,
+    "placement": 7,
+    "team": [
+      {
+        "name": "Cylind3r",
+        "kills": 0,
+        "damage": 66.076584,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 66.07658386230469,
+          "Uaz_ C_01": 10.939593315124512,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 12,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1329,
+        "walkDistance": 2491.1462,
+        "rideDistance": 3656.4177,
+        "swimDistance": 0
+      },
+      {
+        "name": "NoobodyKnowss",
+        "kills": 1,
+        "damage": 474.66437,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Kar98k": 332.2015266418457,
+          "Weap A U G": 142.46284675598145,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 10,
+          "totalHits": 31,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 9,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1329,
+        "walkDistance": 2771.8984,
+        "rideDistance": 3890.5955,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 1,
+        "damage": 359.28015,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M24": 359.2801399230957,
+          "Uaz_ C_01": 10.939593315124512,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 20,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 7,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1329,
+        "walkDistance": 2619.6533,
+        "rideDistance": 3517.3484,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 119.28496,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 59.194759368896484,
+          "Weap M24": 119.28496551513672
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 41,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 3,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1329,
+        "walkDistance": 2944.177,
+        "rideDistance": 4144.6724,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T21:43:21Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1624,
+    "placement": 8,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 1,
+        "damage": 423.1989,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M P5 K": 37.94668769836426,
+          "Player Male_ A": 0,
+          "Weap Mk14": 186.80972480773926,
+          "Weap Groza": 198.44249534606934
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 13,
+          "totalHits": 56,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 3,
+        "boosts": 9,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1188,
+        "walkDistance": 2918.828,
+        "rideDistance": 635.1545,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 7,
+        "damage": 597.28644,
+        "headshots": 2,
+        "weapons": {
+          "Unknown Weapon": 7
+        },
+        "weaponDamage": {
+          "Weap V S S": 26.932497024536133,
+          "Weap Beryl M762": 570.3539791107178,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 7
+        },
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1077,
+        "walkDistance": 2839.4116,
+        "rideDistance": 729.7512,
+        "swimDistance": 97.82264
+      },
+      {
+        "name": "Cylind3r",
+        "kills": 1,
+        "damage": 26.124102,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M P5 K": 26.124101638793945,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 15,
+          "totalHits": 11,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 1,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1188,
+        "walkDistance": 3820.5476,
+        "rideDistance": 711.2902,
+        "swimDistance": 0
+      },
+      {
+        "name": "NoobodyKnowss",
+        "kills": 1,
+        "damage": 383.1033,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap A C E32": 46.49507713317871,
+          "Weap M24": 85.04967498779297,
+          "Player Female_ A": 0,
+          "Weap Kar98k": 64.69683837890625,
+          "Weap H K416": 40.37704849243164,
+          "Weap A U G": 146.4846897125244
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 18,
+          "totalHits": 95,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 2,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1179,
+        "walkDistance": 3032.6514,
+        "rideDistance": 704.8728,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T21:36:09Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1486,
+    "placement": 20,
+    "team": [
+      {
+        "name": "NoobodyKnowss",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 6,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 240,
+        "walkDistance": 540.3004,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cylind3r",
+        "kills": 0,
+        "damage": 101.07,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 58.5,
+          "Weap A C E32": 42.57000160217285,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 30,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 316,
+        "walkDistance": 597.41266,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 200,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 200
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 2,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 316,
+        "walkDistance": 344.73663,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 28.38,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A C E32": 28.3799991607666,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 42,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 269,
+        "walkDistance": 534.83923,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T21:29:54Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1547,
+    "placement": 22,
+    "team": [
+      {
+        "name": "Cylind3r",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 51,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 251,
+        "walkDistance": 276.66318,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "NoobodyKnowss",
+        "kills": 1,
+        "damage": 122.22389,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Q B Z95": 22.223896026611328,
+          "Weap A K47": 99.9999942779541,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 20,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 251,
+        "walkDistance": 441.68994,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 1,
+        "damage": 125.2,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap S C A R- L": 125.19999885559082
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 14,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 251,
+        "walkDistance": 339.64563,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 251,
+        "walkDistance": 299.6248,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T21:13:28Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1573,
+    "placement": 22,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 98.28,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Q B Z95": 98.27999687194824,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 10,
+          "totalHits": 31,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 187,
+        "walkDistance": 266.47595,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cacunka",
+        "kills": 1,
+        "damage": 168.96356,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap G18": 70.34355163574219,
+          "Weap M16 A4": 98.6200065612793,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 24,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 168,
+        "walkDistance": 180.53728,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 1,
+        "damage": 3.1000023,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Mk47 Mutant": 3.1000022888183594
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 3,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 217,
+        "walkDistance": 365.13968,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 21,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 158,
+        "walkDistance": 262.68304,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T20:52:33Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1551,
+    "placement": 11,
+    "team": [
+      {
+        "name": "Cacunka",
+        "kills": 0,
+        "damage": 205.08774,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 41.27223587036133,
+          "Weap A U G": 163.81549072265625
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1091,
+        "walkDistance": 1825.4746,
+        "rideDistance": 5331.831,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 0,
+        "damage": 100.27641,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mk12": 100.27641105651855,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 26,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1091,
+        "walkDistance": 1780.7394,
+        "rideDistance": 5008.3765,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 165.59718,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 107.09717750549316,
+          "Weap A U G": 58.5,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 12,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1091,
+        "walkDistance": 1348.4506,
+        "rideDistance": 5551.3125,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 1,
+        "damage": 163.05086,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Kar98k": 100,
+          "Weap Beryl M762": 38.60999870300293,
+          "Proj Grenade": 24.44085693359375,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 10,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1081,
+        "walkDistance": 1446.3801,
+        "rideDistance": 5445.651,
+        "swimDistance": 15.043017
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T20:25:49Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1452,
+    "placement": 2,
+    "team": [
+      {
+        "name": "Cacunka",
+        "kills": 0,
+        "damage": 118.21003,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 1.24261474609375,
+          "Weap H K416": 61.19999980926514,
+          "Weap P90": 57.01003074645996
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 12,
+          "totalHits": 37,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 4,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1179,
+        "walkDistance": 3130.7798,
+        "rideDistance": 6438.9106,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 8,
+        "damage": 758.17944,
+        "headshots": 3,
+        "weapons": {
+          "Unknown Weapon": 8
+        },
+        "weaponDamage": {
+          "Weap S K S": 40.184998512268066,
+          "Player Male_ A": 0,
+          "Weap A U G": 704.2157678604126,
+          "Proj Grenade": 13.778677940368652
+        },
+        "weaponKills": {
+          "Unknown Weapon": 8
+        },
+        "weaponStats": {
+          "totalShots": 35,
+          "totalHits": 98,
+          "longestKill": 0,
+          "vehicleDestroys": 1
+        },
+        "assists": 3,
+        "boosts": 6,
+        "heals": 13,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1449,
+        "walkDistance": 4055.6826,
+        "rideDistance": 6622.816,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 5,
+        "damage": 376.8485,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 5
+        },
+        "weaponDamage": {
+          "Weap S C A R- L": 342.4599952697754,
+          "Player Female_ A": 5.423312664031982,
+          "B P_ Coupe R B": 49.59711837768555,
+          "Proj Grenade": 34.3885498046875,
+          "Weap Mk12": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 5
+        },
+        "weaponStats": {
+          "totalShots": 17,
+          "totalHits": 48,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 10,
+        "heals": 7,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1449,
+        "walkDistance": 4303.255,
+        "rideDistance": 6403.374,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 3,
+        "damage": 232.21243,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap U M P": 172.76359176635742,
+          "Player Male_ A": 0,
+          "Weap V S S": 2.4420909881591797,
+          "Weap M P5 K": 57.00675964355469
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 17,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 8,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1114,
+        "walkDistance": 2588.3862,
+        "rideDistance": 6405.849,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T20:18:06Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1526,
+    "placement": 21,
+    "team": [
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 1,
+        "damage": 165.40196,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M P5 K": 162.12959480285645,
+          "Proj Grenade": 0,
+          "Weap Saiga12": 3.2723896503448486
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 19,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 329,
+        "walkDistance": 707.4062,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cacunka",
+        "kills": 0,
+        "damage": 70.33688,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M16 A4": 70.33688354492188,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 262,
+        "walkDistance": 440.9995,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 202.24,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A K47": 202.2400016784668,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 8,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 155,
+        "walkDistance": 176.81932,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 75.20178,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Vector": 75.20178031921387,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 9,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 201,
+        "walkDistance": 362.2603,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T20:09:20Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Summerland_Main",
+    "duration": 1077,
+    "placement": 14,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 26.199316024780273
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 14,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 304,
+        "walkDistance": 423.75046,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 125,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap H K416": 125.00000190734863,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 77,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 365,
+        "walkDistance": 381.492,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cacunka",
+        "kills": 0,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Panzer Faust100 M_ Projectile": 100,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 110,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 287,
+        "walkDistance": 453.16058,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 1,
+        "damage": 87,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap U M P": 87
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 7,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 365,
+        "walkDistance": 804.1132,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T19:42:35Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1600,
+    "placement": 3,
+    "team": [
+      {
+        "name": "Cacunka",
+        "kills": 1,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "B P_ Blanc_ Esports": 27.674467086791992,
+          "Weap Kar98k": 100,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 27,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1230,
+        "walkDistance": 2096.344,
+        "rideDistance": 4615.7334,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 324.25482,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 225.25482559204102,
+          "Weap Beryl M762": 99,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 9,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1441,
+        "walkDistance": 2951.5374,
+        "rideDistance": 5615.3936,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 2,
+        "damage": 127.07182,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "B P_ Blanc_ Esports": 27.674467086791992,
+          "Weap H K416": 101.9999942779541,
+          "Weap Mk12": 25.071823120117188,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 10,
+          "totalHits": 52,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 11,
+        "heals": 3,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1448,
+        "walkDistance": 3875.3164,
+        "rideDistance": 4467.481,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 99.37355,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M24": 99.3735466003418,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 44,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 11,
+        "heals": 3,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1457,
+        "walkDistance": 3122.948,
+        "rideDistance": 4636.4546,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T19:18:09Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1541,
+    "placement": 7,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 2,
+        "damage": 330.1533,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap Thompson": 100.81574821472168,
+          "Weap M16 A4": 10,
+          "Player Male_ A": 4.423742771148682,
+          "B P_ Mirado_ A_03_ Esports": 1.8158012628555298,
+          "Weap Dragunov": 124.83949851989746,
+          "Weap Kar98k": 44.848819732666016,
+          "Weap Famas G2": 75.46500015258789
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 10,
+          "totalHits": 68,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 9,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1165,
+        "walkDistance": 2411.6658,
+        "rideDistance": 3325.5059,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cacunka",
+        "kills": 1,
+        "damage": 310.38065,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Kar98k": 109.46271324157715,
+          "Player Female_ A": 0,
+          "B P_ Mirado_ A_03_ Esports": 1.8158012628555298,
+          "Weap A U G": 200.91793251037598
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 67,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 5,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1302,
+        "walkDistance": 2310.3088,
+        "rideDistance": 3363.973,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 5,
+        "damage": 646.535,
+        "headshots": 4,
+        "weapons": {
+          "Unknown Weapon": 5
+        },
+        "weaponDamage": {
+          "Weap Thompson": 292.9321708679199,
+          "Weap Mk47 Mutant": 74.60281372070312,
+          "Weap Beryl M762": 178.99999618530273,
+          "Weap Mk14": 99.99999618530273,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 5
+        },
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 56,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 5,
+        "heals": 3,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1157,
+        "walkDistance": 2548.153,
+        "rideDistance": 4058.6428,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 1,
+        "damage": 205.25897,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M24": 42.38560104370117,
+          "Weap A U G": 88.7371826171875,
+          "Weap Mini14": 74.13619613647461,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 24,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 3,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1302,
+        "walkDistance": 3050.9526,
+        "rideDistance": 3977.0254,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T19:01:17Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1522,
+    "placement": 11,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 3,
+        "damage": 308.81644,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap Mk12": 0,
+          "Player Male_ A": 0,
+          "Weap U M P": 132.31999969482422,
+          "Weap Dragunov": 124.8964614868164,
+          "Weap A C E32": 51.599998474121094
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 86,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 3,
+        "boosts": 2,
+        "heals": 2,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 664,
+        "walkDistance": 1062.5459,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cacunka",
+        "kills": 0,
+        "damage": 296.7435,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 78.96824645996094,
+          "Player Male_ A": 0,
+          "Weap A K47": 192.7736415863037,
+          "Proj Grenade": 25.001619338989258
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 121,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 3,
+        "boosts": 4,
+        "heals": 2,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 779,
+        "walkDistance": 1194.1666,
+        "rideDistance": 150.99463,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 4,
+        "damage": 744.5843,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 4
+        },
+        "weaponDamage": {
+          "Weap S C A R- L": 343.71175384521484,
+          "Proj Grenade": 51.79255294799805,
+          "Player Male_ A": 0,
+          "Weap Kar98k": 100,
+          "Weap A U G": 123.68000602722168,
+          "Weap Beryl M762": 125.4000015258789
+        },
+        "weaponKills": {
+          "Unknown Weapon": 4
+        },
+        "weaponStats": {
+          "totalShots": 12,
+          "totalHits": 94,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 5,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 719,
+        "walkDistance": 1307.7754,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 1,
+        "damage": 79.056915,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Female_ A": 0,
+          "Weap A U G": 5.880001068115234,
+          "Weap Thompson": 73.17691421508789
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 109,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 2,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 772,
+        "walkDistance": 1506.2411,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-04-11T18:54:48Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1655,
+    "placement": 19,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap U M P": 100,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 31,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 268,
+        "walkDistance": 191.37085,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 47.879997,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap S C A R- L": 47.8799991607666,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 67,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 286,
+        "walkDistance": 224.99776,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 56,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 286,
+        "walkDistance": 241.37828,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Cacunka",
+        "kills": 1,
+        "damage": 74.8,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap A C E32": 74.80000305175781,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 17,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 286,
+        "walkDistance": 358.55792,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2026-04-10T21:32:55Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
