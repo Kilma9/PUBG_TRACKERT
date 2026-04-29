@@ -1,29 +1,29 @@
 ## 🎮 PUBG Multi-Player Data Collection Report
-**Collection Date:** Tue Apr 28 23:29:54 UTC 2026
+**Collection Date:** Wed Apr 29 23:30:55 UTC 2026
 **Trigger:** schedule
 
 ### 👤 Kilma9
-- **Matches:** 337
-- **Latest Match:** 2026-04-14T19:08:57Z
+- **Matches:** 345
+- **Latest Match:** 2026-04-29T19:21:56Z
 
 ### 👤 Mar-0
-- **Matches:** 744
-- **Latest Match:** 2026-04-26T19:12:42Z
+- **Matches:** 755
+- **Latest Match:** 2026-04-29T20:17:05Z
 
 ### 👤 Hyottokko
 - **Matches:** 174
 - **Latest Match:** 2026-04-22T20:28:57Z
 
 ### 👤 Baron_Frajeris
-- **Matches:** 566
-- **Latest Match:** 2026-04-26T19:12:42Z
+- **Matches:** 577
+- **Latest Match:** 2026-04-29T20:17:05Z
 
 ### 👤 codufus
-- **Matches:** 817
-- **Latest Match:** 2026-04-23T17:52:34Z
+- **Matches:** 826
+- **Latest Match:** 2026-04-29T20:17:05Z
 
 ### 👤 Veru_13
-- **Matches:** 259
-- **Latest Match:** 2026-04-14T19:08:57Z
+- **Matches:** 261
+- **Latest Match:** 2026-04-29T18:16:26Z
 
-**Total Matches Across All Players:** 2897
+**Total Matches Across All Players:** 2938
