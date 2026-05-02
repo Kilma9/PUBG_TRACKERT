@@ -1,5 +1,1792 @@
 [
   {
+    "date": "2026-05-02T17:52:16Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Kiki_Main",
+    "duration": 1445,
+    "placement": 1,
+    "team": [
+      {
+        "name": "DonTefflon_",
+        "kills": 6,
+        "damage": 751.5299,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 6
+        },
+        "weaponDamage": {
+          "Weap M P5 K": 217.19999027252197,
+          "Weap M24": 164.34999084472656,
+          "B P_ Pickup Truck_ A_esports": 4.823855876922607,
+          "B P_ Pickup Truck_ A_03": 13.005962371826172,
+          "Weap P90": 148.56014251708984,
+          "Weap L6": 221.41985702514648,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 6
+        },
+        "weaponStats": {
+          "totalShots": 15,
+          "totalHits": 55,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 8,
+        "heals": 5,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1445,
+        "walkDistance": 4831.501,
+        "rideDistance": 1326.8054,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 4,
+        "damage": 383.7996,
+        "headshots": 2,
+        "weapons": {
+          "Unknown Weapon": 4
+        },
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "B P_ Pickup Truck_ A_03": 13.005962371826172,
+          "Weap A U G": 138.90881824493408,
+          "Weap M24": 120.875,
+          "Weap Mk14": 124.01578330993652
+        },
+        "weaponKills": {
+          "Unknown Weapon": 4
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 54,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 1,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1445,
+        "walkDistance": 3995.943,
+        "rideDistance": 3053.0212,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 7,
+        "damage": 721.5436,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 7
+        },
+        "weaponDamage": {
+          "Weap M P9": 461.2186622619629,
+          "Player Male_ A": 0,
+          "Weap A U G": 18,
+          "Weap A W M": 242.32492065429688
+        },
+        "weaponKills": {
+          "Unknown Weapon": 7
+        },
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 46,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 2,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1445,
+        "walkDistance": 3798.332,
+        "rideDistance": 2821.5942,
+        "swimDistance": 0
+      },
+      {
+        "name": "codufus",
+        "kills": 2,
+        "damage": 86.57772,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Player Female_ A": 0,
+          "B P_ Pickup Truck_ A_esports": 4.823855876922607,
+          "Weap M24": 5.577726364135742,
+          "Weap A K47": 80.99999809265137
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 107,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 8,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1445,
+        "walkDistance": 3813.018,
+        "rideDistance": 1868.8079,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T17:23:11Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1572,
+    "placement": 1,
+    "team": [
+      {
+        "name": "DonTefflon_",
+        "kills": 4,
+        "damage": 658.8634,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 4
+        },
+        "weaponDamage": {
+          "Weap S C A R- L": 353.06346321105957,
+          "Weap Berreta686": 99.99999618530273,
+          "Weap Beryl M762": 94.99999809265137,
+          "Player Female_ A": 2.0713858604431152,
+          "Weap L6": 100,
+          "Weap H K416": 10.800000190734863
+        },
+        "weaponKills": {
+          "Unknown Weapon": 4
+        },
+        "weaponStats": {
+          "totalShots": 15,
+          "totalHits": 56,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 1,
+        "heals": 5,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 843,
+        "walkDistance": 1701.6989,
+        "rideDistance": 2265.1538,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 8,
+        "damage": 855.1248,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 8
+        },
+        "weaponDamage": {
+          "Weap U M P": 99.99999809265137,
+          "Player Male_ A": 0,
+          "Weap Beryl M762": 438.4748258590698,
+          "Weap A W M": 59.849998474121094,
+          "Weap P90": 256.80000019073486
+        },
+        "weaponKills": {
+          "Unknown Weapon": 8
+        },
+        "weaponStats": {
+          "totalShots": 28,
+          "totalHits": 101,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 7,
+        "heals": 20,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1572,
+        "walkDistance": 3582.434,
+        "rideDistance": 2955.188,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 3,
+        "damage": 207.22379,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Weap Beryl M762": 131.96157455444336,
+          "Weap M24": 75.26221084594727
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 14,
+          "totalHits": 56,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 11,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1547,
+        "walkDistance": 3696.2686,
+        "rideDistance": 3131.6646,
+        "swimDistance": 0
+      },
+      {
+        "name": "SVK_shirooo",
+        "kills": 0,
+        "damage": 126.4,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap U M P": 100,
+          "Weap H K416": 26.399999618530273,
+          "Player Female_ A": 5.307946681976318
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 115,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 404,
+        "walkDistance": 533.51135,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T16:57:07Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1547,
+    "placement": 5,
+    "team": [
+      {
+        "name": "DonTefflon_",
+        "kills": 4,
+        "damage": 506.21365,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 4
+        },
+        "weaponDamage": {
+          "Weap K2": 80.19999885559082,
+          "Weap Mk14": 283.9940891265869,
+          "Weap H K416": 142.0195550918579,
+          "Player Female_ A": 14.848638892173767
+        },
+        "weaponKills": {
+          "Unknown Weapon": 4
+        },
+        "weaponStats": {
+          "totalShots": 10,
+          "totalHits": 103,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 10,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1367,
+        "walkDistance": 4047.8145,
+        "rideDistance": 1831.3008,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 26.4,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap K2": 0,
+          "Proj Grenade": 20.020004272460938,
+          "Weap H K416": 26.399999618530273,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 96,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 4,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1094,
+        "walkDistance": 2758.385,
+        "rideDistance": 822.8663,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 4,
+        "damage": 471.0707,
+        "headshots": 3,
+        "weapons": {
+          "Unknown Weapon": 4
+        },
+        "weaponDamage": {
+          "Weap Beryl M762": 249.9767827987671,
+          "Player Male_ A": 0,
+          "Weap Dragunov": 221.09393882751465
+        },
+        "weaponKills": {
+          "Unknown Weapon": 4
+        },
+        "weaponStats": {
+          "totalShots": 19,
+          "totalHits": 61,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 2,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1334,
+        "walkDistance": 3896.7844,
+        "rideDistance": 804.0452,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 2,
+        "damage": 491.47556,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Panzer Faust100 M_ Projectile": 100,
+          "Player Male_ A": 0,
+          "Weap A C E32": 100,
+          "Weap Mk14": 291.47554111480713,
+          "Weap Groza": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 14,
+          "totalHits": 43,
+          "longestKill": 0,
+          "vehicleDestroys": 1
+        },
+        "assists": 1,
+        "boosts": 7,
+        "heals": 3,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1316,
+        "walkDistance": 3047.7173,
+        "rideDistance": 871.425,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T16:35:05Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1521,
+    "placement": 5,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 1,
+        "damage": 160.0169,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Mini14": 56.60895919799805,
+          "Player Male_ A": 0,
+          "Weap M G3": 103.40793991088867
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 10,
+          "totalHits": 34,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 4,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 714,
+        "walkDistance": 997.3264,
+        "rideDistance": 2419.6216,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 5,
+        "damage": 691.98315,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 5
+        },
+        "weaponDamage": {
+          "Weap H K416": 82.79999732971191,
+          "Player Male_ A": 108.57044982910156,
+          "Weap M24": 122.11062622070312,
+          "Weap Beryl M762": 387.0725326538086,
+          "Proj Grenade": 100
+        },
+        "weaponKills": {
+          "Unknown Weapon": 5
+        },
+        "weaponStats": {
+          "totalShots": 13,
+          "totalHits": 98,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 5,
+        "heals": 6,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1212,
+        "walkDistance": 2465.9724,
+        "rideDistance": 5092.4688,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 125.4,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Weap Mini14": 125.39999961853027
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 8,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 379,
+        "walkDistance": 826.242,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "DonTefflon_",
+        "kills": 3,
+        "damage": 789.00037,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap Dragunov": 349.98708152770996,
+          "Weap A K47": 84.88065528869629,
+          "Player Female_ A": 93.41650390625,
+          "Proj Grenade": 30.919923782348633,
+          "Weap Kar98k": 104.85104751586914,
+          "Weap H K416": 218.3617000579834
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 18,
+          "totalHits": 54,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 4,
+        "boosts": 9,
+        "heals": 11,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1205,
+        "walkDistance": 2100.9895,
+        "rideDistance": 5632.302,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T16:28:18Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1454,
+    "placement": 20,
+    "team": [
+      {
+        "name": "DonTefflon_",
+        "kills": 3,
+        "damage": 358.19028,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap A C E32": 358.19033432006836,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 22,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 272,
+        "walkDistance": 626.18616,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 1,
+        "damage": 200.99997,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap S C A R- L": 100,
+          "Weap V S S": 25.399982452392578,
+          "Weap Q B Z95": 75.5999984741211,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 14,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 310,
+        "walkDistance": 557.12256,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap A U G": 100,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 22,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 309,
+        "walkDistance": 686.43463,
+        "rideDistance": 3.5486677,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 2,
+        "damage": 189.20001,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap U M P": 189.1999969482422,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 21,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 310,
+        "walkDistance": 581.20764,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T15:29:06Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1612,
+    "placement": 2,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 2,
+        "damage": 386.555,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap Beryl M762": 236.0600004196167,
+          "Player Male_ A": 0,
+          "Weap Kar98k": 150.49499893188477,
+          "B P_ Fire Effect Controller": 12,
+          "B P_ Molotov Fire Debuff": 40,
+          "Bluezonebomb_ Effect Actor": 1.1764705181121826
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 12,
+          "totalHits": 95,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 6,
+        "heals": 5,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1359,
+        "walkDistance": 3029.813,
+        "rideDistance": 2496.4717,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 3,
+        "damage": 586.72217,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap M249": 94.29999542236328,
+          "Weap Mini14": 177.7709722518921,
+          "Weap A C E32": 173.2560329437256,
+          "Player Male_ A": 0,
+          "B P_ Mirado_ A_04": 3.8568599224090576,
+          "Weap M24": 141.39514541625977
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 22,
+          "totalHits": 67,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 3,
+        "boosts": 8,
+        "heals": 8,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1609,
+        "walkDistance": 2576.2732,
+        "rideDistance": 2694.7852,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 2,
+        "damage": 186,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap A C E32": 25.799999237060547,
+          "Player Male_ A": 1.705468773841858,
+          "Weap A U G": 54.159996032714844,
+          "Weap Beryl M762": 106.04000091552734
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 31,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 8,
+        "heals": 12,
+        "revives": 3,
+        "teamKills": 0,
+        "timeSurvived": 1544,
+        "walkDistance": 3428.8586,
+        "rideDistance": 2469.2202,
+        "swimDistance": 0
+      },
+      {
+        "name": "DonTefflon_",
+        "kills": 8,
+        "damage": 1093.8375,
+        "headshots": 3,
+        "weapons": {
+          "Unknown Weapon": 8
+        },
+        "weaponDamage": {
+          "Weap Dragunov": 329.55664348602295,
+          "Weap A U G": 178.23238277435303,
+          "Player Female_ A": 0.32893067598342896,
+          "B P_ Coupe R B": 71.41423034667969,
+          "Weap P90": 586.0485782623291,
+          "Bluezonebomb_ Effect Actor": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 8
+        },
+        "weaponStats": {
+          "totalShots": 27,
+          "totalHits": 132,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 15,
+        "heals": 18,
+        "revives": 3,
+        "teamKills": 0,
+        "timeSurvived": 1605,
+        "walkDistance": 4035.3782,
+        "rideDistance": 2363.0269,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T15:16:55Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1561,
+    "placement": 16,
+    "team": [
+      {
+        "name": "DonTefflon_",
+        "kills": 2,
+        "damage": 513.3533,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap Berreta686": 32.25330352783203,
+          "Player Female_ A": 0,
+          "Weap H K416": 392.2133798599243,
+          "Panzer Faust100 M_ Projectile": 88.8866195678711
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 15,
+          "totalHits": 60,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 568,
+        "walkDistance": 1472.6307,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 1,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Weap S C A R- L": 100.00000381469727
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 105,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 562,
+        "walkDistance": 981.85785,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 146.215,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Vector": 99.99999809265137,
+          "Player Male_ A": 0,
+          "Weap Kar98k": 46.214996337890625
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 44,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 517,
+        "walkDistance": 956.4476,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 2,
+        "damage": 107.11595,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap A U G": 107.11595916748047,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 14,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 2,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 542,
+        "walkDistance": 1366.2417,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T14:45:30Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1674,
+    "placement": 1,
+    "team": [
+      {
+        "name": "Baron_Frajeris",
+        "kills": 8,
+        "damage": 570.3185,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 8
+        },
+        "weaponDamage": {
+          "Weap M24": 42.47477340698242,
+          "Proj Grenade": 53.7944221496582,
+          "Weap Beryl M762": 387.04931259155273,
+          "Uaz_ C_01": 27.342267006635666,
+          "Player Male_ A": 0,
+          "Proj C4": 114.75130844116211
+        },
+        "weaponKills": {
+          "Unknown Weapon": 8
+        },
+        "weaponStats": {
+          "totalShots": 15,
+          "totalHits": 50,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 9,
+        "heals": 8,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1674,
+        "walkDistance": 3382.3574,
+        "rideDistance": 6476.6626,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 3,
+        "damage": 294.56,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Weap Beryl M762": 123.76000022888184,
+          "Player Male_ A": 0,
+          "Weap A K47": 170.79999923706055
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 13,
+          "totalHits": 30,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 7,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1090,
+        "walkDistance": 2766.895,
+        "rideDistance": 440.74585,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 668.0904,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap A C E32": 99.99999809265137,
+          "Proj Grenade": 56.2055778503418,
+          "Uaz_ C_01": 0.4164704978466034,
+          "Weap P90": 389.0348262786865,
+          "Weap M24": 122.84999084472656
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 23,
+          "totalHits": 42,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 3,
+        "boosts": 6,
+        "heals": 7,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1674,
+        "walkDistance": 3677.5527,
+        "rideDistance": 7057.8066,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T14:38:07Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1520,
+    "placement": 22,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 42.63,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mk47 Mutant": 42.63000011444092,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 9,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 256,
+        "walkDistance": 478.56787,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 349.1,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Mini14": 174.0999994277954,
+          "Weap A K47": 175.00000190734863,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 34,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 279,
+        "walkDistance": 574.69763,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 1,
+        "damage": 172.90062,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap M9": 55.900001525878906,
+          "Weap S K S": 0,
+          "Weap U Z I": 117.00061321258545
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 13,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 289,
+        "walkDistance": 624.1589,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T14:13:20Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1362,
+    "placement": 4,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 83.635666,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "Weap Beryl M762": 83.63566398620605,
+          "Weap Kar98k": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 18,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 9,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 900,
+        "walkDistance": 1724.2717,
+        "rideDistance": 4814.9985,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 1,
+        "damage": 207.657,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Proj Grenade": 66.56184387207031,
+          "Weap Mk12": 48.852664947509766,
+          "Player Male_ A": 59.375282287597656,
+          "Buggy_ A_04": 8.678770065307617,
+          "Weap F N Fal": 92.24249458312988
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 21,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 8,
+        "heals": 23,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1211,
+        "walkDistance": 2486.4084,
+        "rideDistance": 4936.999,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 2,
+        "damage": 225.57326,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap Vector": 35.43815994262695,
+          "Buggy_ A_04": 8.678770065307617,
+          "Weap Mk12": 190.13509559631348
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 12,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 7,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1211,
+        "walkDistance": 2536.5647,
+        "rideDistance": 7016.196,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T14:08:01Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1415,
+    "placement": 21,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 125.4,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap H K416": 125.4000015258789
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 6,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 218,
+        "walkDistance": 409.84186,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 56.88,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 56.88000297546387
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 29,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 117,
+        "walkDistance": 28.619137,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 3,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 100,
+        "walkDistance": 44.143566,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T13:52:52Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1527,
+    "placement": 9,
+    "team": [
+      {
+        "name": "Mar-0",
+        "kills": 1,
+        "damage": 99.99999,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Beryl M762": 99.99999618530273
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 14,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 804,
+        "walkDistance": 2246.1787,
+        "rideDistance": 1560.7483,
+        "swimDistance": 0
+      },
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 1,
+        "damage": 80.2,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Beryl M762": 80.19999885559082,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 30,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 708,
+        "walkDistance": 1745.2113,
+        "rideDistance": 1408.385,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 43.559998,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Beryl M762": 43.55999946594238,
+          "Proj Grenade": 2.25,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 6,
+          "longestKill": 0,
+          "vehicleDestroys": 1
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 774,
+        "walkDistance": 1749.8654,
+        "rideDistance": 1975.8147,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T13:48:02Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1456,
+    "placement": 23,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap U M P": 99.99999809265137,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 7,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 169,
+        "walkDistance": 230.85893,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 15.942523,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap U Z I": 15.942523002624512
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 1,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 185,
+        "walkDistance": 229.4632,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 100,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Thompson": 99.99999904632568,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 23,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 162,
+        "walkDistance": 198.51057,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T13:31:55Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1458,
+    "placement": 12,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 1,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 813,
+        "walkDistance": 901.0791,
+        "rideDistance": 5041.2095,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 25,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 815,
+        "walkDistance": 1370.7283,
+        "rideDistance": 5214.129,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 219.79999,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Beryl M762": 219.7999963760376
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 10,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 824,
+        "walkDistance": 1897.2235,
+        "rideDistance": 4678.721,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02T13:22:43Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1423,
+    "placement": 20,
+    "team": [
+      {
+        "name": "Majk_the_Reaper",
+        "kills": 0,
+        "damage": 31.680002,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A K47": 31.680002212524414,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 120,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 218,
+        "walkDistance": 101.865425,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 0,
+        "damage": 214.54721,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A C E32": 46.14720153808594,
+          "Weap H K416": 168.399995803833
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 14,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 225,
+        "walkDistance": 438.55783,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 111,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 225,
+        "walkDistance": 129.89896,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2026-04-30T20:51:15Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",

@@ -1,5 +1,153 @@
 [
   {
+    "date": "2026-05-02T17:52:16Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Kiki_Main",
+    "duration": 1445,
+    "placement": 1,
+    "team": [
+      {
+        "name": "DonTefflon_",
+        "kills": 6,
+        "damage": 751.5299,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 6
+        },
+        "weaponDamage": {
+          "Weap M P5 K": 217.19999027252197,
+          "Weap M24": 164.34999084472656,
+          "B P_ Pickup Truck_ A_esports": 4.823855876922607,
+          "B P_ Pickup Truck_ A_03": 13.005962371826172,
+          "Weap P90": 148.56014251708984,
+          "Weap L6": 221.41985702514648,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 6
+        },
+        "weaponStats": {
+          "totalShots": 15,
+          "totalHits": 55,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 8,
+        "heals": 5,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1445,
+        "walkDistance": 4831.501,
+        "rideDistance": 1326.8054,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 4,
+        "damage": 383.7996,
+        "headshots": 2,
+        "weapons": {
+          "Unknown Weapon": 4
+        },
+        "weaponDamage": {
+          "Player Male_ A": 0,
+          "B P_ Pickup Truck_ A_03": 13.005962371826172,
+          "Weap A U G": 138.90881824493408,
+          "Weap M24": 120.875,
+          "Weap Mk14": 124.01578330993652
+        },
+        "weaponKills": {
+          "Unknown Weapon": 4
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 54,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 1,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1445,
+        "walkDistance": 3995.943,
+        "rideDistance": 3053.0212,
+        "swimDistance": 0
+      },
+      {
+        "name": "Mar-0",
+        "kills": 7,
+        "damage": 721.5436,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 7
+        },
+        "weaponDamage": {
+          "Weap M P9": 461.2186622619629,
+          "Player Male_ A": 0,
+          "Weap A U G": 18,
+          "Weap A W M": 242.32492065429688
+        },
+        "weaponKills": {
+          "Unknown Weapon": 7
+        },
+        "weaponStats": {
+          "totalShots": 11,
+          "totalHits": 46,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 2,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1445,
+        "walkDistance": 3798.332,
+        "rideDistance": 2821.5942,
+        "swimDistance": 0
+      },
+      {
+        "name": "codufus",
+        "kills": 2,
+        "damage": 86.57772,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Player Female_ A": 0,
+          "B P_ Pickup Truck_ A_esports": 4.823855876922607,
+          "Weap M24": 5.577726364135742,
+          "Weap A K47": 80.99999809265137
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 107,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 8,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1445,
+        "walkDistance": 3813.018,
+        "rideDistance": 1868.8079,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2026-04-29T20:17:05Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
