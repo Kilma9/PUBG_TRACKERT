@@ -1,5 +1,43 @@
 [
   {
+    "date": "2026-05-03T17:21:20Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Neon_Main",
+    "duration": 1390,
+    "placement": 26,
+    "team": [
+      {
+        "name": "codufus",
+        "kills": 0,
+        "damage": 134.02,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Q B Z95": 134.02000427246094
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 5,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 204,
+        "walkDistance": 387.9628,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2026-05-02T17:52:16Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
