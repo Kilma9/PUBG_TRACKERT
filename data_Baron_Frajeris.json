@@ -1,5 +1,372 @@
 [
   {
+    "date": "2026-05-25T18:39:42Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Savage_Main",
+    "duration": 1414,
+    "placement": 15,
+    "team": [
+      {
+        "name": "Cacunka",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {},
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 0,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 355,
+        "walkDistance": 563.09094,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 0,
+        "damage": 76.30156,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap V S S": 76.3015546798706,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 24,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 438,
+        "walkDistance": 728.62384,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "KYBLzBUDEJC",
+        "kills": 0,
+        "damage": 141.03531,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 105.31105041503906,
+          "Weap Vector": 35.72425079345703
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 3,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 460,
+        "walkDistance": 1100.8641,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 0,
+        "damage": 19.35,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A C E32": 19.350000381469727,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 53,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 460,
+        "walkDistance": 715.1548,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-25T18:10:19Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1691,
+    "placement": 3,
+    "team": [
+      {
+        "name": "Baron_Frajeris",
+        "kills": 7,
+        "damage": 744.99316,
+        "headshots": 3,
+        "weapons": {
+          "Unknown Weapon": 7
+        },
+        "weaponDamage": {
+          "B P_ Pickup Truck_ A_05": 1.35541570186615,
+          "Weap Beryl M762": 129.2180004119873,
+          "Player Male_ A": 5.80000114440918,
+          "Weap Dragunov": 615.7751712799072
+        },
+        "weaponKills": {
+          "Unknown Weapon": 7
+        },
+        "weaponStats": {
+          "totalShots": 12,
+          "totalHits": 78,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 6,
+        "heals": 2,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1632,
+        "walkDistance": 3621.9438,
+        "rideDistance": 1670.3951,
+        "swimDistance": 0
+      },
+      {
+        "name": "KYBLzBUDEJC",
+        "kills": 1,
+        "damage": 537.68286,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Kar98k": 421.71325874328613,
+          "Player Female_ A": 0,
+          "Weap M P5 K": 115.96956825256348
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 44,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 3,
+        "boosts": 2,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1632,
+        "walkDistance": 3400.0981,
+        "rideDistance": 4894.151,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 2,
+        "damage": 310.8551,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Player Female_ A": 9.407275199890137,
+          "Weap Famas G2": 56.10222625732422,
+          "Weap Mk12": 254.75286293029785
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 23,
+          "totalHits": 63,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 9,
+        "heals": 2,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1632,
+        "walkDistance": 3624.0752,
+        "rideDistance": 1519.305,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-05-25T17:45:41Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1467,
+    "placement": 3,
+    "team": [
+      {
+        "name": "KYBLzBUDEJC",
+        "kills": 0,
+        "damage": 132.30511,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 10.584985733032227,
+          "Weap Kar98k": 132.30511856079102,
+          "Weap M P5 K": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 2,
+          "totalHits": 26,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1343,
+        "walkDistance": 2579.5386,
+        "rideDistance": 4831.0537,
+        "swimDistance": 0
+      },
+      {
+        "name": "Baron_Frajeris",
+        "kills": 3,
+        "damage": 145.27106,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 3
+        },
+        "weaponDamage": {
+          "Player Male_ A": 0.22990722954273224,
+          "Uaz_ B_01_esports": 1.0597050189971924,
+          "Weap Kar98k": 100,
+          "Weap A C E32": 45.27104949951172
+        },
+        "weaponKills": {
+          "Unknown Weapon": 3
+        },
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 16,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 7,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1349,
+        "walkDistance": 2627.6772,
+        "rideDistance": 5069.1206,
+        "swimDistance": 0
+      },
+      {
+        "name": "qzbeanwow",
+        "kills": 1,
+        "damage": 376.33536,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Female_ A": 12.27099609375,
+          "Dacia_ A_03_v2_ Esports": 54.920294761657715,
+          "Weap A C E32": 100.00000381469727,
+          "Weap Kar98k": 211.0871524810791,
+          "Proj Grenade": 65.24819946289062
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 35,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 7,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1333,
+        "walkDistance": 2389.9612,
+        "rideDistance": 8104.516,
+        "swimDistance": 0
+      },
+      {
+        "name": "BigGeorge_CZ",
+        "kills": 1,
+        "damage": 411.6689,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Female_ A": 0.772998034954071,
+          "Uaz_ B_01_esports": 1.0597050189971924,
+          "Weap Mk12": 271.76937103271484,
+          "Weap M P5 K": 147.1429100036621,
+          "Proj Grenade": 92.75664520263672
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 20,
+          "totalHits": 53,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 8,
+        "heals": 1,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1344,
+        "walkDistance": 2616.3406,
+        "rideDistance": 4938.4907,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2026-05-24T19:53:52Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
