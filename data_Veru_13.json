@@ -1,5 +1,1198 @@
 [
   {
+    "date": "2026-06-03T17:35:21Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1552,
+    "placement": 24,
+    "team": [
+      {
+        "name": "Toncek_12345",
+        "kills": 0,
+        "damage": 193.59999,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap H K416": 193.5999994277954,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 12,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 146,
+        "walkDistance": 129.65623,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 1,
+        "damage": 212,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap H K416": 124.0000057220459,
+          "Panzer Faust100 M_ Projectile": 88
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 12,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 270,
+        "walkDistance": 383.6856,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 3.5999994,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap H K416": 3.59999942779541,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 58,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 239,
+        "walkDistance": 277.58237,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-06-03T17:13:24Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1548,
+    "placement": 7,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Dacia_ A_02_v2": 1.1355299949645996,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 56,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1115,
+        "walkDistance": 2897.4087,
+        "rideDistance": 868.2033,
+        "swimDistance": 0
+      },
+      {
+        "name": "Toncek_12345",
+        "kills": 0,
+        "damage": 21.539465,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Dacia_ A_02_v2": 1.1355299949645996,
+          "Weap Mk12": 21.539464950561523,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 40,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1100,
+        "walkDistance": 2871.0933,
+        "rideDistance": 1052.611,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 165.44064,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Mini14": 165.44065284729004
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 7,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1163,
+        "walkDistance": 3745.5894,
+        "rideDistance": 2134.5388,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-06-03T16:48:44Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1547,
+    "placement": 7,
+    "team": [
+      {
+        "name": "Toncek_12345",
+        "kills": 1,
+        "damage": 130.84729,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Mk12": 103.84728813171387,
+          "Weap S C A R- L": 27,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 12,
+          "totalHits": 36,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 4,
+        "heals": 0,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1261,
+        "walkDistance": 2476.8486,
+        "rideDistance": 4510.685,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Niva_04": 67.45708465576172,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 14,
+          "totalHits": 11,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1125,
+        "walkDistance": 2264.5747,
+        "rideDistance": 4572.6426,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 1,
+        "damage": 134.84325,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Player Female_ A": 0,
+          "Weap Mini14": 113.5113525390625,
+          "Weap A U G": 21.33189582824707
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 18,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1261,
+        "walkDistance": 3142.551,
+        "rideDistance": 4472.3906,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-06-03T16:24:33Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "DihorOtok_Main",
+    "duration": 1531,
+    "placement": 9,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 2,
+        "damage": 406.7893,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Player Female_ A": 0.05859375,
+          "Proj Grenade": 100,
+          "Weap M P5 K": 66.78933525085449,
+          "Weap A W M": 100,
+          "Bluezonebomb_ Effect Actor": 210
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 32,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 7,
+        "heals": 5,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1265,
+        "walkDistance": 2585.7212,
+        "rideDistance": 1038.4851,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 1,
+        "damage": 143.8219,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap Mini14": 143.82190322875977,
+          "B P_ Fire Effect Controller": 0,
+          "B P_ Molotov Fire Debuff": 0,
+          "Weap A U G": 0,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 113,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1086,
+        "walkDistance": 2439.091,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Toncek_12345",
+        "kills": 2,
+        "damage": 69.303856,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap H K416": 69.30385780334473,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 21,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 920,
+        "walkDistance": 1753.0557,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-06-03T16:08:14Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1683,
+    "placement": 12,
+    "team": [
+      {
+        "name": "Adonisak1",
+        "kills": 1,
+        "damage": 192.59076,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Weap K2": 60.36223220825195,
+          "Player Male_ A": 9.474963188171387,
+          "Weap A U G": 93.4000015258789,
+          "Proj Grenade": 38.82852554321289
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 6,
+          "totalHits": 32,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 774,
+        "walkDistance": 1580.3949,
+        "rideDistance": 4001.8171,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Pony Coupe": 0.8919049501419067,
+          "Player Female_ A": 0.2535400390625,
+          "Proj Grenade": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 35,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 774,
+        "walkDistance": 1371.2134,
+        "rideDistance": 4012.6958,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 39.6,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A U G": 39.60000038146973,
+          "Proj Grenade": 0,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 21,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 1,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 774,
+        "walkDistance": 1599.3014,
+        "rideDistance": 3863.9758,
+        "swimDistance": 0
+      },
+      {
+        "name": "Toncek_12345",
+        "kills": 0,
+        "damage": 0,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 0,
+          "totalHits": 4,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 774,
+        "walkDistance": 1499.4102,
+        "rideDistance": 3358.6843,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-06-03T15:48:01Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1535,
+    "placement": 9,
+    "team": [
+      {
+        "name": "Toncek_12345",
+        "kills": 0,
+        "damage": 21.6,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A U G": 21.600000381469727,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 31,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 827,
+        "walkDistance": 2031.0874,
+        "rideDistance": 2456.9375,
+        "swimDistance": 0
+      },
+      {
+        "name": "Adonisak1",
+        "kills": 0,
+        "damage": 153.998,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M9": 19.287673950195312,
+          "Weap A U G": 114.1514539718628,
+          "Weap Mk12": 39.8465518951416,
+          "Player Male_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 16,
+          "totalHits": 70,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 2,
+        "heals": 3,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 915,
+        "walkDistance": 1683.7476,
+        "rideDistance": 3120.3318,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 48.31243,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap M P5 K": 48.31243133544922,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 51,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 4,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 837,
+        "walkDistance": 1552.5055,
+        "rideDistance": 2467.7346,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 1,
+        "damage": 268.26306,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Uaz_ B_01_esports": 42.0391731262207,
+          "Weap A U G": 68.26305961608887,
+          "Proj Grenade": 100,
+          "Weap Mini14": 100
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 17,
+          "totalHits": 8,
+          "longestKill": 0,
+          "vehicleDestroys": 1
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 1,
+        "revives": 3,
+        "teamKills": 0,
+        "timeSurvived": 970,
+        "walkDistance": 1964.0609,
+        "rideDistance": 2486.303,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-06-03T15:22:28Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Tiger_Main",
+    "duration": 1466,
+    "placement": 3,
+    "team": [
+      {
+        "name": "Toncek_12345",
+        "kills": 0,
+        "damage": 153.53055,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 4.6720733642578125,
+          "Weap A U G": 77.39999961853027,
+          "Proj Grenade": 76.13053894042969
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 14,
+          "totalHits": 55,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1210,
+        "walkDistance": 2140.1624,
+        "rideDistance": 8038.4956,
+        "swimDistance": 0
+      },
+      {
+        "name": "Adonisak1",
+        "kills": 1,
+        "damage": 110.05031,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 1
+        },
+        "weaponDamage": {
+          "Jerrycan": 32.04912185668945,
+          "Jerrycan Fire": 67.95088195800781,
+          "Player Male_ A": 0,
+          "Weap H K416": 110.05031776428223
+        },
+        "weaponKills": {
+          "Unknown Weapon": 1
+        },
+        "weaponStats": {
+          "totalShots": 7,
+          "totalHits": 56,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 5,
+        "heals": 6,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1167,
+        "walkDistance": 1668.115,
+        "rideDistance": 5291.039,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 2,
+        "damage": 238.54076,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Uaz_ B_01": 99.58888244628906,
+          "Weap A U G": 167.35571098327637,
+          "Weap Mini14": 71.18505477905273,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 27,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 2,
+        "teamKills": 0,
+        "timeSurvived": 1338,
+        "walkDistance": 2759.846,
+        "rideDistance": 6776.6133,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 2,
+        "damage": 219.07475,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Player Female_ A": 0,
+          "B P_ Fire Effect Controller": 12,
+          "B P_ Molotov Fire Debuff": 40,
+          "Proj Grenade": 66,
+          "Weap Kar98k": 126.66720581054688,
+          "Weap M P5 K": 92.40753364562988
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 21,
+          "totalHits": 36,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 5,
+        "heals": 5,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1412,
+        "walkDistance": 2394.7756,
+        "rideDistance": 5936.9966,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-06-03T15:05:49Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Baltic_Main",
+    "duration": 1557,
+    "placement": 15,
+    "team": [
+      {
+        "name": "Veru_13",
+        "kills": 0,
+        "damage": 268.65573,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 67.73727416992188,
+          "Weap Thompson": 199.74197959899902,
+          "Bluezonebomb_ Effect Actor": 1.1764705181121826,
+          "Player Female_ A": 0,
+          "Proj Grenade": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 4,
+          "totalHits": 29,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 607,
+        "walkDistance": 1505.5703,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 45.6,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Female_ A": 0,
+          "Weap H K416": 45.60000038146973
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 3,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 403,
+        "walkDistance": 559.3982,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Toncek_12345",
+        "kills": 0,
+        "damage": 29.035645,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap U M P": 29.03564453125,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 42,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 279,
+        "walkDistance": 261.8779,
+        "rideDistance": 0,
+        "swimDistance": 0
+      },
+      {
+        "name": "Adonisak1",
+        "kills": 0,
+        "damage": 155.75298,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Saiga12": 74.51999473571777,
+          "Player Male_ A": 0,
+          "Weap Vector": 81.23298454284668
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 1,
+          "totalHits": 15,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 0,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 467,
+        "walkDistance": 631.413,
+        "rideDistance": 0,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-06-03T14:39:28Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1460,
+    "placement": 3,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 0,
+        "damage": 225.06256,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap Kar98k": 180.50864028930664,
+          "Weap M P5 K": 44.55391883850098,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 12,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 2,
+        "heals": 4,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1354,
+        "walkDistance": 2460.651,
+        "rideDistance": 4915.584,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 2,
+        "damage": 350.69318,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap A U G": 274.39999294281006,
+          "Proj Grenade": 0,
+          "Weap Mini14": 76.29320526123047,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 8,
+          "totalHits": 49,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1323,
+        "walkDistance": 2936.5347,
+        "rideDistance": 4835.547,
+        "swimDistance": 0
+      },
+      {
+        "name": "Toncek_12345",
+        "kills": 0,
+        "damage": 371.24875,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "B P_ Van_ A_03": 20.973852157592773,
+          "Weap M24": 371.2487373352051,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 9,
+          "totalHits": 10,
+          "longestKill": 0,
+          "vehicleDestroys": 3
+        },
+        "assists": 0,
+        "boosts": 1,
+        "heals": 0,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1248,
+        "walkDistance": 2509.5212,
+        "rideDistance": 4351.099,
+        "swimDistance": 0
+      },
+      {
+        "name": "Adonisak1",
+        "kills": 2,
+        "damage": 184.3565,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap Mini14": 58.75650978088379,
+          "Player Male_ A": 0,
+          "Weap A U G": 125.60000038146973
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 23,
+          "totalHits": 19,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 0,
+        "boosts": 6,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1440,
+        "walkDistance": 2815.3628,
+        "rideDistance": 3610.094,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-06-03T14:16:03Z",
+    "gameMode": "squad-fpp",
+    "gameType": "normal",
+    "teamSize": "squad",
+    "perspective": "fpp",
+    "mapName": "Desert_Main",
+    "duration": 1443,
+    "placement": 5,
+    "team": [
+      {
+        "name": "Sosonek111",
+        "kills": 2,
+        "damage": 221.52682,
+        "headshots": 1,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap Kar98k": 100,
+          "Weap M P5 K": 121.52680778503418,
+          "Player Female_ A": 0
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 5,
+          "totalHits": 35,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 1,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1217,
+        "walkDistance": 2779.024,
+        "rideDistance": 3226.419,
+        "swimDistance": 0
+      },
+      {
+        "name": "Veru_13",
+        "kills": 2,
+        "damage": 470.0572,
+        "headshots": 0,
+        "weapons": {
+          "Unknown Weapon": 2
+        },
+        "weaponDamage": {
+          "Weap A U G": 169.94440841674805,
+          "B P_ Desert Tsl Gas Pump": 100,
+          "Weap Mini14": 200.11280632019043,
+          "Player Female_ A": 0,
+          "B P_ Pickup Truck_ A_esports": 1.5470819473266602
+        },
+        "weaponKills": {
+          "Unknown Weapon": 2
+        },
+        "weaponStats": {
+          "totalShots": 12,
+          "totalHits": 37,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 2,
+        "boosts": 3,
+        "heals": 6,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1249,
+        "walkDistance": 3186.3218,
+        "rideDistance": 3481.4053,
+        "swimDistance": 0
+      },
+      {
+        "name": "ITSFAKE18",
+        "kills": 0,
+        "damage": 275.01822,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Weap A C E32": 0,
+          "Player Female_ A": 0,
+          "B P_ Pickup Truck_ A_esports": 1.5470819473266602,
+          "Weap Kar98k": 275.0182132720947
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 54,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 2,
+        "revives": 0,
+        "teamKills": 0,
+        "timeSurvived": 1163,
+        "walkDistance": 2893.7898,
+        "rideDistance": 2844.3875,
+        "swimDistance": 0
+      },
+      {
+        "name": "Adonisak1",
+        "kills": 0,
+        "damage": 74.0809,
+        "headshots": 0,
+        "weapons": {},
+        "weaponDamage": {
+          "Player Male_ A": 1.87451171875,
+          "Weap F N Fal": 25.467748641967773,
+          "Proj Grenade": 28.813148498535156,
+          "Weap Beryl M762": 19.799999237060547
+        },
+        "weaponKills": {},
+        "weaponStats": {
+          "totalShots": 3,
+          "totalHits": 17,
+          "longestKill": 0,
+          "vehicleDestroys": 0
+        },
+        "assists": 1,
+        "boosts": 3,
+        "heals": 1,
+        "revives": 1,
+        "teamKills": 0,
+        "timeSurvived": 1197,
+        "walkDistance": 3258.3665,
+        "rideDistance": 3154.5867,
+        "swimDistance": 0
+      }
+    ]
+  },
+  {
     "date": "2026-05-31T16:19:49Z",
     "gameMode": "squad-fpp",
     "gameType": "normal",
