@@ -1,5 +1,5 @@
 ## 🎮 PUBG Multi-Player Data Collection Report
-**Collection Date:** Thu Jun  4 23:39:20 UTC 2026
+**Collection Date:** Fri Jun  5 23:37:50 UTC 2026
 **Trigger:** schedule
 
 ### 👤 Kilma9
@@ -23,7 +23,7 @@
 - **Latest Match:** 2026-06-02T19:53:04Z
 
 ### 👤 Veru_13
-- **Matches:** 323
-- **Latest Match:** 2026-06-04T17:27:17Z
+- **Matches:** 338
+- **Latest Match:** 2026-06-05T21:54:16Z
 
-**Total Matches Across All Players:** 3406
+**Total Matches Across All Players:** 3421
