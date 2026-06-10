@@ -2,8 +2,8 @@ name: Scheduled PUBG Data Collection
 
 on:
   # Run multiple times every evening (Prague time)
-  schedule:
-    - cron: '0 23 * * *'  # 20:00 Prague time (8 PM)
+#  schedule:
+#    - cron: '0 23 * * *'  # 20:00 Prague time (8 PM)
   
   # Allow manual triggering
   workflow_dispatch:
